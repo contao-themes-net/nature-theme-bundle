@@ -1,0 +1,30 @@
+<div class="social_feed_element arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+    <div class="inner">
+
+        <a href="<?= $this->url ?>" target="_blank">
+            <div class="icon">
+                {{picture::<?php echo \StringUtil::binToUuid($this->sfFbAccountPicture); ?>}}
+            </div>
+
+            <?php if ($this->hasMetaFields): ?>
+            <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?> <i class="fab fa-facebook-f" aria-hidden="true"></i></p>
+            <?php endif; ?>
+
+            <div class="title"><?= $this->sfFbAccount ?></div>
+        </a>
+
+        <?php if ($this->addImage): ?>
+        <?php if ($this->sfImages): ?>
+        <?php $this->insert('image', $this->arrData); ?>
+        <?php endif; ?>
+        <?php endif; ?>
+
+
+        <a href="<?= $this->url ?>" target="_blank">
+            <div class="ce_text block" itemprop="description">
+                <p><?= preg_replace('#(?:<br\s*/?>\s*?){2,}#', '</p><p>', $this->teaser) ?></p>
+            </div>
+        </a>
+
+    </div>
+</div>

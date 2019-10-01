@@ -1,0 +1,22 @@
+
+<div class="layout_short column is-12-mobile is-6-tablet is-4-desktop arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+
+    <div class="inside">
+        <?php if($this->subheadline): ?>
+        <div class="subheadline"><?= $this->subheadline ?></div>
+        <?php endif; ?>
+
+        <div class="text">
+            <h2 itemprop="name"><?= $this->linkHeadline ?></h2>
+
+            <div class="ce_text block" itemprop="description">
+                <?= $this->teaser ?>
+            </div>
+
+            <?php if ($this->hasMetaFields): ?>
+            <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+</div>

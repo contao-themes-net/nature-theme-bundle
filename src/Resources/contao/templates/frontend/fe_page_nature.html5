@@ -1,0 +1,64 @@
+<?php $this->extend('fe_page'); ?>
+
+<?php $this->block('head'); ?>
+    <meta charset="<?= $this->charset ?>">
+    <title><?= $this->title ?></title>
+    <base href="<?= $this->base ?>">
+
+    <meta name="robots" content="<?= $this->robots ?>">
+    <meta name="description" content="<?= $this->description ?>">
+    <meta name="generator" content="Contao Open Source CMS">
+
+    <style>
+        #wrapper { display: none; }
+    </style>
+
+    <?= $this->viewport ?>
+
+    <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
+    <meta property="og:description" content="<?php echo $this->description; ?>" />
+    <meta property="og:url" content="{{env::url}}/{{env::request}}" />
+    <?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+
+    <link rel="shortcut icon" href="files/mate/img/favicon.ico" type="image/x-icon" />
+
+<?php $this->endblock(); ?>
+
+<?php $this->block('body'); ?>
+    <?php $this->parent(); ?>
+
+    <?= $this->stylesheets ?>
+
+    <link rel="stylesheet" type="text/css" media="all" href="<?php
+        // add stylesheets
+        $combiner = new Combiner();
+        $combiner->add('bundles/contaothemesnetnaturetheme/fonts/fontawesome/css/all.min.css');
+        $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature.scss');
+        echo $combiner->getCombinedFile(); ?>">
+
+    <?= $this->head ?>
+
+    <script charset="utf-8" src="<?php
+    // add javascripts
+    $combiner = new Combiner();
+    $combiner->add('bundles/contaothemesnetnaturetheme/js/theme.js');
+    echo $combiner->getCombinedFile();
+    ?>"></script>
+
+    <?= $this->mooScripts ?>
+    <?= $this->framework ?>
+<?php $this->endblock(); ?>
+
+<?php $this->block('container'); ?>
+    <?php if ($this->left || $this->right): ?><div class="column-wrapper"><div class="container"><?php endif; ?>
+        <?php $this->parent(); ?>
+    <?php if ($this->left || $this->right): ?></div></div><?php endif; ?>
+<?php $this->endblock(); ?>
+
+<?php $this->block('footer'); ?>
+    <?php if ($this->footer): ?>
+        <footer id="footer" class="page-footer">
+            <?= $this->footer ?>
+        </footer>
+    <?php endif; ?>
+<?php $this->endblock(); ?>

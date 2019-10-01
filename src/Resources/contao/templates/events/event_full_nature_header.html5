@@ -1,0 +1,10 @@
+<?php if ($this->addImage): ?>
+<div class="hero header-image dark-image white-text <?= $this->class ?>" <?= $this->cssId ?>>
+<figure class="image_container float_above" style="background-image:url('/<?= $this->picture['img']['src'] ?>')"></figure>
+<div class="hero-body">
+    <div class="container">
+        <h1 itemprop="name"><?= $this->title ?></h1>
+    </div>
+</div>
+</div>
+<?php endif; ?>

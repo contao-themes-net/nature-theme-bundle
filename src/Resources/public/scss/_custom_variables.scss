@@ -1,0 +1,180 @@
+/****
+ **** nature theme files / nature_variables
+ ****
+ */
+
+/*
+ * uncomment lines to override theme colors
+ */
+
+//$family-primary: 'Roboto', sans-serif;
+//$family-heading: 'Roboto Slab', sans-serif;
+
+//$font-size: 1.2rem;
+//$font-weight: 200;
+//$strong-weight: 400;
+
+/* ====================== */
+/*      Breadcrumb        */
+/* ====================== */
+
+//$breadcrumb-background-color: $boxes-background;
+//$breadcrumb-item-color: $boxes-color;
+//$breadcrumb-item-hover-color: $link-hover;
+//$breadcrumb-item-active-color: $link-hover;
+//$breadcrumb-item-separator-color: $boxes-color;
+
+/* More variables: https://bulma.io/documentation/components/breadcrumb/#variables */
+
+
+/* ====================== */
+/*        Buttons         */
+/* ====================== */
+
+//$button-color: $grey-darker;
+//$button-background-color: $white;
+//$button-border-color: $grey-lighter;
+//$button-border-width: 1px;
+//$button-hover-color: $link-hover;
+//$button-hover-border-color: $link-hover;
+
+/* More variables: https://bulma.io/documentation/elements/button/#variables */
+
+
+/* ====================== */
+/*        Footer          */
+/* ====================== */
+
+//$footer-background-color: $black-ter;
+//$footer-color: $white-ter;
+//$footer-padding: 40px 0;
+
+//$footer-copyright-background-color: $black-bis;
+//$footer-copyright-color: $footer-color;
+//$footer-copyright-padding: $footer-padding;
+
+/* More variables: https://bulma.io/documentation/layout/footer/#variables */
+
+
+/* ====================== */
+/*         Forms          */
+/* ====================== */
+
+//$input-color: $boxes-color;
+//$input-background-color: $boxes-background;
+//$input-border-color: $grey-lighter;
+//$input-shadow: none;
+//$input-hover-border-color: $grey-lighter;
+//$input-focus-border-color: $grey-lighter;
+//$input-focus-box-shadow-size: 0;
+//$input-arrow: $link;
+//$input-icon-color: rgba($boxes-color,.4);
+//$input-icon-active-color: $boxes-color;
+//$input-radius: 0;
+
+/* More variables: https://bulma.io/documentation/form/input/#variables */
+
+
+/* ====================== */
+/*     Main Navigation    */
+/* ====================== */
+
+//$navbar-background-color: #eaeaea;
+//$navbar-background-color-home: rgba(255,255,255,.5);
+
+//$navbar-item-color: #333;
+//$navbar-item-hover-color: $navbar-item-color;
+//$navbar-item-hover-background-color: none;
+//$navbar-item-active-color: $navbar-item-color;
+//$navbar-item-active-background-color: none;
+
+//$navbar-dropdown-background-color: #fff;
+//$navbar-dropdown-arrow: $primary;
+//$navbar-dropdown-border-top: none;
+//$navbar-dropdown-boxed-shadow: none;
+
+//$navbar-dropdown-item-hover-color: $link-hover;
+//$navbar-dropdown-item-hover-background-color: none;
+//$navbar-dropdown-item-active-color: $link-hover;
+//$navbar-dropdown-item-active-background-color: none;
+
+//$navbar-burger-color: $navbar-item-color;
+
+/* More variables: https://bulma.io/documentation/components/navbar/#variables */
+
+
+/* ====================== */
+/*         Modal          */
+/* ====================== */
+
+//$modal-background-background-color: rgba($black, 0.86);
+//$modal-content-width: 640px;
+//$modal-card-head-background-color: $background;
+//$modal-card-head-border-bottom: 1px solid rgba($text, 0.2);
+//$modal-card-head-padding: 20px;
+//$modal-card-body-background-color: $boxes-background;
+//$modal-card-body-padding: 20px;
+
+/* More variables: https://bulma.io/documentation/components/modal/#variables */
+
+
+/* ====================== */
+/*      Pagination        */
+/* ====================== */
+
+//$pagination-color: $text;
+//$pagination-border-color: $grey-lighter;
+//$pagination-hover-color: $link-hover;
+//$pagination-hover-border-color: $link-hover;
+//$pagination-current-color: $white;
+//$pagination-current-background-color: $link-hover;
+//$pagination-current-border-color: $link-hover;
+
+/* More variables: https://bulma.io/documentation/components/pagination/#variables */
+
+
+/* ====================== */
+/*        Submenu         */
+/* ====================== */
+
+//$menu-item-color: $text;
+//$menu-item-radius: 2px;
+//$menu-item-hover-color: $text;
+//$menu-item-hover-background-color: $boxes-background;
+//$menu-item-active-color: #fff;
+//$menu-item-active-background-color: $link;
+//$menu-list-border-left: 1px solid rgba($text, 0.2);
+
+/* More variables: https://bulma.io/documentation/components/menu/#variables */
+
+
+/* ====================== */
+/*         Table          */
+/* ====================== */
+
+//$table-background-color: $background;
+//$table-color: $text;
+//$table-head-cell-color: $text;
+//$table-row-hover-background-color: $boxes-background;
+//$table-striped-row-even-background-color: $boxes-background;
+//$table-striped-row-even-hover-background-color: $boxes-background;
+
+/* More variables: https://bulma.io/documentation/elements/table/#variables */
+
+
+/* ====================== */
+/*          Tabs          */
+/* ====================== */
+
+//$tabs-border-bottom-color: rgba($text, 0.2);
+//$tabs-border-bottom-style: solid;
+//$tabs-border-bottom-width: 1px;
+
+//$tabs-link-color: $text;
+//$tabs-link-hover-color: $link-hover;
+//$tabs-link-active-color: $text;
+//$tabs-link-padding: 0.5em 1em;
+//$tabs-link-active-border-bottom-color: $primary;
+//$tabs-link-hover-border-bottom-color: $primary;
+
+/* More variables: https://bulma.io/documentation/components/tabs/#variables */

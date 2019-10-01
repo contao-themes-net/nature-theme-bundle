@@ -1,0 +1,272 @@
+@import 'bulma/utilities/_initial-variables';
+
+/* Fonts Start */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto Slab'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto Slab'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto Slab'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto Slab'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thinitalic-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thinitalic-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thinitalic-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thinitalic-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-lightitalic-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-lightitalic-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-lightitalic-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-lightitalic-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-italic-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-italic-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-italic-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-italic-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-medium-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-medium-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-medium-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-medium-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-mediumitalic-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-mediumitalic-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-mediumitalic-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-mediumitalic-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bolditalic-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bolditalic-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bolditalic-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bolditalic-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.eot') format('eot');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local('Roboto'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-blackitalic-webfont.woff2') format('woff2'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-blackitalic-webfont.woff') format('woff'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-blackitalic-webfont.ttf') format('ttf'),
+  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-blackitalic-webfont.eot') format('eot');
+}
+/* Fonts End */
+
+@import "../../../../../../../files/naturetheme/scss/_custom_colors";
+@import "_nature_colors";
+
+@import "../../../../../../../files/naturetheme/scss/_custom_variables";
+@import "_nature_variables";
+
+@import '../../../../../../../files/naturetheme/scss/custom';
+
+@import 'bulma/bulma';
+
+@import 'parts/layout';
+
+@import "parts/elements";
+@import "parts/footer";
+@import "parts/header";
+@import "parts/modules";
+
+@import "parts/responsive";
+
+/* IE & Edge Fixes */
+
+.ie, .edge {
+  .ce_toplink a:after {
+    margin-left: -40px;
+  }
+
+  .full-width-height-slider .video_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-transform-style: preserve-3d;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    .navbar-item {
+      &.is-hoverable:hover {
+        .navbar-dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ie {
+  .article-full-height:after {
+    content:'';
+    min-height:inherit;
+    font-size:0;
+  }
+
+  .ce_ct_teaserBox.sticky-teaserbox .image_container {
+    display: block;
+    top: 0;
+  }
+
+  .full-width-height-slider .text .container {
+    justify-content: flex-start;
+  }
+
+  .header-image .hero-body {
+    justify-content: center;
+
+    .container {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .mod_subscribe.newsletter-primary .widget-submit {
+    margin-top: -6px;
+  }
+
+  .sticky-column {
+    display: none;
+  }
+}

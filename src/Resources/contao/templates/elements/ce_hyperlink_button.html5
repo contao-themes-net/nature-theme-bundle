@@ -1,0 +1,1 @@
+<p><a href="<?= $this->href ?>" class="button <?= $this->class ?>" title="<?= $this->linkTitle ?>"<?= $this->attribute ?><?= $this->target ?><?= $this->rel ?>><?= $this->link ?></a></p>

@@ -1,0 +1,30 @@
+$primary: #7ebb3e !default;
+
+$text: $white-ter !default;
+$link: $primary !default;
+$link-hover: #89d03c !default;
+
+$background: $grey-darker !default;
+$boxes-background: $grey-dark !default;
+$boxes-color: $white !default;
+
+$info: $cyan !default;
+$success: $green !default;
+$warning: $yellow !default;
+$danger: $red !default;
+$dark: $grey-dark !default;
+
+//variables
+$input-border-color: $grey-darker !default;
+$input-hover-border-color: $grey-darker !default;
+$input-focus-border-color: $grey-darker !default;
+
+//CSS
+body {
+  @extend .dark-color-scheme;
+}
+
+.dark-color-scheme .layout_short .subheadline {
+  background: $grey;
+  color: $white;
+}

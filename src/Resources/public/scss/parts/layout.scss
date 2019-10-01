@@ -1,0 +1,53 @@
+::-moz-selection { background: $primary; color: #fff; }
+::selection { background: $primary; color: #fff; }
+
+body {
+  font-weight: $font-weight;
+  background: $background;
+  position: relative;
+
+  strong {
+    font-weight: $strong-weight;
+  }
+
+  #wrapper {
+    font-size: $font-size;
+  }
+}
+
+body + div {
+  display: none !important;
+}
+
+#container {
+  background: $background;
+}
+
+.column-wrapper {
+  position: relative;
+  background: $background;
+}
+
+#left, #right {
+  padding: 120px 20px;
+
+  .mod_article:not(.article-full-width) .container {
+    padding: 0;
+  }
+}
+
+.page-not-found, .unauthorized, .access-denied {
+  #main h1 {
+    font-size: 12rem;
+    margin: 0;
+    font-weight: 700;
+
+    + p {
+      font-size: 2rem;
+    }
+  }
+}
+
+#wrapper {
+  display: block;
+}

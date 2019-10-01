@@ -1,0 +1,62 @@
+{
+    "name": "contao-themes-net/nature-theme-bundle",
+    "type": "contao-bundle",
+    "description": "Nature Theme Bundle for Contao 4",
+    "license": "LGPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Webdesign für Contao",
+            "homepage": "https://pdir.de",
+            "email" : "develop@pdir.de",
+            "role" : "Developer"
+        },
+        {
+            "name": "Kostenlose Contao Themes",
+            "homepage": "https://contao-themes.net",
+            "email" : "develop@pdir.de",
+            "role" : "Supplier"
+        }
+    ],
+    "support" : {
+        "docs": "https://docs.contao-themes.net/",
+        "forum": "https://community.contao.org",
+        "email" : "support@pdir.de",
+        "issues" : "",
+        "source" : ""
+    },
+    "require": {
+        "php": "^5.6 || ^7.0",
+        "contao/core-bundle": "^4.4",
+        "terminal42/contao-folderpage": "^2.0",
+        "pdir/contao-theme-helper-bundle": "^1.0",
+        "contao-themes-net/theme-components-bundle": "^1.2",
+        "craffft/css-style-selector-bundle": "^1.6",
+        "netzmacht/contao-font-awesome-inserttag": "^2.0"
+    },
+    "conflict": {
+        "contao/core": "*",
+        "contao/manager-plugin": "<2.0 || >=3.0"
+    },
+    "require-dev": {
+        "contao/manager-plugin": "^2.0",
+        "doctrine/doctrine-cache-bundle": "^1.3",
+        "friendsofphp/php-cs-fixer": "^2.12",
+        "php-http/guzzle6-adapter": "^1.1",
+        "php-http/message-factory": "^1.0.2",
+        "phpunit/phpunit": "^5.7.26",
+        "symfony/phpunit-bridge": "^3.2"
+    },
+    "extra": {
+        "contao-manager-plugin": "ContaoThemesNet\\NatureThemeBundle\\ContaoManager\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "ContaoThemesNet\\NatureThemeBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ContaoThemesNet\\NatureThemeBundle\\Tests\\": "tests/"
+        }
+    }
+}

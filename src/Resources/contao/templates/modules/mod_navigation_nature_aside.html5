@@ -1,0 +1,14 @@
+
+<!-- indexer::stop -->
+<aside class="<?= $this->class ?> menu block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+<a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
+
+<div id="navbarMain" class="navbar-menu is-primary">
+<?= $this->items ?>
+</div>
+
+<a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
+
+</aside>
+<!-- indexer::continue -->
