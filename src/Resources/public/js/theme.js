@@ -13,23 +13,14 @@ jQuery(document).ready(function($) {
 	$('.ce_tabsNavElement li.first, .tab-content[data-content="' + firstTab + '"]').addClass('is-active');
 
     // Parallax
-    if( $("#header .parallax-slider").length > 0 ) {
-        if($(window).width() > 768) {
-            $(window).scroll(function () {
-                var scrollPos_Px = $(window).scrollTop();
-                $(".parallax-slider .text").css("transform","translate3d(0px,"+ (0 - (scrollPos_Px / 2) ) +"px,0px)");
-            });
-        }
-    }
-
-    if( $(".header-image").length > 0 ) {
+    if( $(".header-image").length > 0 || $(".parallax-slider").length > 0 ) {
         parallaxScroll();
         $(window).scroll(function(e){
             parallaxScroll();
         });
     }
 
-    function parallaxScroll(){
+    function parallaxScroll() {
         var scrolled = $(window).scrollTop();
 
         var opacity = scrolled / 350 - 1;
@@ -38,7 +29,9 @@ jQuery(document).ready(function($) {
         } else {
             opacity = 0;
         }
-        $(".header-image .title").css("opacity",opacity);
+
+        if($(".header-image").length > 0) $(".header-image .title").css("opacity",opacity);
+        if($(".parallax-slider").length > 0 && $(window).width() > 768) $(".parallax-slider .text").css("opacity",opacity);
     }
 
     // Sticky Teaserbox

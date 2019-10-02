@@ -123,16 +123,24 @@
     border-top-left-radius: 6px;
   }
 
-  .navbar-dropdown a {
-    font-weight: 300;
+  .navbar-dropdown {
+    min-width: 200px;
 
-    &.trail, &.active {
-      color: $navbar-dropdown-item-active-color;
-      background: $navbar-dropdown-item-active-background-color;
-    }
+    a {
+      font-weight: 300;
 
-    &:hover {
-      color: $navbar-dropdown-item-hover-color;
+      &.trail, &.active {
+        color: $navbar-dropdown-item-active-color;
+        background: $navbar-dropdown-item-active-background-color;
+      }
+
+      &:hover {
+        color: $navbar-dropdown-item-hover-color;
+      }
+
+      &.navbar-item span {
+        white-space: normal;
+      }
     }
   }
 

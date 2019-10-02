@@ -748,6 +748,12 @@ a {
     }
   }
 
+  &.parallax-slider .content-slider {
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
   }
@@ -836,6 +842,7 @@ a {
     z-index: 1;
     height: 100%;
     display: flex;
+    transition: all .05s;
 
     .container {
       display: flex;

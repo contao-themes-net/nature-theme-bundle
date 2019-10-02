@@ -129,7 +129,7 @@
     }
 
     &.full-height .content {
-      padding: 25px;
+      padding: 40px 25px;
     }
 
     .image_container {
@@ -227,6 +227,14 @@
     p {
       font-size: 1.2rem;
       line-height: 2rem;
+    }
+
+    &.parallax-slider .content-slider {
+      position: relative;
+    }
+
+    .text .container {
+      display: block;
     }
   }
 
