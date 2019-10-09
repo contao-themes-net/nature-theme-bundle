@@ -17,7 +17,7 @@ for documentation please visit https://docs.contao-themes.net/#/nature_theme/ind
 ## compatible
 compatible with Contao >=4.4
 
-## dependencies & licenses
+## dependencies
 
 - [Bulma CSS Framework](https://bulma.io/) | [Github](https://github.com/jgthms/bulma)
 - [Fontawesome](https://fontawesome.com/) | [Github](https://github.com/FortAwesome/Font-Awesome)
