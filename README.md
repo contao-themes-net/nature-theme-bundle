@@ -20,7 +20,7 @@ compatible with Contao >=4.4
 ## dependencies
 
 - [Bulma CSS Framework](https://bulma.io/) | [Github](https://github.com/jgthms/bulma)
-- [Fontawesome](https://fontawesome.com/) | [Github](https://github.com/FortAwesome/Font-Awesome)
+- [Fontawesome 5](https://fontawesome.com/) | [Github](https://github.com/FortAwesome/Font-Awesome)
 - [Contao Theme Helper Bundle](https://github.com/pdir/contao-theme-helper-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden")
 - [Theme Components Bundle](https://github.com/contao-themes-net/theme-components-bundle) by [pdir](https://pdir.de/ "Webdesign für Dresden")
 - [Contao Folderpage](https://github.com/terminal42/contao-folderpage)
