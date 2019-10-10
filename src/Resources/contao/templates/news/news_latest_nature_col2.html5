@@ -2,9 +2,7 @@
 
     <div class="inside">
         <?php if ($this->addImage): ?>
-            <?php if(version_compare(VERSION, '4.4','==')): ?><a href="<?= $this->link ?>" title="<?= $this->headline ?>"><?php endif; ?>
-                <?php $this->insert('image', $this->arrData); ?>
-            <?php if(version_compare(VERSION, '4.4','==')): ?></a><?php endif; ?>
+        <?php $this->insert('image', $this->arrData); ?>
         <?php endif; ?>
 
         <?php if($this->subheadline): ?>

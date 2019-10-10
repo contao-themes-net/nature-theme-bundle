@@ -1,5 +1,8 @@
 jQuery(document).ready(function($) {
-    // Tabs
+
+    /* =================== *
+     * Tabs         	   *
+     * =================== */
     $('.ce_tabsNavElement li').on('click', function() {
         var tab = $(this).data('tab');
 
@@ -12,7 +15,9 @@ jQuery(document).ready(function($) {
 	var firstTab = $('.ce_tabsNavElement li.first').attr('data-tab');
 	$('.ce_tabsNavElement li.first, .tab-content[data-content="' + firstTab + '"]').addClass('is-active');
 
-    // Parallax
+    /* =================== *
+     * Parallax Opacity    *
+     * =================== */
     if( $(".header-image").length > 0 || $(".parallax-slider").length > 0 ) {
         parallaxScroll();
         $(window).scroll(function(e){
@@ -34,7 +39,9 @@ jQuery(document).ready(function($) {
         if($(".parallax-slider").length > 0 && $(window).width() > 768) $(".parallax-slider .text").css("opacity",opacity);
     }
 
-    // Sticky Teaserbox
+    /* =================== *
+     * Sticky Teaserbox    *
+     * =================== */
     if( $(".sticky-teaserbox").length > 0 ) {
         $(".sticky-teaserbox").closest(".mod_article").removeClass("block");
         $(".sticky-teaserbox").closest(".container").addClass("sticky-container");
@@ -45,13 +52,17 @@ jQuery(document).ready(function($) {
         $(".sticky-column").append('<div class="sticky-column-background" style="'+style+'"></div>');
     });
 
-    // File Upload
+    /* =================== *
+     * File Upload   	   *
+     * =================== */
     $('input[type="file"]').on("change", function(){
         $(this).closest(".file").find(".file-name").addClass("active");
         $(this).closest(".file").find(".file-name").text( $(this).val().replace("C:\\fakepath\\","") );
     });
 
-    // Modal Dialog
+    /* =================== *
+     * Modal Dialog  	   *
+     * =================== */
     $(".modal-button").click( function() {
         var modalId = $(this).attr("data-target");
         $(modalId).toggleClass("is-active");
@@ -61,14 +72,18 @@ jQuery(document).ready(function($) {
         $(this).closest(".modal").toggleClass("is-active");
     });
 
-    // Mobile Menu
+    /* =================== *
+     * Mobile Menu   	   *
+     * =================== */
     $(".toggle-more, .toggle-less").click( function(e) {
         $(this).closest("a").next().toggleClass("active");
         $(this).closest("a").find(".toggle-more, .toggle-less").toggleClass("active");
         e.preventDefault();
     });
 
-    // Top Link
+    /* =================== *
+     * Top Link     	   *
+     * =================== */
     $(window).scroll(function () {
         scrollPos = $(document).scrollTop();
 
@@ -82,6 +97,23 @@ jQuery(document).ready(function($) {
         event.preventDefault();
 
         $("html, body").animate({ scrollTop: 0 }, 1000);
+    });
+
+    /* =================== *
+     * Smooth Scroll	   *
+     * =================== */
+    $('a[href*=\\#]').on('click', function(event){
+        var href = $(this).attr('href');
+        href = href.substr(0,href.indexOf('#'));
+        href = href.replace('./','');
+
+        var path = window.location.pathname;
+        path = path.replace('/','');
+
+        if ( $(this).attr('target') != '_blank' && path == href) {
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
+        }
     });
 });
 

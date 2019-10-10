@@ -14,7 +14,19 @@ $darkMode_input-focus-border-color: $grey-darker;
   }
 
   .color-scheme-dark-mode {
-    
+
+    .logo-light {
+      display: block;
+    }
+
+    .mod_navigation.navbar .ce_image:not(.logo-light) {
+      display: none;
+    }
+
+    &.home .navbar {
+      background: rgba($black-ter, 0.7);
+    }
+
     &, #container {
       color: $darkMode_text;
     }
@@ -299,6 +311,10 @@ $darkMode_input-focus-border-color: $grey-darker;
       }
     }
 
+    .menu .level_2 > li > a:not(.active) {
+      color: rgba($white-ter, .4);
+    }
+
     .control.has-icons-left .icon {
       color: rgba($darkMode_boxes-color,.4);
     }
@@ -375,7 +391,7 @@ $darkMode_input-focus-border-color: $grey-darker;
     }
 
     .navbar-menu {
-      background: $darkMode_boxes-background;
+      background: $black-ter;
     }
 
     .mod_navigation.navbar a.trail, .mod_navigation.navbar a.active, .navbar-item, .navbar-link,
@@ -384,7 +400,7 @@ $darkMode_input-focus-border-color: $grey-darker;
     }
 
     .navbar {
-      background: $darkMode_boxes-background;
+      background: $black-ter;
     }
 
   }

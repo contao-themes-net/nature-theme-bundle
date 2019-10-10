@@ -1,4 +1,4 @@
-<div class="<?= $this->class ?> block"<?= $this->cssID ?>>
+<div class="<?= $this->class ?> block hero"<?= $this->cssID ?>>
 
     <?php if($this->playerSRC != ""): ?>
         <figure class="video_container">

@@ -30,6 +30,8 @@ a {
   white-space: inherit;
   height: inherit;
   font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 1px;
 
   &.is-link, &.is-primary {
     &:hover {
@@ -39,11 +41,15 @@ a {
 }
 
 .ce_accordion {
+  &.block:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
   .accordion {
     background: $boxes-background;
     color: $boxes-color;
     padding: 30px;
-    margin-top: 25px;
+    margin-top: 10px;
 
     h1, h2, h3, h4, h5, h6 {
       color: $boxes-color;
@@ -75,10 +81,11 @@ a {
   .toggler {
     background: $primary;
     color: $white;
-    padding: 10px 15px;
-    font-size: 1.5rem;
+    padding: 5px 10px;
     font-weight: 300;
     cursor: pointer;
+    border-radius: 5px;
+    font-family: $family-heading;
 
     &:focus {
       outline: 0;
@@ -210,6 +217,10 @@ a {
   .icon {
     width: 60px;
     padding-bottom: 5px;
+
+    i {
+      color: $primary;
+    }
   }
 
   .inside {
@@ -220,6 +231,7 @@ a {
     color: $boxes-color;
     padding: 20px;
     height: 100%;
+    border-radius: 5px;
   }
 
   &:not(.nature) {
@@ -265,6 +277,7 @@ a {
     padding: 50px;
     text-align: center;
     height: 100%;
+    border-radius: 5px;
 
     h1, h2, h3, h4, h5, h6 {
       margin-top: 0;
@@ -293,7 +306,6 @@ a {
 
     .first-link a {
       @extend .button;
-      padding: 10px;
       color: $boxes-color;
       background: $boxes-background;
       border-color: $boxes-background;
@@ -375,6 +387,10 @@ a {
   }
 }
 
+#wrapper .ce_ct_priceBox .first-link a {
+  padding: 10px;
+}
+
 .ce_ct_teaserBox {
   &.block {
     margin-bottom: 0;
@@ -393,7 +409,7 @@ a {
   &:not(.full-height) {
     .content {
       margin-left: 50%;
-      z-index: 1;
+      z-index: 0;
       text-align: center;
       padding: 80px;
     }
@@ -485,7 +501,6 @@ a {
   .pageLink a {
     @extend .button;
     @extend .is-primary;
-    font-size: 1.2rem;
   }
 
   strong {
@@ -562,6 +577,7 @@ a {
 .ce_sliderStart:not(.full-width-height-slider) {
   background: $boxes-background;
   color: $boxes-color;
+  border-radius: 5px;
 
   .ce_text {
     &.block:not(:last-child) {
@@ -649,13 +665,9 @@ a {
 
 .content {
   h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 30px;
     color: $text;
-
-    &:first-child {
-      //margin-top: 0;
-    }
 
     strong {
       font-weight: 700;
@@ -724,7 +736,6 @@ a {
     &.readmore {
       @extend .button;
       @extend .is-primary;
-      font-size: 1.2rem;
     }
   }
 
@@ -752,6 +763,7 @@ a {
     position: fixed;
     min-height: 100vh;
     width: 100%;
+    top: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -791,7 +803,21 @@ a {
       top: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,.4);
+      background: rgba(0,0,0,.25);
+      content: "";
+    }
+  }
+
+  .light-image {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,255,255,.25);
       content: "";
     }
   }
@@ -800,6 +826,10 @@ a {
     font-size: 1.4rem;
     line-height: 2.2rem;
     font-weight: 400;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
   }
 
   p, strong, a {
@@ -857,6 +887,8 @@ a {
       transform: rotate(5deg);
       width: 350px;
       text-align: right;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     }
 
     img {

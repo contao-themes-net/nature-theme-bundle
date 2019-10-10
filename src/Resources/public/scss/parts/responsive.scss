@@ -10,6 +10,15 @@
     }
   }
 
+  .footer .footer-content .column:nth-of-type(1) {
+    border-right: none;
+
+    .container {
+      padding-bottom: 30px;
+      border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+  }
+
 }
 
 @media (max-width: 1023px) {
@@ -42,11 +51,17 @@
     padding: 0;
   }
 
-  .mod_navigation.navbar .navbar-brand {
-    padding-left: 10px;
-    align-items: center;
-    padding-right: 20px;
-    height: 100%;
+  .mod_navigation {
+    &.navbar .navbar-brand {
+      padding-left: 10px;
+      align-items: center;
+      padding-right: 20px;
+      height: 100%;
+    }
+
+    &.menu .navbar-menu {
+      background: none;
+    }
   }
 
   .navbar-menu {
@@ -274,6 +289,18 @@
     }
   }
 
+  .footer {
+    .footer-content {
+      padding: 20px 0 0;
+    }
+
+    .image_container {
+      display: block;
+      width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+
   .full-width-height-slider .text .image_container {
     padding: 50px 10px 30px;
   }
@@ -339,6 +366,10 @@
       border: none;
       background: none;
 
+      thead:after {
+        display: none;
+      }
+
       .days.active .events {
         display: block;
         position: relative;
@@ -349,7 +380,7 @@
         padding: 0;
 
         a {
-          color: #333;
+          color: $boxes-color;
           text-align: center;
         }
       }
@@ -361,7 +392,7 @@
       th, td.active {
         display: block;
         margin: 5px 0;
-        background: #f2f2f2;
+        background: $boxes-background;
       }
 
       thead tr:nth-of-type(2), td:not(.active) {
@@ -445,9 +476,20 @@
 
   .mod_calendar table.minicalendar {
     width: 100%;
+    border: 5px solid $boxes-background;
 
     th, td, td.active a {
       padding: 5px;
+      font-size: 1rem;
+    }
+
+    td.active {
+      padding: 0 5px;
+
+      a {
+        width: inherit;
+        height: inherit;
+      }
     }
   }
 

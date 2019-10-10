@@ -1,5 +1,5 @@
 
-<div class="layout_short column is-12-mobile is-6-tablet is-4-desktop arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+<a href="<?= $this->link ?>" title="<?= $this->headline ?>" class="layout_short column is-12-mobile is-6-tablet is-4-desktop arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
 
     <div class="inside">
         <?php if($this->subheadline): ?>
@@ -7,7 +7,7 @@
         <?php endif; ?>
 
         <div class="text">
-            <h2 itemprop="name"><?= $this->linkHeadline ?></h2>
+            <h2 itemprop="name"><?= $this->headline ?></h2>
 
             <div class="ce_text block" itemprop="description">
                 <?= $this->teaser ?>
@@ -19,4 +19,4 @@
         </div>
     </div>
 
-</div>
+</a>

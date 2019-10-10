@@ -11,17 +11,17 @@
 //$family-heading: 'Roboto Slab', sans-serif;
 
 //$font-size: 1.2rem;
-//$font-weight: 200;
-//$strong-weight: 400;
+//$font-weight: 300;
+//$strong-weight: 500;
 
 /* ====================== */
 /*      Breadcrumb        */
 /* ====================== */
 
 //$breadcrumb-background-color: $boxes-background;
-//$breadcrumb-item-color: $boxes-color;
+//$breadcrumb-item-color: $link;
 //$breadcrumb-item-hover-color: $link-hover;
-//$breadcrumb-item-active-color: $link-hover;
+//$breadcrumb-item-active-color: $boxes-color;
 //$breadcrumb-item-separator-color: $boxes-color;
 
 /* More variables: https://bulma.io/documentation/components/breadcrumb/#variables */
@@ -50,7 +50,7 @@
 //$footer-padding: 40px 0;
 
 //$footer-copyright-background-color: $black-bis;
-//$footer-copyright-color: $footer-color;
+//$footer-copyright-color: #4a4a4a;
 //$footer-copyright-padding: $footer-padding;
 
 /* More variables: https://bulma.io/documentation/layout/footer/#variables */
@@ -64,13 +64,14 @@
 //$input-background-color: $boxes-background;
 //$input-border-color: $grey-lighter;
 //$input-shadow: none;
+//$input-hover-color: $primary;
 //$input-hover-border-color: $grey-lighter;
 //$input-focus-border-color: $grey-lighter;
 //$input-focus-box-shadow-size: 0;
 //$input-arrow: $link;
 //$input-icon-color: rgba($boxes-color,.4);
 //$input-icon-active-color: $boxes-color;
-//$input-radius: 0;
+//$input-radius: 4px;
 
 /* More variables: https://bulma.io/documentation/form/input/#variables */
 
@@ -87,8 +88,9 @@
 //$navbar-item-hover-background-color: none;
 //$navbar-item-active-color: $navbar-item-color;
 //$navbar-item-active-background-color: none;
+//$navbar-item-img-max-height: none;
 
-//$navbar-dropdown-background-color: #fff;
+//$navbar-dropdown-background-color: linear-gradient(to top, rgb(255, 255, 255) 90%,rgba(255,255,255,0) 100%);
 //$navbar-dropdown-arrow: $primary;
 //$navbar-dropdown-border-top: none;
 //$navbar-dropdown-boxed-shadow: none;
@@ -97,8 +99,6 @@
 //$navbar-dropdown-item-hover-background-color: none;
 //$navbar-dropdown-item-active-color: $link-hover;
 //$navbar-dropdown-item-active-background-color: none;
-
-//$navbar-burger-color: $primary;
 
 /* More variables: https://bulma.io/documentation/components/navbar/#variables */
 
@@ -138,7 +138,7 @@
 /* ====================== */
 
 //$menu-item-color: $text;
-//$menu-item-radius: 2px;
+//$menu-item-radius: 5px;
 //$menu-item-hover-color: $text;
 //$menu-item-hover-background-color: $boxes-background;
 //$menu-item-active-color: #fff;

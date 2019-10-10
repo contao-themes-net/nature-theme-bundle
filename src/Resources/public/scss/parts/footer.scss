@@ -2,6 +2,7 @@
   padding: 0;
   overflow: hidden;
   position: relative;
+  font-size: 1rem;
 
   a {
     font-weight: 700;
@@ -37,6 +38,10 @@
     color: $footer-color;
     padding: $footer-padding;
 
+    .column:nth-of-type(1) {
+      border-right: 1px solid rgba(255,255,255,.3);
+    }
+
     p a {
       padding-right: 20px;
     }
@@ -71,10 +76,18 @@
     }
   }
 
+  .is-vertical-center {
+    width: inherit;
+  }
+
   .mod_customnav {
     li {
       display: inline-block;
-      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    ul {
+      margin-left: 0;
     }
   }
 
@@ -102,7 +115,6 @@
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    z-index: 10;
 
     &:after {
       content: "\f077";

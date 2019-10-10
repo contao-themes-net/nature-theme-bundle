@@ -209,6 +209,10 @@ body:not(.home) #header .inside {
 }
 
 .layout_short {
+  h1, h2, h3, h4, h5, h6 {
+    color: $link;
+  }
+
   .info {
     color: $boxes-color;
   }
@@ -223,6 +227,16 @@ body:not(.home) #header .inside {
   .subheadline {
     background: #e8e8e8;
     color: #525252;
+  }
+
+  &:hover {
+    .inside {
+      background: rgba($boxes-background, .6);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $link-hover;
+    }
   }
 }
 
@@ -287,6 +301,7 @@ body:not(.home) #header .inside {
     margin: 0;
     font-style: italic;
     font-size: 16px;
+    font-weight: 500;
     position: relative;
     padding-top: 25px;
     margin-top: 10px;
@@ -396,6 +411,10 @@ body:not(.home) #header .inside {
   }
 }
 
+.mod_navigation + .mod_breadcrumb {
+  position: relative;
+}
+
 .mod_calendar {
   &.block {
     overflow: visible;
@@ -444,28 +463,36 @@ body:not(.home) #header .inside {
   table {
     background: $boxes-background;
     border: 20px solid $boxes-background;
+    position: relative;
 
     &.calendar {
-      td.active {
-        font-weight: 700;
+      .header {
+        font-weight: 500;
       }
     }
 
     &.minicalendar {
       width: inherit;
+    }
 
-      td.active {
-        padding: 0;
+    td.active {
+      vertical-align: middle;
+      padding: 0;
 
-        a {
-          padding: 0.5em 0.75em;
-          display: block;
-          background: $primary;
-          color: #fff;
+      > a {
+        padding: 0.5em 0.75em;
+        background: $primary;
+        color: $white;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
 
-          &:hover {
-            background: $link-hover;
-          }
+        &:hover {
+          background: $link-hover;
         }
       }
     }
@@ -480,11 +507,12 @@ body:not(.home) #header .inside {
 
     th.label {
       color: #c3c3c3;
-      font-weight: 300;
+      font-weight: 500;
     }
 
     th.head {
       color: $text;
+      font-family: $family-heading;
     }
 
     td {
@@ -493,6 +521,17 @@ body:not(.home) #header .inside {
       &.active {
         color: $primary;
       }
+    }
+
+    thead {
+      border-bottom: 3px solid $white;
+    }
+
+    tbody:before {
+      content:"@";
+      display:block;
+      line-height:10px;
+      text-indent:-99999px;
     }
   }
 }
@@ -685,8 +724,6 @@ body:not(.home) #header .inside {
     background: $white;
     color: $primary;
     margin-left: 15px;
-    font-weight: 500;
-    text-transform: uppercase;
     margin-top: 1px;
 
     &:hover {
@@ -700,6 +737,14 @@ body:not(.home) #header .inside {
 }
 
 .modal {
+  .delete {
+    background: $link;
+
+    &:hover {
+      background: $link-hover;
+    }
+  }
+
   h1, h2, h3, h4, h5, h6 {
     margin: 0;
 
@@ -710,6 +755,10 @@ body:not(.home) #header .inside {
 
   .modal-card-head {
     justify-content: space-between;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $primary;
+    }
   }
 
   .modal-card-body:last-child {

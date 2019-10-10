@@ -2,8 +2,8 @@ $family-primary: 'Roboto', sans-serif !default;
 $family-heading: 'Roboto Slab', sans-serif !default;
 
 $font-size: 1.2rem !default;
-$font-weight: 200 !default;
-$strong-weight: 400 !default;
+$font-weight: 300 !default;
+$strong-weight: 500 !default;
 
 /* Navigation */
 $navbar-background-color: #eaeaea !default;
@@ -16,7 +16,7 @@ $navbar-item-active-color: $navbar-item-color !default;
 $navbar-item-active-background-color: none !default;
 $navbar-item-img-max-height: none !default;
 
-$navbar-dropdown-background-color: #fff !default;
+$navbar-dropdown-background-color: linear-gradient(to top, rgb(255, 255, 255) 90%,rgba(255,255,255,0) 100%) !default;
 $navbar-dropdown-arrow: $primary !default;
 $navbar-dropdown-border-top: none !default;
 $navbar-dropdown-boxed-shadow: none !default;
@@ -30,7 +30,7 @@ $navbar-burger-color: $primary !default;
 
 /* Menu */
 $menu-item-color: $text !default;
-$menu-item-radius: 2px !default;
+$menu-item-radius: 5px !default;
 $menu-item-hover-color: $text !default;
 $menu-item-hover-background-color: $boxes-background !default;
 $menu-item-active-color: #fff !default;
@@ -43,7 +43,7 @@ $footer-color: $white-ter !default;
 $footer-padding: 40px 0 !default;
 
 $footer-copyright-background-color: $black-bis !default;
-$footer-copyright-color: $footer-color !default;
+$footer-copyright-color: #4a4a4a !default;
 $footer-copyright-padding: $footer-padding !default;
 
 /* Tabs */
@@ -63,6 +63,7 @@ $input-color: $boxes-color !default;
 $input-background-color: $boxes-background !default;
 $input-border-color: $grey-lighter !default;
 $input-shadow: none !default;
+$input-hover-color: $primary !default;
 $input-hover-border-color: $grey-lighter !default;
 $input-focus-border-color: $grey-lighter !default;
 $input-focus-box-shadow-size: 0 !default;

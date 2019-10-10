@@ -1,16 +1,15 @@
 /****
- **** nature theme files / nature_colors
+ **** nature theme files / custom_colors
  ****
+ */
+
+/*
+ * uncomment lines to override theme colors
  */
 
 /* ============================= */
 /*        Colour Schemes         */
 /* ============================= */
-
-/*
- * uncomment lines to override theme color scheme,
-   you can combine dark colors with green, red or blue colors
- */
 
 //@import 'color_schemes/nature_red_colors';
 //@import 'color_schemes/nature_blue_colors';
@@ -26,17 +25,13 @@
 /*     Nature Theme Colors       */
 /* ============================= */
 
-/*
- * uncomment lines to override theme colors
- */
+//$primary: orange;
 
-//$primary: #5ca152;
-
-//$text: $black;
+//$text: $grey-dark;
 //$link: $primary;
 //$link-hover: #7ebb3e;
 
-//$background: $white;
+//$background: yellow;
 //$boxes-background: $white-ter;
 //$boxes-color: $grey-dark;
 
