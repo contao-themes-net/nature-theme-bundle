@@ -5,25 +5,30 @@
             <div class="right">
                 <div class="inner">
                     <a href="#" target="_blank"><img
-                            src="bundles/contaothemesnetnaturetheme/img/nature_theme_logo_platzhalter.png"
+                            src="bundles/contaothemesnetnaturetheme/img/NATURE_Logo_black.svg"
                             alt="Nature Theme für Contao" class="logo" style="width: 100px;"></a>
                     <p>Das Nature Theme für Contao ist ein Produkt der <a href="http://www.pdir.de/" target="_blank">pdir
                             / digital agentur</a></p>
                     <h2>Interessante Links</h2>
                     <ul class="link-list">
-                        <li><a href="https://docs.contao-themes.net" target="_blank"
+                        <li><a href="https://docs.contao-themes.net/#/nature_theme/index" target="_blank"
                                style="text-decoration: underline;">Dokumentation</a></li>
                         <li><a href="https://nature.contao-themes.net/" target="_blank"
                                style="text-decoration: underline;">Demo</a></li>
+                        <li><a href="https://contao-themes.net/theme-detail/nature.html" target="_blank"
+                               style="text-decoration: underline;">Lizenz erwerben</a></li>
                         <li><a href="https://github.com/contao-themes-net/nature-theme-bundle/issues" target="_blank"
                                style="text-decoration: underline;">Probleme melden</a></li>
+                        <li><a href="https://contao-themes.net/" target="_blank"
+                               style="text-decoration: underline;">Contao Themes</a></li>
                     </ul>
                 </div>
             </div>
             <div class="left">
                 <div class="inner">
                     <h2>Willkommen bei Nature Theme für Contao</h2>
-                    <p style="line-height:22px;"><b>pdir contao theme licence</b><br>Mit dieser <b>Lizenz</b> gekennzeichnete Themes dürfen sowohl privat als auch kommerziell eingesetzt werden. Der Copyright-Link bzw. die Copyright-Links "<i>powered by contao-themes.net</i>" dürfen nicht entfernt oder verändert werden. Das gilt auch wenn Sie das Theme nur als Basis für eine Website einsetzen und es verändern. Möchten Sie diesen Theme ohne Copyright-Link einsetzen, müssen Sie eine kostenpflichtige Lizenz erwerben.</p>
+                    <p style="line-height:22px;"><b>pdir contao theme licence</b><br>Mit dieser <b>Lizenz</b> gekennzeichnete Themes dürfen sowohl privat als auch kommerziell eingesetzt werden. Der Copyright-Link bzw. die Copyright-Links "<i>powered by contao-themes.net</i>" dürfen nicht entfernt oder verändert werden. Das gilt auch wenn Sie das Theme nur als Basis für eine Website einsetzen und es verändern. Möchten Sie diesen Theme ohne Copyright-Link einsetzen, müssen Sie eine kostenpflichtige <a href="https://contao-themes.net/theme-detail/nature.html" target="_blank"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         style="text-decoration: underline;">Lizenz erwerben</a>.</p>
                 </div>
             </div>
             <div class="clr"></div>
@@ -32,7 +37,7 @@
         <div class="tools">
             <h2>Tools</h2>
             <div class="left">
-                <p style="border: 1px solid #42b983;padding: 15px;background: rgba(66, 185, 131, .3);color: #000;font-size: 14px;line-height: 18px;">Die folgenden Schritte sind <strong>nur bei der ersten Installation</strong> notwendig und nicht bei einem Update des ODD Themes. Wenn Sie das Theme aktualisieren wollen, können Sie das ganz einfach über den Contao Manager durchführen. Anschließend rufen Sie das Install-Tool auf und aktualisieren die Datenbank. <br><br>Ein <strong>Backup der Datenbank</strong> kann nie schaden!</p>
+                <p style="border: 1px solid #42b983;padding: 15px;background: rgba(66, 185, 131, .3);color: #000;font-size: 14px;line-height: 18px;">Die folgenden Schritte sind <strong>nur bei der ersten Installation</strong> notwendig und nicht bei einem Update des Themes. Wenn Sie das Theme aktualisieren wollen, können Sie das ganz einfach über den Contao Manager durchführen. Anschließend rufen Sie das Install-Tool auf und aktualisieren die Datenbank. <br><br>Ein <strong>Backup der Datenbank</strong> kann nie schaden!</p>
                 <p>Bevor Sie die Datenbank importieren, müssen Sie die Theme-Dateien synchronisieren.</p>
                 <div class="button sync-folder">
                     <a href="/contao/main.php?do=natureThemeSetup&act=syncFolder">Theme-Dateien synchronisieren</a>
