@@ -21,8 +21,8 @@
         "docs": "https://docs.contao-themes.net/",
         "forum": "https://community.contao.org",
         "email" : "support@pdir.de",
-        "issues" : "",
-        "source" : ""
+        "issues" : "https://github.com/contao-themes-net/nature-theme-bundle/issues",
+        "source" : "https://github.com/contao-themes-net/nature-theme-bundle"
     },
     "require": {
         "php": "^5.6 || ^7.0",
