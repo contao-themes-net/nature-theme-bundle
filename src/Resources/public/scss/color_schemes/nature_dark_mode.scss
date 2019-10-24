@@ -288,6 +288,10 @@ $darkMode_input-focus-border-color: $grey-darker;
       }
     }
 
+    .mod_navigation.navbar .navbar-brand {
+      background: rgba(36,36,36,1);
+    }
+
     .field {
       > label {
         color: $darkMode_text;
