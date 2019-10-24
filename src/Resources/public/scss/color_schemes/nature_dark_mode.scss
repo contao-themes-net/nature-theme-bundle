@@ -27,6 +27,10 @@ $darkMode_input-focus-border-color: $grey-darker;
       background: rgba($black-ter, 0.7);
     }
 
+    .navbar-dropdown {
+      background: $black-ter;
+    }
+
     &, #container {
       color: $darkMode_text;
     }
