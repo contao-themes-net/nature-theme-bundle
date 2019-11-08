@@ -185,8 +185,6 @@
 @import "../../../../../../../files/naturetheme/scss/_custom_variables";
 @import "_nature_variables";
 
-@import '../../../../../../../files/naturetheme/scss/custom';
-
 @import 'bulma/bulma';
 
 @import 'parts/layout';
@@ -197,6 +195,8 @@
 @import "parts/modules";
 
 @import "parts/responsive";
+
+@import '../../../../../../../files/naturetheme/scss/custom';
 
 /* Browser Fixes */
 
