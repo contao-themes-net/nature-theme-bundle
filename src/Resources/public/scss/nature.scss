@@ -196,8 +196,6 @@
 
 @import "parts/responsive";
 
-@import '../../../../../../../files/naturetheme/scss/custom';
-
 /* Browser Fixes */
 
 .ie, .edge {
@@ -266,3 +264,5 @@
     display: none;
   }
 }
+
+@import '../../../../../../../files/naturetheme/scss/custom';
