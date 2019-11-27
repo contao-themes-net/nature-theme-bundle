@@ -36,6 +36,12 @@ body + div {
   }
 }
 
+#main {
+  .mod_article {
+    overflow: visible;
+  }
+}
+
 .page-not-found, .unauthorized, .access-denied {
   #main h1 {
     font-size: 12rem;

@@ -4,7 +4,7 @@ namespace ContaoThemesNet\NatureThemeBundle\Module;
 
 class NatureThemeSetup extends \BackendModule
 {
-    const VERSION = '1.0.7';
+    const VERSION = '1.1.0';
 
     protected $strTemplate = 'be_naturetheme_setup';
 
@@ -39,7 +39,7 @@ class NatureThemeSetup extends \BackendModule
                 $pos = strpos($path,"contaothemesnetnaturetheme");
                 $filesFolder = "files/naturetheme".str_replace("contaothemesnetnaturetheme","",substr($path,$pos))."/".$dir;
 
-                if($dir != "_nature_variables.scss" && $dir != "_nature_colors.scss" && $dir != "backend.css" && $dir != "nature.scss") {
+                if($dir != "_nature_variables.scss" && $dir != "_nature_colors.scss" && $dir != "backend.css" && $dir != "nature.scss" && $dir != "maklermodul.scss") {
                     if(!file_exists(TL_ROOT."/".$filesFolder)) {
                         $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
