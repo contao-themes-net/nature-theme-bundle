@@ -359,7 +359,8 @@ $darkMode_input-focus-border-color: $grey-darker;
     }
 
     .pagination-previous, .pagination-next, .pagination-link,
-    .content table thead th, .content table tbody th {
+    .content table thead th, .content table tbody th,
+    .mod_immoListView .pagination .pagination-link {
       color: $darkMode_text;
     }
 
@@ -411,6 +412,58 @@ $darkMode_input-focus-border-color: $grey-darker;
       background: $black-ter;
     }
 
+    #estate_filter_list {
+      &.select-filter, &.button-filter {
+        &, > div {
+          background: $darkMode_boxes-background;
+        }
+      }
+
+      &.select-filter select {
+        background-color: $darkMode_background;
+        color: $darkMode_text;
+        border: 1px solid $darkMode_text;
+      }
+    }
+
+    .mod_immoListView .estate .inner {
+      background: $darkMode_boxes-background;
+    }
+
+    .mod_immoListView .estate .fields .label, .mod_immoListView .estate .fields .field>label, .mod_immoListView .estate .fields .widget>label {
+      color: $darkMode_boxes-color;
+    }
+
+    .top-obj-details {
+      background: $darkMode_boxes-background;
+
+      .field .label {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .estate-detail.extended .right .obj-details .inside, .estate-detail .description .inside {
+      background: $darkMode_boxes-background;
+
+      .field {
+        .label, div:last-child {
+          color: $darkMode_boxes-color;
+        }
+      }
+    }
+
+    .estate-detail .description .inside {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+    }
+
+    .estate-detail .legende_eclass {
+      background: $darkMode_boxes-background;
+
+      span {
+        color: $darkMode_boxes-color;
+      }
+    }
   }
 
 }
