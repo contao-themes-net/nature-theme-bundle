@@ -464,6 +464,11 @@ $darkMode_input-focus-border-color: $grey-darker;
         color: $darkMode_boxes-color;
       }
     }
+
+    .ce_textModalElement~.modal .modal-content {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+    }
   }
 
 }

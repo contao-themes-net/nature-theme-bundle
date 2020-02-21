@@ -659,6 +659,80 @@ a {
   }
 }
 
+.ce_textModalElement {
+  &.block:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+
+  .inside {
+    h2, h3, h4, h5, h6 {
+      margin: 0;
+      font-size: 16px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0,0,0,.5);
+      padding: 10px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+
+  .modal-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover ~ .teaser {
+      display: flex;
+    }
+  }
+
+  ~ .modal {
+    padding: 0 15px;
+
+    .modal-content {
+      background: $boxes-background;
+      color: $text;
+      padding: 30px;
+      max-width: 900px;
+      width: 100%;
+    }
+  }
+
+  .teaser {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 30px 40px;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+
+    p {
+      color: #fff;
+      font-size: 16px;
+    }
+  }
+}
+
 .columns {
   flex-wrap: wrap;
 }

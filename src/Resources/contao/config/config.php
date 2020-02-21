@@ -4,6 +4,7 @@ use ContaoThemesNet\NatureThemeBundle\Element\SliderElementNature;
 use ContaoThemesNet\NatureThemeBundle\Element\TabsNavElement;
 use ContaoThemesNet\NatureThemeBundle\Element\TabsStartElement;
 use ContaoThemesNet\NatureThemeBundle\Element\TabsStopElement;
+use ContaoThemesNet\NatureThemeBundle\Element\TextModalElement;
 
 // Insert the nature theme category
 array_insert($GLOBALS['TL_CTE'], 1, array('natureTheme' => array()));
@@ -16,6 +17,7 @@ $GLOBALS['TL_CTE']['contaoThemesNet']['ct_sliderElement'] = SliderElementNature:
 $GLOBALS['TL_CTE']['natureTheme']['tabsNavElement'] = TabsNavElement::class;
 $GLOBALS['TL_CTE']['natureTheme']['tabsStartElement'] = TabsStartElement::class;
 $GLOBALS['TL_CTE']['natureTheme']['tabsStopElement'] = TabsStopElement::class;
+$GLOBALS['TL_CTE']['natureTheme']['textModalElement'] = TextModalElement::class;
 
 /**
  * Available tags for Nature Theme
