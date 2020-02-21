@@ -44,7 +44,7 @@
         "php-http/guzzle6-adapter": "^1.1",
         "php-http/message-factory": "^1.0.2",
         "phpunit/phpunit": "^5.7.26",
-        "symfony/phpunit-bridge": "^3.2"
+        "symfony/phpunit-bridge": "^4.1"
     },
     "extra": {
         "contao-manager-plugin": "ContaoThemesNet\\NatureThemeBundle\\ContaoManager\\Plugin"
