@@ -1,0 +1,79 @@
+@import 'bulma/bulma';
+
+@import 'parts/layout';
+
+@import "parts/elements";
+@import "parts/footer";
+@import "parts/header";
+@import "parts/modules";
+
+@import "parts/responsive";
+
+/* Browser Fixes */
+
+.ie, .edge {
+  .full-width-height-slider .video_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    min-height: 100%;
+    min-width: 100%;
+    -webkit-transform-style: preserve-3d;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      min-height: 100%;
+      min-width: 100%;
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  @include desktop {
+    .navbar-item {
+      &.is-hoverable:hover {
+        .navbar-dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.ie {
+  .article-full-height:after {
+    content:'';
+    min-height:inherit;
+    font-size:0;
+  }
+
+  .ce_ct_teaserBox.sticky-teaserbox .image_container {
+    display: block;
+    top: 0;
+  }
+
+  .full-width-height-slider .text .container {
+    justify-content: flex-start;
+  }
+
+  .header-image .hero-body {
+    justify-content: center;
+
+    .container {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .mod_subscribe.newsletter-primary .widget-submit {
+    margin-top: -6px;
+  }
+
+  .sticky-column {
+    display: none;
+  }
+}
