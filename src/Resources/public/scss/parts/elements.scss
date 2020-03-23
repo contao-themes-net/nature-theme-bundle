@@ -961,13 +961,13 @@ a {
       transform: rotate(5deg);
       width: 350px;
       text-align: right;
-      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     }
 
     img {
       vertical-align: bottom;
       border: 10px solid #fff;
+      box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
     }
 
     .inside {
