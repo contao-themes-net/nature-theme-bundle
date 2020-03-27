@@ -1,6 +1,6 @@
 
 <!-- indexer::stop -->
-<nav class="<?= $this->class ?> navbar block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement" role="navigation" aria-label="main navigation">
+<nav class="<?= $this->class ?> navbar block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="main navigation">
 
 <div class="navbar-brand">
     <a class="navbar-item" href="{{env::path}}">

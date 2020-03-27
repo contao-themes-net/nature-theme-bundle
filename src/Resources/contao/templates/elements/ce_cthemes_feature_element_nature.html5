@@ -1,19 +1,20 @@
 <div class="<?= $this->class ?> block nature"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-<div class="inside">
-<?php if($this->featureIcon != ""): ?>
-<div class="icon">
-    <?php if($this->iconLink != ""): ?><a href="{{link_url::<?= $this->iconLink ?>}}"<?= $this->target ?><?= $this->rel ?>><?php endif; ?>
-    <i class="<?= $this->featureIcon ?>"></i>
-    <?php if($this->iconLink != ""): ?></a><?php endif; ?>
-</div>
-<?php endif; ?>
+    <div class="inside">
+        <?php if($this->featureIcon != ""): ?>
+            <div class="icon">
+                <?php if($this->iconLink != ""): ?><a href="{{link_url::<?= $this->iconLink ?>}}"<?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+                    <i class="<?= $this->featureIcon ?>"></i>
+                <?php if($this->iconLink != ""): ?></a><?php endif; ?>
+            </div>
+        <?php endif; ?>
 
-<div class="feature-text">
-    <div class="headline">
-        <?php if($this->iconLink != ""): ?><a href="{{link_url::<?= $this->iconLink ?>}}"<?= $this->target ?><?= $this->rel ?>><?php endif; ?>
-        <?= $this->headline ?></div>
-    <?php if($this->iconLink != ""): ?></a><?php endif; ?>
-    <div class="text"><?= $this->text ?></div>
-</div>
-</div>
+        <div class="feature-text">
+            <div class="headline">
+                <?php if($this->iconLink != ""): ?><a href="{{link_url::<?= $this->iconLink ?>}}"<?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+                <?= $this->headline ?>
+                <?php if($this->iconLink != ""): ?></a><?php endif; ?>
+            </div>
+            <div class="text"><?= $this->text ?></div>
+        </div>
+    </div>
 </div>

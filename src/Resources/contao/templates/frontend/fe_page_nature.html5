@@ -44,7 +44,7 @@
 
     <?= $this->head ?>
 
-    <script charset="utf-8" src="<?php
+    <script src="<?php
     // add javascripts
     $combiner = new Combiner();
     $combiner->add('bundles/contaothemesnetnaturetheme/js/theme.js');
