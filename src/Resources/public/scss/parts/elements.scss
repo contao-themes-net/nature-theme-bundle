@@ -1255,6 +1255,16 @@ strong {
   }
 }
 
+.tab-content {
+  .block:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  &.block:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
 .video-detach-button {
   display: none;
 }

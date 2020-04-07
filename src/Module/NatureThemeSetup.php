@@ -4,7 +4,7 @@ namespace ContaoThemesNet\NatureThemeBundle\Module;
 
 class NatureThemeSetup extends \BackendModule
 {
-    const VERSION = '1.2.4';
+    const VERSION = '1.2.5';
 
     protected $strTemplate = 'be_naturetheme_setup';
 
