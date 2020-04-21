@@ -352,8 +352,14 @@
   }
 
   #main {
-    .ce_ct_teaserBox .inside {
-      min-height: 100%;
+    .ce_ct_teaserBox {
+      &.full-height .inside {
+        min-height: inherit;
+      }
+
+      .inside {
+        min-height: 100%;
+      }
     }
 
     .navbar-menu {
