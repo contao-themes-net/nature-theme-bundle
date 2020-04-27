@@ -139,18 +139,27 @@
     margin: 0;
   }
 
-  .has-dropdown .has-dropdown:hover .level_3 {
-    display: block !important;
-    position: absolute;
-    top: -0.5rem;
-    left: -100%;
-    width: 100%;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 6px;
+  .has-dropdown .has-dropdown {
+    &:hover .level_3 {
+      display: block !important;
+    }
+
+    .level_3 {
+      position: absolute;
+      top: -0.5rem;
+      left: -100%;
+      width: 100%;
+      border-bottom-right-radius: 0;
+      border-top-left-radius: 6px;
+    }
   }
 
   .navbar-dropdown {
     min-width: 200px;
+
+    &.open {
+      display: block !important;
+    }
 
     a {
       font-weight: 300;

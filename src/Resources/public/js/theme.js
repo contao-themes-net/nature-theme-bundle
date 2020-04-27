@@ -115,6 +115,22 @@ jQuery(document).ready(function($) {
             $('html,body').animate({scrollTop:$(this.hash).offset().top}, 1000);
         }
     });
+
+    /* =================== *
+     * Touch Navigation	   *
+     * =================== */
+    $("#navbarMain:not(.is-active)").on("touchstart","a.submenu:not(.open)", function(e) {
+        if( $(this).parent().parent().hasClass("level_1") ) {
+            $("#navbarMain:not(.is-active) .navbar-dropdown").removeClass("open");
+        }
+        if( $(this).parent().parent().hasClass("level_2") ) {
+            $("#navbarMain:not(.is-active) .level_2 .navbar-dropdown").removeClass("open");
+        }
+        $("#navbarMain a.open").removeClass("open");
+        $(this).addClass("open");
+        $(this).next().addClass("open");
+        e.preventDefault();
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function(e) {
