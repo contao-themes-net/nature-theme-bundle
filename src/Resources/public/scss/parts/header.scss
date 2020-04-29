@@ -373,7 +373,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: $navbar-breakpoint) {
   .navbar-dropdown {
     background: $navbar-dropdown-background-color;
   }

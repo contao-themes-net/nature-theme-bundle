@@ -119,7 +119,7 @@ jQuery(document).ready(function($) {
     /* =================== *
      * Touch Navigation	   *
      * =================== */
-    $("#navbarMain:not(.is-active)").on("touchstart","a.submenu:not(.open)", function(e) {
+    $(".navbar").on("touchstart",".navbar-menu:not(.is-active) a.submenu:not(.open)", function(e) {
         if( $(this).parent().parent().hasClass("level_1") ) {
             $("#navbarMain:not(.is-active) .navbar-dropdown").removeClass("open");
         }

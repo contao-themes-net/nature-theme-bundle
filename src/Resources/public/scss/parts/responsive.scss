@@ -21,6 +21,27 @@
 
 }
 
+@media (max-width: $navbar-breakpoint - 1) {
+  .mod_navigation {
+    &.navbar .navbar-brand {
+      padding-left: 10px;
+      align-items: center;
+      padding-right: 20px;
+      height: 100%;
+    }
+
+    &.menu .navbar-menu {
+      background: none;
+    }
+  }
+
+  .navbar-menu {
+    padding-top: 120px;
+    margin-top: -105px;
+    padding-bottom: 20px;
+  }
+}
+
 @media (max-width: 1023px) {
 
   .ce_ct_teaserBox .content {
@@ -49,25 +70,6 @@
 
   .mod_breadcrumb .breadcrumb {
     padding: 0;
-  }
-
-  .mod_navigation {
-    &.navbar .navbar-brand {
-      padding-left: 10px;
-      align-items: center;
-      padding-right: 20px;
-      height: 100%;
-    }
-
-    &.menu .navbar-menu {
-      background: none;
-    }
-  }
-
-  .navbar-menu {
-    padding-top: 120px;
-    margin-top: -105px;
-    padding-bottom: 20px;
   }
 
   #wrapper {
