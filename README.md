@@ -27,3 +27,9 @@ compatible with Contao >=4.4
 - [CSS Style Selector Bundle](https://github.com/Craffft/css-style-selector-bundle)
 - [Font Awesome InsertTag](https://github.com/netzmacht/contao-font-awesome-inserttag)
 
+
+## Contao Themes
+
+| [![MATE Theme](https://contao-themes.net/assets/images/5/mate_theme_green_1-77f20ba3.png)](https://contao-themes.net/theme-detail/mate.html) | [![0.1 Theme](https://contao-themes.net/assets/images/3/0.1_Energy_saving_Contao_Theme_00-1e927a73.jpg)](https://contao-themes.net/theme-detail/zeroone.html) | [![ODD Theme](https://contao-themes.net/assets/images/c/ODD_Exploring_Contao_Theme_05-9e3a18d8.png)](https://contao-themes.net/theme-detail/odd.html) |
+|:---:|:---:|:---:|
+| **MATE Theme**  | **0.1 Theme**  | **ODD Theme**  |
