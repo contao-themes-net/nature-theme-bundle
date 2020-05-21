@@ -4,7 +4,7 @@
 
 <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
 
-<div id="navbarMain" class="navbar-menu is-primary">
+<div id="navbarAside" class="navbar-menu is-primary">
 <?= $this->items ?>
 </div>
 
