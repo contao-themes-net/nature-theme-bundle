@@ -2,7 +2,7 @@
     "name": "contao-themes-net/nature-theme-bundle",
     "type": "contao-bundle",
     "description": "Nature Theme Bundle for Contao 4",
-    "license": "LGPL-3.0-or-later",
+    "license": "proprietary",
     "authors": [
         {
             "name": "Webdesign für Contao",
