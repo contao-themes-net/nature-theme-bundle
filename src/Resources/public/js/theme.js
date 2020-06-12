@@ -1,5 +1,9 @@
 jQuery(document).ready(function($) {
 
+    if($(".home #header .full-width-height-slider").length == 0) {
+        $("#main .mod_article.first").addClass("first-element");
+    }
+
     /* =================== *
      * Tabs         	   *
      * =================== */

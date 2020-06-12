@@ -392,6 +392,10 @@ body:not(.home) #header .inside {
 
   &:not(.article-full-width) {
     padding: 100px 0;
+
+    &.first-element {
+      padding-top: 140px;
+    }
   }
 }
 

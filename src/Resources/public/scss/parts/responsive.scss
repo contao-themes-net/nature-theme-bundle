@@ -66,6 +66,10 @@
 
   #main .mod_article:not(.article-full-width) {
     padding: 40px 0;
+
+    &.first-element {
+      padding-top: 140px;
+    }
   }
 
   .mod_breadcrumb .breadcrumb {
