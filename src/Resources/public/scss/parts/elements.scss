@@ -201,6 +201,12 @@ a {
 }
 
 .ce_ct_featureElement {
+  &[class*="has-text-"] {
+    .icon i, .inside {
+      color: inherit;
+    }
+  }
+
   &.column.block:not(:last-child) {
     margin-bottom: 0;
   }
@@ -242,6 +248,7 @@ a {
 
   .text p {
     margin: 5px 0;
+    color: $boxes-color;
   }
 }
 
