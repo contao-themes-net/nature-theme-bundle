@@ -139,12 +139,17 @@
     margin: 0;
   }
 
+  .level_3 .has-dropdown:hover .level_4 {
+    display: block !important;
+    border-radius: 6px;
+  }
+
   .has-dropdown .has-dropdown {
     &:hover .level_3 {
       display: block !important;
     }
 
-    .level_3 {
+    .level_3, .level_4 {
       position: absolute;
       top: -0.5rem;
       left: -100%;
@@ -179,7 +184,7 @@
     }
   }
 
-  .level_3 {
+  .level_3, .level_4 {
     display: none !important;
   }
 
@@ -231,7 +236,7 @@
     padding-bottom: 0;
 
     .navbar-link {
-      padding: 0.375rem 3rem 0.375rem 1rem;
+      padding: 0.3rem 3rem 0.3rem 1rem;
       width: 100%;
     }
   }
@@ -376,5 +381,13 @@
 @media screen and (min-width: $navbar-breakpoint) {
   .navbar-dropdown {
     background: $navbar-dropdown-background-color;
+
+    &.level_3 {
+      background: $navbar-dropdown-lvl3-background-color;
+    }
+
+    &.level_4 {
+      background: $navbar-dropdown-lvl4-background-color;
+    }
   }
 }
