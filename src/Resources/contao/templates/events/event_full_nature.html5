@@ -18,24 +18,26 @@
 
     <?php if (!$this->addImage): ?>
         <h1 itemprop="name"><?= $this->title ?></h1>
+    <?php else: ?>
+        <div class="name invisible" itemprop="name"><?= $this->title ?></div>
     <?php endif; ?>
 
     <?php if ($this->hasDetails): ?>
-    <?= $this->details ?>
+        <div itemprop="description"><?= $this->details ?></div>
     <?php else: ?>
-    <div class="ce_text block">
-        <?php if (!$this->addBefore): ?>
-        <?= $this->teaser ?>
-        <?php endif; ?>
+        <div class="ce_text block">
+            <?php if (!$this->addBefore): ?>
+            <?= $this->teaser ?>
+            <?php endif; ?>
 
-        <?php if ($this->addImage): ?>
-        <?php $this->insert('image', $this->arrData); ?>
-        <?php endif; ?>
+            <?php if ($this->addImage): ?>
+            <?php $this->insert('image', $this->arrData); ?>
+            <?php endif; ?>
 
-        <?php if ($this->addBefore): ?>
-        <?= $this->teaser ?>
-        <?php endif; ?>
-    </div>
+            <?php if ($this->addBefore): ?>
+            <?= $this->teaser ?>
+            <?php endif; ?>
+        </div>
     <?php endif; ?>
 
     <?php if ($this->enclosure): ?>
