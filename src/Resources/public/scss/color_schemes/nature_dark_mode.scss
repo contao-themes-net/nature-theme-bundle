@@ -434,8 +434,12 @@ $darkMode_input-focus-border-color: $grey-darker;
       color: $darkMode_boxes-color;
     }
 
-    .top-obj-details {
+    .estate-detail .small-pics {
       background: $darkMode_boxes-background;
+    }
+
+    .top-obj-details {
+      background: rgba(10,10,10,.9);
 
       .field .label {
         color: $darkMode_boxes-color;
