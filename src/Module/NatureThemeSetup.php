@@ -4,7 +4,7 @@ namespace ContaoThemesNet\NatureThemeBundle\Module;
 
 class NatureThemeSetup extends \BackendModule
 {
-    const VERSION = '1.3.3';
+    const VERSION = '1.3.4';
 
     protected $strTemplate = 'be_naturetheme_setup';
 
@@ -22,11 +22,13 @@ class NatureThemeSetup extends \BackendModule
                 $this->getFiles($path);
                 $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/nature-theme-bundle/src/templates");
                 $this->Template->message = true;
+                $this->Template->version = NatureThemeSetup::VERSION;
                 break;
             case 'truncateTlFiles':
                 $this->import('Database');
                 $this->Database->prepare("TRUNCATE tl_files")->execute();
                 $this->Template->messageTruncate = true;
+                $this->Template->version = NatureThemeSetup::VERSION;
                 break;
             default:
                 $this->Template->version = NatureThemeSetup::VERSION;
