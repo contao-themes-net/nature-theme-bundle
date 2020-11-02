@@ -37,3 +37,34 @@ compatible with Contao >=4.4
 | [![CONVERT Theme](https://contao-themes.net/assets/images/7/Convert_Selling_Contao_Theme_01-9c1306b6.png)](https://contao-themes.net/theme-detail/convert.html) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) | ![](https://contao-themes.net/files/contao-themes-net/screenshots/platzhalter.jpg) |
 |:---:|:---:|:---:|
 | [**CONVERT Theme**](https://contao-themes.net/theme-detail/convert.html) |  |  |
+
+## Bild- und Videonachweise
+
+* Bienen auf Honigwaben / CONTAO_NATURE_THEME_Bienen-auf-Honigwaben.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Bienenstöcke in Wildblumenwiese / CONTAO_NATURE_THEME_Bienenstoecke_in_Wildblumenwiese.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Bienenwabe Wildbau / CONTAO_NATURE_THEME_Bienenwabe-Wildbau.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene an Bienenfreund / CONTAO_NATURE_THEME_Biene_an_Bienenfreund.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene an Distel / CONTAO_NATURE_THEME_Biene_an_Distel.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene an Mohn / CONTAO_NATURE_THEME_Biene_an_Mohn.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene an Teich / CONTAO_NATURE_THEME_Biene_an_Teich.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene an weißer Blüte / CONTAO_NATURE_THEME_Biene_an_weisser_Bluete.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene auf Blume / CONTAO_NATURE_THEME_Biene_auf_Blume.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene auf dem Heimweg / CONTAO_NATURE_THEME_Biene_auf_dem_Heimweg.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene im Anflug / CONTAO_NATURE_THEME_Biene_im_Anflug.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene in Wildblumenwiese / CONTAO_NATURE_THEME_Biene_in_Wildblumenwiese.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene Nahaufnahme / CONTAO_NATURE_THEME_Biene_Nahaufnahme.jpg: [Capri23auto](https://pixabay.com/de/users/capri23auto-1767157/)@[Pixabay](https://pixabay.com/de/photos/dahlie-bl%C3%BCte-blume-biene-3856176/)
+* Honigbiene / CONTAO_NATURE_THEME_Honigbiene.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Hummel auf Sonnenblume / CONTAO_NATURE_THEME_Hummel-auf-Sonnenblume.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Hummel an Mohn / CONTAO_NATURE_THEME_Hummel_an_Mohn.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Hummel an Sonnenblume / CONTAO_NATURE_THEME_Hummel_an_Sonnenblume.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Hummel im Anflug / CONTAO_NATURE_THEME_Hummel_im_Anflug.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Wildbiene / CONTAO_NATURE_THEME_Wildbiene.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Wildbiene an Senf / CONTAO_NATURE_THEME_Wildbiene_an_Senf.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Wildbiene im Anflug / CONTAO_NATURE_THEME_Wildbiene_im_Anflug.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Wildbiene in Wildblumenwiese / CONTAO_NATURE_THEME_Wildbiene_in_Wildblumenwiese.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Wildbiene Nahaufnahme / CONTAO_NATURE_THEME_Wildbiene_Nahaufnahme.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Wildblumenwiese / CONTAO_NATURE_THEME_Wildblumenwiese.jpg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* NATURE Theme Logo schwarz / NATURE_Logo_black.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* NATURE Theme Logo weiß / NAUTRE_Logo_white.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+* Biene fliegt gelbe Blume an / CONTAO_NATURE_THEME_Biene_auf_gelber_Blume.mp4: [NmewahanG](https://pixabay.com/de/users/NmewahanG)@[Pixabay](https://pixabay.com/de/videos/biene-blumen-insekt-bl%C3%BCte-natur-26668/)
+* Bienen fliegen an Bienenstöcken / CONTAO_NATURE_THEME_Bienenstock.mp4: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
