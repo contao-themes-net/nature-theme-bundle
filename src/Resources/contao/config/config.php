@@ -22,22 +22,30 @@ $GLOBALS['TL_CTE']['natureTheme']['textModalElement'] = TextModalElement::class;
 /**
  * Available tags for Nature Theme
  */
-array_push($GLOBALS['tl_config']['theme_tags'], '-');
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE01/01';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE01/02';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE01/03';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE01/04';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE01/05';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE02/01';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE02/02';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE02/03';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE02/04';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE02/05';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE03/01';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE03/02';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE03/03';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE03/04';
-$GLOBALS['tl_config']['theme_tags'][] = 'NATURE03/05';
+if (empty($GLOBALS['tl_config']['theme_tags'])) {
+    $GLOBALS['tl_config']['theme_tags'] = [];
+    $GLOBALS['tl_config']['theme_tags'][] = '-';
+}
+
+if (!empty($GLOBALS['tl_config']['theme_tags']) && \is_array($GLOBALS['tl_config']['theme_tags'])) {
+    $GLOBALS['tl_config']['theme_tags'] = array_merge($GLOBALS['tl_config']['theme_tags'], [
+        'NATURE01/01',
+        'NATURE01/02',
+        'NATURE01/03',
+        'NATURE01/04',
+        'NATURE01/05',
+        'NATURE02/01',
+        'NATURE02/02',
+        'NATURE02/03',
+        'NATURE02/04',
+        'NATURE02/05',
+        'NATURE03/01',
+        'NATURE03/02',
+        'NATURE03/03',
+        'NATURE03/04',
+        'NATURE03/05'
+    ]);
+}
 
 /**
  * Wrapper elements
