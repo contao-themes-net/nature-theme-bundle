@@ -68,3 +68,5 @@ compatible with Contao >=4.4
 * NATURE Theme Logo weiß / NAUTRE_Logo_white.svg: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
 * Biene fliegt gelbe Blume an / CONTAO_NATURE_THEME_Biene_auf_gelber_Blume.mp4: [NmewahanG](https://pixabay.com/de/users/NmewahanG)@[Pixabay](https://pixabay.com/de/videos/biene-blumen-insekt-bl%C3%BCte-natur-26668/)
 * Bienen fliegen an Bienenstöcken / CONTAO_NATURE_THEME_Bienenstock.mp4: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
+
+Alle Demo-Inhalte dieses Themes, insbesondere Texte, Fotografien und Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt bei der pdir Gmbh bzw. den jeweiligen Urhebern der Werke. Bitte fragen Sie uns, falls Sie die Demo-Inhalte dieses Themes verwenden möchten. Ohne schriftliche Genehmigung seitens der Urheber dürfen diese in keiner Form verwendet, vervielfältigt oder verbreitet werden.
