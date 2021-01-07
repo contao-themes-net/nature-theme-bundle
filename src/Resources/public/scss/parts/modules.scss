@@ -411,6 +411,10 @@ body:not(.home) #header .inside {
   }
 }
 
+.mod_article:not(.article-full-width) .container {
+  padding: 0 20px;
+}
+
 .mod_navigation + .mod_breadcrumb {
   position: relative;
 }
