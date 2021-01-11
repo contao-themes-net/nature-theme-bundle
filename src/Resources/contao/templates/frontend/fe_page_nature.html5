@@ -9,10 +9,6 @@
     <meta name="description" content="<?= $this->description ?>">
     <meta name="generator" content="Contao Open Source CMS">
 
-    <style>
-        #wrapper { display: none; }
-    </style>
-
     <?= $this->viewport ?>
 
     <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />

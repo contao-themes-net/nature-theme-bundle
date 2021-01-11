@@ -475,4 +475,10 @@ $darkMode_input-focus-border-color: $grey-darker;
     }
   }
 
+  @media screen and (min-width: 1024px) {
+    .color-scheme-dark-mode .navbar-dropdown.level_3 {
+      background: $black-ter;
+    }
+  }
+
 }
