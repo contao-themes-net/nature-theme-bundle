@@ -1210,12 +1210,10 @@ pre {
       height: 100vh;
       z-index: 10;
 
-      &:nth-of-type(2) {
-        z-index: 11;
-      }
-
-      &:nth-of-type(3) {
-        z-index: 12;
+      @for $i from 1 through 20 {
+        &:nth-of-type(#{$i}) {
+          z-index: #{$i};
+        }
       }
     }
   }
