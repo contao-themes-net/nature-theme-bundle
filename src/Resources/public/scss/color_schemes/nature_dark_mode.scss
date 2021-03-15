@@ -397,6 +397,11 @@ $darkMode_input-focus-border-color: $grey-darker;
         background: $darkMode_boxes-background;
       }
 
+      &.is-hoverable.is-striped tbody tr:not(.is-selected):hover:nth-child(even),
+      &.is-hoverable.is-striped tbody tr:not(.is-selected):hover {
+        background: lighten($darkMode_boxes-background, 5%);
+      }
+
     }
 
     .navbar-menu {

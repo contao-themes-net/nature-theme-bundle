@@ -402,7 +402,7 @@ body:not(.home) #header .inside {
 .mod_breadcrumb {
   padding: 20px;
   background: $breadcrumb-background-color;
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
 
@@ -413,10 +413,6 @@ body:not(.home) #header .inside {
 
 .mod_article:not(.article-full-width) .container {
   padding: 0 20px;
-}
-
-.mod_navigation + .mod_breadcrumb {
-  position: relative;
 }
 
 .mod_calendar {
