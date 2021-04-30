@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
     }
     $(".sticky-teaserbox").each( function() {
         var style = $(this).find(".inside > .image_container").attr("style").replace(/\"/g, "'"); // replace for ie11
-        $(".sticky-column").append('<div class="sticky-column-background" style="'+style+'"></div>');
+        $(this).closest(".sticky-container").find(".sticky-column").append('<div class="sticky-column-background" style="'+style+'"></div>');
     });
 
     /* =================== *
