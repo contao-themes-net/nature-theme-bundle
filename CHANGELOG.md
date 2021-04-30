@@ -2,8 +2,8 @@
 
 ## [1.4.3] – 2021-04-30
 
-- [#23]: fix sticky teaserbox
+- [fix] sticky teaserbox ([#23](i23))
 
 ## [1.4.2] – 2021-03-15
 
-- [#22]: css fix for fullheight teaserbox
+- [fix] css fix for fullheight teaserbox ([#22](i22))
