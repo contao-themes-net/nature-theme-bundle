@@ -40,6 +40,10 @@ body:not(.home) #header .inside {
     padding: 50px;
     margin: 0;
 
+    a {
+      color: $white;
+    }
+
     .ce_text.block:not(:last-child) {
       margin-bottom: 3rem;
     }
@@ -408,6 +412,10 @@ body:not(.home) #header .inside {
 
   .breadcrumb {
     padding: 0 20px;
+
+    li {
+      white-space: normal;
+    }
   }
 }
 

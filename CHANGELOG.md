@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.5.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.5.0) – 2021-08-25
+
+- [feature] add sql files for contao 4.12
+- [fix] update styling
+
 ## [1.4.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.4.3) – 2021-04-30
 
 - [fix] sticky teaserbox ([#23](https://github.com/contao-themes-net/nature-theme-bundle/issues/23))
