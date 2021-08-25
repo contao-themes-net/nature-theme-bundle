@@ -207,6 +207,89 @@ a {
     }
   }
 
+  &[class*="has-background-"] {
+    .inside {
+      background: none;
+    }
+  }
+
+  &.has-background-white {
+    background: none !important;
+    .inside { @extend .has-background-white }
+  }
+  &.has-background-black {
+    background: none !important;
+    .inside { @extend .has-background-black }
+  }
+  &.has-background-light {
+    background: none !important;
+    .inside { @extend .has-background-light }
+  }
+  &.has-background-dark {
+    background: none !important;
+    .inside { @extend .has-background-dark }
+  }
+  &.has-background-primary {
+    background: none !important;
+    .inside { @extend .has-background-primary }
+  }
+  &.has-background-link {
+    background: none !important;
+    .inside { @extend .has-background-link }
+  }
+  &.has-background-info {
+    background: none !important;
+    .inside { @extend .has-background-info }
+  }
+  &.has-background-success {
+    background: none !important;
+    .inside { @extend .has-background-success }
+  }
+  &.has-background-warning {
+    background: none !important;
+    .inside { @extend .has-background-warning }
+  }
+  &.has-background-danger {
+    background: none !important;
+    .inside { @extend .has-background-danger }
+  }
+  &.has-background-black-bis {
+    background: none !important;
+    .inside { @extend .has-background-black-bis }
+  }
+  &.has-background-black-ter {
+    background: none !important;
+    .inside { @extend .has-background-black-ter }
+  }
+  &.has-background-grey-darker {
+    background: none !important;
+    .inside { @extend .has-background-grey-darker }
+  }
+  &.has-background-grey-dark {
+    background: none !important;
+    .inside { @extend .has-background-grey-dark }
+  }
+  &.has-background-grey {
+    background: none !important;
+    .inside { @extend .has-background-grey }
+  }
+  &.has-background-grey-light {
+    background: none !important;
+    .inside { @extend .has-background-grey-light }
+  }
+  &.has-background-grey-lighter {
+    background: none  !important;
+    .inside { @extend .has-background-grey-lighter }
+  }
+  &.has-background-white-ter {
+    background: none !important;
+    .inside { @extend .has-background-white-ter }
+  }
+  &.has-background-white-bis {
+    background: none !important;
+    .inside { @extend .has-background-white-bis }
+  }
+
   &.column.block:not(:last-child) {
     margin-bottom: 0;
   }
@@ -745,6 +828,7 @@ a {
 
 .columns {
   flex-wrap: wrap;
+  display: flex;
 }
 
 .content {
