@@ -78,6 +78,10 @@ a {
     }
   }
 
+  .ce_table.block, .ce_text.block {
+    overflow: hidden;
+  }
+
   .toggler {
     background: $primary;
     color: $white;
@@ -828,7 +832,6 @@ a {
 
 .columns {
   flex-wrap: wrap;
-  display: flex;
 }
 
 .content {
