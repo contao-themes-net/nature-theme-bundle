@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.5.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.5.1) – 2021-09-24
+
+- [fix] responsive columns
+
 ## [1.5.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.5.0) – 2021-08-25
 
 - [feature] add sql files for contao 4.12
