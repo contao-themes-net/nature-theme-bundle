@@ -116,3 +116,15 @@ $button-border-color: $grey-lighter !default;
 $button-border-width: 1px !default;
 $button-hover-color: $link-hover !default;
 $button-hover-border-color: $link-hover !default;
+
+/* Megamenu */
+$megamenu-width: 900px !default;
+$megamenu-right: 70px !default;
+$megamenu-background-color: $navbar-background-color !default;
+$megamenu-background-color-home: rgba(#eaeaea, .9) !default;
+$megamenu-item-width: 33.33% !default;
+$megamenu-padding: 20px 60px 5px 30px !default;
+$megamenu-link-lvl2-color: #000 !default;
+$megamenu-link-lvl2-color-hover: $primary !default;
+$megamenu-link-lvl3-color: #000 !default;
+$megamenu-link-lvl3-color-hover: $primary !default;

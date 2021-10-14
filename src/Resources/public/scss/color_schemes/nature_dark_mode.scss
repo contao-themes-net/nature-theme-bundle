@@ -478,6 +478,26 @@ $darkMode_input-focus-border-color: $grey-darker;
       background: $darkMode_boxes-background;
       color: $darkMode_boxes-color;
     }
+
+    .megamenu .navbar-item {
+      .navbar-dropdown.level_2 {
+        background: $black-ter;
+
+        > a.navbar-item, > div.navbar-item > a {
+          color: $white;
+        }
+      }
+
+      .navbar-dropdown.level_3 {
+        > a.navbar-item, > div.navbar-item > a {
+          color: $white;
+        }
+      }
+    }
+
+    &.home .megamenu .navbar-item .navbar-dropdown.level_2 {
+      background: $black-ter;
+    }
   }
 
   @media screen and (min-width: 1024px) {

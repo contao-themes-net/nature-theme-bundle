@@ -1,0 +1,96 @@
+@media screen and (min-width: $navbar-breakpoint) {
+  .home .megamenu .navbar-item .navbar-dropdown.level_2 {
+    background: $megamenu-background-color-home;
+  }
+
+  .megamenu {
+    &.mod_navigation.navbar .navbar-dropdown.open {
+      display: flex !important;
+    }
+
+    .navbar-item {
+      position: static;
+      height: 100%;
+
+      &:hover .navbar-dropdown.level_2 {
+        display: flex;
+      }
+
+      .navbar-dropdown.level_2 {
+        position: absolute;
+        left: inherit;
+        right: $megamenu-right;
+        max-width: calc(100% - #{$megamenu-right});
+        width: $megamenu-width;
+        flex-wrap: wrap;
+        padding: $megamenu-padding;
+        background: $megamenu-background-color;
+
+        @media (max-width: calc(#{$megamenu-width} + #{$megamenu-right})) {
+          max-width: 100%;
+          right: inherit;
+          left: 0;
+        }
+
+        > .navbar-item, > .navbar-link {
+          width: calc(#{$megamenu-item-width} - 40px);
+          margin: 0 20px 20px;
+        }
+
+        > a.navbar-item, > div.navbar-item > a {
+          font-size: 1.2em;
+          font-weight: 700;
+          color: $megamenu-link-lvl2-color;
+          padding: 5px;
+          white-space: normal;
+
+          &:hover {
+            color: $megamenu-link-lvl2-color-hover;
+          }
+        }
+
+        .navbar-link:after, .toggle-more, .toggle-less {
+          display: none;
+        }
+      }
+
+      .navbar-dropdown.level_3 {
+        background: none;
+        padding: 0;
+        min-width: 100%;
+
+        > a.navbar-item, > div.navbar-item > a {
+          color: $megamenu-link-lvl3-color;
+          padding: 5px;
+          white-space: normal;
+
+          &:hover {
+            color: $megamenu-link-lvl3-color-hover;
+          }
+        }
+      }
+    }
+
+    &.mod_navigation.navbar .has-dropdown .has-dropdown .level_3, &.mod_navigation.navbar .has-dropdown .has-dropdown .level_4 {
+      position: relative;
+      top: inherit;
+      left: inherit;
+      display: block !important;
+    }
+
+    .navbar-dropdown.level_2 {
+      .navbar-item {
+        display: block;
+      }
+    }
+
+    .navbar-dropdown {
+      box-shadow: none;
+    }
+
+    &.navbar .navbar-start {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
