@@ -44,7 +44,7 @@
           padding: 5px;
           white-space: normal;
 
-          &:hover {
+          &:hover, &.active {
             color: $megamenu-link-lvl2-color-hover;
           }
         }
@@ -64,7 +64,7 @@
           padding: 5px;
           white-space: normal;
 
-          &:hover {
+          &:hover, &.active {
             color: $megamenu-link-lvl3-color-hover;
           }
         }
