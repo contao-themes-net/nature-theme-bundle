@@ -185,13 +185,14 @@
 /*      Megamenu          */
 /* ====================== */
 
-//$megamenu-width: 900px;
-//$megamenu-right: 70px;
-//$megamenu-background-color: $navbar-background-color;
-//$megamenu-background-color-home: rgba(#eaeaea, .9);
-//$megamenu-item-width: 33.33%;
+//$megamenu-width: 100%;
+//$megamenu-right: 0px;
+//$megamenu-background-color: $boxes-background;
+//$megamenu-background-color-home: $megamenu-background-color;
+//$megamenu-item-width: 20%;
 //$megamenu-padding: 20px 60px 5px 30px;
 //$megamenu-link-lvl2-color: #000;
 //$megamenu-link-lvl2-color-hover: $primary;
-//$megamenu-link-lvl3-color: #000;
-//$megamenu-link-lvl3-color-hover: $primary;
+//$megamenu-link-lvl3-color: #4a4a4a;
+//$megamenu-link-lvl3-color-hover: $link-hover;
+//$megamenu-border-color: $primary;

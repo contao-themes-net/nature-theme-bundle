@@ -41,8 +41,11 @@
           font-size: 1.2em;
           font-weight: 700;
           color: $megamenu-link-lvl2-color;
-          padding: 5px;
+          padding: 5px 20px;
           white-space: normal;
+          border-bottom: 2px solid $megamenu-border-color;
+          margin-bottom: 10px;
+          font-family: $family-heading;
 
           &:hover, &.active {
             color: $megamenu-link-lvl2-color-hover;
@@ -61,7 +64,7 @@
 
         > a.navbar-item, > div.navbar-item > a {
           color: $megamenu-link-lvl3-color;
-          padding: 5px;
+          padding: 5px 20px;
           white-space: normal;
 
           &:hover, &.active {
