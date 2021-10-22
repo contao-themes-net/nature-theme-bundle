@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.6.0) – 2021-10-14
+## [1.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.6.0) – 2021-10-22
 
 - [feature] megamenu
 
