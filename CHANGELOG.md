@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.0) – 2021-11-18
+
+- [feature] add new header layout to show logo and navigation below each other
+
 ## [1.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.6.0) – 2021-10-22
 
 - [feature] megamenu

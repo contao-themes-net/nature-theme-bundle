@@ -391,4 +391,32 @@
       background: $navbar-dropdown-lvl4-background-color;
     }
   }
+
+  .header-block-layout {
+    &:not(.home) #header .inside {
+      padding-top: 160px;
+    }
+
+    .header-image .image_container {
+      height: 620px;
+    }
+
+    .mod_navigation.navbar {
+      display: block;
+      height: 160px;
+
+      .navbar-brand {
+        justify-content: center;
+
+        .navbar-item {
+          padding: 15px 0 10px;
+        }
+      }
+
+      .navbar-start {
+        justify-content: center;
+        padding: 0;
+      }
+    }
+  }
 }
