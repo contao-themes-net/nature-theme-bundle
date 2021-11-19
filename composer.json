@@ -26,7 +26,7 @@
         "donate": "https://contao-themes.net/sponsoring.html"
     },
     "require": {
-        "php": "^5.6 || ^7.0",
+        "php": "^7.0 || ^8.0",
         "contao/core-bundle": "^4.4",
         "terminal42/contao-folderpage": "^2.0",
         "pdir/contao-theme-helper-bundle": "^1.0",
