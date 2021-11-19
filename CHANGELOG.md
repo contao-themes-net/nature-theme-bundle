@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.0) – 2021-11-18
+## [1.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.0) – 2021-11-19
 
 - [feature] add new header layout to show logo and navigation below each other
 - [feature] php 8 support
