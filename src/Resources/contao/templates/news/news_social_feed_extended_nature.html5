@@ -1,9 +1,11 @@
 <div class="social_feed_element extended arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
     <div class="inner">
 
-        <div class="icon">
-            {{picture::<?php echo \StringUtil::binToUuid($this->sfFbAccountPicture); ?>}}
-        </div>
+        <?php if($this->accountPicture): ?>
+            <div class="icon">
+                <?php $this->insert('picture_default', $this->accountPicture); ?>
+            </div>
+        <?php endif; ?>
 
         <?php if ($this->hasMetaFields): ?>
         <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished">
