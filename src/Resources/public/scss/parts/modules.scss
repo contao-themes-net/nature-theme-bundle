@@ -626,6 +626,11 @@ body:not(.home) #header .inside {
       background: $boxes-background;
     }
 
+    i {
+      margin-left: 10px;
+      font-size: 1.2rem;
+    }
+
     .title {
       margin-bottom: 15px;
       text-transform: uppercase;

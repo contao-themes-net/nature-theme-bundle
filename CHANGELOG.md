@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.7.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.1) – 2021-12-03
+
+- [fix] update social feed template
+
 ## [1.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.0) – 2021-11-19
 
 - [feature] add new header layout to show logo and navigation below each other

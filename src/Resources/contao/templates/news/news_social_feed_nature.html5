@@ -15,6 +15,8 @@
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                 <?php elseif($this->socialFeedType == "Twitter"): ?>
                     <i class="fab fa-twitter" aria-hidden="true"></i>
+                <?php elseif($this->socialFeedType == "LinkedIn"): ?>
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 <?php endif; ?>
             </p>
             <?php endif; ?>
