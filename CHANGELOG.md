@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.2) – 2021-12-13
+
+- [fix] bufixes for header image and megamenu
+
 ## [1.7.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.1) – 2021-12-03
 
 - [fix] update social feed template
