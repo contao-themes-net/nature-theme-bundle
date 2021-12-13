@@ -14,7 +14,7 @@
     <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
     <meta property="og:description" content="<?php echo $this->description; ?>" />
     <meta property="og:url" content="{{env::url}}/{{env::request}}" />
-    <?php if($GLOBALS['og:image']) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+    <?php if(array_key_exists('og:image', $GLOBALS)) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
 
     <link rel="shortcut icon" href="files/naturetheme/img/favicon.ico" type="image/x-icon" />
 
