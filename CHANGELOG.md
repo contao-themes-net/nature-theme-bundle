@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.7.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.3) – 2021-12-22
+
+- [fix] add mod_newsreader_header_nature template to hide comments in newsreader header image
+
 ## [1.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.2) – 2021-12-13
 
 - [fix] bufixes for header image and megamenu
