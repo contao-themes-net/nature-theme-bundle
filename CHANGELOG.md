@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.0) – 2022-xx-xx
+
+- [feature] add sql files for contao 4.13
+- [fix] fix form_password template
+
 ## [1.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.2) – 2021-12-13
 
 - [fix] bufixes for header image and megamenu
