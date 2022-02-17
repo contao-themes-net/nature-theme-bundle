@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.0) – 2022-02-15
+
+- [feature] add sql files for contao 4.13
+- [fix] fix form_password template
+- 
 ## [1.7.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.3) – 2022-02-17
 
 - [fix] add mod_newsreader_header_nature template to hide comments in newsreader header image
