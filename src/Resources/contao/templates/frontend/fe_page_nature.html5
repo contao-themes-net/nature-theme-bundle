@@ -24,18 +24,7 @@
 
     <?= $this->stylesheets ?>
 
-    <link rel="stylesheet" type="text/css" media="all" href="<?php
-        // add stylesheets
-        $combiner = new Combiner();
-        $combiner->add('bundles/contaothemesnetnaturetheme/fonts/fontawesome/css/all.min.css');
-
-        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature_win.scss');
-        } else {
-            $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature.scss');
-        }
-
-        echo $combiner->getCombinedFile(); ?>">
+    <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\NatureThemeBundle\ThemeUtils::getCombinedStylesheet(); // nature theme css optimization ?>">
 
     <?= $this->head ?>
 
