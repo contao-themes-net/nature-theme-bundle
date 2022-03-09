@@ -2,6 +2,8 @@
 
 namespace ContaoThemesNet\NatureThemeBundle\Module;
 
+use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
+
 class NatureThemeSetup extends \BackendModule
 {
     const VERSION = '1.8.1';
