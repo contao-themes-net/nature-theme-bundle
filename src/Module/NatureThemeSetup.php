@@ -26,7 +26,7 @@ class NatureThemeSetup extends \BackendModule
                     new \Folder("files/naturetheme");
                 }
                 $this->getFiles($path);
-                $this->getSqlFiles(ThemeUtils::getRootDir() . "/vendor/contao-themes-net/nature-theme-bundle/src/templates");
+                $this->getSqlFiles(ThemeUtils::getRootDir()."/vendor/contao-themes-net/nature-theme-bundle/src/templates");
                 $this->Template->message = true;
                 $this->Template->version = NatureThemeSetup::VERSION;
                 break;
