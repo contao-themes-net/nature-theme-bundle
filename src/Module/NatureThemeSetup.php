@@ -15,12 +15,16 @@ class NatureThemeSetup extends \BackendModule
     {
         switch (\Input::get('act')) {
             case 'syncFolder':
-                $path = TL_ROOT . '/web/bundles/contaothemesnetnaturetheme';
+                $path = sprintf('%s/%s/bundles/contaothemesnetnaturetheme',
+                    ThemeUtils::getRootDir(),
+                    ThemeUtils::getWebDir()
+                );
+
                 if(!file_exists("files/naturetheme")) {
                     new \Folder("files/naturetheme");
                 }
                 $this->getFiles($path);
-                $this->getSqlFiles($path = TL_ROOT . "/vendor/contao-themes-net/nature-theme-bundle/src/templates");
+                $this->getSqlFiles(ThemeUtils::getRootDir() . "/vendor/contao-themes-net/nature-theme-bundle/src/templates");
                 $this->Template->message = true;
                 $this->Template->version = NatureThemeSetup::VERSION;
                 break;
@@ -42,8 +46,8 @@ class NatureThemeSetup extends \BackendModule
                 $filesFolder = "files/naturetheme".str_replace("contaothemesnetnaturetheme","",substr($path,$pos))."/".$dir;
 
                 if($dir != "_nature_variables.scss" && $dir != "_nature_colors.scss" && $dir != "backend.css" && $dir != "nature.scss" && $dir != "nature_win.scss" && $dir != "nature_style.scss" && $dir != "maklermodul.scss" && $dir != "fonts.scss") {
-                    if(!file_exists(TL_ROOT."/".$filesFolder)) {
-                        $objFile = new \File("web/bundles/".substr($path,$pos)."/".$dir, true);
+                    if(!file_exists(ThemeUtils::getRootDir()."/".$filesFolder)) {
+                        $objFile = new \File(ThemeUtils::getWebDir()."/bundles/".substr($path,$pos)."/".$dir, true);
                         $objFile->copyTo($filesFolder);
                     }
                 }
