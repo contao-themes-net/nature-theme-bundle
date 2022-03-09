@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.8.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.1) – 2022-02-18
+## [1.8.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.1) – 2022-03-09
 
 - [fix] add support for Symfony 5 public entry point
 - [fix] update fe_page template
