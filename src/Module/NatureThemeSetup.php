@@ -6,7 +6,7 @@ use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
 
 class NatureThemeSetup extends \BackendModule
 {
-    const VERSION = '1.8.1';
+    const VERSION = '1.8.2';
 
     protected $strTemplate = 'be_naturetheme_setup';
 
