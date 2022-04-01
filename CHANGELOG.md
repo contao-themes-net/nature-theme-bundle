@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.2) – 2022-04-01
+
+- [fix] fix slider element error
+
 ## [1.8.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.1) – 2022-03-09
 
 - [fix] add support for Symfony 5 public entry point
