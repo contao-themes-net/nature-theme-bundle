@@ -1,8 +1,12 @@
 # Changelog
 
-## [1.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.2) – 2022-03-09
+## [1.8.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.3) – 2022-04-04
 
 - [fix] replace patchwork/utf8
+
+## [1.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.2) – 2022-04-01
+
+- [fix] fix slider element error
 
 ## [1.8.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.1) – 2022-03-09
 

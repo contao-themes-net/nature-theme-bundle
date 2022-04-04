@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace ContaoThemesNet\NatureThemeBundle\Element;
 
 use ContaoThemesNet\ThemeComponentsBundle\Element\SliderElement;
@@ -15,7 +17,7 @@ class SliderElementNature extends SliderElement
     /**
      * Generate the content element
      */
-    protected function compile()
+    protected function compile(): void
     {
         parent::compile();
 
