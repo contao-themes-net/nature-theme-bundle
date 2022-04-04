@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\NatureThemeBundle\Element;
 
+use Contao\FilesModel;
+use Contao\System;
 use ContaoThemesNet\ThemeComponentsBundle\Element\SliderElement;
 
 class SliderElementNature extends SliderElement
@@ -22,14 +24,14 @@ class SliderElementNature extends SliderElement
         parent::compile();
 
         if($this->ct_sliderElement_backgroundImageSRC != '') {
-            $backgroundImageSRC = \FilesModel::findByUuid($this->ct_sliderElement_backgroundImageSRC)->path;
+            $backgroundImageSRC = FilesModel::findByUuid($this->ct_sliderElement_backgroundImageSRC)->path;
             $this->Template->backgroundImage = "background-image:url('".$backgroundImageSRC."')";
         }
 
         if ($this->addImage && $this->singleSRC != '')
         {
-            $objModel = \FilesModel::findByUuid($this->singleSRC);
-            if ($objModel !== null && is_file(\System::getContainer()->getParameter('kernel.project_dir') . '/' . $objModel->path))
+            $objModel = FilesModel::findByUuid($this->singleSRC);
+            if ($objModel !== null && is_file(System::getContainer()->getParameter('kernel.project_dir') . '/' . $objModel->path))
             {
                 $this->singleSRC = $objModel->path;
                 $this->addImageToTemplate($this->Template, $this->arrData, null, null, $objModel);
