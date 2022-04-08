@@ -1,4 +1,7 @@
+@import "../utilities/mixins";
+
 $container-offset: 2 * $gap !default;
+$container-max-width: $fullhd !default;
 
 .container {
   flex-grow: 1;
@@ -6,37 +9,42 @@ $container-offset: 2 * $gap !default;
   position: relative;
   width: auto;
 
+  &.is-fluid {
+    max-width: none !important;
+    padding-left: $gap;
+    padding-right: $gap;
+    width: 100%;
+  }
+
   @include desktop {
     max-width: $desktop - $container-offset;
-
-    &.is-fluid {
-      margin-left: $gap;
-      margin-right: $gap;
-      max-width: none;
-    }
   }
 
 
   @include until-widescreen {
-    &.is-widescreen {
-      max-width: $widescreen - $container-offset;
+    &.is-widescreen:not(.is-max-desktop) {
+      max-width: min($widescreen, $container-max-width) - $container-offset;
     }
   }
 
 
   @include until-fullhd {
-    &.is-fullhd {
-      max-width: $fullhd - $container-offset;
+    &.is-fullhd:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: min($fullhd, $container-max-width) - $container-offset;
     }
   }
 
 
   @include widescreen {
-    max-width: $widescreen - $container-offset;
+    &:not(.is-max-desktop) {
+      max-width: min($widescreen, $container-max-width) - $container-offset;
+    }
   }
 
 
   @include fullhd {
-    max-width: $fullhd - $container-offset;
+    &:not(.is-max-desktop):not(.is-max-widescreen) {
+      max-width: min($fullhd, $container-max-width) - $container-offset;
+    }
   }
 }

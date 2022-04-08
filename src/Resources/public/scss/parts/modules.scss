@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.article-full-width > .container {
+.article-full-width > .container:not(.is-max-desktop):not(.is-max-widescreen) {
   max-width: 100%;
 }
 

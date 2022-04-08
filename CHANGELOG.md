@@ -1,7 +1,8 @@
 # Changelog
 
-## [1.8.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.3) – 2022-04-08
+## [1.9.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.0) – 2022-04-08
 
+- [feature] update bulma version (0.9.3)
 - [fix] replace patchwork/utf8
 - [info] set php 7.1 to minimum requirement
 - [fix] change custom template in contao 4.13 sql file

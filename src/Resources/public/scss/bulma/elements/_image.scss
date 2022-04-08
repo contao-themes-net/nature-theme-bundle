@@ -1,3 +1,5 @@
+@import "../utilities/mixins";
+
 $dimensions: 16 24 32 48 64 96 128 !default;
 
 .image {
@@ -12,6 +14,10 @@ $dimensions: 16 24 32 48 64 96 128 !default;
     &.is-rounded {
       border-radius: $radius-rounded;
     }
+  }
+
+  &.is-fullwidth {
+    width: 100%;
   }
 
   // Ratio
