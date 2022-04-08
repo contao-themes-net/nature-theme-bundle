@@ -1,9 +1,10 @@
 # Changelog
 
-## [1.8.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.3) – 2022-04-04
+## [1.8.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.3) – 2022-04-08
 
 - [fix] replace patchwork/utf8
 - [info] set php 7.1 to minimum requirement
+- [fix] change custom template in contao 4.13 sql file
 
 ## [1.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.2) – 2022-04-01
 
