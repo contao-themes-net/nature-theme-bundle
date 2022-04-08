@@ -7,6 +7,7 @@
 - [info] set php 7.1 to minimum requirement
 - [fix] change custom template in contao 4.13 sql file
 - [fix] css fix for navbar dropdown background
+- [fix] display galleries mobile single column
 
 ## [1.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.2) – 2022-04-01
 
