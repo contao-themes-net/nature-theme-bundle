@@ -1,5 +1,10 @@
 # Changelog
 
+## [1.8.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.3) – 2022-04-04
+
+- [fix] replace patchwork/utf8
+- [info] set php 7.1 to minimum requirement
+
 ## [1.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.8.2) – 2022-04-01
 
 - [fix] fix slider element error

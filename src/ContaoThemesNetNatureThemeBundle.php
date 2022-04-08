@@ -1,11 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 /*
- * This file is part of [package name].
+ * nature theme bundle for Contao Open Source CMS
  *
- * (c) John Doe
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
  *
- * @license LGPL-3.0-or-later
+ * @package    contao-themes-net/nature-theme-bundle
+ * @link       https://github.com/contao-themes-net/nature-theme-bundle
+ * @license    pdir contao theme licence
+ * @author     pdir GmbH <develop@pdir.de>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
  */
 
 namespace ContaoThemesNet\NatureThemeBundle;
