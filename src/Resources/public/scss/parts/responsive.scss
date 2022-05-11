@@ -471,9 +471,9 @@
   }
 
   #wrapper .ce_gallery > ul {
-    &.cols_5, &.cols_6, &.cols_7, &.cols_8, &.cols_9, &.cols_10, &.cols_11, &.cols_12 {
+    &.cols_2, &.cols_3, &.cols_4, &.cols_5, &.cols_6, &.cols_7, &.cols_8, &.cols_9, &.cols_10, &.cols_11, &.cols_12 {
       li {
-        width: calc(100% / 4);
+        width: 100%;
       }
     }
 

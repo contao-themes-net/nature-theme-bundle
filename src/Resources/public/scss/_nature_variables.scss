@@ -16,7 +16,7 @@ $navbar-item-active-color: $navbar-item-color !default;
 $navbar-item-active-background-color: none !default;
 $navbar-item-img-max-height: none !default;
 
-$navbar-dropdown-background-color: linear-gradient(to top, rgb(255, 255, 255) 90%,rgba(255,255,255,0) 100%) !default;
+$navbar-dropdown-background-color: linear-gradient(to top, white calc(100% - 20px), rgba(255, 255, 255, 0) 100%) !default;
 $navbar-dropdown-lvl3-background-color: #fff !default;
 $navbar-dropdown-lvl4-background-color: $navbar-dropdown-lvl3-background-color !default;
 $navbar-dropdown-arrow: $primary !default;

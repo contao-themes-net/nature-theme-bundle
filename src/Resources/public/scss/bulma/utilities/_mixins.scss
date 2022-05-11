@@ -1,4 +1,4 @@
-@import "initial-variables";
+@import "derived-variables";
 
 @mixin clearfix {
   &::after {
@@ -12,12 +12,12 @@
   position: absolute;
 
   @if $height != 0 {
-    left: calc(50% - (#{$width} / 2));
-    top: calc(50% - (#{$height} / 2));
+    left: calc(50% - (#{$width} * 0.5));
+    top: calc(50% - (#{$height} * 0.5));
   }
   @else {
-    left: calc(50% - (#{$width} / 2));
-    top: calc(50% - (#{$width} / 2));
+    left: calc(50% - (#{$width} * 0.5));
+    top: calc(50% - (#{$width} * 0.5));
   }
 }
 
@@ -64,7 +64,7 @@
   }
 
   &:hover {
-    background-color: rgba(black, 0.05);
+    background-color: bulmaRgba(black, 0.05);
   }
 
   // Modifers
@@ -97,6 +97,19 @@
       @content;
     }
   }
+}
+
+@mixin reset {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: none;
+  border: none;
+  color: currentColor;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
 }
 
 // Responsiveness
@@ -191,6 +204,42 @@
   }
 }
 
+@mixin ltr {
+  @if not $rtl {
+    @content;
+  }
+}
+
+@mixin rtl {
+  @if $rtl {
+    @content;
+  }
+}
+
+@mixin ltr-property($property, $spacing, $right: true) {
+  $normal: if($right, "right", "left");
+  $opposite: if($right, "left", "right");
+
+  @if $rtl {
+    #{$property}-#{$opposite}: $spacing;
+  }
+  @else {
+    #{$property}-#{$normal}: $spacing;
+  }
+}
+
+@mixin ltr-position($spacing, $right: true) {
+  $normal: if($right, "right", "left");
+  $opposite: if($right, "left", "right");
+
+  @if $rtl {
+    #{$opposite}: $spacing;
+  }
+  @else {
+    #{$normal}: $spacing;
+  }
+}
+
 // Placeholders
 
 @mixin unselectable {
@@ -199,10 +248,6 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-
-%unselectable {
-  @include unselectable;
 }
 
 @mixin arrow($color: transparent) {
@@ -222,26 +267,18 @@
   width: 0.625em;
 }
 
-%arrow {
-  @include arrow;
-}
-
 @mixin block($spacing: $block-spacing) {
   &:not(:last-child) {
     margin-bottom: $spacing;
   }
 }
 
-%block {
-  @include block;
-}
-
 @mixin delete {
-  @extend %unselectable;
+  @include unselectable;
 
   -moz-appearance: none;
   -webkit-appearance: none;
-  background-color: rgba($black, 0.2);
+  background-color: bulmaRgba($scheme-invert, 0.2);
   border: none;
   border-radius: $radius-rounded;
   cursor: pointer;
@@ -262,7 +299,7 @@
 
   &::before,
   &::after {
-    background-color: $white;
+    background-color: $scheme-main;
     content: "";
     display: block;
     left: 50%;
@@ -284,11 +321,11 @@
 
   &:hover,
   &:focus {
-    background-color: rgba($black, 0.3);
+    background-color: bulmaRgba($scheme-invert, 0.3);
   }
 
   &:active {
-    background-color: rgba($black, 0.4);
+    background-color: bulmaRgba($scheme-invert, 0.4);
   }
 
   // Sizes
@@ -320,10 +357,6 @@
   }
 }
 
-%delete {
-  @include delete;
-}
-
 @mixin loader {
   animation: spinAround 500ms infinite linear;
   border: 2px solid $grey-lighter;
@@ -337,18 +370,10 @@
   width: 1em;
 }
 
-%loader {
-  @include loader;
-}
-
 @mixin overlay($offset: 0) {
   bottom: $offset;
   left: $offset;
   position: absolute;
   right: $offset;
   top: $offset;
-}
-
-%overlay {
-  @include overlay;
 }
