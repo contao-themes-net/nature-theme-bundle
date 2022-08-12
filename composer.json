@@ -45,6 +45,11 @@
         "symfony/phpunit-bridge": "^4.4 || ^5.1"
     },
     "extra": {
+        "contao": {
+            "sources": {
+                "src/Resources/contao/files/naturetheme": "files/naturetheme"
+            }
+        },
         "contao-manager-plugin": "ContaoThemesNet\\NatureThemeBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
