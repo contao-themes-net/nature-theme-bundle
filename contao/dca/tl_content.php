@@ -16,6 +16,8 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
+use Contao\Backend;
+
 $GLOBALS['TL_DCA']['tl_content']['palettes']['ct_sliderElement'] = str_replace(
     'ct_sliderElement_linkText;',
     'ct_sliderElement_linkText;{background_image_legend},ct_sliderElement_backgroundImageSRC;',

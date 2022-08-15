@@ -28,11 +28,11 @@
     "require": {
         "php": "^7.4 || ^8.0",
         "contao/core-bundle": "^4.13 || ^5.0",
-        "terminal42/contao-folderpage": "^2.0",
-        "pdir/contao-theme-helper-bundle": "^1.0",
-        "contao-themes-net/theme-components-bundle": "^1.3",
-        "pdir/css-style-selector-bundle": "^1.6",
-        "netzmacht/contao-font-awesome-inserttag": "^2.0"
+        "terminal42/contao-folderpage": "dev-contao5",
+        "pdir/contao-theme-helper-bundle": "dev-contao5",
+        "contao-themes-net/theme-components-bundle": "dev-contao5",
+        "pdir/css-style-selector-bundle": "dev-contao5",
+        "netzmacht/contao-font-awesome-inserttag": "dev-contao5"
     },
     "conflict": {
         "contao/core": "*",
@@ -47,7 +47,7 @@
     "extra": {
         "contao": {
             "sources": {
-                "src/Resources/contao/files/naturetheme": "files/naturetheme"
+                "contao/files/naturetheme": "files/naturetheme"
             }
         },
         "contao-manager-plugin": "ContaoThemesNet\\NatureThemeBundle\\ContaoManager\\Plugin"
@@ -55,7 +55,18 @@
     "autoload": {
         "psr-4": {
             "ContaoThemesNet\\NatureThemeBundle\\": "src/"
-        }
+        },
+        "classmap": [
+            "contao/"
+        ],
+        "exclude-from-classmap": [
+            "contao/config/",
+            "contao/dca/",
+            "contao/files/",
+            "contao/languages/",
+            "contao/sql/",
+            "contao/templates/"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
@@ -76,5 +87,11 @@
         "pdir/maklermodul-bundle": "NATURE Theme includes all styles for maklermodul bundle. / NATURE Theme enthält Stylesheets für das Maklermodul Bundle.",
         "pdir/social-feed-bundle": "NATURE Theme includes all styles for social feed bundle. / NATURE Theme enthält Stylesheets für das Social Feed Bundle",
         "pdir/animated-timeline-bundle": "Render content in a dynamic timeline. / Zeige Inhalte in einem dynamischen Zeitstrahl an."
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "contao/manager-plugin": true
+        }
     }
 }

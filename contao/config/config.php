@@ -23,7 +23,11 @@ use ContaoThemesNet\NatureThemeBundle\Element\TabsStopElement;
 use ContaoThemesNet\NatureThemeBundle\Element\TextModalElement;
 
 // Insert the nature theme category
-array_insert($GLOBALS['TL_CTE'], 1, ['natureTheme' => []]);
+if (!isset($GLOBALS['TL_CTE']['natureTheme']))
+{
+    $GLOBALS['TL_CTE']['natureTheme'] = [];
+}
+
 
 /*
  * Add content element
@@ -72,10 +76,13 @@ $GLOBALS['TL_WRAPPERS']['stop'][] = 'tabsStopElement';
 /*
  * Backend Modules
  */
-array_insert($GLOBALS['BE_MOD']['contaoThemesNet'], 1, [
-    'natureThemeSetup' => [
-        'callback' => 'ContaoThemesNet\\NatureThemeBundle\\Module\\NatureThemeSetup',
-        'tables' => [],
-        'stylesheet' => 'bundles/contaothemesnetnaturetheme/css/backend.css',
-    ],
-]);
+if (!isset($GLOBALS['BE_MOD']['contaoThemesNet']))
+{
+    $GLOBALS['BE_MOD']['contaoThemesNet'] = [];
+}
+
+$GLOBALS['BE_MOD']['contaoThemesNet']['natureThemeSetup'] = [
+    'callback' => 'ContaoThemesNet\\NatureThemeBundle\\Module\\NatureThemeSetup',
+    'tables' => [],
+    'stylesheet' => 'bundles/contaothemesnetnaturetheme/css/backend.css',
+];
