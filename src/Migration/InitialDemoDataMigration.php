@@ -16,16 +16,25 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace ContaoThemesNet\NatureThemeBundle\Migrations;
+namespace ContaoThemesNet\NatureThemeBundle\Migration;
 
+use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
+use Contao\File;
+use Contao\Folder;
 use Contao\System;
+use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
 use Doctrine\DBAL\Connection;
 
 class InitialDemoDataMigration extends AbstractMigration
 {
-    private string $sqlFile = 'vendor/contao-themes-net/nature-theme-bundle/contao/sql/contao50/minimal.sql';
+    private ContaoFramework $contaoFramework;
+    private Connection $connection;
+
+    private string $filesFolder = 'files'.\DIRECTORY_SEPARATOR.'naturetheme';
+    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
+    private string $sqlFile = 'sql'.\DIRECTORY_SEPARATOR.'contao50'.\DIRECTORY_SEPARATOR.'minimal.sql';
 
     private array $minTables = [
         'tl_article', 'tl_content', 'tl_css_style_selector', 'tl_files', 'tl_form', 'tl_form_field', 'tl_image_size',
@@ -36,14 +45,17 @@ class InitialDemoDataMigration extends AbstractMigration
         'tl_calendar', 'tl_calendar_events', 'tl_faq', 'tl_faq_category', 'tl_news', 'tl_newsletter_channel', 'tl_news_archive'
     ];
 
-    /**
-     * @var Connection
-     */
-    private $connection;
+    private string $rootDir = '';
 
-    public function __construct(Connection $connection)
+    public function __construct(ContaoFramework $contaoFramework, Connection $connection)
     {
+        $this->contaoFramework = $contaoFramework;
         $this->connection = $connection;
+    }
+
+    public function getName(): string
+    {
+        return "Initial demo data migration - NATURE Theme";
     }
 
     public function shouldRun(): bool
@@ -60,7 +72,10 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->sqlFile = str_replace('minimal', 'full', $this->sqlFile);
         }
 
+        // check some tables for content
         $count = $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
 
         if ($count > 0) {
             return false;
@@ -71,20 +86,30 @@ class InitialDemoDataMigration extends AbstractMigration
 
     public function run(): MigrationResult
     {
-        $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+        $this->contaoFramework->initialize();
 
-        foreach (explode("\n", file_get_contents($rootDir . '/' . $this->sqlFile)) as $sql) {
-            dump($sql);
-            dump('----');
+        $this->rootDir = System::getContainer()->getParameter('kernel.project_dir');
+
+        foreach (explode("\n", file_get_contents($this->rootDir . '/' . $this->contaoFolder . '/' . $this->sqlFile)) as $sql) {
+            // ignore empty lines
             if ('' === trim($sql)) {
                 continue;
             }
-            // dump(rtrim($sql, "\n\r"));
-            // dump(str_replace(["\r", "\n"], '', $sql));
-            // dump(trim($sql));
+
             $this->connection->prepare($sql)->execute();
         }
 
+        // copy theme folder if not exists
+        $this->copyThemeFolder();
+
         return $this->createResult(true, "Initial NATURE Theme demo data added.");
+    }
+
+    protected function copyThemeFolder(): void
+    {
+        if (!file_exists($this->rootDir . \DIRECTORY_SEPARATOR . $this->contaoFolder . \DIRECTORY_SEPARATOR .  $this->filesFolder)) {
+            $folder = new Folder($this->contaoFolder.\DIRECTORY_SEPARATOR.$this->filesFolder);
+            $folder->copyTo($this->filesFolder);
+        }
     }
 }

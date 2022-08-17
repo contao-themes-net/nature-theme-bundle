@@ -2,10 +2,10 @@
 
 <?php $this->block('content'); ?>
 
-<ol type="A">
+  <ol type="A">
     <?php foreach ($this->items as $item): ?>
-    <li<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?>><?= $item['content'] ?></li>
+      <li><?= $item ?></li>
     <?php endforeach; ?>
-</ol>
+  </ol>
 
 <?php $this->endblock(); ?>

@@ -7,3 +7,9 @@ services:
         Symfony\Component\DependencyInjection\ContainerAwareInterface:
             calls:
                 - ["setContainer", ["@service_container"]]
+
+    # Migration
+    ContaoThemesNet\NatureThemeBundle\Migration\:
+        resource: "../src/Migration/*"
+        autoconfigure: true
+        autowire: true
