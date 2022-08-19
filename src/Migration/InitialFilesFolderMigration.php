@@ -65,6 +65,6 @@ class InitialFilesFolderMigration extends AbstractMigration
         $folder->copyTo($this->filesFolder);
 
 
-        return $this->createResult(true, "Initial theme files added.");
+        return $this->createResult(true, "Initial theme files where copied.");
     }
 }
