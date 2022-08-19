@@ -42,8 +42,8 @@
     "require-dev": {
         "contao/manager-plugin": "^2.0",
         "contao/easy-coding-standard": "^3.0",
-        "phpunit/phpunit": "^7.1 || ^8.2 || ^8.4 || ^9.5",
-        "symfony/phpunit-bridge": "^4.4 || ^5.1"
+        "phpunit/phpunit": "^9.5",
+        "symfony/phpunit-bridge": "^6.0"
     },
     "extra": {
         "contao": {
@@ -56,18 +56,7 @@
     "autoload": {
         "psr-4": {
             "ContaoThemesNet\\NatureThemeBundle\\": "src/"
-        },
-        "classmap": [
-            "contao/"
-        ],
-        "exclude-from-classmap": [
-            "contao/config/",
-            "contao/dca/",
-            "contao/files/",
-            "contao/languages/",
-            "contao/sql/",
-            "contao/templates/"
-        ]
+        }
     },
     "autoload-dev": {
         "psr-4": {
