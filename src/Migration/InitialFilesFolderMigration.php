@@ -33,7 +33,6 @@ class InitialFilesFolderMigration extends AbstractMigration
 
     private string $filesFolder = 'files'.\DIRECTORY_SEPARATOR.'naturetheme';
     private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
-    private string $rootDir = '';
 
     public function __construct(ContaoFramework $contaoFramework)
     {
@@ -49,10 +48,10 @@ class InitialFilesFolderMigration extends AbstractMigration
     {
         $this->contaoFramework->initialize();
 
-        $this->rootDir = System::getContainer()->getParameter('kernel.project_dir');
+        $rootDir = System::getContainer()->getParameter('kernel.project_dir');
 
         // If the folder exists we should do nothing
-        if (file_exists($this->rootDir . \DIRECTORY_SEPARATOR . $this->contaoFolder . \DIRECTORY_SEPARATOR .  $this->filesFolder)) {
+        if (file_exists($rootDir . \DIRECTORY_SEPARATOR . $this->filesFolder)) {
             return false;
         }
 
@@ -61,16 +60,11 @@ class InitialFilesFolderMigration extends AbstractMigration
 
     public function run(): MigrationResult
     {
-        if (!file_exists($this->rootDir . \DIRECTORY_SEPARATOR . $this->contaoFolder . \DIRECTORY_SEPARATOR .  $this->filesFolder)) {
-            $folder = new Folder($this->contaoFolder.\DIRECTORY_SEPARATOR.$this->filesFolder);
-            $folder->copyTo($this->filesFolder);
-        }
+        // copy files and folders to files
+        $folder = new Folder($this->contaoFolder . \DIRECTORY_SEPARATOR . $this->filesFolder);
+        $folder->copyTo($this->filesFolder);
 
-        return $this->createResult(true, "Initial files added.");
-    }
 
-    protected function copyThemeFolder(): void
-    {
-
+        return $this->createResult(true, "Initial theme files added.");
     }
 }
