@@ -24,7 +24,6 @@ use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\File;
 use Contao\Folder;
 use Contao\System;
-use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
 use Doctrine\DBAL\Connection;
 
 class InitialFilesFolderMigration extends AbstractMigration

@@ -24,7 +24,6 @@ use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\File;
 use Contao\Folder;
 use Contao\System;
-use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
 use Doctrine\DBAL\Connection;
 
 class InitialDemoDataMigration extends AbstractMigration
@@ -33,6 +32,7 @@ class InitialDemoDataMigration extends AbstractMigration
     private Connection $connection;
 
     private string $sqlFile = 'sql'.\DIRECTORY_SEPARATOR.'contao50'.\DIRECTORY_SEPARATOR.'minimal.sql';
+    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
 
     private array $minTables = [
         'tl_article', 'tl_content', 'tl_css_style_selector', 'tl_files', 'tl_form', 'tl_form_field', 'tl_image_size',
