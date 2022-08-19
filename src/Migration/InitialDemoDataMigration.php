@@ -32,8 +32,6 @@ class InitialDemoDataMigration extends AbstractMigration
     private ContaoFramework $contaoFramework;
     private Connection $connection;
 
-    private string $filesFolder = 'files'.\DIRECTORY_SEPARATOR.'naturetheme';
-    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
     private string $sqlFile = 'sql'.\DIRECTORY_SEPARATOR.'contao50'.\DIRECTORY_SEPARATOR.'minimal.sql';
 
     private array $minTables = [
@@ -99,17 +97,6 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->connection->prepare($sql)->execute();
         }
 
-        // copy theme folder if not exists
-        $this->copyThemeFolder();
-
-        return $this->createResult(true, "Initial NATURE Theme demo data added.");
-    }
-
-    protected function copyThemeFolder(): void
-    {
-        if (!file_exists($this->rootDir . \DIRECTORY_SEPARATOR . $this->contaoFolder . \DIRECTORY_SEPARATOR .  $this->filesFolder)) {
-            $folder = new Folder($this->contaoFolder.\DIRECTORY_SEPARATOR.$this->filesFolder);
-            $folder->copyTo($this->filesFolder);
-        }
+        return $this->createResult(true, "Initial structure and content added.");
     }
 }
