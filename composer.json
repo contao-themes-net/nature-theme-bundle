@@ -28,7 +28,6 @@
     "require": {
         "php": "^8.0",
         "contao/core-bundle": "^5.0",
-        "contao-community-alliance/composer-plugin": "~2.4 || ~3.0",
         "terminal42/contao-folderpage": "dev-contao5",
         "pdir/contao-theme-helper-bundle": "dev-contao5",
         "contao-themes-net/theme-components-bundle": "dev-contao5",
@@ -46,11 +45,6 @@
         "symfony/phpunit-bridge": "^6.0"
     },
     "extra": {
-        "contao": {
-            "userfiles": {
-                "contao/files/naturetheme": "naturetheme"
-            }
-        },
         "contao-manager-plugin": "ContaoThemesNet\\NatureThemeBundle\\ContaoManager\\Plugin"
     },
     "autoload": {
