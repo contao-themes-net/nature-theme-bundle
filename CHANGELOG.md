@@ -1,5 +1,21 @@
 # Changelog
 
+[//]: <> (
+Types of changes
+    Added for new Addeds.
+    Changed for changes in existing functionality.
+    Deprecated for soon-to-be removed Addeds.
+    Removed for now removed Addeds.
+    Fixed for any bug fixes.
+    Security in case of vulnerabilities.
+)
+
+## [2.0.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.0) – 2022-02-09
+
+- [Changed] Increase Contao version to 5 only
+- [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
+- [Removed] Cleanup older Contao SQL files
+
 ## [1.9.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.0) – 2022-04-08
 
 - [feature] update bulma version (0.9.3)
@@ -22,7 +38,7 @@
 
 - [feature] add sql files for contao 4.13
 - [fix] fix form_password template
-- 
+-
 ## [1.7.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.7.3) – 2022-02-17
 
 - [fix] add mod_newsreader_header_nature template to hide comments in newsreader header image
@@ -75,7 +91,7 @@
 
 - [fix] update fe_page and css fix for dark mode
 - [fix] css fix for navigation
-- [fix] replace <footer> with <div> in sql files 
+- [fix] replace <footer> with <div> in sql files
 
 ## [1.3.7](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.3.7) – 2020-12-14
 
@@ -182,7 +198,7 @@
 
 ## [1.0.6](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.0.6) – 2019-11-08
 
-- [fix] load custom scss after theme scss 
+- [fix] load custom scss after theme scss
 
 ## [1.0.5](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.0.5) – 2019-11-04
 
