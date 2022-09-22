@@ -1,40 +1,40 @@
 <div class="social_feed_element extended arc_<?= $this->archive->id ?> block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
-    <div class="inner">
+  <div class="inner">
 
-        <?php if($this->accountPicture): ?>
-            <div class="icon">
-                <?php $this->insert('picture_default', $this->accountPicture); ?>
-            </div>
+    <?php if($this->accountPicture): ?>
+      <div class="icon">
+        <?php $this->insert('picture_default', $this->accountPicture); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ($this->hasMetaFields): ?>
+      <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished">
+        <?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?>
+        <?php if($this->socialFeedType == "Facebook" || $this->socialFeedType == ""): ?>
+          <i class="fab fa-facebook" aria-hidden="true"></i>
+        <?php elseif($this->socialFeedType == "Instagram"): ?>
+          <i class="fab fa-instagram" aria-hidden="true"></i>
+        <?php elseif($this->socialFeedType == "Twitter"): ?>
+          <i class="fab fa-twitter" aria-hidden="true"></i>
         <?php endif; ?>
+      </p>
+    <?php endif; ?>
 
-        <?php if ($this->hasMetaFields): ?>
-        <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished">
-            <?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?>
-            <?php if($this->socialFeedType == "Facebook" || $this->socialFeedType == ""): ?>
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-            <?php elseif($this->socialFeedType == "Instagram"): ?>
-            <i class="fab fa-instagram" aria-hidden="true"></i>
-            <?php elseif($this->socialFeedType == "Twitter"): ?>
-            <i class="fab fa-twitter" aria-hidden="true"></i>
-            <?php endif; ?>
-        </p>
-        <?php endif; ?>
+    <div class="title"><?= $this->sfFbAccount ?></div>
 
-        <div class="title"><?= $this->sfFbAccount ?></div>
-
-        <?php if ($this->addImage): ?>
-        <?php if ($this->sfImages): ?>
+    <?php if ($this->addImage): ?>
+      <?php if ($this->sfImages): ?>
         <?php $this->insert('image', $this->arrData); ?>
-        <?php endif; ?>
-        <?php endif; ?>
+      <?php endif; ?>
+    <?php endif; ?>
 
-        <div class="ce_text block" itemprop="description">
-            <p><?= preg_replace('#(?:<br\s*/?>\s*?){2,}#', '</p><p>', $this->teaser) ?></p>
-        </div>
-
-        <a href="<?= $this->url ?>" target="_blank" class="more" rel="noreferrer noopener">
-            <?= $GLOBALS['TL_LANG']['MSC']['more'] ?>
-        </a>
-
+    <div class="ce_text block" itemprop="description">
+      <p><?= preg_replace('#(?:<br\s*/?>\s*?){2,}#', '</p><p>', $this->teaser) ?></p>
     </div>
+
+    <a href="<?= $this->url ?>" target="_blank" class="more" rel="noreferrer noopener">
+      <?= $GLOBALS['TL_LANG']['MSC']['more'] ?>
+    </a>
+
+  </div>
 </div>

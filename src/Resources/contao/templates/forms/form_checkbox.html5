@@ -1,36 +1,36 @@
 <?php $this->extend('form_row'); ?>
 
 <?php $this->block('field'); ?>
-<?php if ($this->label): ?>
-<label class="label">
+  <?php if ($this->label): ?>
+  <label class="label">
     <?php if ($this->mandatory): ?>
-    <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+      <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
     <?php else: ?>
-    <?= $this->label ?>
+      <?= $this->label ?>
     <?php endif; ?>
-</label>
+  </label>
 <?php endif; ?>
 
 <input type="hidden" name="<?= $this->name ?>" value="">
 
 <div class="control">
-    <?php foreach ($this->getOptions() as $option): ?>
+  <?php foreach ($this->getOptions() as $option): ?>
     <?php if ('group_start' == $option['type']): ?>
-    <fieldset>
+      <fieldset>
         <legend><?= $option['label'] ?></legend>
         <?php endif; ?>
 
         <?php if ('option' == $option['type']): ?>
-        <label class="checkbox"><input type="checkbox" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="checkbox" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>> <?= $option['label'] ?></label>
+          <label class="checkbox"><input type="checkbox" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="checkbox" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>> <?= $option['label'] ?></label>
         <?php endif; ?>
 
         <?php if ('group_end' == $option['type']): ?>
-    </fieldset>
+      </fieldset>
     <?php endif; ?>
-    <?php endforeach; ?>
+  <?php endforeach; ?>
 </div>
 
 <?php if ($this->hasErrors()): ?>
-    <p class="help is-danger"><?= $this->getErrorAsString() ?></p>
+  <p class="help is-danger"><?= $this->getErrorAsString() ?></p>
 <?php endif; ?>
 <?php $this->endblock(); ?>

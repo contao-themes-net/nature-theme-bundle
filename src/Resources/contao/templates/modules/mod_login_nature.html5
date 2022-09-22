@@ -3,57 +3,61 @@
 <div class="<?= $this->class ?> <?= $this->logout ? 'logout' : 'login' ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 
 <?php if ($this->headline): ?>
-<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+  <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
 
 <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> id="<?= $this->formId ?>" method="post">
-<div class="formbody">
+  <div class="formbody">
+
     <?php if ($this->message): ?>
-    <p class="error"><?= $this->message ?></p>
+      <p class="error"><?= $this->message ?></p>
     <?php endif; ?>
+
     <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formId ?>">
     <input type="hidden" name="REQUEST_TOKEN" value="{{request_token}}">
     <input type="hidden" name="_target_path" value="<?= $this->targetPath ?>">
+
     <?php if ($this->logout): ?>
-    <p class="login_info"><?= $this->loggedInAs ?><br><?= $this->lastLogin ?></p>
+      <p class="login_info"><?= $this->loggedInAs ?><br><?= $this->lastLogin ?></p>
     <?php elseif ($this->twoFactorEnabled): ?>
-    <h3><?= $this->twoFactorAuthentication ?></h3>
-    <div class="widget widget-text">
+      <h3><?= $this->twoFactorAuthentication ?></h3>
+      <div class="widget widget-text">
         <label for="verify"><?= $this->authCode ?></label>
         <input type="text" name="verify" id="verify" class="text" value="" autocapitalize="off" autocomplete="off" required>
-    </div>
+      </div>
     <?php else: ?>
-    <input type="hidden" name="_failure_path" value="<?= $this->failurePath ?>">
-    <input type="hidden" name="_always_use_target_path" value="<?= $this->forceTargetPath ?>">
-    <div class="widget widget-text field">
+      <input type="hidden" name="_failure_path" value="<?= $this->failurePath ?>">
+      <input type="hidden" name="_always_use_target_path" value="<?= $this->forceTargetPath ?>">
+      <div class="widget widget-text field">
         <label for="username" class="label"><?= $this->username ?></label>
         <div class="control has-icons-left">
-            <input type="text" name="username" id="username" class="text input" value="<?= $this->value ?>" required>
-            <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
+          <input type="text" name="username" id="username" class="text input" value="<?= $this->value ?>" required>
+          <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
         </div>
-    </div>
-    <div class="widget widget-password field">
+      </div>
+      <div class="widget widget-password field">
         <label for="password" class="label"><?= $this->password ?></label>
         <div class="control has-icons-left">
-            <input type="password" name="password" id="password" class="text password input" value="" required>
-            <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
+          <input type="password" name="password" id="password" class="text password input" value="" required>
+          <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
         </div>
-    </div>
-    <?php if ($this->autologin): ?>
-    <div class="widget widget-checkbox">
-        <fieldset class="checkbox_container">
+      </div>
+      <?php if ($this->autologin): ?>
+        <div class="widget widget-checkbox">
+          <fieldset class="checkbox_container">
             <span><input type="checkbox" name="autologin" id="autologin" value="1" class="checkbox"> <label for="autologin"><?= $this->autoLabel ?></label></span>
-        </fieldset>
-    </div>
+          </fieldset>
+        </div>
+      <?php endif; ?>
     <?php endif; ?>
-    <?php endif; ?>
+
     <div class="widget widget-submit">
-        <button type="submit" class="submit"><?= $this->slabel ?></button>
-        <?php if ($this->twoFactorEnabled): ?>
+      <button type="submit" class="submit"><?= $this->slabel ?></button>
+      <?php if ($this->twoFactorEnabled): ?>
         <a href="<?= $this->route('contao_frontend_logout') ?>"><?= $this->cancel ?> ›</a>
-        <?php endif; ?>
+      <?php endif; ?>
     </div>
-</div>
+  </div>
 </form>
 
 </div>
