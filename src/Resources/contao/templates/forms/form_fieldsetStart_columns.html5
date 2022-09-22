@@ -2,5 +2,5 @@
 <div class="columns <?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>">
 
 <?php if ($this->label): ?>
-<legend><?= $this->label ?></legend>
+  <legend><?= $this->label ?></legend>
 <?php endif; ?>

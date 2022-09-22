@@ -1,42 +1,42 @@
 <div class="<?= $this->class ?> block hero"<?= $this->cssID ?>>
 
-    <?php if($this->playerSRC != ""): ?>
-        <figure class="video_container">
-            <video autoplay loop muted>
-                <source type="video/mp4" src="<?= $this->playerSRC ?>">
-            </video>
-        </figure>
-    <?php endif; ?>
+  <?php if($this->playerSRC != ""): ?>
+    <figure class="video_container">
+      <video autoplay loop muted>
+        <source type="video/mp4" src="<?= $this->playerSRC ?>">
+      </video>
+    </figure>
+  <?php endif; ?>
 
-    <?php if ($this->backgroundImage): ?>
-        <figure class="image_container" style="<?= $this->backgroundImage; ?>"></figure>
-    <?php endif; ?>
+  <?php if ($this->backgroundImage): ?>
+    <figure class="image_container" style="<?= $this->backgroundImage; ?>"></figure>
+  <?php endif; ?>
 
-    <div class="text">
-        <div class="container">
-            <div class="inside">
-                <?php if($this->subheadline): ?>
-                <div class="subheadline"><?= $this->subheadline ?></div>
-                <?php endif; ?>
+  <div class="text">
+    <div class="container">
+      <div class="inside">
+        <?php if($this->subheadline): ?>
+        <div class="subheadline"><?= $this->subheadline ?></div>
+        <?php endif; ?>
 
-                <?php if ($this->headline): ?>
-                <<?= $this->hl ?>>
+        <?php if ($this->headline): ?>
+        <<?= $this->hl ?>>
 
-                <?php if($this->page != ""): ?><a href="<?= $this->page ?>"><?php endif; ?>
-                    <?= $this->headline ?>
-                        <?php if($this->page != ""): ?></a><?php endif; ?>
-                    </<?= $this->hl ?>>
-                <?php endif; ?>
+        <?php if($this->page != ""): ?><a href="<?= $this->page ?>"><?php endif; ?>
+          <?= $this->headline ?>
+            <?php if($this->page != ""): ?></a><?php endif; ?>
+          </<?= $this->hl ?>>
+        <?php endif; ?>
 
-                <?= $this->text ?>
+        <?= $this->text ?>
 
-                <?php if($this->page): ?>
-                    <a href="<?= $this->page ?>" class="readmore"<?= $this->target ?><?= $this->rel ?>><?= $this->linkText ?></a>
-                <?php endif; ?>
-            </div>
-            <?php if ($this->addImage): ?>
-                <?php $this->insert('image', $this->arrData); ?>
-            <?php endif; ?>
-        </div>
+        <?php if($this->page): ?>
+          <a href="<?= $this->page ?>" class="readmore"<?= $this->target ?><?= $this->rel ?>><?= $this->linkText ?></a>
+        <?php endif; ?>
+      </div>
+      <?php if ($this->addImage): ?>
+        <?php $this->insert('image', $this->arrData); ?>
+      <?php endif; ?>
     </div>
+  </div>
 </div>

@@ -1,54 +1,54 @@
 <?php $this->extend('fe_page'); ?>
 
 <?php $this->block('head'); ?>
-    <meta charset="<?= $this->charset ?>">
-    <title><?= $this->title ?></title>
-    <base href="<?= $this->base ?>">
+  <meta charset="<?= $this->charset ?>">
+  <title><?= $this->title ?></title>
+  <base href="<?= $this->base ?>">
 
-    <meta name="robots" content="<?= $this->robots ?>">
-    <meta name="description" content="<?= Contao\StringUtil::substr($this->description, 320) ?>">
-    <meta name="generator" content="Contao Open Source CMS">
+  <meta name="robots" content="<?= $this->robots ?>">
+  <meta name="description" content="<?= Contao\StringUtil::substr($this->description, 320) ?>">
+  <meta name="generator" content="Contao Open Source CMS">
 
-    <?php if ($this->canonical): ?>
-        <link rel="canonical" href="<?= $this->canonical ?>">
-    <?php endif; ?>
+  <?php if ($this->canonical): ?>
+    <link rel="canonical" href="<?= $this->canonical ?>">
+  <?php endif; ?>
 
-    <?= $this->viewport ?>
+  <?= $this->viewport ?>
 
-    <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
-    <meta property="og:description" content="<?php echo $this->description; ?>" />
-    <meta property="og:url" content="{{env::url}}/{{env::request}}" />
-    <?php if(array_key_exists('og:image', $GLOBALS)) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
+  <meta property="og:title" content="<?php echo $this->pageTitle; ?> - <?php echo $this->mainTitle; ?>" />
+  <meta property="og:description" content="<?php echo $this->description; ?>" />
+  <meta property="og:url" content="{{env::url}}/{{env::request}}" />
+  <?php if(array_key_exists('og:image', $GLOBALS)) echo '<meta property="og:image" content="'.$GLOBALS['og:image'].'" />'; ?>
 
-    <link rel="shortcut icon" href="files/naturetheme/img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="files/naturetheme/img/favicon.ico" type="image/x-icon" />
 
-    <?= $this->stylesheets ?>
+  <?= $this->stylesheets ?>
 
-    <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\NatureThemeBundle\ThemeUtils::getCombinedStylesheet(); // nature theme css optimization ?>">
+  <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\NatureThemeBundle\ThemeUtils::getCombinedStylesheet(); // nature theme css optimization ?>">
 
-    <?= $this->head ?>
+  <?= $this->head ?>
 
-    <?= $this->mooScripts ?>
-    <?= $this->framework ?>
+  <?= $this->mooScripts ?>
+  <?= $this->framework ?>
 
 <?php $this->endblock(); ?>
 
 <?php $this->block('body'); ?>
-    <?php $this->parent(); ?>
+  <?php $this->parent(); ?>
 
-    <?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaothemesnetnaturetheme/js/theme.js|static'; ?>
+  <?php $GLOBALS['TL_JAVASCRIPT'][] = 'bundles/contaothemesnetnaturetheme/js/theme.js|static'; ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('container'); ?>
-    <?php if ($this->left || $this->right): ?><div class="column-wrapper"><div class="container"><?php endif; ?>
-        <?php $this->parent(); ?>
-    <?php if ($this->left || $this->right): ?></div></div><?php endif; ?>
+  <?php if ($this->left || $this->right): ?><div class="column-wrapper"><div class="container"><?php endif; ?>
+    <?php $this->parent(); ?>
+  <?php if ($this->left || $this->right): ?></div></div><?php endif; ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('footer'); ?>
-    <?php if ($this->footer): ?>
-        <footer id="footer" class="page-footer">
-            <?= $this->footer ?>
-        </footer>
-    <?php endif; ?>
+  <?php if ($this->footer): ?>
+    <footer id="footer" class="page-footer">
+      <?= $this->footer ?>
+    </footer>
+  <?php endif; ?>
 <?php $this->endblock(); ?>
