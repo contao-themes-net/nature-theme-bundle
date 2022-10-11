@@ -411,7 +411,7 @@ body:not(.home) #header .inside {
   width: 100%;
 
   .breadcrumb {
-    padding: 0 20px;
+    padding: $container-padding;
 
     li {
       white-space: normal;
@@ -420,7 +420,7 @@ body:not(.home) #header .inside {
 }
 
 .mod_article:not(.article-full-width) .container {
-  padding: 0 20px;
+  padding: $container-padding;
 }
 
 .mod_calendar {
