@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.9.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.2) – 2022-10-11
+
+- [Changed] now require terminal42/contao-folderpage version 3.*
+
 ## [1.9.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.1) – 2022-09-22
 
 - [Changed] change templates for maklermodul bundle
