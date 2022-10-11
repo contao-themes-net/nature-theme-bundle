@@ -14,6 +14,7 @@ Types of changes
 
 - [Changed] now require terminal42/contao-folderpage version 3.*
 - [Changed] load custom stylesheets after nature stylesheets [#56](https://github.com/contao-themes-net/nature-theme-bundle/issues/56)
+- [Fixed] css fix for bold font in footer
 
 ## [1.9.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.1) – 2022-09-22
 

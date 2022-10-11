@@ -59,6 +59,11 @@
       text-decoration: underline;
       font-weight: 700;
     }
+
+    strong {
+      color: $footer-color;
+      font-weight: 700;
+    }
   }
 
   .footer-copyright {
@@ -77,6 +82,11 @@
     .mod_customnav strong {
       color: $footer-copyright-color;
       text-decoration: underline;
+    }
+
+    strong {
+      color: $footer-copyright-color;
+      font-weight: 700;
     }
   }
 
