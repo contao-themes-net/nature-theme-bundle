@@ -22,9 +22,9 @@
 
   <link rel="shortcut icon" href="files/naturetheme/img/favicon.ico" type="image/x-icon" />
 
-  <?= $this->stylesheets ?>
-
   <link rel="stylesheet" type="text/css" media="all" href="<?= ContaoThemesNet\NatureThemeBundle\ThemeUtils::getCombinedStylesheet(); // nature theme css optimization ?>">
+
+  <?= $this->stylesheets ?>
 
   <?= $this->head ?>
 

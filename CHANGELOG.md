@@ -13,6 +13,7 @@ Types of changes
 ## [1.9.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.2) – 2022-10-11
 
 - [Changed] now require terminal42/contao-folderpage version 3.*
+- [Changed] load custom stylesheets after nature stylesheets [#56](https://github.com/contao-themes-net/nature-theme-bundle/issues/56)
 
 ## [1.9.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.1) – 2022-09-22
 
