@@ -11,7 +11,7 @@
   position: relative;
   transition: all .1s ease 0s;
 
-  &.dark-image .image_container:after {
+  &.dark-image figure:after {
     position: absolute;
     left: 0;
     top: 0;
@@ -21,7 +21,7 @@
     content: "";
   }
 
-  &.light-image .image_container:after {
+  &.light-image figure:after {
     position: absolute;
     left: 0;
     top: 0;
@@ -36,9 +36,10 @@
     display: flex;
     align-items: center;
     text-align: center;
+    z-index: 1;
   }
 
-  .image_container {
+  figure {
     left: 0;
     width: 100%;
     margin: 0;
@@ -52,13 +53,19 @@
   &.large-headerimage {
     height: 660px;
 
-    .image_container {
+    figure {
       height: 760px;
     }
   }
 
   h1, h2, h3, h4, h5, h6 {
     margin-bottom: 60px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
   }
 }
 

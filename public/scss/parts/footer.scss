@@ -17,7 +17,7 @@
     margin: 0;
   }
 
-  .ce_text.block {
+  .content-text.block {
     overflow: hidden;
   }
 
@@ -100,7 +100,7 @@
   }
 }
 
-.ce_toplink {
+.content-toplink {
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.5s linear;
@@ -143,4 +143,8 @@
       text-decoration: none;
     }
   }
+}
+
+.footer-content .media--left figure {
+  margin: 10px 30px 0 0;
 }

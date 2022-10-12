@@ -44,7 +44,7 @@ body:not(.home) #header .inside {
       color: $white;
     }
 
-    .ce_text.block:not(:last-child) {
+    .content-text.block:not(:last-child) {
       margin-bottom: 3rem;
     }
 
@@ -124,7 +124,7 @@ body:not(.home) #header .inside {
 }
 
 .layout_latest {
-  .ce_text {
+  .content-text {
     font-weight: 300;
   }
 
@@ -182,7 +182,7 @@ body:not(.home) #header .inside {
     margin-bottom: 0;
   }
 
-  .ce_text {
+  .content-text {
     margin-bottom: 0;
   }
 
@@ -264,7 +264,7 @@ body:not(.home) #header .inside {
   padding: 0 0.75em 50px;
   width: 100%;
 
-  .ce_text {
+  .content-text {
     margin: 0;
   }
 
@@ -611,7 +611,7 @@ body:not(.home) #header .inside {
       margin-bottom: 0;
     }
 
-    .ce_text {
+    .content-text {
       padding: 0;
       color: $boxes-color;
     }

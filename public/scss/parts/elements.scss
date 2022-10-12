@@ -78,7 +78,7 @@ a {
     }
   }
 
-  .ce_table.block, .ce_text.block {
+  .ce_table.block, .content-text.block {
     overflow: hidden;
   }
 
@@ -676,7 +676,7 @@ a {
   color: $boxes-color;
   border-radius: 5px;
 
-  .ce_text {
+  .content-text {
     &.block:not(:last-child) {
       margin-bottom: 0;
     }
@@ -756,7 +756,7 @@ a {
   }
 }
 
-.ce_textModalElement {
+.content-textModalElement {
   &.block:not(:last-child) {
     margin-bottom: 0;
   }
@@ -1205,7 +1205,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.ce_text {
+.content-text {
   &.hero:not(.is-primary):not(.is-link):not(.is-info):not(.is-success):not(.is-warning):not(.is-danger) {
     background: $boxes-background;
     color: $boxes-color;
@@ -1325,7 +1325,7 @@ strong {
     justify-content: center;
   }
 
-  .ce_text.column {
+  .content-text.column {
     padding: 0 80px;
   }
 
@@ -1334,7 +1334,7 @@ strong {
   }
 }
 
-.ce_table, .ce_text {
+.ce_table, .content-text {
   &.block {
     overflow: auto;
   }

@@ -157,7 +157,7 @@ $darkMode_input-focus-border-color: $grey-darker;
       }
     }
 
-    .ce_text {
+    .content-text {
       &.hero:not(.is-primary):not(.is-link):not(.is-info):not(.is-success):not(.is-warning):not(.is-danger) {
         background: $darkMode_boxes-background;
         color: $darkMode_boxes-color;
@@ -274,7 +274,7 @@ $darkMode_input-focus-border-color: $grey-darker;
 
     .mod_newslist {
       .social_feed_element {
-        .ce_text {
+        .content-text {
           color: $darkMode_boxes-color;
         }
 
@@ -474,7 +474,7 @@ $darkMode_input-focus-border-color: $grey-darker;
       }
     }
 
-    .ce_textModalElement~.modal .modal-content {
+    .content-textModalElement~.modal .modal-content {
       background: $darkMode_boxes-background;
       color: $darkMode_boxes-color;
     }

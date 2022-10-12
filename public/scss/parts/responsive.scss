@@ -221,7 +221,7 @@
     }
   }
 
-  .ce_toplink a {
+  .content-toplink a {
     right: 15px;
     bottom: 15px;
   }
@@ -281,14 +281,14 @@
     .header-image {
       height: 200px;
 
-      .image_container {
+      figure {
         height: 300px;
       }
 
       &.large-headerimage {
         height: 200px;
 
-        .image_container {
+        figure {
           height: 300px;
         }
       }
@@ -319,14 +319,14 @@
       padding: 0 15px;
     }
 
-    .image_container {
+    figure {
       height: 360px;
     }
 
     &.large-headerimage {
       height: 360px;
 
-      .image_container {
+      figure {
         height: 460px;
       }
     }
@@ -450,7 +450,7 @@
   .tab-content {
     padding: 0;
 
-    .ce_text.column {
+    .content-text.column {
       padding: 15px;
     }
 
