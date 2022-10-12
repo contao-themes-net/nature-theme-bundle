@@ -87,9 +87,9 @@ jQuery(document).ready(function($) {
     $(window).scroll(function () {
         scrollPos = $(document).scrollTop();
 
-        $("footer .ce_toplink").addClass("active");
+        $("footer .content-toplink").addClass("active");
         if(scrollPos <= 500) {
-            $("footer .ce_toplink").removeClass("active");
+            $("footer .content-toplink").removeClass("active");
         }
     });
 
