@@ -79,6 +79,18 @@ class InitialDemoDataMigration extends AbstractMigration
             return false;
         }
 
+        if (!isset($schemaManager->listTableColumns('tl_article')['pdir_th_tag'])) {
+            return false;
+        }
+
+        if (!$schemaManager->tablesExist(['tl_content']) && !isset($schemaManager->listTableColumns('tl_content')['advancedCss'])) {
+            return false;
+        }
+
+        if (!$schemaManager->tablesExist(['tl_form']) && !isset($schemaManager->listTableColumns('tl_form')['ac_set'])) {
+            return false;
+        }
+
         return true;
     }
 
