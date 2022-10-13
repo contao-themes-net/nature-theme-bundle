@@ -44,7 +44,7 @@ body:not(.home) #header .inside {
       color: $white;
     }
 
-    .content-text.block:not(:last-child) {
+    .content-text:not(:last-child) {
       margin-bottom: 3rem;
     }
 
