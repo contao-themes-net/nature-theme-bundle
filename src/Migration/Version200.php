@@ -52,7 +52,7 @@ class Version200 extends AbstractMigration
             return false;
         }
 
-        $test = $this->connection->fetchOne("SELECT id FROM tl_content WHERE customTpl = 'ce_image_headerimage'");
+        $test = $this->connection->fetchOne("SELECT id FROM tl_content WHERE customTpl = 'ce_image_headerimage' OR 'text' LIKE ' %2x}}%'");
 
         return false !== $test;
     }
@@ -62,7 +62,11 @@ class Version200 extends AbstractMigration
      */
     public function run(): MigrationResult
     {
+        // change header image template
         $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/image/header_image_nature' WHERE customTpl = 'ce_image_headerimage'");
+
+        // change font awesome class
+        $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 2x}}', ' fa-2x}}')");
 
         // create and set header image size
         $test = $this->connection->fetchOne("SELECT id FROM tl_image_size WHERE name = 'Headerbild &#40;Fixed&#41;'");

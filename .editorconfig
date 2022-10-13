@@ -19,6 +19,6 @@ insert_final_newline = false
 [/contao/**.{css,js,php}]
 indent_style = tab
 
-[/contao/**.html5]
+[/contao/**.{html5,twig}]
 indent_style = space
 indent_size = 2
