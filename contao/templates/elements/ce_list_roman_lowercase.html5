@@ -3,9 +3,9 @@
 <?php $this->block('content'); ?>
 
   <ol type="i">
-    <?php foreach ($this->items as $item): ?>
-      <li><?= $item ?></li>
-    <?php endforeach; ?>
+  <?php foreach ($this->items as $item): ?>
+    <li><?= $item ?></li>
+  <?php endforeach; ?>
   </ol>
 
 <?php $this->endblock(); ?>

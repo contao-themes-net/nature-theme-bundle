@@ -1,33 +1,33 @@
 <?php $this->extend('form_row'); ?>
 
 <?php $this->block('label'); ?>
-    <?php if ($this->label): ?>
-    <label for="ctrl_<?= $this->id ?>" class="label<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>">
-        <?php if ($this->mandatory): ?>
-            <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
-        <?php else: ?>
-            <?= $this->label ?>
-        <?php endif; ?>
-    </label>
+  <?php if ($this->label): ?>
+  <label for="ctrl_<?= $this->id ?>" class="label<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>">
+    <?php if ($this->mandatory): ?>
+      <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+    <?php else: ?>
+      <?= $this->label ?>
     <?php endif; ?>
+  </label>
+  <?php endif; ?>
 <?php $this->endblock(); ?>
 
 <?php $this->block('field'); ?>
 <div class="file">
-    <label class="file-label">
-        <input type="file" name="<?= $this->name ?>" id="ctrl_<?= $this->id ?>" class="upload file-input<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>"<?= $this->getAttributes() ?>>
-    <span class="file-cta">
-      <span class="file-icon">
-        <i class="fas fa-upload"></i>
-      </span>
-      <span class="file-label">
-        Datei auswählen
-      </span>
+  <label class="file-label">
+    <input type="file" name="<?= $this->name ?>" id="ctrl_<?= $this->id ?>" class="upload file-input<?php if ($this->class): ?> <?= $this->class ?><?php endif; ?>"<?= $this->getAttributes() ?>>
+  <span class="file-cta">
+    <span class="file-icon">
+    <i class="fas fa-upload"></i>
     </span>
-    <span class="file-name"></span>
-    </label>
-    <?php if ($this->hasErrors()): ?>
-        <p class="help is-danger"><?= $this->getErrorAsString() ?></p>
-    <?php endif; ?>
+    <span class="file-label">
+    Datei auswählen
+    </span>
+  </span>
+  <span class="file-name"></span>
+  </label>
+  <?php if ($this->hasErrors()): ?>
+    <p class="help is-danger"><?= $this->getErrorAsString() ?></p>
+  <?php endif; ?>
 </div>
 <?php $this->endblock(); ?>

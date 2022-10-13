@@ -12,23 +12,23 @@
 
 <form<?php if ($this->action): ?> action="<?= $this->action ?>"<?php endif; ?> id="<?= $this->formId ?>" method="post" enctype="<?= $this->enctype ?>">
 <div class="formbody">
-    <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formId ?>">
-    <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>">
+  <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formId ?>">
+  <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>">
 
-    <?php foreach ($this->categories as $legend => $category): ?>
-    <?php if (!empty($category)): ?>
-    <div class="fields">
-        <?php if ($legend): ?>
-        <legend><?= $legend ?></legend>
-        <?php endif; ?>
-        <?= implode('', $category) ?>
-    </div>
+  <?php foreach ($this->categories as $legend => $category): ?>
+  <?php if (!empty($category)): ?>
+  <div class="fields">
+    <?php if ($legend): ?>
+    <legend><?= $legend ?></legend>
     <?php endif; ?>
-    <?php endforeach; ?>
+    <?= implode('', $category) ?>
+  </div>
+  <?php endif; ?>
+  <?php endforeach; ?>
 
-    <div class="widget widget-submit">
-        <button type="submit" class="submit"><?= $this->slabel ?></button>
-    </div>
+  <div class="widget widget-submit">
+    <button type="submit" class="submit"><?= $this->slabel ?></button>
+  </div>
 </div>
 </form>
 

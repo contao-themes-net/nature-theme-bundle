@@ -1,34 +1,42 @@
 
-<div class="layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Article">
+<div class="layout_full block<?= $this->class ?>">
 
-    <?php if ($this->hasMetaFields): ?>
-    <p class="info"><time datetime="<?= $this->datetime ?>" itemprop="datePublished"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-    <?php endif; ?>
+  <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
 
-    <?php if (!$this->addImage): ?>
-        <h1 itemprop="name"><?= $this->newsHeadline ?></h1>
-    <?php endif; ?>
+  <?php if (!$this->addImage): ?>
+    <h1><?= $this->newsHeadline ?></h1>
+  <?php endif; ?>
 
-    <?php if ($this->hasSubHeadline): ?>
-    <h2 itemprop="headline"><?= $this->subHeadline ?></h2>
-    <?php endif; ?>
+  <?php if ($this->hasSubHeadline): ?>
+    <h2><?= $this->subHeadline ?></h2>
+  <?php endif; ?>
 
-    <?php if ($this->hasText): ?>
-        <?= $this->text ?>
-    <?php else: ?>
-    <div class="ce_text block">
-        <?= $this->teaser ?>
+  <?php if ($this->hasText): ?>
+    <?= $this->text ?>
+  <?php else: ?>
+    <div class="content-text block">
+      <?= $this->teaser ?>
     </div>
-    <?php endif; ?>
+  <?php endif; ?>
 
-    <?php if ($this->enclosure): ?>
+  <?php if ($this->enclosure): ?>
     <ul class="enclosure">
-        <?php foreach ($this->enclosure as $enclosure): ?>
+      <?php foreach ($this->enclosure as $enclosure): ?>
         <li class="download-element ext-<?= $enclosure['extension'] ?>">
-            <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+          <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
         </li>
-        <?php endforeach; ?>
+      <?php endforeach; ?>
     </ul>
-    <?php endif; ?>
+  <?php endif; ?>
 
 </div>
+
+<?php
+
+$schemaOrg = $this->getSchemaOrgData();
+
+if ($this->hasText) {
+$schemaOrg['text'] = $this->rawHtmlToPlainText($this->text);
+}
+
+$this->addSchemaOrg($schemaOrg);

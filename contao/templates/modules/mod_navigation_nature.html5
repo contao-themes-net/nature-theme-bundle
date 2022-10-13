@@ -3,15 +3,15 @@
 <nav class="<?= $this->class ?> navbar block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="main navigation">
 
 <div class="navbar-brand">
-    <a class="navbar-item" href="{{env::path}}">
-        {{theme::content::NATURE01/01}}
-    </a>
+  <a class="navbar-item" href="{{env::path}}">
+    {{theme::content::NATURE01/01}}
+  </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
+  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
 </div>
 
 <?php if ($this->headline): ?>
