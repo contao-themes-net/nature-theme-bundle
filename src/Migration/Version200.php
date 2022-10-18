@@ -52,7 +52,13 @@ class Version200 extends AbstractMigration
             return false;
         }
 
-        $test = $this->connection->fetchOne("SELECT id FROM tl_content WHERE customTpl = 'ce_image_headerimage' OR 'text' LIKE ' %2x}}%'");
+        $test = $this->connection->fetchOne("
+            SELECT id FROM tl_content 
+            WHERE customTpl = 'ce_image_headerimage' 
+               OR customTpl = 'ce_hyperlink_button' 
+               OR customTpl = 'ce_text_cthemes_simplebox_nature' 
+               OR customTpl = 'ce_youtube_nature' 
+               OR 'text' LIKE ' %2x}}%'");
 
         return false !== $test;
     }
@@ -62,8 +68,14 @@ class Version200 extends AbstractMigration
      */
     public function run(): MigrationResult
     {
-        // change header image template
+        // change templates
         $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/image/header_image_nature' WHERE customTpl = 'ce_image_headerimage'");
+
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/hyperlink/button_nature' WHERE customTpl = 'ce_hyperlink_button'");
+
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/text/simplebox_nature' WHERE customTpl = 'ce_text_cthemes_simplebox_nature'");
+
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = '' WHERE customTpl = 'ce_youtube_nature'");
 
         // change font awesome class
         $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 2x}}', ' fa-2x}}')");
