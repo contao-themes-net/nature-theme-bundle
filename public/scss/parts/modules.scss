@@ -737,8 +737,7 @@ body:not(.home) #header .inside {
   .submit {
     background: $white;
     color: $primary;
-    margin-left: 15px;
-    margin-top: 1px;
+    margin: 0 15px 0;
 
     &:hover {
       background: $white-ter;

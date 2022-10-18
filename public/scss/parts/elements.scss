@@ -32,6 +32,9 @@ a {
   font-weight: 300;
   font-size: 1rem;
   letter-spacing: 1px;
+  margin: 15px 0;
+  display: block;
+  width: max-content;
 
   &.is-link, &.is-primary {
     &:hover {
@@ -102,6 +105,15 @@ a {
     margin-bottom: 0;
   }
 
+  .pageLink {
+    position: absolute;
+    bottom: 30px;
+
+    a {
+      @extend .button;
+    }
+  }
+
   .inside {
     background: $boxes-background;
     padding: 30px 30px 80px;
@@ -128,7 +140,6 @@ a {
     }
 
     .pageLink a {
-      @extend .button;
       @extend .has-text-primary;
     }
   }
@@ -143,7 +154,6 @@ a {
     }
 
     .pageLink a {
-      @extend .button;
       color: $dark;
     }
   }
@@ -158,7 +168,6 @@ a {
     }
 
     .pageLink a {
-      @extend .button;
       @extend .has-text-success;
     }
   }
@@ -173,7 +182,6 @@ a {
     }
 
     .pageLink a {
-      @extend .button;
       @extend .has-text-danger;
     }
   }
@@ -188,7 +196,6 @@ a {
     }
 
     .pageLink a {
-      @extend .button;
       @extend .has-text-info;
     }
   }
@@ -196,11 +203,6 @@ a {
   &:not(.is-primary):not(.is-warning):not(.is-success):not(.is-danger):not(.is-info) .pageLink a {
     @extend .button;
     @extend .is-primary;
-  }
-
-  .pageLink {
-    position: absolute;
-    bottom: 30px;
   }
 }
 
@@ -534,6 +536,11 @@ a {
     .inside {
       height: inherit;
     }
+
+    .pageLink a {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &.sticky-teaserbox {
@@ -601,38 +608,52 @@ a {
   }
 }
 
-.ce_gallery {
-  .cols_2 li {
+.content-gallery {
+  &[class*="cols-1"] li {
+    width: 100%;
+  }
+
+  &[class*="cols-2"] li {
     width: calc(100% / 2);
   }
-  .cols_3 li {
+
+  &[class*="cols-3"] li {
     width: calc(100% / 3);
   }
-  .cols_4 li {
+
+  &[class*="cols-4"] li {
     width: calc(100% / 4);
   }
-  .cols_5 li {
+
+  &[class*="cols-5"] li {
     width: calc(100% / 5);
   }
-  .cols_6 li {
-    width: calc(100% / 6);
+
+  &[class*="cols-6"] li {
+    max-width: calc(100% / 6);
   }
-  .cols_7 li {
+
+  &[class*="cols-7"] li {
     width: calc(100% / 7);
   }
-  .cols_8 li {
+
+  &[class*="cols-8"] li {
     width: calc(100% / 8);
   }
-  .cols_9 li {
+
+  &[class*="cols-9"] li {
     width: calc(100% / 9);
   }
-  .cols_10 li {
+
+  &[class*="cols-10"] li {
     width: calc(100% / 10);
   }
-  .cols_11 li {
+
+  &[class*="cols-11"] li {
     width: calc(100% / 11);
   }
-  .cols_12 li {
+
+  &[class*="cols-12"] li {
     width: calc(100% / 12);
   }
 
@@ -645,15 +666,14 @@ a {
     vertical-align: bottom;
   }
 
-  > ul {
-    &.cols_1, &.cols_2, &.cols_3, &.cols_4, &.cols_5, &.cols_6, &.cols_7, &.cols_8, &.cols_9, &.cols_10, &.cols_11, &.cols_12 {
-      margin-left: -5px;
-      margin-right: -5px;
+  ul {
+    margin-left: -5px;
+    margin-right: -5px;
+    list-style: none;
 
-      li {
-        padding: 5px;
-        margin: 0;
-      }
+    li {
+      padding: 5px;
+      margin: 0;
     }
   }
 }
@@ -873,8 +893,8 @@ a {
   }
 }
 
-.ce_download, .ce_downloads {
-  .download-element a {
+.content-download, .content-downloads .download-element {
+  a {
     font-weight: 300;
 
     &:before {
@@ -884,11 +904,11 @@ a {
       padding-right: 10px;
     }
   }
+}
 
-  ul {
-    list-style: none;
-    margin-left: 0;
-  }
+.content-downloads ul {
+  list-style: none;
+  margin-left: 0;
 }
 
 .empty {
@@ -1266,6 +1286,37 @@ div.icon {
   min-height: 100vh;
 }
 
+.media.content-text {
+  display: block;
+  overflow: hidden;
+  border: none;
+
+  &.media--left figure {
+    margin: 0 50px 50px 0;
+  }
+
+  &.media--right figure {
+    margin: 0 0 50px 50px;
+  }
+
+  &.media--below {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      order: 2;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 10px;
+    }
+
+    .rte {
+      order: 1;
+    }
+  }
+}
+
 p {
   margin: 15px 0;
 }
@@ -1273,7 +1324,13 @@ p {
 pre {
   background: $boxes-background;
   color: $boxes-color;
+
+  .hljs {
+    background: none;
+  }
 }
+
+
 
 .sticky-container {
   position: relative;
@@ -1375,14 +1432,14 @@ strong {
   display: none;
 }
 
-.ce_video, .ce_youtube {
-  .video_container {
+.content-player, .content-youtube {
+  figure {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
     padding-top: 25px;
     height: 0;
 
-    iframe {
+    iframe, video {
       position: absolute;
       top: 0;
       left: 0;

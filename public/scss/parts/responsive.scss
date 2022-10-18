@@ -265,8 +265,12 @@
   }
 
   .footer {
-    .footer-content a {
-      display: inline-block;
+    .footer-content {
+      padding: 20px 0 0;
+
+      a {
+        display: inline-block;
+      }
     }
 
     .has-text-right {
@@ -293,14 +297,8 @@
         }
       }
     }
-  }
 
-  .footer {
-    .footer-content {
-      padding: 20px 0 0;
-    }
-
-    .image_container {
+    figure {
       display: block;
       width: 100%;
       padding-bottom: 20px;
@@ -424,8 +422,7 @@
     }
 
     .submit {
-      margin-left: 0;
-      margin-top: 20px;
+      margin: 20px auto;
     }
   }
 
@@ -470,15 +467,9 @@
     }
   }
 
-  #wrapper .ce_gallery > ul {
-    &.cols_2, &.cols_3, &.cols_4, &.cols_5, &.cols_6, &.cols_7, &.cols_8, &.cols_9, &.cols_10, &.cols_11, &.cols_12 {
-      li {
-        width: 100%;
-      }
-    }
-
-    li.col_first {
-      clear: none;
+  .content-gallery[class*="cols"] {
+    li {
+      width: 100%;
     }
   }
 
