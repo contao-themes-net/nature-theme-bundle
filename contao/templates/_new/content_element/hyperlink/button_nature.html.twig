@@ -1,0 +1,17 @@
+{% extends "@Contao/content_element/hyperlink.html.twig" %}
+
+{% block wrapper %}
+  {# Wrapper attributes: add the user defined ID/classes and also add the
+     template name (e.g. "content_element/text") as a class #}
+  {% set attributes = attrs(attributes|default)
+    .setIfExists('id', element_html_id)
+    .addClass([element_css_classes, "button", "content-#{type}"])
+  %}
+
+  {# Wrapper element around headline and content #}
+  <{% block wrapper_tag %}a{% endblock %}{% block attributes %}{{ attributes }}{% endblock %}{% block link_attributes %}{{ link_attributes }}{% endblock %}>
+    {%- block inner %}
+      {{ link_text }}
+    {% endblock -%}
+  </{{ block('wrapper_tag') }}>
+{% endblock %}
