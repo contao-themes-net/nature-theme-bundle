@@ -1,0 +1,19 @@
+{% extends "@Contao/content_element/list.html.twig" %}
+
+{% block list %}
+  {# If the list should be shuffled, paginated or limited, add the
+     respective data-attributes. #}
+  {% set list_attributes = attrs(list.list_attributes|default)
+    .set('data-list-random', '', randomize_order)
+    .set('data-list-paginate', items_per_page ~ ',' ~ limit, add_pagination or limit_elements)
+  %}
+  <ol{% block list_attributes %}{{ list_attributes }}{% endblock %} type='i'>
+    {% for item in list.items %}
+      <li{% block list_item_attributes %}{{ attrs(list.item_attributes|default) }}{% endblock %}>
+        {%- block list_item %}
+          {{ item }}
+        {% endblock -%}
+      </li>
+    {% endfor %}
+  </ol>
+{% endblock %}

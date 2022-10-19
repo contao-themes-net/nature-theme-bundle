@@ -57,7 +57,11 @@ class Version200 extends AbstractMigration
             WHERE customTpl = 'ce_image_headerimage' 
                OR customTpl = 'ce_hyperlink_button' 
                OR customTpl = 'ce_text_cthemes_simplebox_nature' 
-               OR customTpl = 'ce_youtube_nature' 
+               OR customTpl = 'ce_youtube_nature'
+               OR customTpl = 'ce_list_alphabetic_lowercase' 
+               OR customTpl = 'ce_list_alphabetic_uppercase' 
+               OR customTpl = 'ce_list_roman_lowercase' 
+               OR customTpl = 'ce_list_roman_uppercase' 
                OR 'text' LIKE ' %2x}}%'
                OR 'text' LIKE ' %3x}}%'
                OR 'text' LIKE ' %4x}}%'
@@ -73,12 +77,13 @@ class Version200 extends AbstractMigration
     {
         // change templates
         $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/image/header_image_nature' WHERE customTpl = 'ce_image_headerimage'");
-
         $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/hyperlink/button_nature' WHERE customTpl = 'ce_hyperlink_button'");
-
         $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/text/simplebox_nature' WHERE customTpl = 'ce_text_cthemes_simplebox_nature'");
-
         $this->connection->executeStatement("UPDATE tl_content SET customTpl = '' WHERE customTpl = 'ce_youtube_nature'");
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/list/alphabetic_lowercase' WHERE customTpl = 'ce_list_alphabetic_lowercase'");
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/list/alphabetic_uppercase' WHERE customTpl = 'ce_list_alphabetic_uppercase'");
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/list/roman_lowercase' WHERE customTpl = 'ce_list_roman_lowercase'");
+        $this->connection->executeStatement("UPDATE tl_content SET customTpl = 'content_element/list/roman_uppercase' WHERE customTpl = 'ce_list_roman_uppercase'");
 
         // change font awesome class
         $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 2x}}', ' fa-2x}}')");
