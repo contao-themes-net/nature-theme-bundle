@@ -58,7 +58,10 @@ class Version200 extends AbstractMigration
                OR customTpl = 'ce_hyperlink_button' 
                OR customTpl = 'ce_text_cthemes_simplebox_nature' 
                OR customTpl = 'ce_youtube_nature' 
-               OR 'text' LIKE ' %2x}}%'");
+               OR 'text' LIKE ' %2x}}%'
+               OR 'text' LIKE ' %3x}}%'
+               OR 'text' LIKE ' %4x}}%'
+               OR 'text' LIKE ' %5x}}%'");
 
         return false !== $test;
     }
@@ -79,6 +82,9 @@ class Version200 extends AbstractMigration
 
         // change font awesome class
         $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 2x}}', ' fa-2x}}')");
+        $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 3x}}', ' fa-3x}}')");
+        $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 4x}}', ' fa-4x}}')");
+        $this->connection->executeStatement("UPDATE tl_content SET text = REPLACE(text, ' 5x}}', ' fa-5x}}')");
 
         // create and set header image size
         $test = $this->connection->fetchOne("SELECT id FROM tl_image_size WHERE name = 'Headerbild &#40;Fixed&#41;'");
