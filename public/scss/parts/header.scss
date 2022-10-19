@@ -408,11 +408,11 @@
     }
 
     .header-image {
-      .image_container {
+      figure {
         height: 620px;
       }
 
-      &.large-headerimage .image_container {
+      &.large-headerimage figure {
         height: 820px;
       }
     }
