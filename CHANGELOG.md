@@ -15,6 +15,7 @@ Types of changes
 - [Changed] Increase Contao version to 5 only
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Removed] Cleanup older Contao SQL files
+- [Added] Add more options to style content slider
 
 ## [1.9.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.0) – 2022-04-08
 

@@ -913,7 +913,7 @@ a {
 
 .full-width-height-slider {
   width: 100vw;
-  min-height: 100vh;
+  min-height: $nature-slider-min-height;
   position: relative;
   background: $white;
 
@@ -928,7 +928,7 @@ a {
 
   .ce_ct_sliderElement {
     background-size: cover;
-    min-height: 100vh;
+    min-height: $nature-slider-min-height;
     background-position: center;
 
     &.block:not(:last-child) {
@@ -947,8 +947,8 @@ a {
   }
 
   &.parallax-slider .content-slider {
-    position: fixed;
-    min-height: 100vh;
+    position: $nature-slider-position;
+    min-height: $nature-slider-min-height;
     width: 100%;
     top: 0;
   }
@@ -1052,7 +1052,6 @@ a {
   }
 
   .text {
-    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
@@ -1060,6 +1059,8 @@ a {
     height: 100%;
     display: flex;
     transition: all .05s;
+    position: relative;
+    padding: 150px 20px 70px;
 
     .container {
       display: flex;
