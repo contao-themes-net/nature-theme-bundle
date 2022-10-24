@@ -947,7 +947,7 @@ a {
   }
 
   &.parallax-slider .content-slider {
-    position: $nature-slider-position;
+    position: fixed;
     min-height: $nature-slider-min-height;
     width: 100%;
     top: 0;
