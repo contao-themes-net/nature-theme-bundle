@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.10.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.0) – 2022-10-25
+
+- [Added] Add more options to style content slider
+
 ## [1.9.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.2) – 2022-10-11
 
 - [Changed] now require terminal42/contao-folderpage version 2.* or 3.*

@@ -50,7 +50,7 @@
 
   .full-width-height-slider .text {
     position: relative;
-    padding: 120px 20px 50px;
+    padding: 120px 20px 70px;
 
     .image_container {
       width: 100%;
@@ -246,6 +246,12 @@
   }
 
   .full-width-height-slider {
+    min-height: $nature-slider-mobile-min-height;
+
+    .ce_ct_sliderElement {
+      min-height: $nature-slider-mobile-min-height;
+    }
+
     .text .inside {
       width: 100%;
     }
@@ -257,6 +263,7 @@
 
     &.parallax-slider .content-slider {
       position: relative;
+      min-height: $nature-slider-mobile-min-height;
     }
 
     .text .container {
