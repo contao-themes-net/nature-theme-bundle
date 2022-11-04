@@ -94,7 +94,7 @@ class Version200 extends AbstractMigration
         // create and set header image size
         $test = $this->connection->fetchOne("SELECT id FROM tl_image_size WHERE name = 'Headerbild &#40;Fixed&#41;'");
 
-        if(false === $test) {
+        if (false === $test) {
             $this->connection->executeStatement("INSERT INTO `tl_image_size` (`id`, `skipIfDimensionsMatch`, `lazyLoading`, `pid`, `tstamp`, `name`, `cssClass`, `densities`, `sizes`, `width`, `height`, `resizeMode`, `zoom`, `formats`) VALUES (NULL, '0', '1', '1', '1665577831', 'Headerbild &#40;Fixed&#41;', '', '1x, 1.5x, 2x', '', '1920', '560', 'crop', '0', 'a:3:{i:0;s:12:\"png:webp,png\";i:1;s:27:\"jpg:webp,jpg;jpeg:webp,jpeg\";i:2;s:12:\"gif:webp,gif\";}');");
 
             $lastInsertId = $this->connection->lastInsertId();

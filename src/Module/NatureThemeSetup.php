@@ -19,7 +19,6 @@ declare(strict_types=1);
 namespace ContaoThemesNet\NatureThemeBundle\Module;
 
 use Contao\BackendModule;
-use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
 
 class NatureThemeSetup extends BackendModule
 {

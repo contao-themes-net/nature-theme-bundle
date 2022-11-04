@@ -45,8 +45,7 @@ class SliderElementNature extends SliderElement
         }
 
         // Add image
-        if ($this->addImage)
-        {
+        if ($this->addImage) {
             $figure = System::getContainer()
                 ->get('contao.image.studio')
                 ->createFigureBuilder()
@@ -54,7 +53,8 @@ class SliderElementNature extends SliderElement
                 ->setSize($this->size)
                 ->setMetadata($this->objModel->getOverwriteMetadata())
                 ->enableLightbox($this->fullsize)
-                ->buildIfResourceExists();
+                ->buildIfResourceExists()
+            ;
 
             $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
 
