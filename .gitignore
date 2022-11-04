@@ -1,0 +1,8 @@
+# Composer
+/composer.lock
+/vendor/
+
+# PhpStorm
+.idea
+/phpunit.xml.bak
+/.phpunit.result.cache
