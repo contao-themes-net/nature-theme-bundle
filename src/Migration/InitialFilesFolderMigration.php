@@ -33,9 +33,10 @@ class InitialFilesFolderMigration extends AbstractMigration
     private string $filesFolder = 'files'.\DIRECTORY_SEPARATOR.'naturetheme';
     private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
 
-    public function __construct(ContaoFramework $contaoFramework)
+    public function __construct(ContaoFramework $contaoFramework, Connection $connection)
     {
         $this->contaoFramework = $contaoFramework;
+        $this->connection = $connection;
     }
 
     public function getName(): string
