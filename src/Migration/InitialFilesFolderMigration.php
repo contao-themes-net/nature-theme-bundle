@@ -45,12 +45,33 @@ class InitialFilesFolderMigration extends AbstractMigration
 
     public function shouldRun(): bool
     {
+        $schemaManager = $this->connection->createSchemaManager();
+
+        // If the database tables itself does not exist we should do nothing
+        if (!$schemaManager->tablesExist($this->minTables)) {
+            return false;
+        }
+
+        // Check if full version is used
+        if (!$schemaManager->tablesExist($this->fullTables)) {
+            return false;
+        }
+
         $this->contaoFramework->initialize();
 
         $rootDir = System::getContainer()->getParameter('kernel.project_dir');
 
         // If the folder exists we should do nothing
         if (file_exists($rootDir . \DIRECTORY_SEPARATOR . $this->filesFolder)) {
+            return false;
+        }
+
+        // check some tables for content
+        $count = $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
+        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
+
+        if ($count == 0) {
             return false;
         }
 
