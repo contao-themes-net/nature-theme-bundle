@@ -23,14 +23,12 @@ use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\Folder;
 use Contao\System;
+use ContaoThemesNet\ZeroOneThemeBundle\Migration\MigrationHelperTrait;
 use Doctrine\DBAL\Connection;
 
 class InitialFilesFolderMigration extends AbstractMigration
 {
-    private ContaoFramework $contaoFramework;
-
-    private string $filesFolder = 'files'.\DIRECTORY_SEPARATOR.'naturetheme';
-    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
+    use MigrationHelperTrait;
 
     public function __construct(ContaoFramework $contaoFramework, Connection $connection)
     {
@@ -43,6 +41,9 @@ class InitialFilesFolderMigration extends AbstractMigration
         return 'Initial files folder migration - NATURE Theme';
     }
 
+    /**
+     * @throws \Exception
+     */
     public function shouldRun(): bool
     {
         $schemaManager = $this->connection->createSchemaManager();
@@ -59,10 +60,11 @@ class InitialFilesFolderMigration extends AbstractMigration
 
         $this->contaoFramework->initialize();
 
-        $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+        $this->uploadPath = System::getContainer()->getParameter('contao.upload_path');
+        $this->projectDir = System::getContainer()->getParameter('kernel.project_dir');
 
         // If the folder exists we should do nothing
-        if (file_exists($rootDir.\DIRECTORY_SEPARATOR.$this->filesFolder)) {
+        if (file_exists($this->projectDir.'/'.$this->uploadPath.'/'.$this->themeFolder)) {
             return false;
         }
 
@@ -78,11 +80,14 @@ class InitialFilesFolderMigration extends AbstractMigration
         return true;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function run(): MigrationResult
     {
         // copy files and folders to files
-        $folder = new Folder($this->contaoFolder.\DIRECTORY_SEPARATOR.$this->filesFolder);
-        $folder->copyTo($this->filesFolder);
+        $folder = new Folder($this->contaoFolder.'/files/'.$this->themeFolder);
+        $folder->copyTo($this->uploadPath.'/'.$this->themeFolder);
 
         return $this->createResult(true, 'Initial theme files where copied.');
     }

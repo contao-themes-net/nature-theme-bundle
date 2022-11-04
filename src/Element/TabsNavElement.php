@@ -37,6 +37,7 @@ class TabsNavElement extends ContentElement
     {
         $items = StringUtil::deserialize($this->tabs_navigation, true);
         $limit = \count($items) - 1;
+        $arrItems = [];
 
         for ($i = 0, $c = \count($items); $i < $c; ++$i) {
             $arrItems[] = [

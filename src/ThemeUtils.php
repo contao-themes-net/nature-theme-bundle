@@ -19,22 +19,26 @@ declare(strict_types=1);
 namespace ContaoThemesNet\NatureThemeBundle;
 
 use Contao\Combiner;
+use Contao\CoreBundle\Exception\InvalidResourceException;
 use Contao\StringUtil;
 use Contao\System;
 
 class ThemeUtils
 {
-    public static function getRootDir()
+    public static function getRootDir(): string
     {
         return System::getContainer()->getParameter('kernel.project_dir');
     }
 
-    public static function getWebDir()
+    public static function getWebDir(): string
     {
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet()
+    /**
+     * @throws InvalidResourceException
+     */
+    public static function getCombinedStylesheet(): string
     {
         // add stylesheets
         $combiner = new Combiner();

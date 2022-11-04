@@ -22,26 +22,12 @@ use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\System;
+use ContaoThemesNet\ZeroOneThemeBundle\Migration\MigrationHelperTrait;
 use Doctrine\DBAL\Connection;
 
 class InitialDemoDataMigration extends AbstractMigration
 {
-    private ContaoFramework $contaoFramework;
-    private Connection $connection;
-
-    private string $sqlFile = 'sql'.\DIRECTORY_SEPARATOR.'contao50'.\DIRECTORY_SEPARATOR.'minimal.sql';
-    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
-
-    private array $minTables = [
-        'tl_article', 'tl_content', 'tl_css_style_selector', 'tl_files', 'tl_form', 'tl_form_field', 'tl_image_size',
-        'tl_image_size_item', 'tl_layout', 'tl_member', 'tl_module', 'tl_page', 'tl_theme',
-    ];
-
-    private array $fullTables = [
-        'tl_calendar', 'tl_calendar_events', 'tl_faq', 'tl_faq_category', 'tl_news', 'tl_newsletter_channel', 'tl_news_archive',
-    ];
-
-    private string $rootDir = '';
+    use MigrationHelperTrait;
 
     public function __construct(ContaoFramework $contaoFramework, Connection $connection)
     {
@@ -54,9 +40,12 @@ class InitialDemoDataMigration extends AbstractMigration
         return 'Initial demo data migration - NATURE Theme';
     }
 
+    /**
+     * @throws \Exception
+     */
     public function shouldRun(): bool
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = $this->connection->createSchemaManager();
 
         // If the database tables itself does not exist we should do nothing
         if (!$schemaManager->tablesExist($this->minTables)) {
@@ -92,13 +81,17 @@ class InitialDemoDataMigration extends AbstractMigration
         return true;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function run(): MigrationResult
     {
         $this->contaoFramework->initialize();
 
-        $this->rootDir = System::getContainer()->getParameter('kernel.project_dir');
+        $this->projectDir = System::getContainer()->getParameter('kernel.project_dir');
 
-        foreach (explode("\n", file_get_contents($this->rootDir.'/'.$this->contaoFolder.'/'.$this->sqlFile)) as $sql) {
+
+        foreach (explode("\n", file_get_contents($this->projectDir.'/'.$this->contaoFolder.'/'.$this->sqlFile)) as $sql) {
             // ignore empty lines
             if ('' === trim($sql)) {
                 continue;
