@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.1) – 2022-11-04
+
+- [Changed] Change migration order
+
 ## [2.0.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.0) – 2022-02-09
 
 - [Changed] Increase Contao version to 5 only
