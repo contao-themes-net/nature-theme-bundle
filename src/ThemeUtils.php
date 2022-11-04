@@ -38,7 +38,7 @@ class ThemeUtils
     {
         // add stylesheets
         $combiner = new Combiner();
-        $combiner->add('bundles/contaothemesnetnaturetheme/fonts/fontawesome/css/all.min.css');
+        $combiner->add('bundles/contaothemesnetfontawesomeinserttag/js/all.min.css');
 
         if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
             $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature_win.scss');

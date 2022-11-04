@@ -1,9 +1,0 @@
-<div class="<?= $this->class ?> tabs block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-
-<ul>
-	<?php foreach ($this->items as $item): ?>
-	  <li data-tab="<?= $item['value'] ?>"<?php if ($item['class']): ?> class="<?= $item['class'] ?>"<?php endif; ?>><a><?= $item['content'] ?></a></li>
-	<?php endforeach; ?>
-</ul>
-
-</div>

@@ -16,6 +16,9 @@ indent_size = 4
 [*.{html5,svg,min.css,min.js}]
 insert_final_newline = false
 
-[*.{html5,css}]
+[/contao/**.{css,js,php}]
+indent_style = tab
+
+[/contao/**.{html5,twig}]
 indent_style = space
 indent_size = 2

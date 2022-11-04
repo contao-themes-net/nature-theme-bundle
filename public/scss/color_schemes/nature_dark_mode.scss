@@ -1,0 +1,509 @@
+$darkMode_text: $white-ter;
+$darkMode_background: $grey-darker;
+$darkMode_boxes-background: $grey-dark;
+$darkMode_boxes-color: $white;
+
+$darkMode_input-border-color: $grey-darker;
+$darkMode_input-hover-border-color: $grey-darker;
+$darkMode_input-focus-border-color: $grey-darker;
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    @extend .color-scheme-dark-mode;
+  }
+
+  .color-scheme-dark-mode {
+
+    .logo-light {
+      display: block;
+    }
+
+    .mod_navigation.navbar .content-image:not(.logo-light) {
+      display: none;
+    }
+
+    &.home .navbar {
+      background: rgba($black-ter, 0.7);
+    }
+
+    .navbar-dropdown {
+      background: $black-ter;
+    }
+
+    &, #container {
+      color: $darkMode_text;
+    }
+
+    &, #container, .column-wrapper {
+      background: $darkMode_background;
+    }
+
+    .ce_accordion .accordion {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+
+      h1, h2, h3, h4, h5, h6 {
+        color: $darkMode_boxes-color;
+      }
+
+      strong {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .ce_ct_contentBox .inside {
+      background: $darkMode_boxes-background;
+
+      &, h1, h2, h3, h4, h5, h6, a {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .ce_ct_featureElement .inside {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+    }
+
+    .ce_ct_priceBox {
+      .inside {
+        background: $darkMode_boxes-background;
+        color: $darkMode_boxes-color;
+        border: 1px solid rgba($darkMode_boxes-color, .05);
+
+        h1, h2, h3, h4, h5, h6 {
+          color: $darkMode_boxes-color;
+        }
+      }
+
+      &.popular-box {
+        .first-link a {
+          @extend .button;
+          color: $darkMode_boxes-color;
+          background: $darkMode_boxes-background;
+          border-color: $darkMode_boxes-background;
+
+          &:hover {
+            background: $darkMode_background;
+            border-color: $darkMode_background;
+            color: $darkMode_boxes-color;
+          }
+        }
+
+        .price {
+          background: $darkMode_boxes-background;
+          color: $darkMode_text;
+
+          .label {
+            color: $darkMode_text;
+          }
+        }
+      }
+    }
+
+    .ce_ct_teaserBox {
+      &:not(.full-height) {
+        p, strong, h1, h2, h3, h4, h5, h6 {
+          color: $darkMode_boxes-color;
+        }
+
+        .image_container {
+          &:after {
+            background: rgba($darkMode_boxes-background, 0.8);
+          }
+        }
+      }
+
+      .inside {
+        background: $darkMode_boxes-background;
+        color: $darkMode_boxes-color;
+      }
+
+      strong {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .ce_sliderStart:not(.full-width-height-slider) {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+
+      .slider-control {
+        .slider-menu {
+          b {
+            color: rgba($darkMode_boxes-color, .5);
+
+            &.active {
+              color: $darkMode_boxes-color;
+            }
+          }
+        }
+      }
+
+      .slider-wrapper {
+        h1, h2, h3, h4, h5, h6 {
+          color: $darkMode_boxes-color;
+        }
+      }
+
+      strong {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .content {
+      h1, h2, h3, h4, h5, h6 {
+        color: $darkMode_text;
+      }
+    }
+
+    .content-text {
+      &.hero:not(.is-primary):not(.is-link):not(.is-info):not(.is-success):not(.is-warning):not(.is-danger) {
+        background: $darkMode_boxes-background;
+        color: $darkMode_boxes-color;
+
+        h1, h2, h3, h4, h5, h6, a, strong {
+          color: $darkMode_boxes-color;
+        }
+      }
+    }
+
+    pre {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+    }
+
+    strong {
+      color: $darkMode_text;
+    }
+
+    .contact-box {
+      background: $darkMode_boxes-background;
+
+      .contact-data {
+        h1, h2, h3, h4, h5, h6 {
+          color: $darkMode_boxes-color;
+        }
+      }
+
+      .contact-form {
+        .label {
+          color: $darkMode_boxes-color;
+        }
+      }
+    }
+
+    .layout_latest {
+      .inside {
+        &:after {
+          background: linear-gradient(to bottom, transparent 0%, rgba($darkMode_boxes-background, 0.4) 35%, rgba($darkMode_boxes-background, 0.9) 55%);
+        }
+      }
+    }
+
+    .layout_short {
+      .info {
+        color: $darkMode_boxes-color;
+      }
+
+      .inside {
+        background: $darkMode_boxes-background;
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .layout_teaser, .layout_list {
+      .time {
+        &:before {
+          border-color: $darkMode_text;
+        }
+      }
+    }
+
+    .layout_list {
+      .inside {
+        background: $darkMode_boxes-background;
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .layout_teaser {
+      &:after {
+        border-bottom: 1px solid rgba($darkMode_text, .2);
+      }
+    }
+
+    .layout_full.event, .layout_teaser {
+      .location {
+        color: $darkMode_text;
+        border-color: $darkMode_text;
+      }
+    }
+
+    .layout_list {
+      .location {
+        color: $darkMode_boxes-color;
+        border-color: $darkMode_boxes-color;
+      }
+
+      .time:before {
+        border-color: $darkMode_boxes-color;
+      }
+    }
+
+    .mod_calendar {
+      table {
+        background: $darkMode_boxes-background;
+        border-color: $darkMode_boxes-background;
+
+        th.head {
+          color: $darkMode_text;
+        }
+      }
+    }
+
+    .mod_faqpage {
+      .info {
+        color: rgba($darkMode_text,.5);
+      }
+
+      section:not(.last) {
+        border-color: rgba($darkMode_text,.2);
+      }
+    }
+
+    .mod_newslist {
+      .social_feed_element {
+        .content-text {
+          color: $darkMode_boxes-color;
+        }
+
+        .inner {
+          background: $darkMode_boxes-background;
+        }
+
+        .title {
+          color: $darkMode_boxes-color;
+        }
+      }
+    }
+
+    .mod_navigation.navbar .navbar-brand {
+      background: rgba(36,36,36,1);
+    }
+
+    .field {
+      > label {
+        color: $darkMode_text;
+      }
+    }
+
+    .menu .navbar-menu {
+      background: $darkMode_background;
+    }
+
+    .menu-list {
+      a {
+        color: $darkMode_text;
+
+        &:hover {
+          background-color: $darkMode_boxes-background;
+          color: $darkMode_text;
+        }
+      }
+
+      li {
+        ul {
+          border-color: $darkMode_text;
+        }
+      }
+    }
+
+    .menu .level_2 > li > a:not(.active) {
+      color: rgba($white-ter, .4);
+    }
+
+    .control.has-icons-left .icon {
+      color: rgba($darkMode_boxes-color,.4);
+    }
+
+    .control.has-icons-left .input:focus~.icon, .control.has-icons-right .input:focus~.icon, .control.has-icons-left .select:focus~.icon, .control.has-icons-right .select:focus~.icon {
+      color: $darkMode_boxes-color;
+    }
+
+    .input, .textarea, .select select, .file-cta {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+      border-color: $darkMode_input-border-color;
+
+      &:hover {
+        border-color: $darkMode_input-hover-border-color;
+      }
+
+      &:focus {
+        border-color: $darkMode_input-hover-border-color;
+      }
+    }
+
+    .tabs a, .tabs li.is-active a {
+      color: $darkMode_text;
+    }
+
+    .tabs ul {
+      border-color: rgba($darkMode_text, .2);
+    }
+
+    .layout_short .subheadline {
+      background: $grey;
+      color: $white;
+    }
+
+    .pagination-previous, .pagination-next, .pagination-link,
+    .content table thead th, .content table tbody th,
+    .mod_immoListView .pagination .pagination-link {
+      color: $darkMode_text;
+    }
+
+    .modal-card-head, .modal-card-foot {
+      background: $darkMode_background;
+      border-color: rgba($darkMode_text, .2);
+    }
+
+    .modal-card-body {
+      background: $darkMode_boxes-background;
+    }
+
+    .mod_breadcrumb {
+      background: $darkMode_boxes-background;
+    }
+
+    .breadcrumb li.is-active a, .breadcrumb li+li::before {
+      color: $darkMode_boxes-color;
+    }
+
+    .table {
+      background: $darkMode_background;
+      color: $darkMode_text;
+
+      &.is-striped tbody tr:not(.is-selected):nth-child(even) {
+        background: $darkMode_boxes-background;
+
+        &:hover {
+            background: $darkMode_boxes-background;
+        }
+      }
+
+      &.is-hoverable tbody tr:not(.is-selected):hover {
+        background: $darkMode_boxes-background;
+      }
+
+      &.is-hoverable.is-striped tbody tr:not(.is-selected):hover:nth-child(even),
+      &.is-hoverable.is-striped tbody tr:not(.is-selected):hover {
+        background: lighten($darkMode_boxes-background, 5%);
+      }
+
+    }
+
+    .navbar-menu {
+      background: $black-ter;
+    }
+
+    .mod_navigation.navbar a.trail, .mod_navigation.navbar a.active, .navbar-item, .navbar-link,
+    a.navbar-item:focus, .navbar-link:focus, a.navbar-item:focus-within, .navbar-link:focus-within, a.navbar-item:hover, .navbar-link:hover, a.navbar-item.is-active, .navbar-link.is-active {
+      color: $darkMode_text;
+    }
+
+    .navbar {
+      background: $black-ter;
+    }
+
+    #estate_filter_list {
+      &.select-filter, &.button-filter {
+        &, > div {
+          background: $darkMode_boxes-background;
+        }
+      }
+
+      &.select-filter select {
+        background-color: $darkMode_background;
+        color: $darkMode_text;
+        border: 1px solid $darkMode_text;
+      }
+    }
+
+    .mod_immoListView .estate .inner {
+      background: $darkMode_boxes-background;
+    }
+
+    .mod_immoListView .estate .fields .label, .mod_immoListView .estate .fields .field>label, .mod_immoListView .estate .fields .widget>label {
+      color: $darkMode_boxes-color;
+    }
+
+    .estate-detail .small-pics {
+      background: $darkMode_boxes-background;
+    }
+
+    .top-obj-details {
+      background: rgba(10,10,10,.9);
+
+      .field .label {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .estate-detail.extended .right .obj-details .inside, .estate-detail .description .inside {
+      background: $darkMode_boxes-background;
+
+      .field {
+        .label, div:last-child {
+          color: $darkMode_boxes-color;
+        }
+      }
+    }
+
+    .estate-detail .description .inside {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+    }
+
+    .estate-detail .legende_eclass {
+      background: $darkMode_boxes-background;
+
+      span {
+        color: $darkMode_boxes-color;
+      }
+    }
+
+    .content-textModalElement~.modal .modal-content {
+      background: $darkMode_boxes-background;
+      color: $darkMode_boxes-color;
+    }
+
+    .megamenu .navbar-item {
+      .navbar-dropdown.level_2 {
+        background: $black-ter;
+
+        > a.navbar-item, > div.navbar-item > a {
+          color: $white;
+        }
+      }
+
+      .navbar-dropdown.level_3 {
+        > a.navbar-item, > div.navbar-item > a {
+          color: $white;
+        }
+      }
+    }
+
+    &.home .megamenu .navbar-item .navbar-dropdown.level_2 {
+      background: $black-ter;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .color-scheme-dark-mode .navbar-dropdown.level_3 {
+      background: $black-ter;
+    }
+  }
+
+}

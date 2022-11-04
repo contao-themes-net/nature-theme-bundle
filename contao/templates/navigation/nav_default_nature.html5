@@ -1,0 +1,7 @@
+<?php if($this->level == "level_1"): ?><div class="navbar-start <?= $this->level ?>"><?php else: ?><div class="navbar-dropdown <?= $this->level ?>"><?php endif; ?>
+  <?php foreach ($this->items as $item): ?>
+  <?php if (!empty($item['subitems'])): ?><div class="navbar-item has-dropdown is-hoverable <?= $item['class'] ?>"><?php endif; ?>
+    <a href="<?= $item['href'] ?: './' ?>" title="<?= $item['pageTitle'] ?: $item['title'] ?>" class="<?php if (!empty($item['subitems'])): ?>navbar-link <?php else: ?>navbar-item <?php endif; ?> <?php if (isset($item['class'])): ?><?= $item['class'] ?><?php endif; ?>"<?php if ('' !== $item['accesskey']): ?> accesskey="<?= $item['accesskey'] ?>"<?php endif; ?><?= $item['target'] ?><?= $item['rel'] ?><?php if (!empty($item['subitems'])): ?> aria-haspopup="true"<?php endif; ?> itemprop="url"><span itemprop="name"><?= $item['link'] ?></span><?php if (!empty($item['subitems'])): ?><span class="toggle-more active"><i class="fas fa-plus-square"></i></span><span class="toggle-less"><i class="fas fa-minus-square"></i></span><?php endif; ?></a><?= $item['subitems'] ?>
+  <?php if (!empty($item['subitems'])): ?></div><?php endif; ?>
+  <?php endforeach; ?>
+</div>

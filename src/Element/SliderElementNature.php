@@ -38,17 +38,28 @@ class SliderElementNature extends SliderElement
     {
         parent::compile();
 
+        // Add background image
         if (null !== $this->ct_sliderElement_backgroundImageSRC) {
             $backgroundImageSRC = FilesModel::findByUuid($this->ct_sliderElement_backgroundImageSRC)->path;
             $this->Template->backgroundImage = "background-image:url('".$backgroundImageSRC."')";
         }
 
-        if ($this->addImage && null !== $this->singleSRC) {
-            $objModel = FilesModel::findByUuid($this->singleSRC);
+        // Add image
+        if ($this->addImage)
+        {
+            $figure = System::getContainer()
+                ->get('contao.image.studio')
+                ->createFigureBuilder()
+                ->from($this->singleSRC)
+                ->setSize($this->size)
+                ->setMetadata($this->objModel->getOverwriteMetadata())
+                ->enableLightbox($this->fullsize)
+                ->buildIfResourceExists();
 
-            if (null !== $objModel && is_file(System::getContainer()->getParameter('kernel.project_dir').'/'.$objModel->path)) {
-                $this->singleSRC = $objModel->path;
-                $this->addImageToTemplate($this->Template, $this->arrData, null, null, $objModel);
+            $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
+
+            if (null === $figure) {
+                $this->Template->addImage = false;
             }
         }
     }

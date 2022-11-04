@@ -1,0 +1,14 @@
+{% extends "@Contao/content_element/image.html.twig" %}
+
+{% block wrapper %}
+  {% set attributes = attrs(attributes|default).addClass(['hero', 'header-image']) %}
+  {{ parent() }}
+{% endblock %}
+
+{% block headline_component %}
+  <div class="hero-body">
+    <div class="container">
+      {{ parent() }}
+    </div>
+  </div>
+{% endblock %}
