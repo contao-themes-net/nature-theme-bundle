@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.10.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.1) – 2022-11-30
+
+- [Added] Add multi domain support
+
 ## [1.10.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.0) – 2022-10-25
 
 - [Added] Add more options to style content slider

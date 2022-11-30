@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2022 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -19,31 +19,45 @@ declare(strict_types=1);
 namespace ContaoThemesNet\NatureThemeBundle;
 
 use Contao\Combiner;
+use Contao\CoreBundle\Exception\InvalidResourceException;
 use Contao\StringUtil;
 use Contao\System;
 
 class ThemeUtils
 {
-    public static function getRootDir()
+    public static string $themeFolder = 'bundles/contaothemesnetnaturetheme/';
+    public static string $scssFolder = 'scss/';
+
+    public static function getRootDir(): string
     {
         return System::getContainer()->getParameter('kernel.project_dir');
     }
 
-    public static function getWebDir()
+    public static function getWebDir(): string
     {
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    public static function getCombinedStylesheet()
+    /**
+     * @throws InvalidResourceException
+     */
+    public static function getCombinedStylesheet($theme = null): string
     {
+        self::$scssFolder = self::$themeFolder.self::$scssFolder;
+
+        // for multi domain setup
+        if (null !== $theme) {
+            self::$scssFolder = 'files/naturetheme/scss/'.$theme.'/';
+        }
+
         // add stylesheets
         $combiner = new Combiner();
         $combiner->add('bundles/contaothemesnetnaturetheme/fonts/fontawesome/css/all.min.css');
 
         if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
-            $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature_win.scss');
+            $combiner->add(self::$scssFolder.'nature_win.scss');
         } else {
-            $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature.scss');
+            $combiner->add(self::$scssFolder.'nature.scss');
         }
 
         return $combiner->getCombinedFile();
