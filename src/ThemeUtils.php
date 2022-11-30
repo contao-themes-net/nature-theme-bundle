@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur  // pdir GmbH
+ * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -19,7 +19,6 @@ declare(strict_types=1);
 namespace ContaoThemesNet\NatureThemeBundle;
 
 use Contao\Combiner;
-use Contao\CoreBundle\Exception\InvalidResourceException;
 use Contao\StringUtil;
 use Contao\System;
 
@@ -28,20 +27,17 @@ class ThemeUtils
     public static string $themeFolder = 'bundles/contaothemesnetnaturetheme/';
     public static string $scssFolder = 'scss/';
 
-    public static function getRootDir(): string
+    public static function getRootDir()
     {
         return System::getContainer()->getParameter('kernel.project_dir');
     }
 
-    public static function getWebDir(): string
+    public static function getWebDir()
     {
         return StringUtil::stripRootDir(System::getContainer()->getParameter('contao.web_dir'));
     }
 
-    /**
-     * @throws InvalidResourceException
-     */
-    public static function getCombinedStylesheet($theme = null): string
+    public static function getCombinedStylesheet($theme = null)
     {
         self::$scssFolder = self::$themeFolder.self::$scssFolder;
 
