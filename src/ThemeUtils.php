@@ -25,6 +25,9 @@ use Contao\System;
 
 class ThemeUtils
 {
+    public static string $themeFolder = 'bundles/contaothemesnetnaturetheme/';
+    public static string $scssFolder = 'scss/';
+
     public static function getRootDir(): string
     {
         return System::getContainer()->getParameter('kernel.project_dir');
@@ -38,17 +41,20 @@ class ThemeUtils
     /**
      * @throws InvalidResourceException
      */
-    public static function getCombinedStylesheet(): string
+    public static function getCombinedStylesheet($theme = null): string
     {
+        self::$scssFolder = self::$themeFolder.self::$scssFolder;
+
+        // for multi domain setup
+        if (null !== $theme) {
+            self::$scssFolder = 'files/naturetheme/scss/'.$theme.'/';
+        }
+
         // add stylesheets
         $combiner = new Combiner();
         $combiner->add('bundles/contaothemesnetfontawesomeinserttag/js/all.min.css');
 
-        if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
-            $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature_win.scss');
-        } else {
-            $combiner->add('bundles/contaothemesnetnaturetheme/scss/nature.scss');
-        }
+        $combiner->add(self::$scssFolder.'nature.scss');
 
         return $combiner->getCombinedFile();
     }
