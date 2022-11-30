@@ -25,9 +25,13 @@ Types of changes
 - [Removed] Cleanup older Contao SQL files
 - [Added] Add more options to style content slider
 
-## [1.10.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.0) – 2022-11-30
+## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
 
-- [Changed] Add multi domain support
+- [Added] Add multi domain support
+
+## [1.10.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.0) – 2022-10-25
+
+- [Added] Add more options to style content slider
 
 ## [1.9.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.2) – 2022-10-11
 
