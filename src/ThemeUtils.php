@@ -41,7 +41,7 @@ class ThemeUtils
     /**
      * @throws InvalidResourceException
      */
-    public static function getCombinedStylesheet($theme = null): string
+    public static function getCombinedStylesheet(null|bool|string $theme = null): string
     {
         self::$scssFolder = self::$themeFolder.self::$scssFolder;
 
