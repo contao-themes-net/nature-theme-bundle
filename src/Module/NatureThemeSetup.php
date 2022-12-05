@@ -26,7 +26,7 @@ use ContaoThemesNet\NatureThemeBundle\ThemeUtils;
 
 class NatureThemeSetup extends BackendModule
 {
-    public const VERSION = '1.10.0';
+    public const VERSION = '1.11.0';
 
     protected $strTemplate = 'be_naturetheme_setup';
 
