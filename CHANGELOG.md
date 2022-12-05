@@ -10,12 +10,9 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-11-30
+## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-12-05
 
-- [Changed] Add multi domain support
-
-## [2.0.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.1) – 2022-12-05
-
+- [Added] Add multi domain support
 - [Changed] Change migration order
 - [Fixed] Fix image alignment for text elements [#64](https://github.com/contao-themes-net/nature-theme-bundle/issues/64)
 
