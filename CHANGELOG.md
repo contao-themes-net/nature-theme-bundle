@@ -14,9 +14,10 @@ Types of changes
 
 - [Changed] Add multi domain support
 
-## [2.0.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.1) – 2022-11-04
+## [2.0.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.1) – 2022-12-05
 
 - [Changed] Change migration order
+- [Fixed] Fix image alignment for text elements [#64](https://github.com/contao-themes-net/nature-theme-bundle/issues/64)
 
 ## [2.0.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.0) – 2022-02-09
 
