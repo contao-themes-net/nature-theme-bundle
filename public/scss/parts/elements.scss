@@ -1288,6 +1288,19 @@ div.icon {
   overflow: hidden;
   border: none;
 
+  &.hero.media--left figure {
+    float: left;
+  }
+
+  &.hero.media--right figure {
+    float: right;
+  }
+
+  &.hero.media--below .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
   &.media--left figure {
     margin: 0 50px 50px 0;
   }
@@ -1302,6 +1315,7 @@ div.icon {
 
     figure {
       order: 2;
+      margin-top: 15px;
     }
 
     h1, h2, h3, h4, h5, h6 {
