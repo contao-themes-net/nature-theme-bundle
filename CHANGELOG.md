@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.1.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.1) – 2022-12-06
+
+- [Fixed] Fix migrations
+
 ## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-12-05
 
 - [Added] Add multi domain support
