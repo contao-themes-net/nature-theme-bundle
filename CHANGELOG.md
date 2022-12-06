@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.0.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.2) – 2022-12-06
+
+- [Fixed] Fix migrations
+
 ## [2.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.1) – 2022-11-04
 
 - [Changed] Change migration order
