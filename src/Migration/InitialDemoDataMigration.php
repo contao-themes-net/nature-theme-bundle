@@ -22,7 +22,7 @@ use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\System;
-use ContaoThemesNet\ZeroOneThemeBundle\Migration\MigrationHelperTrait;
+use ContaoThemesNet\NatureThemeBundle\Migration\MigrationHelperTrait;
 use Doctrine\DBAL\Connection;
 
 class InitialDemoDataMigration extends AbstractMigration
