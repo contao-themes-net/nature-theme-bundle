@@ -10,15 +10,25 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.1) – 2022-11-04
+## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-12-05
 
+- [Added] Add multi domain support
 - [Changed] Change migration order
+- [Fixed] Fix image alignment for text elements [#64](https://github.com/contao-themes-net/nature-theme-bundle/issues/64)
 
 ## [2.0.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.0) – 2022-02-09
 
 - [Changed] Increase Contao version to 5 only
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Removed] Cleanup older Contao SQL files
+- [Added] Add more options to style content slider
+
+## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
+
+- [Added] Add multi domain support
+
+## [1.10.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.0) – 2022-10-25
+
 - [Added] Add more options to style content slider
 
 ## [1.9.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.2) – 2022-10-11
