@@ -18,12 +18,12 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\NatureThemeBundle\Migration;
 
+use Contao\Automator;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
 use Contao\Folder;
 use Contao\System;
-use ContaoThemesNet\ZeroOneThemeBundle\Migration\MigrationHelperTrait;
 use Doctrine\DBAL\Connection;
 
 class InitialFilesFolderMigration extends AbstractMigration
@@ -88,6 +88,9 @@ class InitialFilesFolderMigration extends AbstractMigration
         // copy files and folders to files
         $folder = new Folder($this->contaoFolder.'/files/'.$this->themeFolder);
         $folder->copyTo($this->uploadPath.'/'.$this->themeFolder);
+
+        // generate symlinks
+        (new Automator())->generateSymlinks();
 
         return $this->createResult(true, 'Initial theme files where copied.');
     }

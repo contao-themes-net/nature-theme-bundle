@@ -16,7 +16,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace ContaoThemesNet\ZeroOneThemeBundle\Migration;
+namespace ContaoThemesNet\NatureThemeBundle\Migration;
 
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Doctrine\DBAL\Connection;
@@ -30,7 +30,7 @@ trait MigrationHelperTrait
     private string $projectDir;
 
     private string $contaoFolder = 'vendor/contao-themes-net/nature-theme-bundle/contao';
-    private string $themeFolder = 'nature';
+    private string $themeFolder = 'naturetheme';
     private string $sqlFile = 'sql/contao50/minimal.sql';
 
     private array $minTables = [ // @phpstan-ignore-line
