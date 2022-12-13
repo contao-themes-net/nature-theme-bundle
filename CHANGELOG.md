@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.11.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.1) – 2022-12-13
+
+- [Changed] Change font paths
+
 ## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
 
 - [Added] Add multi domain support
