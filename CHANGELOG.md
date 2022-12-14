@@ -13,6 +13,7 @@ Types of changes
 ## [2.1.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.2) – 2022-12-13
 
 - [Changed] Change font paths
+- [Fixed] Fix smooth scroll javascript (return nothing if href is empty)
 
 ## [2.1.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.1) – 2022-12-08
 
