@@ -14,6 +14,8 @@ Types of changes
 
 - [Changed] Change font paths
 - [Fixed] Fix smooth scroll javascript (return nothing if href is empty)
+- [Fixed] Fix error messages styles
+- [Fixed] Fix link color in hero element
 
 ## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
 
