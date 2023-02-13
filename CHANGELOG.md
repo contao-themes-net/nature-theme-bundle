@@ -10,14 +10,13 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.1.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.2) – 2022-12-13
+## [2.2.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.0) – 2023-02-13
 
-- [Changed] Change font paths
-- [Fixed] Fix smooth scroll javascript (return nothing if href is empty)
-
-## [2.1.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.1) – 2022-12-08
-
+- [Added] Add sql files for Contao 5.1
+- [Changed] Change sql files for Contao 5.0
 - [Fixed] Fix migrations
+- [Fixed] Fix error messages styles
+- [Fixed] Fix link color in hero element
 
 ## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-12-05
 
@@ -31,10 +30,6 @@ Types of changes
 - [Added] Add migrations for demo data import (Setup without further steps, install and run migrations -> Done!)
 - [Removed] Cleanup older Contao SQL files
 - [Added] Add more options to style content slider
-
-## [1.11.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.1) – 2022-12-13
-
-- [Changed] Change font paths
 
 ## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
 
