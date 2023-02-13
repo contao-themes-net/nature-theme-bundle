@@ -12,6 +12,8 @@ Types of changes
 
 ## [2.2.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.0) – 2023-02-13
 
+- [Added] Add sql files for Contao 5.1
+- [Changed] Change sql files for Contao 5.0
 - [Fixed] Fix migrations
 - [Fixed] Fix error messages styles
 - [Fixed] Fix link color in hero element
