@@ -14,6 +14,7 @@ Types of changes
 
 - [Fixed] Fix migrations
 - [Fixed] Fix error messages styles
+- [Fixed] Fix link color in hero element
 
 ## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-12-05
 
