@@ -81,7 +81,8 @@
             "contao-components/installer": true,
             "contao/manager-plugin": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "bamarni/composer-bin-plugin": true
+            "bamarni/composer-bin-plugin": true,
+            "php-http/discovery": true
         }
     }
 }
