@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.1.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.1) – 2023-02-13
+## [2.2.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.0) – 2023-02-13
 
 - [Fixed] Fix migrations
 - [Fixed] Fix error messages styles
