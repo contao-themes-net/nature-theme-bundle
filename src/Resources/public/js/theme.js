@@ -107,6 +107,10 @@ jQuery(document).ready(function($) {
         href = href.substr(0,href.indexOf('#'));
         href = href.replace('./','');
 
+        if( href === '' ) {
+            return;
+        }
+
         var path = window.location.pathname;
         path = path.replace('/','');
 

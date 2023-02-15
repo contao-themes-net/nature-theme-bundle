@@ -10,6 +10,14 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.11.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.1) – 2023-02-13
+
+- [Changed] Change font paths
+- [Changed] Change sql files for Contao 4.13
+- [Fixed] Fix smooth scroll javascript (return nothing if href is empty)
+- [Fixed] Fix error messages styles
+- [Fixed] Fix link color in hero element
+
 ## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
 
 - [Added] Add multi domain support
