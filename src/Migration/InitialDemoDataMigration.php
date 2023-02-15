@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur  // pdir GmbH
+ * Copyright (C) 2023 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -54,6 +54,11 @@ class InitialDemoDataMigration extends AbstractMigration
         // Check if full version is used
         if ($schemaManager->tablesExist($this->fullTables)) {
             $this->sqlFile = str_replace('minimal', 'full', $this->sqlFile);
+        }
+
+        // Contao 5.1
+        if (isset($schemaManager->listTableColumns('tl_form')['ajax'])) {
+            $this->sqlFile = str_replace('50', '51', $this->sqlFile);
         }
 
         // check some tables for content
