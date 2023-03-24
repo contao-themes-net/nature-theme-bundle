@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2023 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -18,20 +18,17 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\NatureThemeBundle\Migration;
 
+use Contao\Automator;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
-use Contao\File;
 use Contao\Folder;
 use Contao\System;
 use Doctrine\DBAL\Connection;
 
 class InitialFilesFolderMigration extends AbstractMigration
 {
-    private ContaoFramework $contaoFramework;
-
-    private string $filesFolder = 'files'.\DIRECTORY_SEPARATOR.'naturetheme';
-    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
+    use MigrationHelperTrait;
 
     public function __construct(ContaoFramework $contaoFramework, Connection $connection)
     {
@@ -41,9 +38,12 @@ class InitialFilesFolderMigration extends AbstractMigration
 
     public function getName(): string
     {
-        return "Initial files folder migration - NATURE Theme";
+        return 'Initial files folder migration - NATURE Theme';
     }
 
+    /**
+     * @throws \Exception
+     */
     public function shouldRun(): bool
     {
         $schemaManager = $this->connection->createSchemaManager();
@@ -60,10 +60,11 @@ class InitialFilesFolderMigration extends AbstractMigration
 
         $this->contaoFramework->initialize();
 
-        $rootDir = System::getContainer()->getParameter('kernel.project_dir');
+        $this->uploadPath = System::getContainer()->getParameter('contao.upload_path');
+        $this->projectDir = System::getContainer()->getParameter('kernel.project_dir');
 
         // If the folder exists we should do nothing
-        if (file_exists($rootDir . \DIRECTORY_SEPARATOR . $this->filesFolder)) {
+        if (file_exists($this->projectDir.'/'.$this->uploadPath.'/'.$this->themeFolder)) {
             return false;
         }
 
@@ -72,20 +73,25 @@ class InitialFilesFolderMigration extends AbstractMigration
         $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
         $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
 
-        if ($count == 0) {
+        if (0 === $count) {
             return false;
         }
 
         return true;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function run(): MigrationResult
     {
         // copy files and folders to files
-        $folder = new Folder($this->contaoFolder . \DIRECTORY_SEPARATOR . $this->filesFolder);
-        $folder->copyTo($this->filesFolder);
+        $folder = new Folder($this->contaoFolder.'/files/'.$this->themeFolder);
+        $folder->copyTo($this->uploadPath.'/'.$this->themeFolder);
 
+        // generate symlinks
+        (new Automator())->generateSymlinks();
 
-        return $this->createResult(true, "Initial theme files where copied.");
+        return $this->createResult(true, 'Initial theme files where copied.');
     }
 }

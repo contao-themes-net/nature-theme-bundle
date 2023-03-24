@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2023 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -21,29 +21,12 @@ namespace ContaoThemesNet\NatureThemeBundle\Migration;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
-use Contao\File;
-use Contao\Folder;
 use Contao\System;
 use Doctrine\DBAL\Connection;
 
 class InitialDemoDataMigration extends AbstractMigration
 {
-    private ContaoFramework $contaoFramework;
-    private Connection $connection;
-
-    private string $sqlFile = 'sql'.\DIRECTORY_SEPARATOR.'contao50'.\DIRECTORY_SEPARATOR.'minimal.sql';
-    private string $contaoFolder = 'vendor'.\DIRECTORY_SEPARATOR.'contao-themes-net'.\DIRECTORY_SEPARATOR.'nature-theme-bundle'.\DIRECTORY_SEPARATOR.'contao';
-
-    private array $minTables = [
-        'tl_article', 'tl_content', 'tl_css_style_selector', 'tl_files', 'tl_form', 'tl_form_field', 'tl_image_size',
-        'tl_image_size_item', 'tl_layout', 'tl_member', 'tl_module', 'tl_page', 'tl_theme'
-    ];
-
-    private array $fullTables = [
-        'tl_calendar', 'tl_calendar_events', 'tl_faq', 'tl_faq_category', 'tl_news', 'tl_newsletter_channel', 'tl_news_archive'
-    ];
-
-    private string $rootDir = '';
+    use MigrationHelperTrait;
 
     public function __construct(ContaoFramework $contaoFramework, Connection $connection)
     {
@@ -53,12 +36,15 @@ class InitialDemoDataMigration extends AbstractMigration
 
     public function getName(): string
     {
-        return "Initial demo data migration - NATURE Theme";
+        return 'Initial demo data migration - NATURE Theme';
     }
 
+    /**
+     * @throws \Exception
+     */
     public function shouldRun(): bool
     {
-        $schemaManager = $this->connection->getSchemaManager();
+        $schemaManager = $this->connection->createSchemaManager();
 
         // If the database tables itself does not exist we should do nothing
         if (!$schemaManager->tablesExist($this->minTables)) {
@@ -68,6 +54,11 @@ class InitialDemoDataMigration extends AbstractMigration
         // Check if full version is used
         if ($schemaManager->tablesExist($this->fullTables)) {
             $this->sqlFile = str_replace('minimal', 'full', $this->sqlFile);
+        }
+
+        // Contao 5.1
+        if (isset($schemaManager->listTableColumns('tl_form')['ajax'])) {
+            $this->sqlFile = str_replace('50', '51', $this->sqlFile);
         }
 
         // check some tables for content
@@ -94,13 +85,16 @@ class InitialDemoDataMigration extends AbstractMigration
         return true;
     }
 
+    /**
+     * @throws \Exception
+     */
     public function run(): MigrationResult
     {
         $this->contaoFramework->initialize();
 
-        $this->rootDir = System::getContainer()->getParameter('kernel.project_dir');
+        $this->projectDir = System::getContainer()->getParameter('kernel.project_dir');
 
-        foreach (explode("\n", file_get_contents($this->rootDir . '/' . $this->contaoFolder . '/' . $this->sqlFile)) as $sql) {
+        foreach (explode("\n", file_get_contents($this->projectDir.'/'.$this->contaoFolder.'/'.$this->sqlFile)) as $sql) {
             // ignore empty lines
             if ('' === trim($sql)) {
                 continue;
@@ -109,6 +103,6 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->connection->prepare($sql)->execute();
         }
 
-        return $this->createResult(true, "Initial structure and content added.");
+        return $this->createResult(true, 'Initial structure and content added.');
     }
 }

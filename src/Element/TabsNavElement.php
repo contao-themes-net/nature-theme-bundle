@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2023 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -37,6 +37,7 @@ class TabsNavElement extends ContentElement
     {
         $items = StringUtil::deserialize($this->tabs_navigation, true);
         $limit = \count($items) - 1;
+        $arrItems = [];
 
         for ($i = 0, $c = \count($items); $i < $c; ++$i) {
             $arrItems[] = [

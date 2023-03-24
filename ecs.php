@@ -11,7 +11,7 @@ $date = date('Y');
 $GLOBALS['ecsHeader'] = <<<EOF
 nature theme bundle for Contao Open Source CMS
 
-Copyright (C) $date pdir / digital agentur <develop@pdir.de>
+Copyright (C) $date pdir / digital agentur  // pdir GmbH
 
 @package    contao-themes-net/nature-theme-bundle
 @link       https://github.com/contao-themes-net/nature-theme-bundle

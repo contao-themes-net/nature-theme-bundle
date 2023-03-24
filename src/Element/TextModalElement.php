@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2022 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2023 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -19,7 +19,6 @@ declare(strict_types=1);
 namespace ContaoThemesNet\NatureThemeBundle\Element;
 
 use Contao\ContentElement;
-use Contao\FilesModel;
 use Contao\StringUtil;
 use Contao\System;
 
@@ -45,8 +44,7 @@ class TextModalElement extends ContentElement
         $this->Template->addImage = false;
 
         // Add image
-        if ($this->addImage)
-        {
+        if ($this->addImage) {
             $figure = System::getContainer()
                 ->get('contao.image.studio')
                 ->createFigureBuilder()
@@ -54,7 +52,8 @@ class TextModalElement extends ContentElement
                 ->setSize($this->size)
                 ->setMetadata($this->objModel->getOverwriteMetadata())
                 ->enableLightbox($this->fullsize)
-                ->buildIfResourceExists();
+                ->buildIfResourceExists()
+            ;
 
             $figure?->applyLegacyTemplateData($this->Template, null, $this->floating);
 

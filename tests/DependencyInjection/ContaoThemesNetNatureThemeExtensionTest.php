@@ -16,17 +16,17 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace ContaoThemesNet\NatureThemeBundle\Tests;
+namespace ContaoThemesNet\NatureThemeBundle\DependencyInjection\Tests;
 
-use ContaoThemesNet\NatureThemeBundle\ContaoThemesNetNatureThemeBundle;
+use ContaoThemesNet\NatureThemeBundle\DependencyInjection\ContaoThemesNetNatureThemeExtension;
 use PHPUnit\Framework\TestCase;
 
-class ContaoThemesNetNatureThemeBundleTest extends TestCase
+class ContaoThemesNetNatureThemeExtensionTest extends TestCase
 {
     public function testCanBeInstantiated(): void
     {
-        $bundle = new ContaoThemesNetNatureThemeBundle();
+        $bundle = new ContaoThemesNetNatureThemeExtension();
 
-        $this->assertInstanceOf('ContaoThemesNet\NatureThemeBundle\ContaoThemesNetNatureThemeBundle', $bundle);
+        $this->assertInstanceOf('ContaoThemesNet\NatureThemeBundle\DependencyInjection\ContaoThemesNetNatureThemeExtension', $bundle);
     }
 }

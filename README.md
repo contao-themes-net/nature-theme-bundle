@@ -70,3 +70,10 @@ compatible with Contao >=4.4
 * Bienen fliegen an Bienenstöcken / CONTAO_NATURE_THEME_Bienenstock.mp4: Eigenaufnahmen@[pdirGmbH](https://pdir.de/)
 
 Alle Demo-Inhalte dieses Themes, insbesondere Texte, Fotografien und Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt bei der pdir Gmbh bzw. den jeweiligen Urhebern der Werke. Bitte fragen Sie uns, falls Sie die Demo-Inhalte dieses Themes verwenden möchten. Ohne schriftliche Genehmigung seitens der Urheber dürfen diese in keiner Form verwendet, vervielfältigt oder verbreitet werden.
+
+# DEV
+### run before commit
+
+    vendor/bin/ecs check src tests
+    vendor/bin/phpstan analyse src
+    vendor/bin/phpunit --colors=always
