@@ -98,6 +98,21 @@ a {
       outline: 0;
     }
   }
+
+  .ui-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    .ui-accordion-header-icon:before {
+      content: "\f063";
+      font: var(--fa-font-solid);
+    }
+
+    &.active .ui-accordion-header-icon:before {
+      content: "\f062";
+    }
+  }
 }
 
 .ce_ct_contentBox {
