@@ -12,9 +12,10 @@ Types of changes
 
 ## [2.0.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.2) – 2023-03-24
 
+- [Added] Add accordion arrows
 - [Fixed] Fix event reader header image ([#75](https://github.com/contao-themes-net/nature-theme-bundle/issues/75))
 - [Fixed] Fix `has-text-*` not working for headlines in dark mode ([#71](https://github.com/contao-themes-net/nature-theme-bundle/issues/71))
-- [Added] Add accordion arrows
+- [Fixed] Fix video for ios devices
 
 ## [2.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.1) – 2022-11-04
 
