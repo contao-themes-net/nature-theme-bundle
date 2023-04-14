@@ -34,7 +34,7 @@ a {
   letter-spacing: 1px;
   margin: 15px 0;
   display: block;
-  width: max-content;
+  width: fit-content;
 
   &.is-link, &.is-primary {
     &:hover {
@@ -1105,14 +1105,19 @@ a {
     }
   }
 
-  .video_container video {
+  .video_container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+
+    video {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
   }
 
   .white-text {
