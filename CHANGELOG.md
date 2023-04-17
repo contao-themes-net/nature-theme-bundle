@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.0.2](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.2) – 2023-04-17
+## [2.2.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.1) – 2023-04-17
 
 - [Added] Add accordion arrows
 - [Fixed] Fix event reader header image ([#75](https://github.com/contao-themes-net/nature-theme-bundle/issues/75))
@@ -18,9 +18,22 @@ Types of changes
 - [Fixed] Fix video for ios devices
 - [Fixed] Fix button width for ios devices
 
-## [2.0.1](https://github.com/contao-themes-net/mate-theme-bundle/tree/2.0.1) – 2022-11-04
+## [2.2.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.0) – 2023-02-13
 
+- [Added] Add sql files for Contao 5.1
+- [Changed] Change sql files for Contao 5.0
+- [Fixed] Fix error messages styles
+- [Fixed] Fix link color in hero element
+
+## [2.1.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.1) – 2022-12-08
+
+- [Fixed] Fix migrations
+
+## [2.1.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.1.0) – 2022-12-05
+
+- [Added] Add multi domain support
 - [Changed] Change migration order
+- [Fixed] Fix image alignment for text elements [#64](https://github.com/contao-themes-net/nature-theme-bundle/issues/64)
 
 ## [2.0.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.0.0) – 2022-02-09
 
