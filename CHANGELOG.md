@@ -42,6 +42,33 @@ Types of changes
 - [Removed] Cleanup older Contao SQL files
 - [Added] Add more options to style content slider
 
+## [1.11.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.1) – 2023-02-13
+
+- [Changed] Change font paths
+- [Changed] Change sql files for Contao 4.13
+- [Fixed] Fix smooth scroll javascript (return nothing if href is empty)
+- [Fixed] Fix error messages styles
+- [Fixed] Fix link color in hero element
+
+## [1.11.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.0) – 2022-11-30
+
+- [Added] Add multi domain support
+
+## [1.10.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.10.0) – 2022-10-25
+
+- [Added] Add more options to style content slider
+
+## [1.9.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.2) – 2022-10-11
+
+- [Changed] now require terminal42/contao-folderpage version 2.* or 3.*
+- [Changed] load custom stylesheets after nature stylesheets [#56](https://github.com/contao-themes-net/nature-theme-bundle/issues/56)
+- [Fixed] css fix for bold font in footer
+- [Changed] add bulma container variables to _custom_variables.scss [#56](https://github.com/contao-themes-net/nature-theme-bundle/issues/56)
+
+## [1.9.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.1) – 2022-09-22
+
+- [Changed] change templates for maklermodul bundle
+
 ## [1.9.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.9.0) – 2022-04-08
 
 - [feature] update bulma version (0.9.3)
