@@ -24,7 +24,7 @@
       });
     </script>
   <?php else: ?>
-    <iframe<?= $this->size ?> src="<?= $this->src ?>" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    <iframe<?= $this->size ?> data-src="<?= $this->src ?>" data-name="youtube-video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
   <?php endif; ?>
 
   <?php if ($this->aspect): ?>
