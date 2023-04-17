@@ -33,8 +33,7 @@ a {
   font-size: 1rem;
   letter-spacing: 1px;
   margin: 15px 0;
-  display: block;
-  width: fit-content;
+  display: table;
 
   &.is-link, &.is-primary {
     &:hover {
