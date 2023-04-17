@@ -95,6 +95,22 @@ a {
       outline: 0;
     }
   }
+
+  .ui-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    .ui-accordion-header-icon:before {
+      content: "\f063";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+
+    &.active .ui-accordion-header-icon:before {
+      content: "\f062";
+    }
+  }
 }
 
 .ce_ct_contentBox {
