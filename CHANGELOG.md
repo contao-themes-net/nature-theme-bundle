@@ -17,6 +17,7 @@ Types of changes
 - [Fixed] Fix `has-text-*` not working for headlines in dark mode ([#71](https://github.com/contao-themes-net/nature-theme-bundle/issues/71))
 - [Fixed] Fix video for ios devices
 - [Fixed] Fix button width for ios devices
+- [Fixed] Remove Font Awesome css (is included via Font Awesome Inserttag Bundle)
 
 ## [2.2.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.0) – 2023-02-13
 

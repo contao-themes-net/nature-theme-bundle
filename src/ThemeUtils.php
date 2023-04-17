@@ -52,8 +52,6 @@ class ThemeUtils
 
         // add stylesheets
         $combiner = new Combiner();
-        $combiner->add('bundles/contaothemesnetfontawesomeinserttag/js/all.min.css');
-
         $combiner->add(self::$scssFolder.'nature.scss');
 
         return $combiner->getCombinedFile();
