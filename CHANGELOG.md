@@ -13,6 +13,7 @@ Types of changes
 ## [1.11.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.2) – 2023-04-17
 
 - [Added] Add accordion arrows
+- [Fixed] Fix `has-text-*` not working for headlines in dark mode ([#71](https://github.com/contao-themes-net/nature-theme-bundle/issues/71))
 
 ## [1.11.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.1) – 2023-02-13
 
