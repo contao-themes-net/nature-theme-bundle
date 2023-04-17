@@ -15,6 +15,7 @@ Types of changes
 - [Added] Add accordion arrows
 - [Fixed] Fix `has-text-*` not working for headlines in dark mode ([#71](https://github.com/contao-themes-net/nature-theme-bundle/issues/71))
 - [Fixed] Fix video for ios devices
+- [Changed] Include Font Awesome via `$GLOBALS['TL_CSS']['fontawesome']`
 
 ## [1.11.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.1) – 2023-02-13
 

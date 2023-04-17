@@ -48,13 +48,14 @@ class ThemeUtils
 
         // add stylesheets
         $combiner = new Combiner();
-        $combiner->add('bundles/contaothemesnetnaturetheme/fonts/fontawesome/css/all.min.css');
 
         if ('WIN' === strtoupper(substr(PHP_OS, 0, 3))) {
             $combiner->add(self::$scssFolder.'nature_win.scss');
         } else {
             $combiner->add(self::$scssFolder.'nature.scss');
         }
+
+        $GLOBALS['TL_CSS']['fontawesome'] = 'bundles/contaothemesnetnaturetheme/fonts/fontawesome/css/all.min.css|static';
 
         return $combiner->getCombinedFile();
     }
