@@ -95,6 +95,22 @@ a {
       outline: 0;
     }
   }
+
+  .ui-accordion-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+
+    .ui-accordion-header-icon:before {
+      content: "\f063";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+    }
+
+    &.active .ui-accordion-header-icon:before {
+      content: "\f062";
+    }
+  }
 }
 
 .ce_ct_contentBox {
@@ -1101,97 +1117,97 @@ h1, h2, h3, h4, h5, h6 {
 
 .has-text-white {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $white;
+    color: $white !important;
   }
 }
 .has-text-black {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $black;
+    color: $black !important;
   }
 }
 .has-text-light {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $light;
+    color: $light !important;
   }
 }
 .has-text-dark {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $dark;
+    color: $dark !important;
   }
 }
 .has-text-primary {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $primary;
+    color: $primary !important;
   }
 }
 .has-text-info {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $info;
+    color: $info !important;
   }
 }
 .has-text-link {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $link;
+    color: $link !important;
   }
 }
 .has-text-success {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $success;
+    color: $success !important;
   }
 }
 .has-text-warning {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $warning;
+    color: $warning !important;
   }
 }
 .has-text-danger {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $danger;
+    color: $danger !important;
   }
 }
 .has-text-black-bis {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $black-bis;
+    color: $black-bis !important;
   }
 }
 .has-text-black-ter {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $black-ter;
+    color: $black-ter !important;
   }
 }
 .has-text-grey-darker {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $grey-darker;
+    color: $grey-darker !important;
   }
 }
 .has-text-grey-dark {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $grey-dark;
+    color: $grey-dark !important;
   }
 }
 .has-text-grey {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $grey;
+    color: $grey !important;
   }
 }
 .has-text-grey-light {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $grey-light;
+    color: $grey-light !important;
   }
 }
 .has-text-grey-lighter {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $grey-lighter;
+    color: $grey-lighter !important;
   }
 }
 .has-text-white-ter {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $white-ter;
+    color: $white-ter !important;
   }
 }
 .has-text-white-bis {
   h1, h2, h3, h4, h5, h6, strong, a {
-    color: $white-bis;
+    color: $white-bis !important;
   }
 }
 
