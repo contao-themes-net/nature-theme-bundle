@@ -2,7 +2,7 @@
 
   <?php if($this->playerSRC != ""): ?>
   <figure class="video_container">
-    <video autoplay loop muted>
+    <video autoplay loop muted playsinline>
     <source type="video/mp4" src="<?= $this->playerSRC ?>">
     </video>
   </figure>
