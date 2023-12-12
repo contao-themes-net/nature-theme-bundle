@@ -1406,6 +1406,43 @@ strong {
   }
 }
 
+.quote {
+  background: $quote-background;
+  color: $quote-color;
+  text-align: center;
+  font-size: 1.3em;
+  font-style: italic;
+
+  .rte {
+    position: relative;
+
+    &:before, &:after {
+      display: block;
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 700;
+      color: $quote-icons-color;
+      font-size: 3rem;
+    }
+
+    &:before {
+      content: "\f10d";
+      text-align: left;
+      font-size: 3rem;
+    }
+
+    &:after {
+      content: "\f10e";
+      text-align: right;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #main .mod_article:not(.article-full-width).quote {
+    padding: 50px 0;
+  }
+}
+
 .tabs {
   a {
     font-size: 22px;
