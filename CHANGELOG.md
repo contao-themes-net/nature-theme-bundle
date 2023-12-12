@@ -10,6 +10,15 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.2.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.1) – 2023-04-17
+
+- [Added] Add accordion arrows
+- [Fixed] Fix event reader header image ([#75](https://github.com/contao-themes-net/nature-theme-bundle/issues/75))
+- [Fixed] Fix `has-text-*` not working for headlines in dark mode ([#71](https://github.com/contao-themes-net/nature-theme-bundle/issues/71))
+- [Fixed] Fix video for ios devices
+- [Fixed] Fix button width for ios devices
+- [Fixed] Remove Font Awesome css (is included via Font Awesome Inserttag Bundle)
+
 ## [2.2.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.0) – 2023-02-13
 
 - [Added] Add sql files for Contao 5.1
