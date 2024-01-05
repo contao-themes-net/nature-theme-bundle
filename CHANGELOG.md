@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.3.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.0) – 2023-05-01
+## [2.3.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.0) – 2024-05-01
 
 - [Added] Add quote element
 - [Added] Add templates to support onepage navigation
