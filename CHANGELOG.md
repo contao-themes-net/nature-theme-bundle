@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.3.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.0) – 2023-05-01
+
+- [Added] Add quote element
+
 ## [2.2.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.2.1) – 2023-04-17
 
 - [Added] Add accordion arrows
