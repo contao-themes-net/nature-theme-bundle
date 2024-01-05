@@ -1,0 +1,37 @@
+<!-- indexer::stop -->
+<nav class="<?= $this->class ?> mod_navigation navbar block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+
+<div class="navbar-brand">
+  <a class="navbar-item" href="{{env::path}}">
+    {{theme::content::NATURE01/01}}
+  </a>
+
+  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarMain">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+</div>
+
+<?php if ($this->headline): ?>
+<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+<?php endif; ?>
+
+<a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
+
+<div id="navbarMain" class="navbar-menu is-primary onepage_navigation__list">
+  <?php if($this->hasItems): ?>
+  <div class="navbar-start level_1">
+    <?php foreach ($this->navigation as $nav): ?>
+    <a href="<?= $nav->onepage_jump; ?>" data-onepage-link="<?= $nav->navigation_jumpTo ?>" title="<?= $nav->title ?>" class="navbar-item<?php if(!empty($nav->css)): ?> <?= $nav->css;?><?php endif; ?>">
+      <span><?= $nav->title ?></span>
+    </a>
+    <?php endforeach; ?>
+  </div>
+  <?php endif; ?>
+</div>
+
+<span id="<?= $this->skipId ?>" class="invisible"></span>
+
+</nav>
+<!-- indexer::continue -->

@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.12.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.12.0) – 2024-01-05
+
+- [Added] Add templates to support onepage navigation
+- [Fixed] Fix styling for dark mode and dark colour scheme
+
 ## [1.11.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.11.2) – 2023-04-17
 
 - [Added] Add accordion arrows

@@ -410,8 +410,16 @@ $darkMode_input-focus-border-color: $grey-darker;
 
     .mod_navigation.navbar a.trail, .mod_navigation.navbar a.active, .navbar-item, .navbar-link,
     a.navbar-item:focus, .navbar-link:focus, a.navbar-item:focus-within, .navbar-link:focus-within, a.navbar-item:hover, .navbar-link:hover, a.navbar-item.is-active, .navbar-link.is-active {
-      color: $darkMode_text;
-    }
+      a.navbar-item:focus, .navbar-link:focus, a.navbar-item:focus-within, .navbar-link:focus-within, a.navbar-item:hover,
+      .navbar-link:hover, a.navbar-item.is-active, .navbar-link.is-active {
+        color: $darkMode_text;
+      }
+
+      .mod_navigation.navbar a.navbar-item.active span, .mod_navigation.navbar a.navbar-item.trail span,
+      .mod_navigation.navbar a.navbar-item:hover span, .mod_navigation.navbar .navbar-link.active>span:first-child,
+      .mod_navigation.navbar .navbar-link.trail>span:first-child, .mod_navigation.navbar .navbar-link:hover>span:first-child {
+        border-color: $darkMode_text;
+      }
 
     .navbar {
       background: $black-ter;
@@ -481,14 +489,14 @@ $darkMode_input-focus-border-color: $grey-darker;
 
     .megamenu .navbar-item {
       .navbar-dropdown.level_2 {
-        background: $black-ter;
+        background: $darkMode_boxes-background;
 
         > a.navbar-item, > div.navbar-item > a {
           color: $white;
         }
       }
 
-      .navbar-dropdown.level_3 {
+      .navbar-dropdown.level_3, .navbar-dropdown.level_4 {
         > a.navbar-item, > div.navbar-item > a {
           color: $white;
         }
@@ -496,13 +504,15 @@ $darkMode_input-focus-border-color: $grey-darker;
     }
 
     &.home .megamenu .navbar-item .navbar-dropdown.level_2 {
-      background: $black-ter;
+      background: $darkMode_boxes-background;
     }
   }
 
   @media screen and (min-width: 1024px) {
-    .color-scheme-dark-mode .navbar-dropdown.level_3 {
-      background: $black-ter;
+    .color-scheme-dark-mode .navbar-dropdown {
+      &.level_3, &.level_4 {
+        background: $black-ter;
+      }
     }
   }
 

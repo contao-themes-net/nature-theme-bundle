@@ -30,6 +30,8 @@ $navbar-item-active-background-color: none !default;
 $navbar-item-img-max-height: none !default;
 
 $navbar-dropdown-background-color: $black-ter !default;
+$navbar-dropdown-lvl3-background-color: $black-ter !default;
+$navbar-dropdown-lvl4-background-color: $navbar-dropdown-lvl3-background-color !default;
 $navbar-dropdown-arrow: $primary !default;
 $navbar-dropdown-border-top: none !default;
 $navbar-dropdown-boxed-shadow: none !default;
@@ -40,6 +42,10 @@ $navbar-dropdown-item-active-color: $link-hover !default;
 $navbar-dropdown-item-active-background-color: none !default;
 
 $navbar-burger-color: $primary !default;
+
+/* Megamenu */
+$megamenu-link-lvl2-color: #fff !default;
+$megamenu-link-lvl3-color: #fff !default;
 
 body {
   @extend .dark-color-scheme;
