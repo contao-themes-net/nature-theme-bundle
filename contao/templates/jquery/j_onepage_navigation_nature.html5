@@ -1,0 +1,79 @@
+<script src="/bundles/eufonepagenavigation/jquery.waypoints.js"></script>
+<script>
+    $(document).ready(function() {
+        var el = $('a[href*="#"]').not('[href="#"]').not('[href="#0"]');
+        var scrollSpeed = 800;
+        var uri = window.location.href.split("#")[0];
+
+        el.click(function(event) {
+            // check if On-page links
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+                &&
+                location.hostname == this.hostname
+            ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                    // Only prevent default if animation is actually gonna happen
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, scrollSpeed);
+                    history.pushState("", "", uri + this.hash);
+                }
+            }
+        });
+
+        // set nav active when scrolling
+        var navActive = function(section) {
+            var $el = $('.onepage_navigation__list');
+
+            $el.find('a.active').removeClass('active');
+            $el.each(function(){
+                $(this).find('a[data-onepage-link="'+section+'"]').addClass('active');
+            });
+        };
+
+        var navigationSection = function() {
+            var $section = $('.mod_article');
+
+            $section.waypoint(function(direction) {
+
+                if (direction === 'down') {
+                    if($(this.element).hasClass('onepage_article')) {
+                        // change url to active link
+                        navActive(this.element.id);
+                    }
+                }
+            }, {
+                offset: '50%'
+            });
+
+            $section.waypoint(function(direction) {
+
+                if (direction === 'up') {
+                    var previousWaypoint = this.previous();
+
+                    if($(this.element).hasClass('onepage_article')) {
+                        // change url to active link
+                        navActive(this.element.id);
+                    }
+                }
+
+            }, {
+                offset: function() {
+                    return (this.context.innerHeight()/2) - this.element.offsetHeight; // offset 50% from bottom
+                },
+                group: $section
+            });
+        };
+
+        $(function(){
+            navigationSection();
+        });
+
+    });
+</script>

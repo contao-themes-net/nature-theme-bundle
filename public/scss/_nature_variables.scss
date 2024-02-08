@@ -77,6 +77,8 @@ $input-arrow: $link !default;
 $input-icon-color: rgba($boxes-color,.4) !default;
 $input-icon-active-color: $boxes-color !default;
 $input-radius: 4px !default;
+$input-switch-color: $grey-lighter !default;
+$input-switch-active-color: $primary !default;
 
 /* Pagination */
 $pagination-color: $text !default;
@@ -125,7 +127,7 @@ $megamenu-right: 0px !default;
 $megamenu-background-color: $boxes-background !default;
 $megamenu-background-color-home: $megamenu-background-color !default;
 $megamenu-item-width: 20% !default;
-$megamenu-padding: 20px 60px 5px 30px !default;
+$megamenu-padding: 20px 60px 20px 30px !default;
 $megamenu-link-lvl2-color: #000 !default;
 $megamenu-link-lvl2-color-hover: $primary !default;
 $megamenu-link-lvl3-color: #4a4a4a !default;
@@ -135,3 +137,8 @@ $megamenu-border-color: $primary !default;
 /* Slider */
 $nature-slider-min-height: 100vh !default;
 $nature-slider-mobile-min-height: 100vh !default;
+
+/* Zitat */
+$quote-background: $primary !default;
+$quote-color: #fff !default;
+$quote-icons-color: $link-hover !default;

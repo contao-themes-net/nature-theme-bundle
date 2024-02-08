@@ -286,11 +286,29 @@
   .navbar-link {
     border-bottom: 2px solid transparent;
 
+    &:hover > span:first-child {
+      border-bottom: 2px solid $navbar-item-hover-color;
+    }
+
+    &.active, &.trail {
+      > span:first-child {
+        border-bottom: 2px solid $navbar-item-active-color;
+      }
+    }
+
     &:not(.is-arrowless) {
       padding-right: 2em;
 
       &:after {
         right: 1em;
+      }
+    }
+  }
+
+  .level_2 .navbar-link {
+    &:hover, &.active, &.trail {
+      > span:first-child {
+        border: none;
       }
     }
   }
