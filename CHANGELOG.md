@@ -14,7 +14,7 @@ Types of changes
 
 - [Added] Add quote element
 - [Added] Add templates to support onepage navigation
-- [Added] Add form switch
+- [Added] Add form switch (use `form_checkbox_switch_nature` template)
 - [Fixed] Fix styling for dark mode and dark colour scheme
 - [Changed] Update sql files
 
