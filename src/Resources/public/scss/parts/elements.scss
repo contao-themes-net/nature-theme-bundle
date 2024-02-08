@@ -1357,6 +1357,12 @@ strong {
   }
 }
 
+@media (min-width: 1024px) {
+  #main .mod_article:not(.article-full-width).quote {
+    padding: 50px 0;
+  }
+}
+
 .tabs {
   a {
     font-size: 22px;
