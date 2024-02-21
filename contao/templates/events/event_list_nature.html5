@@ -18,7 +18,7 @@
     <?php endif; ?>
 
     <div class="ce_text block" itemprop="description">
-      <?= $this->teaser ?>
+      <?= $this->cspInlineStyles($this->teaser) ?>
     </div>
 
     <p class="time"><i class="far fa-calendar-alt"></i><time datetime="<?= $this->datetime ?>" itemprop="startDate"><?= $this->date ?><?php if ($this->time):?> <?= $this->time ?><?php endif; ?></time></p>

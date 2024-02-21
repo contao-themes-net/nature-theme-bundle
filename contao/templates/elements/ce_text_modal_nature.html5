@@ -10,7 +10,7 @@
 
     <div class="teaser">
       <div>
-        <?= $this->text ?>
+        <?= $this->cspInlineStyles($this->text) ?>
       </div>
     </div>
 
@@ -29,6 +29,6 @@
   <div class="modal-background"></div>
   <div class="modal-content">
     <button class="delete float_right" aria-label="close"></button>
-    <?= $this->modalContent ?>
+    <?= $this->cspInlineStyles($this->modalContent) ?>
   </div>
 </div>

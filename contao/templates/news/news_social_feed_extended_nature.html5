@@ -29,7 +29,7 @@
     <?php endif; ?>
 
     <div class="ce_text block" itemprop="description">
-      <p><?= preg_replace('#(?:<br\s*/?>\s*?){2,}#', '</p><p>', $this->teaser) ?></p>
+      <p><?= preg_replace('#(?:<br\s*/?>\s*?){2,}#', '</p><p>', $this->cspInlineStyles($this->teaser)) ?></p>
     </div>
 
     <a href="<?= $this->url ?>" target="_blank" class="more" rel="noreferrer noopener">

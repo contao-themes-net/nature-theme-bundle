@@ -27,7 +27,7 @@
     },
     "require": {
         "php": "^8.0",
-        "contao/core-bundle": "^5.0",
+        "contao/core-bundle": "^5.3",
         "terminal42/contao-folderpage": "^3.0",
         "pdir/contao-theme-helper-bundle": "^1.5",
         "contao-themes-net/theme-components-bundle": "^1.4",
