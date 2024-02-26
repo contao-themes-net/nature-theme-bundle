@@ -15,7 +15,7 @@
     <?= $this->text ?>
   <?php else: ?>
     <div class="content-text block">
-      <?= $this->teaser ?>
+      <?= $this->cspInlineStyles($this->teaser) ?>
     </div>
   <?php endif; ?>
 

@@ -10,7 +10,7 @@
       <h2><?= $this->headline ?></h2>
 
       <div class="ce_text block" itemprop="description">
-        <?= $this->teaser ?>
+        <?= $this->cspInlineStyles($this->teaser) ?>
       </div>
 
       <?php if ($this->hasMetaFields): ?>

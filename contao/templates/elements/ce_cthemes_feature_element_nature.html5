@@ -14,7 +14,7 @@
         <?= $this->headline ?>
         <?php if($this->iconLink != ""): ?></a><?php endif; ?>
       </div>
-      <div class="text"><?= $this->text ?></div>
+      <div class="text"><?= $this->cspInlineStyles($this->text) ?></div>
     </div>
   </div>
 </div>

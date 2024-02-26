@@ -31,7 +31,7 @@ trait MigrationHelperTrait
 
     private string $contaoFolder = 'vendor/contao-themes-net/nature-theme-bundle/contao';
     private string $themeFolder = 'naturetheme';
-    private string $sqlFile = 'sql/contao50/minimal.sql';
+    private string $sqlFile = 'sql/contao53/minimal.sql';
 
     private array $minTables = [ // @phpstan-ignore-line
         'tl_article', 'tl_content', 'tl_css_style_selector', 'tl_files', 'tl_form', 'tl_form_field', 'tl_image_size',

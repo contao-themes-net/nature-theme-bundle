@@ -15,7 +15,7 @@
   </<?= $this->hl ?>>
   <?php endif; ?>
 
-  <?= $this->text ?>
+  <?= $this->cspInlineStyles($this->text) ?>
 
   <?php if($this->page != ""): ?>
   <div class="pageLink">
