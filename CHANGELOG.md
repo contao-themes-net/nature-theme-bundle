@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.3.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.1) – 2024-02-21
+## [2.3.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.1) – 2024-02-26
 
 - [Changed] Change templates to support CSP on WYSIWYG editors like TinyMCE
 - [Changed] Now require contao version ^5.3
