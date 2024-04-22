@@ -813,6 +813,10 @@ body:not(.home) #header .inside {
   display: none;
 }
 
+input.captcha {
+  @extend .input;
+}
+
 p.error {
   padding: 0 0.75rem;
   color: $danger;

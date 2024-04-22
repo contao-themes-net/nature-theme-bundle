@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [1.12.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.12.1) – 2024-04-22
+
+- [Fixed] Fix form captcha (delete custom `form_captcha template`)
+
 ## [1.12.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/1.12.0) – 2024-01-05
 
 - [Added] Add templates to support onepage navigation
