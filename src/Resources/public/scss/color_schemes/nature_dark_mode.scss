@@ -331,7 +331,7 @@ $darkMode_input-focus-border-color: $grey-darker;
       color: $darkMode_boxes-color;
     }
 
-    .input, .textarea, .select select, .file-cta {
+    .input, .textarea, .select select, .file-cta, input.captcha {
       background: $darkMode_boxes-background;
       color: $darkMode_boxes-color;
       border-color: $darkMode_input-border-color;
