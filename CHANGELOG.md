@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.3.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.2) – 2024-04-22
+
+- [Fixed] Fix form captcha (delete custom `form_captcha template`)
+
 ## [2.3.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.1) – 2024-02-26
 
 - [Changed] Change templates to support CSP on WYSIWYG editors like TinyMCE
