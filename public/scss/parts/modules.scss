@@ -836,6 +836,10 @@ p.error {
   }
 }
 
+input.captcha {
+  @extend .input;
+}
+
 /* Checkbox switch */
 
 .checkbox-switch {
