@@ -76,4 +76,17 @@
         });
 
     });
+
+    const navToggler = document.querySelector('.mod_onepage_navigation .navbar-burger');
+    const navMobile = document.querySelector('.mod_onepage_navigation .navbar-menu');
+
+    navMobile.querySelectorAll('a[data-onepage-link]').forEach ((link) => {
+        link.addEventListener('click', (event) => {
+            navToggler.classList.toggle('is-active');
+
+            setTimeout(function() {
+                navMobile.classList.toggle('is-active');
+            }, 200);
+        });
+    });
 </script>
