@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.3.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.3) – 2024-09-24
+
+- [Fixed] Close mobile navigation after click if onepage navigation is enabled
+
 ## [2.3.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.2) – 2024-04-22
 
 - [Fixed] Fix form captcha (delete custom `form_captcha template`)

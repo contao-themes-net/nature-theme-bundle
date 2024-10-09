@@ -1,13 +1,4 @@
 services:
-    _instanceof:
-        Contao\CoreBundle\Framework\FrameworkAwareInterface:
-            calls:
-                - ["setFramework", ["@contao.framework"]]
-
-        Symfony\Component\DependencyInjection\ContainerAwareInterface:
-            calls:
-                - ["setContainer", ["@service_container"]]
-
     # Migration
     ContaoThemesNet\NatureThemeBundle\Migration\:
         resource: "../src/Migration/*"
