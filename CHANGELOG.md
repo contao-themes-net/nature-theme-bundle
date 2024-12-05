@@ -13,6 +13,7 @@ Types of changes
 ## [2.4.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.4.0) – 2024-12-05
 
 - [Added] Add responsive tables (use template `content_element/table/table_nature`)
+- [Fixed] Fix fourth level of mobile navigation ([#96](https://github.com/contao-themes-net/nature-theme-bundle/issues/96))
 
 ## [2.3.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.3) – 2024-09-24
 

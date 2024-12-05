@@ -40,6 +40,10 @@
     margin-top: -105px;
     padding-bottom: 20px;
   }
+
+  .mod_navigation.navbar .navbar-menu.is-active .navbar-dropdown.level_3 div.navbar-item .navbar-link {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 1023px) {
