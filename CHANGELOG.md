@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.4.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.4.0) – 2024-12-05
+
+- [Added] Add responsive tables (use template `content_element/table/table_nature`)
+
 ## [2.3.3](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.3.3) – 2024-09-24
 
 - [Fixed] Close mobile navigation after click if onepage navigation is enabled

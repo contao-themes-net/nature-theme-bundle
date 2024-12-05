@@ -1,0 +1,31 @@
+{% extends "@Contao/content_element/table.html.twig" %}
+
+{% block wrapper %}
+  {% set attributes = attrs(attributes|default).addClass(['resp-table']) %}
+  {{ parent() }}
+{% endblock %}
+
+{# Body #}
+{% block table_body %}
+  <tbody{{ table_body_attributes|default }}>
+  {% block table_body_inner %}
+    {% for row in rows %}
+      <tr>
+        {% for cell in row %}
+          {% if loop.first and use_row_headers %}
+            <th scope="row">{{ block('table_cell_content') }}</th>
+          {% else %}
+            <td data-header-label="{{ header[loop.index0] }}">
+              {%- block table_body_cell_content %}
+                {%- block table_cell_content %}
+                  {{- cell -}}
+                {% endblock -%}
+              {% endblock -%}
+            </td>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  {% endblock %}
+  </tbody>
+{% endblock %}
