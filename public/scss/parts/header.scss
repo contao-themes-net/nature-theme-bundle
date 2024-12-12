@@ -246,8 +246,9 @@
     padding-bottom: 0;
 
     .navbar-link {
-      padding: 0.3rem 3rem 0.3rem 1rem;
+      padding: .5rem 3rem .5rem 1rem;
       width: 100%;
+      border: none;
     }
   }
 
@@ -341,6 +342,21 @@
           position: relative;
           left: 0;
           border-radius: 0;
+          top: 0;
+          padding: 0;
+        }
+      }
+
+      &.level_4.active {
+        display: block !important;
+        position: relative;
+        left: 0;
+        border-radius: 0;
+        top: 0;
+        padding: 0;
+
+        .navbar-item {
+          padding-left: 1rem;
         }
       }
     }
