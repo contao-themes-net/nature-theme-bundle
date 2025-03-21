@@ -22,7 +22,7 @@ use Contao\BackendModule;
 
 class NatureThemeSetup extends BackendModule
 {
-    public const VERSION = '2.4.0';
+    public const VERSION = '2.4.1';
 
     protected $strTemplate = 'be_naturetheme_setup';
 

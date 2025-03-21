@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.4.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.4.1) – 2025-03-21
+
+- [Fixed] Updated scssphp dependency to 1.0 for Contao 5.5 compatibility
+
 ## [2.4.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.4.0) – 2024-12-05
 
 - [Added] Add responsive tables (use template `content_element/table/table_nature`)
