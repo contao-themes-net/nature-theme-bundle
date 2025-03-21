@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2024 pdir / digital agentur  // pdir GmbH
+ * Copyright (C) 2025 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -57,9 +57,9 @@ class InitialDemoDataMigration extends AbstractMigration
         }
 
         // check some tables for content
-        $count = $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
-        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
-        $count += $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
+        $count = (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_article`');
+        $count += (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_content`');
+        $count += (int) $this->connection->fetchOne('SELECT COUNT(*) FROM `tl_module`');
 
         if ($count > 0) {
             return false;

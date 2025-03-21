@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2024 pdir / digital agentur  // pdir GmbH
+ * Copyright (C) 2025 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -22,7 +22,7 @@ use Contao\BackendModule;
 
 class NatureThemeSetup extends BackendModule
 {
-    public const VERSION = '2.4.0';
+    public const VERSION = '2.4.1';
 
     protected $strTemplate = 'be_naturetheme_setup';
 
