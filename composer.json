@@ -32,7 +32,7 @@
         "pdir/contao-theme-helper-bundle": "^1.5",
         "contao-themes-net/theme-components-bundle": "^1.4",
         "pdir/css-style-selector-bundle": "^1.7",
-        "contao-themes-net/font-awesome-inserttag-bundle": "^1.0",
+        "contao-themes-net/font-awesome-inserttag-bundle": "^1.0"
     },
     "conflict": {
         "contao/core": "*",
