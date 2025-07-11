@@ -10,15 +10,15 @@
     <?php endif; ?>
 
     <div class="text">
-      <h2><?= $this->linkHeadline ?></h2>
+      <h2><?= $this->headline ?></h2>
 
       <div class="ce_text block" itemprop="description">
         <?= $this->cspInlineStyles($this->teaser) ?>
       </div>
 
-      <?php if ($this->hasMetaFields): ?>
-        <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?></p>
-      <?php endif; ?>
+      <?php $this->block('info'); ?>
+        <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
+      <?php $this->endblock(); ?>
     </div>
   </div>
 

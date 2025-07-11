@@ -52,7 +52,13 @@ class ThemeUtils
 
         // add stylesheets
         $combiner = new Combiner();
-        $combiner->add(self::$scssFolder.'nature.scss');
+
+        // Check for v2 or use old stylesheets
+        if ($isV2 = file_exists(self::getRootDir().'/files/naturetheme/.v2') && null === $theme) {
+            $combiner->add(self::$scssFolder.'v2/nature.scss');
+        } else {
+            $combiner->add(self::$scssFolder.'nature.scss');
+        }
 
         return $combiner->getCombinedFile();
     }

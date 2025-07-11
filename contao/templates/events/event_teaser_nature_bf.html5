@@ -1,0 +1,37 @@
+<div class="event layout_teaser<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
+
+  <div class="columns">
+    <div class="column is-12-mobile is-6-tablet">
+
+      <?php if ($this->addImage): ?>
+      <?php $this->insert('picture_default', $this->picture); ?>
+      <?php endif; ?>
+
+    </div>
+    <div class="column is-12-mobile is-6-tablet">
+
+      <?php if ($this->location): ?>
+      <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+        <span itemprop="name"><?= $this->location ?></span>
+        <?php if ($this->address): ?>
+        (<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $this->address ?></span>)
+        <?php endif; ?>
+      </p>
+      <?php endif; ?>
+
+      <h3 itemprop="name"><?= $this->title ?></h3>
+
+      <div class="ce_text block" itemprop="description">
+        <?= $this->cspInlineStyles($this->teaser) ?>
+      </div>
+
+      <p class="time"><i class="far fa-calendar-alt"></i><time datetime="<?= $this->datetime ?>" itemprop="startDate"><?= $this->date ?><?php if ($this->time):?> <?= $this->time ?><?php endif; ?></time></p>
+
+      <?php if ($this->hasDetails): ?>
+        <p class="more is-centered"><a href="<?= $this->href ?>" title="<?= $this->readMore ?>" class="button is-primary"<?= $this->target ?>><?= $this->more ?><span class="invisible"> <?= $this->link ?></span></a></p>
+      <?php endif; ?>
+
+    </div>
+  </div>
+
+</div>

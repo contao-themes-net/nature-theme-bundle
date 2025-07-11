@@ -8,7 +8,7 @@
         </div>
       <?php endif; ?>
 
-      <?php if ($this->hasMetaFields): ?>
+      <?php $this->block('info'); ?>
         <p class="info"><time datetime="<?= $this->datetime ?>">
           <?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?>
           <?php if($this->socialFeedType == "Facebook" || $this->socialFeedType == ""): ?>
@@ -21,7 +21,7 @@
             <i class="fab fa-linkedin" aria-hidden="true"></i>
           <?php endif; ?>
         </p>
-      <?php endif; ?>
+      <?php $this->endblock(); ?>
 
       <div class="title"><?= $this->sfFbAccount ?></div>
     </a>

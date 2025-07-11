@@ -2,9 +2,7 @@
   <div class="inside">
     <?php if($this->featureIcon != ""): ?>
       <div class="icon">
-        <?php if($this->iconLink != ""): ?><a href="<?= $this->iconLink ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->target ?><?= $this->rel ?>><?php endif; ?>
           <i class="<?= $this->featureIcon ?>"></i>
-        <?php if($this->iconLink != ""): ?></a><?php endif; ?>
       </div>
     <?php endif; ?>
 
