@@ -1,6 +1,6 @@
-
 <!-- indexer::stop -->
-<div class="<?= $this->class ?> <?= $this->logout ? 'logout' : 'login' ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+<div
+  class="<?= $this->class ?> <?= $this->logout ? 'logout' : 'login' ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
 
 <?php if ($this->headline): ?>
 <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
@@ -14,35 +14,51 @@
   <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formId ?>">
   <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>">
   <input type="hidden" name="_target_path" value="<?= $this->targetPath ?>">
+  <input type="hidden" name="_always_use_target_path" value="<?= $this->forceTargetPath ?>">
+  <?php if ($this->remembered): ?>
+  <input type="hidden" name="username" value="<?= $this->value ?>">
+  <input type="hidden" name="autologin" value="<?= $this->autologin ? '1' : '' ?>">
+  <?php endif; ?>
   <?php if ($this->logout): ?>
   <p class="login_info"><?= $this->loggedInAs ?><br><?= $this->lastLogin ?></p>
   <?php elseif ($this->twoFactorEnabled): ?>
   <h3><?= $this->twoFactorAuthentication ?></h3>
   <div class="widget widget-text">
     <label for="verify"><?= $this->authCode ?></label>
-    <input type="text" name="verify" id="verify" class="text" value="" autocapitalize="off" autocomplete="off" required>
+    <input type="text" name="verify" id="verify" class="text" value="" autocapitalize="off" autocomplete="one-time-code"
+           required>
+  </div>
+  <div class="widget widget-checkbox">
+    <fieldset class="checkbox_container">
+      <span><input type="checkbox" name="trusted" id="trusted" value="1" class="tl_checkbox"> <label
+        for="trusted"><?= $this->trans('MSC.twoFactorTrustDevice') ?></label></span>
+    </fieldset>
   </div>
   <?php else: ?>
-  <input type="hidden" name="_failure_path" value="<?= $this->failurePath ?>">
-  <input type="hidden" name="_always_use_target_path" value="<?= $this->forceTargetPath ?>">
+  <?php if ($this->remembered): ?>
+  <p class="login_info"><?= $this->loggedInAs ?><br><?= $this->reauthenticate ?></p>
+  <?php else: ?>
   <div class="widget widget-text field">
     <label for="username" class="label"><?= $this->username ?></label>
     <div class="control has-icons-left">
-      <input type="text" name="username" id="username" class="text input" value="<?= $this->value ?>" required>
+      <input type="text" name="username" id="username" class="text input" value="<?= $this->value ?>" autocapitalize="off"
+             autocomplete="username" required>
       <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
     </div>
   </div>
+  <?php endif; ?>
   <div class="widget widget-password field">
     <label for="password" class="label"><?= $this->password ?></label>
     <div class="control has-icons-left">
-      <input type="password" name="password" id="password" class="text password input" value="" required>
+      <input type="password" name="password" id="password" class="text password input" value="" autocomplete="current-password" required>
       <span class="icon is-small is-left"><i class="fas fa-lock"></i></span>
     </div>
   </div>
-  <?php if ($this->autologin): ?>
+  <?php if ($this->autologin && !$this->remembered): ?>
   <div class="widget widget-checkbox">
     <fieldset class="checkbox_container">
-      <span><input type="checkbox" name="autologin" id="autologin" value="1" class="checkbox"> <label for="autologin"><?= $this->autoLabel ?></label></span>
+      <span><input type="checkbox" name="autologin" id="autologin" value="1" class="checkbox"> <label
+        for="autologin"><?= $this->autoLabel ?></label></span>
     </fieldset>
   </div>
   <?php endif; ?>
@@ -53,6 +69,11 @@
     <a href="<?= $this->route('contao_frontend_logout') ?>"><?= $this->cancel ?> ›</a>
     <?php endif; ?>
   </div>
+  <?php if ($this->pwResetUrl): ?>
+  <div class="widget password-reset">
+    <a href="<?= $this->pwResetUrl ?>"><?= $this->trans('MSC.lostPassword') ?></a>
+  </div>
+  <?php endif; ?>
 </div>
 </form>
 

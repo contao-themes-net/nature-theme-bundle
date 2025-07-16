@@ -1,15 +1,15 @@
 <?php $this->extend('form_row'); ?>
 
 <?php $this->block('field'); ?>
-  <?php if ($this->label): ?>
-    <label class="label">
-      <?php if ($this->mandatory): ?>
-      <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
-      <?php else: ?>
-      <?= $this->label ?>
-      <?php endif; ?>
-    </label>
+<?php if ($this->label): ?>
+<legend class="label">
+  <?php if ($this->mandatory): ?>
+  <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+  <?php else: ?>
+  <?= $this->label ?>
   <?php endif; ?>
+</legend>
+<?php endif; ?>
 
   <input type="hidden" name="<?= $this->name ?>" value="">
 
@@ -22,11 +22,13 @@
 
           <?php if ('option' == $option['type']): ?>
             <div class="checkbox-switch">
-              <label class="switch" id="lbl_<?= $option['id'] ?>">
-                <input type="checkbox" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="checkbox" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>>
-                <span class="slider round"></span>
+              <label id="lbl_<?= $option['id'] ?>">
+                <div class="switch" >
+                  <input type="checkbox" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="checkbox" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>>
+                  <span class="slider round"></span>
+                </div>
+                <span><?= $option['label'] ?></span>
               </label>
-              <span><?= $option['label'] ?></span>
             </div>
           <?php endif; ?>
 

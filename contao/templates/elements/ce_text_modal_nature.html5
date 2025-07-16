@@ -6,7 +6,7 @@
       <?php $this->insert('image', $this->arrData); ?>
     <?php endif; ?>
 
-    <button class="modal-button" data-target="#modal<?= $this->id ?>"></button>
+    <button class="modal-button" data-target="#modal<?= $this->id ?>" title="<?php if ($this->titleText) echo $this->titleText ?><?php if (!$this->titleText && $this->headline) echo $this->headline ?>"></button>
 
     <div class="teaser">
       <div>

@@ -28,10 +28,10 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-boxes-background: var(--bulma-white-ter);
   --bulma-boxes-color: var(--bulma-grey-dark);
 
-  --bulma-info: var(--bulma-cyan);
-  --bulma-success: var(--bulma-green);
-  --bulma-warning: var(--bulma-yellow);
-  --bulma-danger: var(--bulma-red);
+  --bulma-info: #3e8ed0;
+  --bulma-success: #48c78e;
+  --bulma-warning: #ffe08a;
+  --bulma-danger: #f14668;
 
 
 
@@ -42,7 +42,6 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-font-size: 1.2rem;
   --bulma-font-weight: 300;
   --bulma-strong-weight: 500;
-
   --bulma-container-padding: 0 20px;
 
   /* Menu */
@@ -65,22 +64,6 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-tabs-link-padding: 0.5em 1em;
   --bulma-tabs-link-active-border-bottom-color: var(--bulma-primary);
   --bulma-tabs-link-hover-border-bottom-color: var(--bulma-primary);
-
-  /* Forms */
-  --bulma-input-color: var(--bulma-boxes-color);
-  --bulma-input-background-color: var(--bulma-boxes-background);
-  --bulma-input-border-color: var(--bulma-grey-lighter);
-  --bulma-input-shadow: none;
-  --bulma-input-hover-color: var(--bulma-primary);
-  --bulma-input-hover-border-color: var(--bulma-grey-lighter);
-  --bulma-input-focus-border-color: var(--bulma-grey-lighter);
-  --bulma-input-focus-box-shadow-size: 0;
-  --bulma-input-arrow: var(--bulma-link);
-  --bulma-input-icon-color: rgba(var(--bulma-boxes-color), 0.4);
-  --bulma-input-icon-active-color: var(--bulma-boxes-color);
-  --bulma-input-radius: 4px;
-  --bulma-input-switch-color: var(--bulma-grey-lighter);
-  --bulma-input-switch-active-color: var(--bulma-primary);
 
   /* Pagination */
   --bulma-pagination-color: var(--bulma-text);
@@ -148,6 +131,27 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-breadcrumb-item-separator-color: var(--bulma-boxes-color);
 }
 
+.control, .input, input.captcha, .textarea, .select {
+  /* Forms */
+  --bulma-input-color: var(--bulma-boxes-color);
+  --bulma-input-background-color: var(--bulma-boxes-background);
+  --bulma-input-border-color: var(--bulma-grey-lighter);
+  --bulma-input-shadow: none;
+  --bulma-input-hover-border-color: var(--bulma-grey-lighter);
+  --bulma-input-focus-border-color: var(--bulma-grey-lighter);
+  --bulma-input-arrow: var(--bulma-link);
+  --bulma-input-icon-color: var(--bulma-grey-light);
+  --bulma-input-icon-hover-color: var(--bulma-boxes-color);
+  --bulma-input-icon-active-color: var(--bulma-boxes-color);
+  --bulma-input-radius: 4px;
+  --bulma-input-switch-color: var(--bulma-grey-lighter);
+  --bulma-input-switch-active-color: var(--bulma-primary);
+}
+
+.grid {
+  --bulma-grid-gap: 1.5rem;
+}
+
 .navbar {
   /* Navigation */
   --bulma-navbar-background-color: #eaeaea;
@@ -184,4 +188,10 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-footer-copyright-background-color: var(--bulma-black-bis);
   --bulma-footer-copyright-color: #8C8C8C;
   --bulma-footer-copyright-padding: var(--bulma-footer-padding);
+}
+
+// overwrite some variables
+.control, .input, input.captcha, .textarea, .select {
+  --bulma-arrow-color: var(--bulma-input-arrow);
+  --bulma-input-icon-focus-color: var(--bulma-input-icon-active-color);
 }

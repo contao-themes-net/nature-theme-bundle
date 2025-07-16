@@ -2,13 +2,13 @@
 
 <?php $this->block('field'); ?>
 <?php if ($this->label): ?>
-<label class="label">
+<legend class="label">
   <?php if ($this->mandatory): ?>
   <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
   <?php else: ?>
   <?= $this->label ?>
   <?php endif; ?>
-</label>
+</legend>
 <?php endif; ?>
 
 <input type="hidden" name="<?= $this->name ?>" value="">

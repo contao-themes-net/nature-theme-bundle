@@ -28,7 +28,7 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['ct_sliderElement'] = str_replace(
 $GLOBALS['TL_DCA']['tl_content']['palettes']['tabsNavElement'] = '{type_legend},type;{tabs_nav_legend},tabs_navigation;{expert_legend:hide},cssID;{invisible_legend:hide},invisible,start,stop;';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['tabsStartElement'] = '{type_legend},type;{tabs_nav_legend},tabs_element;{expert_legend:hide},cssID;{invisible_legend:hide},invisible,start,stop;';
 $GLOBALS['TL_DCA']['tl_content']['palettes']['tabsStopElement'] = '{type_legend},type;{invisible_legend:hide},invisible,start,stop;';
-$GLOBALS['TL_DCA']['tl_content']['palettes']['textModalElement'] = '{type_legend},type,headline;{text_legend},text;{modal_legend},textModal_content;{image_legend},addImage;{template_legend:hide},textModal_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop;';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['textModalElement'] = '{type_legend},type,headline;{text_legend},text;{modal_legend},textModal_content;{image_legend},addImage;{link_legend},titleText;{template_legend:hide},textModal_customTpl;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID;{invisible_legend:hide},invisible,start,stop;';
 
 /*
  * Add fields to tl_content
