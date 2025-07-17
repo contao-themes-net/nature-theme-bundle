@@ -102,7 +102,7 @@
   background: none;
   color: var(--bulma-menu-item-color);
 
-  &:hover {
+  &:hover, &:focus {
     color: var(--bulma-menu-item-hover-color);
     background: var(--bulma-menu-item-hover-background-color);
   }
@@ -163,7 +163,7 @@
   }
 
   .has-dropdown .has-dropdown {
-    &:hover .level_3 {
+    &:hover .level_3, &:focus .level_3, &:focus-within .level_3 {
       display: block !important;
     }
 
@@ -221,7 +221,7 @@
     width: 40px;
     height: 40px;
 
-    &:hover {
+    &:hover, &:focus {
       background: none;
     }
 
@@ -267,12 +267,6 @@
     width: auto;
   }
 
-  a.navbar-item, a.navbar-link {
-    &:focus {
-      outline: 0;
-    }
-  }
-
   .navbar-start {
     > a.navbar-item {
       padding: 0.5rem 1.6rem 0.5rem 0.75rem;
@@ -284,7 +278,7 @@
       border-bottom: 2px solid transparent;
     }
 
-    &:hover span {
+    &:hover span, &:focus span {
       border-bottom: 2px solid var(--bulma-navbar-item-hover-color);
     }
 
@@ -298,7 +292,7 @@
   .navbar-link {
     border-bottom: 2px solid transparent;
 
-    &:hover > span:first-child {
+    &:hover > span:first-child, &:focus > span:first-child {
       border-bottom: 2px solid var(--bulma-navbar-item-hover-color);
     }
 
@@ -318,7 +312,7 @@
   }
 
   .level_2 .navbar-link {
-    &:hover, &.active, &.trail {
+    &:hover, &.active, &.trail, &:focus {
       > span:first-child {
         border: none;
       }
@@ -399,7 +393,7 @@
       padding: 0 0.75rem;
 
       i {
-        color: var(--bulma-primary);
+        color: var(--bulma-primary-bg-text);
       }
     }
   }
@@ -449,7 +443,11 @@ a.navbar-item:active,
 
 @media screen and (min-width: $bulma-navbar-breakpoint) {
   .navbar-dropdown {
-    background: var(--bulma-navbar-dropdown-background-color);
+    a.navbar-item:not(.is-active, .is-selected),
+    .navbar-item:not(.is-active, .is-selected) {
+      background: inherit;
+      color: inherit;
+    }
 
     &.level_3 {
       background: var(--bulma-navbar-dropdown-lvl3-background-color);

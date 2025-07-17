@@ -7,8 +7,9 @@
   a {
     font-weight: 700;
     color: var(--bulma-footer-color);
+    text-decoration: none;
 
-    &:hover {
+    &:hover, &:focus {
       text-decoration: underline;
     }
   }
@@ -102,6 +103,10 @@
     margin: 10px 30px 0 0;
   }
 
+  .mod_article.block {
+    overflow: visible;
+  }
+
   .mod_customnav {
     li {
       display: inline-block;
@@ -133,7 +138,8 @@
     right: 50px;
     bottom: 50px;
     text-indent: -99999px;
-    background: var(--bulma-link);
+    background: var(--bulma-button-background-color);
+    color: var(--bulma-button-color);
     width: 50px;
     height: 50px;
     border-radius: 100%;
@@ -156,8 +162,9 @@
       justify-content: center;
     }
 
-    &:hover {
-      background: var(--bulma-link-hover);
+    &:hover, &:focus {
+      background: var(--bulma-primary-button-hover-background-color);
+      color: var(--bulma-button-hover-color);
       text-decoration: none;
     }
   }

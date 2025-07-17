@@ -12,7 +12,7 @@
       position: static;
       height: 100%;
 
-      &:hover .navbar-dropdown.level_2 {
+      &:hover .navbar-dropdown.level_2, &:focus .navbar-dropdown.level_2 {
         display: flex;
       }
 
@@ -53,7 +53,7 @@
           margin-bottom: 10px;
           font-family: var(--bulma-family-heading);
 
-          &:hover, &.active {
+          &:hover, &.active, &:focus {
             color: var(--bulma-megamenu-link-lvl2-color-hover);
           }
         }
@@ -72,7 +72,7 @@
           color: var(--bulma-megamenu-link-lvl3-color);
           white-space: normal;
 
-          &:hover, &.active {
+          &:hover, &.active, &:focus {
             color: var(--bulma-megamenu-link-lvl3-color-hover);
           }
         }

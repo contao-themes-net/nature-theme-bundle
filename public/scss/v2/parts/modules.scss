@@ -36,12 +36,12 @@ body:not(.home) #header .inside {
 
   .contact-data {
     background: var(--bulma-primary);
-    color: var(--bulma-white);
+    color: var(--bulma-primary-invert);
     padding: 50px;
     margin: 0;
 
     a {
-      color: var(--bulma-white);
+      color: var(--bulma-primary-invert);
     }
 
     .content-text:not(:last-child) {
@@ -49,7 +49,7 @@ body:not(.home) #header .inside {
     }
 
     h1, h2, h3, h4, h5, h6 {
-      color: var(--bulma-boxes-color);
+      color: var(--bulma-primary-invert);
     }
 
     i {
@@ -65,23 +65,15 @@ body:not(.home) #header .inside {
       margin-bottom: 5px;
       display: block;
       font-size: 1.2rem;
-      color: var(--bulma-white);
+      color: var(--bulma-primary-invert);
     }
   }
 
   .contact-form {
     padding: 50px;
 
-    .control.has-icons-left .icon {
-      color: #949494;
-    }
-
-    .control.has-icons-left .input:focus~.icon {
-      color: #333;
-    }
-
-    .label {
-      color: var(--bulma-boxes-color);
+    .control, .input, input.captcha, .textarea, .select {
+      --bulma-input-background-color: var(--bulma-white);
     }
 
     .widget-submit {
@@ -96,6 +88,10 @@ body:not(.home) #header .inside {
     padding: 0.75rem;
     width: 100%;
 
+    a {
+      text-decoration: none;
+    }
+
     ul {
       margin: 0;
       list-style: none;
@@ -107,6 +103,15 @@ body:not(.home) #header .inside {
   }
 }
 
+.pagination-link.is-current, .pagination-link.is-selected {
+  background: var(--bulma-button-background-color);
+  border: none;
+}
+
+.pagination-previous, .pagination-next, .pagination-link {
+  color: var(--bulma-text);
+}
+
 .home, .contact {
   .mod_breadcrumb {
     display: none;
@@ -115,7 +120,7 @@ body:not(.home) #header .inside {
 
 .mod_newsreader .layout_full {
   .info {
-    color: var(--bulma-primary);
+    color: var(--bulma-primary-bg-text);
     font-size: 14px;
     font-weight: 900;
     margin: 0;
@@ -134,7 +139,7 @@ body:not(.home) #header .inside {
 
   .inside {
     &:after {
-      background: linear-gradient(to bottom, transparent 0%, rgba(255,255,255, 0.4) 35%, rgba(255,255,255, 0.9) 55%);
+      background: var(--news-linear-gradient);
       content: "";
       position: absolute;
       bottom: 0;
@@ -145,9 +150,9 @@ body:not(.home) #header .inside {
       transition: all .3s;
     }
 
-    &:hover {
+    &:hover, &:focus {
       &:after {
-        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.2) 42%, rgba(0, 0, 0, 0.5) 60%);
+        background: var(--news-linear-gradient-hover);
         height: 100%;
       }
 
@@ -185,6 +190,10 @@ body:not(.home) #header .inside {
   }
 }
 
+a.layout_short {
+  text-decoration: none;
+}
+
 .layout_latest, .layout_short {
   &:not(:last-child) {
     margin-bottom: 0;
@@ -199,7 +208,7 @@ body:not(.home) #header .inside {
   }
 
   .info {
-    color: var(--bulma-primary);
+    color: var(--bulma-primary-bg-text);
     font-size: 14px;
     margin: 0;
     font-style: italic;
@@ -241,7 +250,7 @@ body:not(.home) #header .inside {
     color: #525252;
   }
 
-  &:hover {
+  &:hover, &:focus {
     .inside:before {
       content: "";
       position: absolute;
@@ -272,6 +281,10 @@ body:not(.home) #header .inside {
     font-weight: 300;
     padding: 5px 10px;
     display: inline-block;
+
+    &:hover, &:focus {
+      color: var(--bulma-link-hover);
+    }
   }
 }
 
@@ -302,7 +315,7 @@ body:not(.home) #header .inside {
     a {
       color: var(--bulma-link);
 
-      &:hover {
+      &:hover, &:focus {
         color: var(--bulma-link-hover);
       }
     }
@@ -422,6 +435,22 @@ body:not(.home) #header .inside {
 .menu-list a.is-active {
   background-color: var(--bulma-menu-item-active-background-color);
   color: var(--bulma-menu-item-active-color);
+
+  &:hover, &:focus {
+    background-color: var(--bulma-menu-item-active-background-color);
+    color: var(--bulma-menu-item-active-color);
+  }
+}
+
+.menu-list a, .menu-list button, .menu-list .menu-item {
+  background: var(--bulma-menu-item-background-color);
+  color: var(--bulma-menu-item-color);
+  text-decoration: none;
+
+  &:hover, &:focus {
+    background: var(--bulma-menu-item-hover-background-color);
+    color: var(--bulma-menu-item-hover-color);
+  }
 }
 
 .mod_breadcrumb {
@@ -452,7 +481,7 @@ body:not(.home) #header .inside {
   .days.active {
     position: relative;
 
-    &:hover .events {
+    &:hover .events, &:focus .events {
       display: block;
     }
 
@@ -520,9 +549,10 @@ body:not(.home) #header .inside {
         align-items: center;
         justify-content: center;
         margin: 0 auto;
+        text-decoration: none;
 
-        &:hover {
-          background: var(--bulma-link-hover);
+        &:hover, &:focus {
+          color: var(--bulma-link-hover);
         }
       }
     }
@@ -536,7 +566,7 @@ body:not(.home) #header .inside {
     }
 
     th.label {
-      color: #6B6B6B;
+      color: var(--bulma-text);
       font-weight: 500;
     }
 
@@ -549,7 +579,7 @@ body:not(.home) #header .inside {
       font-weight: 400;
 
       &.active {
-        color: var(--bulma-primary);
+        color: var(--bulma-primary-bg-text);
       }
     }
 
@@ -572,7 +602,7 @@ body:not(.home) #header .inside {
 
 .mod_faqpage {
   h3 {
-    color: var(--bulma-primary);
+    color: var(--bulma-primary-bg-text);
   }
 
   .info {
@@ -688,7 +718,7 @@ body:not(.home) #header .inside {
     padding: 0.75rem;
     font-size: 1.2rem;
     font-weight: 400;
-    color: var(--bulma-primary);
+    color: var(--bulma-primary-bg-text);
   }
 }
 
@@ -757,10 +787,10 @@ body:not(.home) #header .inside {
 
   .submit {
     background: var(--bulma-white);
-    color: var(--bulma-primary);
+    color: var(--bulma-black);
     margin: 0 15px 0;
 
-    &:hover {
+    &:hover, &:focus {
       background: var(--bulma-white-ter);
     }
   }
@@ -768,17 +798,13 @@ body:not(.home) #header .inside {
   .widget {
     margin: 0;
   }
-
-  .field>label, .widget>label {
-    color: #fff;
-  }
 }
 
 .modal {
   .delete {
     background: var(--bulma-link);
 
-    &:hover {
+    &:hover, &:focus {
       background: var(--bulma-link-hover);
     }
   }
@@ -795,7 +821,7 @@ body:not(.home) #header .inside {
     justify-content: space-between;
 
     h1, h2, h3, h4, h5, h6 {
-      color: var(--bulma-primary);
+      color: var(--bulma-primary-bg-text);
     }
   }
 
@@ -968,6 +994,19 @@ legend.label {
   }
 }
 
+.invisible:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: 8px 16px;
+  margin: 16px;
+  background: var(--bulma-button-background-color);
+  color: var(--bulma-button-color);
+  font-weight: bold;
+  outline: 2px solid #ffffff;
+  z-index: 1000;
+}
+
 input {
   &:checked + .slider {
     background-color: var(--bulma-input-switch-active-color);
@@ -982,4 +1021,8 @@ input {
   &:focus + .slider {
     box-shadow: 0 0 1px var(--bulma-input-switch-active-color);
   }
+}
+
+.mod_customnav.block {
+  overflow: visible;
 }

@@ -1,3 +1,4 @@
-$primary: #0ca6b3 !default;
-$link: $primary !default;
-$link-hover: #1fbac7 !default;
+:root {
+  --bulma-primary: #0ca6b3;
+  --bulma-link-hover: #1fbac7;
+}

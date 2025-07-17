@@ -1,4 +1,10 @@
 :root {
-  --bulma-primary: #186D3B;
-  --bulma-link-hover: #1E8549;
+  --bulma-primary: #5ca152;
+  --bulma-primary-invert: #000;
+  --bulma-primary-bg-text: #186D3B;
+  --bulma-link: #155127;
+  --bulma-link-hover: #1E763A;
+
+  --bulma-button-color: var(--bulma-black);
+  --bulma-primary-button-hover-background-color: #77B66D;
 }

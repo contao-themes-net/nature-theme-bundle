@@ -1,7 +1,7 @@
 :root {
-  --bulma-primary: #186D3B;
-  --bulma-primary-bg-text: #8EC653;
-  --bulma-link-hover: #9BCC66;
+  --bulma-primary: #0E728B;
+  --bulma-primary-bg-text: #37C7EB;
+  --bulma-link-hover: #58D0EE;
   --bulma-text: var(--bulma-white);
   --bulma-text-invert: var(--bulma-black);
   --bulma-text-strong: var(--bulma-white-ter);
@@ -13,7 +13,7 @@
   --bulma-danger: #FF757A;
 
   /* Buttons */
-  --bulma-primary-button-hover-background-color: #1D8147;
+  --bulma-primary-button-hover-background-color: #0A5C70;
 
   /* Menu */
   --bulma-menu-item-hover-background-color: var(--bulma-grey);
@@ -33,6 +33,7 @@
   --bulma-input-focus-border-color: var(--bulma-grey-darker);
   --bulma-input-icon-color: var(--bulma-white-ter);
   --bulma-input-switch-color: var(--bulma-boxes-background);
+  --bulma-input-placeholder-color: var(--bulma-grey-lighter);
 }
 
 .navbar {
