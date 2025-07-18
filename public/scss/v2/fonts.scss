@@ -1,100 +1,49 @@
+/* roboto-slab-300 - latin */
 @font-face {
-  font-family: 'Roboto Slab Thin';
-  font-style: normal;
-  font-weight: 100;
   font-display: swap;
-  src: local('Roboto Slab Thin'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-thin-webfont.eot') format('eot');
-}
-@font-face {
-  font-family: 'Roboto Slab Light';
+  font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 300;
-  font-display: swap;
-  src: local('Roboto Slab Light'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-light-webfont.eot') format('eot');
+  src: url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/roboto-slab-v35-latin-300.woff2') format('woff2');
 }
+/* roboto-slab-regular - latin */
 @font-face {
+  font-display: swap;
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 400;
-  font-display: swap;
-  src: local('Roboto Slab'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-regular-webfont.eot') format('eot');
+  src: url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/roboto-slab-v35-latin-regular.woff2') format('woff2');
 }
+/* roboto-slab-700 - latin */
 @font-face {
+  font-display: swap;
   font-family: 'Roboto Slab';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: local('Roboto Slab Bold'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/robotoslab-bold-webfont.eot') format('eot');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100;
-  font-display: swap;
-  src: local('Roboto Thin'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-thin-webfont.eot') format('eot');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local('Roboto Light'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-light-webfont.eot') format('eot');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: local('Roboto'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-regular-webfont.eot') format('eot');
+  src: url('/bundles/contaothemesnetnaturetheme/fonts/robotoslab/roboto-slab-v35-latin-700.woff2') format('woff2');
 }
 
+/* roboto-300 - latin */
 @font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-v48-latin-300.woff2') format('woff2');
+}
+/* roboto-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-v48-latin-regular.woff2') format('woff2');
+}
+/* roboto-700 - latin */
+@font-face {
+  font-display: swap;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  font-display: swap;
-  src: local('Roboto Bold'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-bold-webfont.eot') format('eot');
-}
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: local('Roboto Black'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.woff2') format('woff2'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.woff') format('woff'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.ttf') format('ttf'),
-  url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-black-webfont.eot') format('eot');
+  src: url('/bundles/contaothemesnetnaturetheme/fonts/roboto/roboto-v48-latin-700.woff2') format('woff2');
 }

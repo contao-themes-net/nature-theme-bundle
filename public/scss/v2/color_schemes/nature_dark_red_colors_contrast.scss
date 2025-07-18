@@ -1,7 +1,7 @@
 :root {
   --bulma-primary: #B62525;
   --bulma-primary-bg-text: #FF9EA1;
-  --bulma-link-hover: #FFADB0;
+  --bulma-link-hover: #FF9EA1;
   --bulma-text: var(--bulma-white);
   --bulma-text-invert: var(--bulma-black);
   --bulma-text-strong: var(--bulma-white-ter);
@@ -12,18 +12,17 @@
   --bulma-info: #40a3e7;
   --bulma-danger: #FF757A;
 
-  /* Buttons */
-  --bulma-primary-button-hover-background-color: #A12121;
-
-  /* Menu */
-  --bulma-menu-item-hover-background-color: var(--bulma-grey);
-
   //News
   --news-linear-gradient: linear-gradient(to bottom, transparent 0%, rgba(0,0,0, 0.4) 35%, rgba(0,0,0, 0.9) 55%);
 
   /* Megamenu */
   --bulma-megamenu-link-lvl2-color: var(--bulma-white);
   --bulma-megamenu-link-lvl3-color: var(--bulma-white);
+}
+
+.button, :root {
+  /* Buttons */
+  --bulma-primary-button-hover-background-color: #A12121;
 }
 
 .control, .input, input.captcha, .textarea, .select {
@@ -34,6 +33,11 @@
   --bulma-input-icon-color: var(--bulma-white-ter);
   --bulma-input-switch-color: var(--bulma-boxes-background);
   --bulma-input-placeholder-color: var(--bulma-grey-lighter);
+}
+
+.menu {
+  /* Menu */
+  --bulma-menu-item-hover-background-color: var(--bulma-grey);
 }
 
 .navbar {

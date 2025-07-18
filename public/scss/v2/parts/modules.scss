@@ -18,7 +18,7 @@ body:not(.home) #header .inside {
 
 .contact {
   .header-image {
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       margin-bottom: 150px;
     }
   }
@@ -48,7 +48,7 @@ body:not(.home) #header .inside {
       margin-bottom: 3rem;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       color: var(--bulma-primary-invert);
     }
 
@@ -104,12 +104,23 @@ body:not(.home) #header .inside {
 }
 
 .pagination-link.is-current, .pagination-link.is-selected {
-  background: var(--bulma-button-background-color);
-  border: none;
+  background: var(--bulma-pagination-current-background-color);
+  border-color: var(--bulma-pagination-current-border-color);
+  color: var(--bulma-pagination-current-color);
+
+  &:hover, &:focus {
+    color: var(--bulma-pagination-current-color);
+  }
 }
 
 .pagination-previous, .pagination-next, .pagination-link {
-  color: var(--bulma-text);
+  color: var(--bulma-pagination-color);
+  border-color: var(--bulma-pagination-border-color);
+
+  &:hover, &:focus {
+    color: var(--bulma-pagination-hover-color);
+    border-color: var(--bulma-pagination-hover-border-color);
+  }
 }
 
 .home, .contact {
@@ -156,7 +167,7 @@ body:not(.home) #header .inside {
         height: 100%;
       }
 
-      .text, a, .info, h1, h2, h3, h4, h5, h6 {
+      .text, a, .info, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         color: #e6e6e6;
       }
     }
@@ -170,7 +181,7 @@ body:not(.home) #header .inside {
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: var(--bulma-link);
   }
 
@@ -203,7 +214,7 @@ a.layout_short {
     margin-bottom: 0;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0;
   }
 
@@ -230,7 +241,7 @@ a.layout_short {
 }
 
 .layout_short {
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: var(--bulma-link);
   }
 
@@ -263,7 +274,7 @@ a.layout_short {
       z-index: -1;
     }
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       color: var(--bulma-link-hover);
     }
   }
@@ -305,7 +316,7 @@ a.layout_short {
     text-align: center;
   }
 
-  h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6, .h2, .h3, .h4, .h5, .h6 {
     margin: 10px 0 5px;
 
     &:not(:first-child) {
@@ -639,7 +650,7 @@ a.layout_short {
 
 .mod_newslist, .mod_eventlist {
   > {
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       width: 100%;
       padding: 0.75rem;
     }
@@ -781,7 +792,7 @@ a.layout_short {
     justify-content: center;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin-top: 0;
   }
 
@@ -809,7 +820,7 @@ a.layout_short {
     }
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     margin: 0;
 
     &:first-child {
@@ -820,7 +831,7 @@ a.layout_short {
   .modal-card-head {
     justify-content: space-between;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       color: var(--bulma-primary-bg-text);
     }
   }
@@ -924,6 +935,12 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 legend.label {
   font-weight: 500;
+}
+
+.has-background-primary {
+  .field>label, .widget>label {
+    color: var(--bulma-primary-invert);
+  }
 }
 
 /* Checkbox switch */

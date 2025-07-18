@@ -5,7 +5,7 @@
   }
 
   .layout_latest, .layout_short {
-    h2 {
+    h2, .h2 {
       font-size: 1.5em;
     }
   }
@@ -202,31 +202,31 @@
   }
 
   .ce_ct_teaserBox, .full-width-height-slider {
-    h1 {
+    h1, .h1 {
       font-size: 2.2rem;
       line-height: 2.5rem;
     }
-    h2 {
+    h2, .h2 {
       font-size: 2rem;
       line-height: 2.3rem;
     }
-    h3 {
+    h3, .h3 {
       font-size: 1.8rem;
       line-height: 2.0rem;
     }
-    h4 {
+    h4, .h4 {
       font-size: 1.6rem;
       line-height: 1.9rem;
     }
-    h5 {
+    h5, .h5 {
       font-size: 1.4rem;
       line-height: 1.7rem;
     }
-    h6 {
+    h6, .h6 {
       font-size: 1.2rem;
       line-height: 1.5rem;
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       margin-top: 0;
     }
   }
@@ -249,7 +249,7 @@
   }
 
   .contact .header-image {
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       margin-bottom: 50px;
     }
   }
@@ -337,7 +337,7 @@
   .header-image {
     height: 260px;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
       margin-bottom: 80px;
       padding: 0 15px;
     }
@@ -467,6 +467,10 @@
 
   .sticky-container .sticky-column {
     display: none;
+  }
+
+  .swiper-button-next, .swiper-button-prev {
+    top: 95%;
   }
 
   .tab-content {

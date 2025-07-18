@@ -20,6 +20,7 @@ namespace ContaoThemesNet\NatureThemeBundle;
 
 use Contao\Combiner;
 use Contao\CoreBundle\Exception\InvalidResourceException;
+use Contao\Input;
 use Contao\StringUtil;
 use Contao\System;
 
@@ -27,6 +28,22 @@ class ThemeUtils
 {
     public static string $themeFolder = 'bundles/contaothemesnetnaturetheme/';
     public static string $scssFolder = 'scss/';
+
+    /**
+     * @var array<string>
+     */
+    public static array $colors = [
+        'green_colors',
+        'green_colors_contrast',
+        'blue_colors',
+        'blue_colors_contrast',
+        'red_colors',
+        'red_colors_contrast',
+        'dark_colors_contrast',
+        'dark_green_colors_contrast',
+        'dark_blue_colors_contrast',
+        'dark_red_colors_contrast'
+    ];
 
     public static function getRootDir(): string
     {
@@ -50,6 +67,9 @@ class ThemeUtils
             self::$scssFolder = 'files/naturetheme/scss/'.$theme.'/';
         }
 
+        // Get session for theme switcher
+        $session = System::getContainer()->get('request_stack')->getSession();
+
         // add stylesheets
         $combiner = new Combiner();
 
@@ -58,6 +78,24 @@ class ThemeUtils
             $combiner->add(self::$scssFolder.'v2/nature.scss');
         } else {
             $combiner->add(self::$scssFolder.'nature.scss');
+        }
+
+        $request = System::getContainer()->get('request_stack')->getCurrentRequest();
+
+        // Execute code only in preview mode
+        if ($request->attributes->get('_preview') || 'nature.contao-themes.net' === $request->headers->get('host')) {
+            if ('reset' === Input::get('theme-color')) {
+                $session->set('nature_color', null);
+            }
+
+            if (Input::get('theme-color') && \in_array(Input::get('theme-color'), self::$colors, true)) {
+                $session->set('nature_color', Input::get('theme-color'));
+            }
+
+            if ($isV2 && $session->get('nature_color') && null !== $session->get('nature_color')) {
+                $combiner->add(self::$scssFolder.'v2/_nature_variables.scss');
+                $combiner->add(self::$scssFolder.'v2/color_schemes/nature_'.$session->get('nature_color').'.scss');
+            }
         }
 
         return $combiner->getCombinedFile();

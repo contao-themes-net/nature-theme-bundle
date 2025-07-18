@@ -1,0 +1,371 @@
+<div id="naturePreviewToolbar">
+  <ul id="slide-out" class="sidenav">
+    <li class="close-icon" title="Toolbar schließen">✕</li>
+
+    <li class="subheader">NATURE color schemes</li>
+
+    <li{% if 'green_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors_contrast"
+        class="color-scheme green-colors-contrast"
+        data-id="green_colors_contrast"
+      >
+        <span class="title">GREEN <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#186D3B"></span>
+          <span style="background:#1E763A"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'blue_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
+        class="color-scheme blue-colors-contrast"
+        data-id="blue_colors_contrast"
+      >
+        <span class="title">BLUE <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#0E728B"></span>
+          <span style="background:#0E618B"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'red_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors_contrast"
+        class="color-scheme red-colors-contrast"
+        data-id="red_colors_contrast"
+      >
+        <span class="title">RED <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#B62525"></span>
+          <span style="background:#C70028"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors_contrast"
+        class="color-scheme dark-colors-contrast"
+        data-id="dark_colors_contrast"
+      >
+        <span class="title">DARK <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#000"></span>
+          <span style="background:#fff"></span>
+          <span style="background:#8ADCFF"></span>
+          <span style="background:#2A2E36"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_green_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_green_colors_contrast"
+        class="color-scheme dark-green-colors-contrast"
+        data-id="dark_green_colors_contrast"
+      >
+        <span class="title">DARK GREEN <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#186D3B"></span>
+          <span style="background:#8EC653"></span>
+          <span style="background:#2A2E36"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_blue_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_blue_colors_contrast"
+        class="color-scheme dark-blue-colors-contrast"
+        data-id="dark_blue_colors_contrast"
+      >
+        <span class="title">DARK BLUE <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#0E728B"></span>
+          <span style="background:#37C7EB"></span>
+          <span style="background:#2A2E36"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'dark_red_colors_contrast' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_red_colors_contrast"
+        class="color-scheme dark-red-colors-contrast"
+        data-id="dark_red_colors_contrast"
+      >
+        <span class="title">DARK RED <span>CONTRAST</span></span>
+        <span class="colors">
+          <span style="background:#B62525"></span>
+          <span style="background:#FF9EA1"></span>
+          <span style="background:#2A2E36"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'green_colors' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors"
+        class="color-scheme green-colors"
+        data-id="green_colors"
+      >
+        <span class="title">GREEN</span>
+        <span class="colors">
+          <span style="background:#5ca152"></span>
+          <span style="background:#7ebb3e"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'blue_colors' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors"
+        class="color-scheme blue-colors"
+        data-id="blue_colors"
+      >
+        <span class="title">BLUE</span>
+        <span class="colors">
+          <span style="background:#0ca6b3"></span>
+          <span style="background:#1fbac7"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li{% if 'red_colors' == natureColor %} class="active"{% endif %}>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors"
+        class="color-scheme red-colors"
+        data-id="red_colors"
+      >
+        <span class="title">RED</span>
+        <span class="colors">
+          <span style="background:#d53333"></span>
+          <span style="background:#ff4949"></span>
+          <span style="background:#fff"></span>
+        </span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=reset"
+      >
+        <span class="title">Farbschema-Auswahl zurücksetzen</span>
+      </a>
+    </li>
+
+    <li class="subheader">Links</li>
+
+    <li class="link">
+      <a href="https://contao-themes.net/theme-detail/nature.html"><i class="fas fa-cart-arrow-down"></i> Kostenlos
+        installieren oder Lizenz bestellen</a>
+    </li>
+    <li class="link">
+      <a href="https://pdir.de/docs/de/contao/themes/nature/"><i class="fa fa-book" aria-hidden="true"></i>
+        Dokumentation</a>
+    </li>
+    <li class="link">
+      <a href="https://github.com/contao-themes-net/nature-theme-bundle/issues"><i class="fab fa-github"></i>
+        Fehler melden</a>
+    </li>
+    <li class="link">
+      <a href="https://nature.isotope.contao-themes.net"><i class="fas fa-globe"></i> ODD Isotope Demo</a>
+    </li>
+  </ul>
+  <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}#"
+     data-target="slide-out" class="open-settings sidenav-trigger" title="Show settings menu"><i class="fas fa-cog"></i></a>
+</div>
+<script>
+  // Set active color image
+  var activeColor = '{{ natureColor }}';
+
+  jQuery(document).ready(function ($) {
+    if(activeColor) {
+      $('#naturePreviewToolbar li img').removeClass('active');
+      $('#naturePreviewToolbar li img.' + activeColor).addClass('active');
+    }
+
+    $(".open-settings").click( function(e) {
+        $("#slide-out").show();
+        e.preventDefault();
+    });
+
+    $("#slide-out .close-icon").click( function() {
+        $("#slide-out").hide();
+    });
+
+    $("a.colour-scheme").hover( function() {
+        var colourScheme = $(this).data("id");
+        $("li img." + colourScheme).toggleClass("hover");
+        $("li.image").toggleClass("hover");
+    });
+  });
+</script>
+<style>
+  .open-settings {
+    position: fixed;
+    top: 150px;
+    background: #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100
+  }
+
+  .open-settings i {
+    color: #fff
+  }
+
+  #slide-out {
+    background: #333;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  #slide-out.sidenav li {
+    position: static
+  }
+
+  #slide-out {
+    background: #333;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 100%;
+    padding: 10px;
+    overflow: auto;
+  }
+
+  #slide-out ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  #slide-out li {
+    list-style-type: none;
+  }
+
+  #slide-out li .title {
+    color: #fff;
+  }
+
+  #slide-out li > a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.2;
+    height: inherit;
+    padding: 5px 32px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+
+  #slide-out li:not(.link) > a {
+    flex-wrap: wrap;
+  }
+
+  #slide-out li > a > i {
+    height: inherit;
+    color: #fff;
+    font-size: 1.5rem;
+    margin: 0 10px 0 0;
+    min-width: 25px;
+    line-height: 1;
+  }
+
+  #slide-out li.image {
+    padding: 65px 32px 0;
+  }
+
+  #slide-out li.image img {
+    display: none;
+  }
+
+  #slide-out li.image img.active {
+    display: block
+  }
+
+  #slide-out li.image.hover img.active {
+    display: none
+  }
+
+  #slide-out li.image.hover img.hover {
+    display: block
+  }
+
+  #slide-out li.active, #slide-out li:hover {
+    background: rgba(255, 255, 255, 0.05)
+  }
+
+  #slide-out li.active.subheader, #slide-out li.active.image, #slide-out li:hover.subheader, #slide-out li:hover.image {
+    background: none
+  }
+
+  #slide-out .close-icon {
+    text-align: right;
+    color: #fff;
+    font-size: 1.8rem;
+    display: inline-block;
+    float: right;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  #slide-out .title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+
+  #slide-out .title span {
+    font-weight: 400;
+  }
+
+  #slide-out .subheader {
+    font-size: 18px;
+    padding: 0;
+    margin: 20px 32px 15px;
+    border-bottom: 1px solid #565656;
+    color: #fff;
+  }
+
+  span.colors {
+    display: flex;
+    height: 5px;
+    width: 100%;
+  }
+
+  span.colors span {
+    width: 100%;
+    height: 100%;
+  }
+
+  @media (max-width: 992px) {
+    #slide-out.sidenav {
+      padding: 0 0 100px
+    }
+  }
+
+  @media (max-width: 600px) {
+    #slide-out {
+      width: 100%
+    }
+  }
+</style>
