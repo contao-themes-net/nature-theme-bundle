@@ -3,11 +3,11 @@
 declare(strict_types=1);
 
 /*
- * pdir theme nature bundle for Contao Open Source CMS
+ * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2025 pdir / digital agentur <develop@pdir.de>
+ * Copyright (C) 2025 pdir / digital agentur  // pdir GmbH
  *
- * @package    theme nature bundle
+ * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
  * @license    pdir contao theme licence
  * @author     pdir GmbH <develop@pdir.de>

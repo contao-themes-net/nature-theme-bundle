@@ -42,7 +42,7 @@ class ThemeUtils
         'dark_colors_contrast',
         'dark_green_colors_contrast',
         'dark_blue_colors_contrast',
-        'dark_red_colors_contrast'
+        'dark_red_colors_contrast',
     ];
 
     public static function getRootDir(): string
