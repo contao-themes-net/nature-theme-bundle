@@ -213,6 +213,7 @@ table {
 // overwrite some variables
 :root {
   --bulma-link-text: var(--bulma-link);
+  --swiper-pagination-bullet-horizontal-gap: 8px;
 }
 
 .control, .input, input.captcha, .textarea, .select {
