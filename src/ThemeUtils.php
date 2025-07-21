@@ -93,8 +93,7 @@ class ThemeUtils
             }
 
             if ($isV2 && $session->get('nature_color') && null !== $session->get('nature_color')) {
-                $combiner->add(self::$scssFolder.'v2/_nature_variables.scss');
-                $combiner->add(self::$scssFolder.'v2/color_schemes/nature_'.$session->get('nature_color').'.scss');
+                $GLOBALS['TL_HEAD'][] = '<link rel="stylesheet" href="'.self::$scssFolder.'v2/color_schemes/nature_'.$session->get('nature_color').'.scss'.'">';
             }
         }
 
