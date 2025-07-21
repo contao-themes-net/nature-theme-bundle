@@ -18,6 +18,7 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\NatureThemeBundle\Migration;
 
+use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
@@ -46,14 +47,19 @@ class InitialDemoDataMigration extends AbstractMigration
     {
         $schemaManager = $this->connection->createSchemaManager();
 
-        // If the database tables itself does not exist we should do nothing
+        // If the database tables itself do not exist we should do nothing
         if (!$schemaManager->tablesExist($this->minTables)) {
             return false;
         }
 
-        // Check if full version is used
+        // Check if a full version is used
         if ($schemaManager->tablesExist($this->fullTables)) {
             $this->sqlFile = str_replace('minimal', 'full', $this->sqlFile);
+        }
+
+        // Check wich Contao Version is used
+        if (version_compare(ContaoCoreBundle::getVersion(), '5.5.0', '>=')) {
+            $this->sqlFile = str_replace('contao53', 'contao56', $this->sqlFile);
         }
 
         // check some tables for content
