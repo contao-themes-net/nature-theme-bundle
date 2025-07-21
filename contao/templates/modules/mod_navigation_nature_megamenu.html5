@@ -1,4 +1,3 @@
-
 <!-- indexer::stop -->
 <nav class="<?= $this->class ?> navbar megamenu block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement" aria-label="main navigation">
 
@@ -15,16 +14,16 @@
 </div>
 
 <?php if ($this->headline): ?>
-<<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
+  <<?= $this->hl ?>><?= $this->headline ?></<?= $this->hl ?>>
 <?php endif; ?>
 
-<a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
+  <a href="<?= $this->request ?>#<?= $this->skipId ?>" class="invisible"><?= $this->skipNavigation ?></a>
 
-<div id="navbarMain" class="navbar-menu is-primary">
-  <?= $this->items ?>
-</div>
+  <div id="navbarMain" class="navbar-menu is-primary">
+    <?= $this->items ?>
+  </div>
 
-<a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
+  <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>
 
 </nav>
 

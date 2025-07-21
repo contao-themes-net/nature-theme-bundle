@@ -1,4 +1,4 @@
-<div class="tl_listing_container">
+  <div class="tl_listing_container">
   <div id="pdir" class="be_naturetheme_setup clr">
     <h1 id="tl_welcome">Nature Theme für Contao (Version <?= $this->version ?>)</h1>
     <div class="intro">

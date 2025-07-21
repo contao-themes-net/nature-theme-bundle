@@ -12,19 +12,19 @@
 
   <ul class="pagination-list">
     <?php if ($this->hasFirst): ?>
-    <li class="first"><a href="<?= $this->first['href'] ?>" class="first pagination-link" title="<?= $this->first['title'] ?>"><?= $this->first['link'] ?></a></li>
+      <li class="first"><a href="<?= $this->first['href'] ?>" class="first pagination-link" title="<?= $this->first['title'] ?>"><?= $this->first['link'] ?></a></li>
     <?php endif; ?>
 
     <?php foreach ($this->pages as $page): ?>
-    <?php if (null === $page['href']): ?>
-    <li><a href="<?= $page['href'] ?>" class="pagination-link is-current" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
-    <?php else: ?>
-    <li><a href="<?= $page['href'] ?>" class="pagination-link" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
-    <?php endif; ?>
+      <?php if (null === $page['href']): ?>
+        <li><a href="<?= $page['href'] ?>" class="pagination-link is-current" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
+      <?php else: ?>
+        <li><a href="<?= $page['href'] ?>" class="pagination-link" title="<?= $page['title'] ?>"><?= $page['page'] ?></a></li>
+      <?php endif; ?>
     <?php endforeach; ?>
 
     <?php if ($this->hasLast): ?>
-    <li class="last"><a href="<?= $this->last['href'] ?>" class="last pagination-link" title="<?= $this->last['title'] ?>"><?= $this->last['link'] ?></a></li>
+      <li class="last"><a href="<?= $this->last['href'] ?>" class="last pagination-link" title="<?= $this->last['title'] ?>"><?= $this->last['link'] ?></a></li>
     <?php endif; ?>
   </ul>
 

@@ -2,7 +2,7 @@
   <div class="inside">
     <?php if($this->featureIcon != ""): ?>
       <div class="icon">
-          <i class="<?= $this->featureIcon ?>"></i>
+        <i class="<?= $this->featureIcon ?>"></i>
       </div>
     <?php endif; ?>
 

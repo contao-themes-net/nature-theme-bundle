@@ -1,29 +1,29 @@
 <div class="<?= $this->class ?> block full-height"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
-<div class="inside">
-  <?php $this->block('content'); ?>
+  <div class="inside">
+    <?php $this->block('content'); ?>
 
-  <?php if ($this->addImage): ?>
-    <figure class="image_container float_above" style="background-image:url('<?= $this->picture['img']['src'] ?>')"></figure>
-  <?php endif; ?>
+      <?php if ($this->addImage): ?>
+        <figure class="image_container float_above" style="background-image:url('<?= $this->picture['img']['src'] ?>')"></figure>
+      <?php endif; ?>
 
-  <div class="content">
-    <?php if ($this->headline): ?>
-      <<?= $this->hl ?>>
-      <?php if($this->page != ""): ?><a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
-      <?= $this->headline ?>
-      <?php if($this->page != ""): ?></a><?php endif; ?>
-      </<?= $this->hl ?>>
-    <?php endif; ?>
+      <div class="content">
+        <?php if ($this->headline): ?>
+          <<?= $this->hl ?>>
+          <?php if($this->page != ""): ?><a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?php endif; ?>
+          <?= $this->headline ?>
+          <?php if($this->page != ""): ?></a><?php endif; ?>
+          </<?= $this->hl ?>>
+        <?php endif; ?>
 
-    <?= $this->cspInlineStyles($this->text) ?>
+        <?= $this->cspInlineStyles($this->text) ?>
 
-    <?php if($this->page != ""): ?>
-      <div class="pageLink">
-        <a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?= $this->pageText ?></a>
+        <?php if($this->page != ""): ?>
+          <div class="pageLink">
+            <a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?= $this->pageText ?></a>
+          </div>
+        <?php endif; ?>
       </div>
-    <?php endif; ?>
-  </div>
 
-  <?php $this->endblock(); ?>
-</div>
+    <?php $this->endblock(); ?>
+  </div>
 </div>

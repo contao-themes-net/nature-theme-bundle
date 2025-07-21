@@ -2,7 +2,7 @@
 <div class="layout_full block<?= $this->class ?>">
 
   <?php $this->block('info'); ?>
-  <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
+    <p class="info"><time datetime="<?= $this->datetime ?>"><?= $this->date ?></time> <?= $this->author ?></p>
   <?php $this->endblock(); ?>
 
   <?php if (!$this->addImage): ?>
@@ -34,11 +34,10 @@
 </div>
 
 <?php
-
 $schemaOrg = $this->getSchemaOrgData();
 
 if ($this->hasText) {
-$schemaOrg['text'] = $this->rawHtmlToPlainText($this->text);
+  $schemaOrg['text'] = $this->rawHtmlToPlainText($this->text);
 }
 
 $this->addSchemaOrg($schemaOrg);
