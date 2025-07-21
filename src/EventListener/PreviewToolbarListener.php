@@ -63,7 +63,8 @@ class PreviewToolbarListener
         }
 
         // Do not inject the toolbar in the back end
-        if ($this->scopeMatcher->isBackendMainRequest($event) || !$this->tokenChecker->hasBackendUser()) {
+        if (($this->scopeMatcher->isBackendMainRequest($event) || !$this->tokenChecker->hasBackendUser())
+            && 'nature.contao-themes.net' !== $request->headers->get('host')) {
             return;
         }
 
