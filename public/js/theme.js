@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
             opacity = 0;
         }
 
-        if($(".header-image").length > 0) $(".header-image .title").css("opacity",opacity);
+        if($(".header-image").length > 0) $(".header-image .title, .header-image h1").css("opacity",opacity);
         if($(".parallax-slider").length > 0 && $(window).width() > 768) $(".parallax-slider .text").css("opacity",opacity);
     }
 

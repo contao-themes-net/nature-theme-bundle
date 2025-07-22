@@ -1,4 +1,3 @@
-
 <table class="calendar">
   <thead>
   <tr>
@@ -14,20 +13,20 @@
   </thead>
   <tbody>
   <?php foreach ($this->weeks as $class => $week): ?>
-  <tr class="<?= $class ?>">
-    <?php foreach ($week as $day): ?>
-    <td class="<?= $day['class'] ?>">
-      <div class="header"><?= $day['label'] ?></div>
-      <?php if(count($day['events']) > 0): ?><div class="events"><?php endif; ?>
-      <?php foreach ($day['events'] as $event): ?>
-      <div class="event cal_<?= $event['parent'] ?><?= $event['class'] ?>" itemscope itemtype="http://schema.org/Event">
-        <a href="<?= $event['href'] ?>" title="<?= $event['title'] ?> (<?php if ($event['day']): ?><?= $event['day'] ?>, <?php endif; ?><?= $event['date'] ?><?php if ($event['time']): ?> <?= $event['time']?><?php endif; ?>)"<?= $event['target'] ?> itemprop="url"><span itemprop="name"><?= $event['link'] ?></span></a>
-      </div>
+    <tr class="<?= $class ?>">
+      <?php foreach ($week as $day): ?>
+      <td class="<?= $day['class'] ?>">
+        <div class="header"><?= $day['label'] ?></div>
+        <?php if(count($day['events']) > 0): ?><div class="events"><?php endif; ?>
+        <?php foreach ($day['events'] as $event): ?>
+        <div class="event cal_<?= $event['parent'] ?><?= $event['class'] ?>" itemscope itemtype="http://schema.org/Event">
+          <a href="<?= $event['href'] ?>" title="<?= $event['title'] ?> (<?php if ($event['day']): ?><?= $event['day'] ?>, <?php endif; ?><?= $event['date'] ?><?php if ($event['time']): ?> <?= $event['time']?><?php endif; ?>)"<?= $event['target'] ?> itemprop="url"><span itemprop="name"><?= $event['link'] ?></span></a>
+        </div>
+        <?php endforeach; ?>
+        <?php if(count($day['events']) > 0): ?></div><?php endif; ?>
+      </td>
       <?php endforeach; ?>
-      <?php if(count($day['events']) > 0): ?></div><?php endif; ?>
-    </td>
-    <?php endforeach; ?>
-  </tr>
+    </tr>
   <?php endforeach; ?>
   </tbody>
 </table>

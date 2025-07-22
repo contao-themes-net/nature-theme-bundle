@@ -1,4 +1,11 @@
 services:
+    _defaults:
+        autoconfigure: true
+        autowire: true
+
+    ContaoThemesNet\NatureThemeBundle\:
+        resource: ../src/
+
     # Migration
     ContaoThemesNet\NatureThemeBundle\Migration\:
         resource: "../src/Migration/*"

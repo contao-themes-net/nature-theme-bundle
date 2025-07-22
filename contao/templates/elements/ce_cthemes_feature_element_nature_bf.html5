@@ -1,0 +1,18 @@
+<div class="<?= $this->class ?> block nature"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <div class="inside">
+    <?php if($this->featureIcon != ""): ?>
+      <div class="icon">
+        <i class="<?= $this->featureIcon ?>"></i>
+      </div>
+    <?php endif; ?>
+
+    <div class="feature-text">
+      <div class="headline">
+        <?php if($this->iconLink != ""): ?><a href="<?= $this->iconLink ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->target ?><?= $this->rel ?>><?php endif; ?>
+        <?= $this->headline ?>
+        <?php if($this->iconLink != ""): ?></a><?php endif; ?>
+      </div>
+      <div class="text"><?= $this->cspInlineStyles($this->text) ?></div>
+    </div>
+  </div>
+</div>

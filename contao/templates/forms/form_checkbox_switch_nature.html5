@@ -1,14 +1,15 @@
 <?php $this->extend('form_row'); ?>
 
-<?php $this->block('field'); ?>
+  <?php $this->block('field'); ?>
+
   <?php if ($this->label): ?>
-    <label class="label">
+    <legend class="label">
       <?php if ($this->mandatory): ?>
-      <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
+        <span class="invisible"><?= $this->mandatoryField ?> </span><?= $this->label ?><span class="mandatory">*</span>
       <?php else: ?>
-      <?= $this->label ?>
+        <?= $this->label ?>
       <?php endif; ?>
-    </label>
+    </legend>
   <?php endif; ?>
 
   <input type="hidden" name="<?= $this->name ?>" value="">
@@ -18,19 +19,21 @@
       <?php if ('group_start' == $option['type']): ?>
         <fieldset>
           <legend><?= $option['label'] ?></legend>
-          <?php endif; ?>
+      <?php endif; ?>
 
-          <?php if ('option' == $option['type']): ?>
-            <div class="checkbox-switch">
-              <label class="switch" id="lbl_<?= $option['id'] ?>">
-                <input type="checkbox" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="checkbox" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>>
-                <span class="slider round"></span>
-              </label>
-              <span><?= $option['label'] ?></span>
+      <?php if ('option' == $option['type']): ?>
+        <div class="checkbox-switch">
+          <label id="lbl_<?= $option['id'] ?>">
+            <div class="switch" >
+              <input type="checkbox" name="<?= $option['name'] ?>" id="opt_<?= $option['id'] ?>" class="checkbox" value="<?= $option['value'] ?>"<?= $option['checked'] ?><?= $option['attributes'] ?>>
+              <span class="slider round"></span>
             </div>
-          <?php endif; ?>
+            <span><?= $option['label'] ?></span>
+          </label>
+        </div>
+      <?php endif; ?>
 
-          <?php if ('group_end' == $option['type']): ?>
+      <?php if ('group_end' == $option['type']): ?>
         </fieldset>
       <?php endif; ?>
     <?php endforeach; ?>
@@ -39,4 +42,5 @@
   <?php if ($this->hasErrors()): ?>
     <p class="help is-danger"><?= $this->getErrorAsString() ?></p>
   <?php endif; ?>
+
 <?php $this->endblock(); ?>

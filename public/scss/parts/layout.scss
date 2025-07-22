@@ -1,6 +1,10 @@
 ::-moz-selection { background: $primary; color: #fff; }
 ::selection { background: $primary; color: #fff; }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-weight: $font-weight;
   background: $background;

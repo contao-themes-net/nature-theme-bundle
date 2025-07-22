@@ -7,7 +7,7 @@
       </div>
     <?php endif; ?>
 
-    <?php if ($this->hasMetaFields): ?>
+    <?php $this->block('info'); ?>
       <p class="info"><time datetime="<?= $this->datetime ?>">
         <?= $this->date ?></time> <?= $this->author ?> <?= $this->commentCount ?>
         <?php if($this->socialFeedType == "Facebook" || $this->socialFeedType == ""): ?>
@@ -18,7 +18,7 @@
         <i class="fab fa-twitter" aria-hidden="true"></i>
         <?php endif; ?>
       </p>
-    <?php endif; ?>
+    <?php $this->endblock(); ?>
 
     <div class="title"><?= $this->sfFbAccount ?></div>
 
@@ -40,7 +40,6 @@
 </div>
 
 <?php
-
 // This template is used as a news list template by default, so we only add
 // JSON-LD data in case this is a news article without a reader
 if (!$this->hasReader) {

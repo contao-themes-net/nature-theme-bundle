@@ -1,0 +1,91 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bulma-primary: #000;
+    --bulma-primary-bg-text: #fff;
+    --bulma-link: #fff;
+    --bulma-link-hover: #8ADCFF;
+    --bulma-text: var(--bulma-white);
+    --bulma-text-invert: var(--bulma-black);
+    --bulma-text-strong: var(--bulma-white-ter);
+
+    --bulma-background: var(--bulma-grey-darker);
+    --bulma-boxes-background: var(--bulma-grey-dark);
+    --bulma-boxes-color: var(--bulma-white);
+    --bulma-info: #40a3e7;
+    --bulma-danger: #FF757A;
+
+    //News
+    --news-linear-gradient: linear-gradient(to bottom, transparent 0%, rgba(0,0,0, 0.4) 35%, rgba(0,0,0, 0.9) 55%);
+
+    /* Megamenu */
+    --bulma-megamenu-link-lvl2-color: var(--bulma-white);
+    --bulma-megamenu-link-lvl3-color: var(--bulma-white);
+  }
+
+  .button, :root {
+    /* Buttons */
+    --bulma-button-color: var(--bulma-white);
+    --bulma-primary-button-hover-background-color: var(--bulma-black-ter);
+  }
+
+  .control, .input, input.captcha, .textarea, .select {
+    /* Forms */
+    --bulma-input-border-color: var(--bulma-grey-darker);
+    --bulma-input-hover-border-color: var(--bulma-grey-darker);
+    --bulma-input-focus-border-color: var(--bulma-grey-darker);
+    --bulma-input-icon-color: var(--bulma-white-ter);
+    --bulma-input-switch-color: var(--bulma-boxes-background);
+    --bulma-input-placeholder-color: var(--bulma-grey-lighter);
+  }
+
+  .menu {
+    /* Menu */
+    --bulma-menu-item-hover-background-color: var(--bulma-grey);
+  }
+
+  .navbar {
+    /* Navigation */
+    --bulma-navbar-background-color: var(--bulma-black-ter);
+    --bulma-navbar-background-color-home: #2023294D;
+
+    --bulma-navbar-item-color: var(--bulma-white);
+
+    --bulma-navbar-dropdown-background-color: var(--bulma-black-ter);
+    --bulma-navbar-dropdown-lvl3-background-color: var(--bulma-navbar-dropdown-background-color);
+    --bulma-navbar-dropdown-lvl4-background-color: var(--bulma-navbar-dropdown-background-color);
+  }
+
+  .table {
+    --bulma-table-background-color: transparent;
+    --bulma-table-row-hover-background-color: var(--bulma-black-bis);
+    --bulma-table-row-active-background-color: var(--bulma-black-bis);
+    --bulma-table-striped-row-even-background-color: var(--bulma-black-ter);
+    --bulma-table-striped-row-even-hover-background-color: var(--bulma-black-bis);
+  }
+
+  body {
+    .contact-box .contact-form {
+      .control, .input, input.captcha, .textarea, .select {
+        --bulma-input-background-color: var(--bulma-grey-darker);
+      }
+    }
+
+    .logo-light {
+      display: block;
+    }
+
+    .mod_navigation.navbar .content-image:not(.logo-light):not(:last-child) {
+      display: none;
+    }
+
+    .mod_subscribe.newsletter-primary {
+      .submit {
+        color: var(--bulma-black);
+      }
+    }
+  }
+
+  .content a {
+    text-decoration: underline;
+  }
+}

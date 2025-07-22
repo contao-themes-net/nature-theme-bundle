@@ -1,4 +1,3 @@
-
 <!-- indexer::stop -->
 <aside class="<?= $this->class ?> menu block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?> itemscope itemtype="http://schema.org/SiteNavigationElement">
 

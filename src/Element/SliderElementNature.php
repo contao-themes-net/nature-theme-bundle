@@ -40,7 +40,7 @@ class SliderElementNature extends SliderElement
 
         // Add background image
         if (null !== $this->ct_sliderElement_backgroundImageSRC) {
-            $backgroundImageSRC = FilesModel::findByUuid($this->ct_sliderElement_backgroundImageSRC)->path;
+            $backgroundImageSRC = FilesModel::findByUuid($this->ct_sliderElement_backgroundImageSRC)?->path;
             $this->Template->backgroundImage = "background-image:url('".$backgroundImageSRC."')";
         }
 

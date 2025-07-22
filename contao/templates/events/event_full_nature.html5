@@ -1,13 +1,12 @@
-
 <div class="event layout_full block<?= $this->class ?>" itemscope itemtype="http://schema.org/Event">
 
   <?php if ($this->location): ?>
-  <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
-    <span itemprop="name"><?= $this->location ?></span>
-    <?php if ($this->address): ?>
-    (<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $this->address ?></span>)
-    <?php endif; ?>
-  </p>
+    <p class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">
+      <span itemprop="name"><?= $this->location ?></span>
+      <?php if ($this->address): ?>
+      (<span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress"><?= $this->address ?></span>)
+      <?php endif; ?>
+    </p>
   <?php endif; ?>
 
   <?php if ($this->recurring): ?>
@@ -41,13 +40,13 @@
   <?php endif; ?>
 
   <?php if ($this->enclosure): ?>
-  <ul class="enclosure">
-    <?php foreach ($this->enclosure as $enclosure): ?>
-    <li class="download-element ext-<?= $enclosure['extension'] ?>">
-      <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
-    </li>
-    <?php endforeach; ?>
-  </ul>
+    <ul class="enclosure">
+      <?php foreach ($this->enclosure as $enclosure): ?>
+      <li class="download-element ext-<?= $enclosure['extension'] ?>">
+        <a href="<?= $enclosure['href'] ?>" title="<?= $enclosure['title'] ?>"><?= $enclosure['link'] ?> <span class="size">(<?= $enclosure['filesize'] ?>)</span></a>
+      </li>
+      <?php endforeach; ?>
+    </ul>
   <?php endif; ?>
 
 </div>

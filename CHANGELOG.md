@@ -10,6 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.5.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.0) – 2025-07-22
+
+- [Added] Contao 5.6 compatibility
+- [Added] Add contrast color schemes (only in v2) and accessibility changes
+- [Changed] Use Bulma version 1.0
+
 ## [2.4.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.4.1) – 2025-03-21
 
 - [Fixed] Updated scssphp dependency to 1.0 for Contao 5.5 compatibility
