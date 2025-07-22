@@ -72,7 +72,6 @@ class ThemeUtils
 
         // add stylesheets
         $combiner = new Combiner();
-        $isV2 = file_exists(self::getRootDir().'/files/naturetheme/.v2');
 
         $request = System::getContainer()->get('request_stack')->getCurrentRequest();
 
@@ -88,12 +87,13 @@ class ThemeUtils
 
             if ($isV2 && $session->get('nature_color') && null !== $session->get('nature_color')) {
                 $combiner->add(self::$scssFolder.'v2/preview_nature_'.$session->get('nature_color').'.scss');
+
                 return $combiner->getCombinedFile();
             }
         }
 
         // Check for v2 or use old stylesheets
-        if ($isV2 && null === $theme) {
+        if ($isV2 = file_exists(self::getRootDir().'/files/naturetheme/.v2') && null === $theme) {
             $combiner->add(self::$scssFolder.'v2/nature.scss');
         } else {
             $combiner->add(self::$scssFolder.'nature.scss');
