@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.5.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.0) – 2025-07-19
+## [2.5.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.0) – 2025-07-22
 
 - [Added] Contao 5.6 compatibility
 - [Added] Add contrast color schemes (only in v2) and accessibility changes
