@@ -88,6 +88,7 @@ class ThemeUtils
 
             if ($isV2 && $session->get('nature_color') && null !== $session->get('nature_color')) {
                 $combiner->add(self::$scssFolder.'v2/preview_nature_'.$session->get('nature_color').'.scss');
+
                 return $combiner->getCombinedFile();
             }
         }
