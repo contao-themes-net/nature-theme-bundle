@@ -1,6 +1,7 @@
 :root {
   --bulma-primary: #0E728B;
   --bulma-primary-bg-text: #37C7EB;
+  --bulma-link: var(--bulma-primary-bg-text);
   --bulma-link-hover: #37C7EB;
   --bulma-text: var(--bulma-white);
   --bulma-text-invert: var(--bulma-black);
