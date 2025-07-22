@@ -3,5 +3,5 @@
   --bulma-primary-bg-text: var(--bulma-primary);
   --bulma-primary-invert: #fff;
   --bulma-link: var(--bulma-primary-bg-text);
-  --bulma-link-hover: #C70028;
+  --bulma-link-hover: color-mix(in srgb, var(--bulma-link), black 30%);
 }

@@ -30,10 +30,10 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-boxes-background: var(--bulma-white-ter);
   --bulma-boxes-color: var(--bulma-text);
 
-  --bulma-info: #3e8ed0;
-  --bulma-success: #48c78e;
-  --bulma-warning: #ffe08a;
-  --bulma-danger: #f14668;
+  //--bulma-info: #3e8ed0;
+  //--bulma-success: #48c78e;
+  //--bulma-warning: #ffe08a;
+  //--bulma-danger: #f14668;
 
   --bulma-family-primary: 'Roboto', sans-serif;
   --bulma-family-heading: 'Roboto Slab', sans-serif;
@@ -80,8 +80,8 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-button-border-color: transparent;
   --bulma-button-border-width: 1px;
   --bulma-button-hover-color: var(--bulma-button-color);
-  --bulma-button-hover-border-color: var(--bulma-link-hover);
-  --bulma-primary-button-hover-background-color: var(--bulma-link-hover);
+  --bulma-button-hover-border-color: transparent;
+  --bulma-primary-button-hover-background-color: color-mix(in srgb, var(--bulma-button-background-color), black 30%);
 }
 
 .breadcrumb {

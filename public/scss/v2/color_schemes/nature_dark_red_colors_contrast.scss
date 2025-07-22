@@ -2,7 +2,7 @@
   --bulma-primary: #B62525;
   --bulma-primary-bg-text: #FF9EA1;
   --bulma-link: var(--bulma-primary-bg-text);
-  --bulma-link-hover: #FF9EA1;
+  --bulma-link-hover: color-mix(in srgb, var(--bulma-link), white 30%);
   --bulma-text: var(--bulma-white);
   --bulma-text-invert: var(--bulma-black);
   --bulma-text-strong: var(--bulma-white-ter);
@@ -19,11 +19,6 @@
   /* Megamenu */
   --bulma-megamenu-link-lvl2-color: var(--bulma-white);
   --bulma-megamenu-link-lvl3-color: var(--bulma-white);
-}
-
-.button, :root {
-  /* Buttons */
-  --bulma-primary-button-hover-background-color: #A12121;
 }
 
 .control, .input, input.captcha, .textarea, .select {

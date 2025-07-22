@@ -31,40 +31,63 @@ a {
 
   &:hover {
     border-color: var(--bulma-button-hover-border-color);
+    color: var(--bulma-black);
+    background: color-mix(in srgb, var(--bulma-white), black 20%);
   }
 
-  &.is-primary:not(.is-outlined) {
+  &.is-primary:not(.is-outlined), &.is-link:not(.is-outlined) {
     background: var(--bulma-button-background-color);
     color: var(--bulma-button-color);
 
     &:hover, &:focus {
       background: var(--bulma-primary-button-hover-background-color);
+      color: var(--bulma-button-hover-color);
     }
   }
 
   &.is-info:not(.is-outlined) {
     background: var(--bulma-info);
-  }
 
-  &.is-link:not(.is-outlined) {
-    background: var(--bulma-link);
+    &:hover, &:focus {
+      background: color-mix(in srgb, var(--bulma-info), white 30%);
+      color: var(--bulma-black);
+    }
   }
 
   &.is-success:not(.is-outlined) {
     background: var(--bulma-success);
+
+    &:hover, &:focus {
+      background: color-mix(in srgb, var(--bulma-success), white 30%);
+      color: var(--bulma-black);
+    }
   }
 
   &.is-warning:not(.is-outlined) {
     background: var(--bulma-warning);
+
+    &:hover, &:focus {
+      background: color-mix(in srgb, var(--bulma-warning), white 30%);
+      color: var(--bulma-black);
+    }
   }
 
   &.is-danger:not(.is-outlined) {
     background: var(--bulma-danger);
+
+    &:hover, &:focus {
+      background: color-mix(in srgb, var(--bulma-danger), white 30%);
+      color: var(--bulma-black);
+    }
   }
 
   &.is-primary.is-outlined {
     border-color: var(--bulma-primary);
     color: var(--bulma-primary-bg);
+
+    &:hover, &:focus {
+      background: none;
+    }
   }
 }
 
