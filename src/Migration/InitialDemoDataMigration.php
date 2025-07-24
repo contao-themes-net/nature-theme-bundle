@@ -58,7 +58,7 @@ class InitialDemoDataMigration extends AbstractMigration
         }
 
         // Check wich Contao Version is used
-        if (version_compare(ContaoCoreBundle::getVersion(), '5.5.0', '>=')) {
+        if (version_compare(ContaoCoreBundle::getVersion(), '5.6.0', '>=')) {
             $this->sqlFile = str_replace('contao53', 'contao56', $this->sqlFile);
         }
 
