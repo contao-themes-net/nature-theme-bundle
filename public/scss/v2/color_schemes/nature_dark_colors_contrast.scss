@@ -87,3 +87,11 @@ body {
 .content a {
   text-decoration: underline;
 }
+
+.has-background-light, .has-background-white, .has-background-white-bis, .has-background-white-ter,
+.has-background-grey-light, .has-background-grey-lighter {
+  .content {
+    --bulma-text: var(--bulma-text-invert);
+    color: var(--bulma-text);
+  }
+}
