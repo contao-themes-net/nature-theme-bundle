@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.0) – 2025-07-25
+## [2.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.0) – 2025-07-28
 
 - [Added] Fixed-position shortlinks for contact and social icons
 - [Added] CSS classes for angled edges on articles (use `.has-slope-top-left`, `.has-slope-top-right`, `.has-slope-bottom-left` or `.has-slope-bottom-right` with background e.g. `.has-background-primary`)
