@@ -21,6 +21,7 @@
 
 <div id="navbarMain" class="navbar-menu is-primary">
 <?= $this->items ?>
+{{insert_article::149}}
 </div>
 
 <a id="<?= $this->skipId ?>" class="invisible">&nbsp;</a>

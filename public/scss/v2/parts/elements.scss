@@ -407,6 +407,9 @@ a {
 }
 
 .ce_ct_priceBox {
+  display: flex;
+  align-items: center;
+
   &.block:not(:last-child) {
     margin-bottom: 0;
   }
@@ -438,7 +441,8 @@ a {
     box-shadow: var(--bulma-box-shadow);
     padding: 50px;
     text-align: center;
-    height: 100%;
+    height: auto;
+    width: 100%;
     border-radius: 5px;
 
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -451,12 +455,6 @@ a {
         margin-top: 0;
       }
     }
-  }
-
-  &:not(.popular-box) .inside {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: calc(100% - 100px);
   }
 
   &.popular-box {
@@ -967,6 +965,10 @@ a {
     &:not(:last-child) {
       margin-bottom: 0;
     }
+  }
+
+  ul {
+    margin-inline-start: 1em;
   }
 
   table {

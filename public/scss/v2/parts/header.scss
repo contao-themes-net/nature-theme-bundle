@@ -139,6 +139,8 @@
   height: 100px;
 
   a {
+    text-decoration: none;
+
     &.trail, &.active {
       color: var(--bulma-navbar-item-active-color);
       background: var(--bulma-navbar-item-active-background-color);
@@ -410,6 +412,10 @@
     }
   }
 
+  .navbar-menu .navbar-start:not(:last-child) {
+    padding-right: 20px;
+  }
+
   .navbar-item.is-mega {
     position: static;
 
@@ -439,6 +445,26 @@ a.navbar-item:active,
 .navbar-link:active {
   background: var(--bulma-navbar-item-active-background-color);
   color: var(--bulma-navbar-item-active-color);
+}
+
+.navbar-start {
+  flex-wrap: wrap;
+}
+
+.wcag.content-text {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+
+  p {
+    display: flex;
+    margin: 0;
+  }
+}
+
+.wcag-square, .wcag-size {
+  transform: scale(0.6);
 }
 
 @media screen and (min-width: $bulma-navbar-breakpoint) {

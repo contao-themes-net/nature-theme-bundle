@@ -465,7 +465,7 @@ a.layout_short {
 }
 
 .mod_breadcrumb {
-  padding: 20px;
+  padding: 20px 0;
   background: var(--bulma-breadcrumb-background-color);
   position: relative;
   bottom: 0;
@@ -478,10 +478,18 @@ a.layout_short {
       white-space: normal;
     }
   }
+
+  .container {
+    padding: var(--bulma-container-padding);
+  }
 }
 
 .mod_article:not(.article-full-width) .container {
   padding: var(--bulma-container-padding);
+
+  .container {
+    padding: 0;
+  }
 }
 
 .mod_calendar {
