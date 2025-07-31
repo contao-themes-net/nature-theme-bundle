@@ -17,6 +17,7 @@ Types of changes
 - [Added] CSS class for full-width elliptical image (`.has-image-ellipse`)
 - [Added] Icon in the header to toggle between normal mode and high contrast mode
 - [Added] Implemented accessibility statement and linked it via an icon in the header
+- [Added] Teaserbox supports right-aligned images via `image-right` class
 - [Changed] Update sql files
 
 ## [2.5.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.1) – 2025-07-24

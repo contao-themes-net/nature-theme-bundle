@@ -435,7 +435,7 @@ a.layout_short {
   margin-bottom: 0;
 
   &:not(.article-full-width) {
-    padding: 100px 0;
+    padding: var(--bulma-article-padding);
 
     &.first-element {
       padding-top: 140px;
