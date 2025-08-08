@@ -179,6 +179,10 @@
     }
   }
 
+  .mod_article {
+    display: flex;
+  }
+
   .navbar-dropdown {
     min-width: 200px;
     background: var(--bulma-navbar-dropdown-background-color);
