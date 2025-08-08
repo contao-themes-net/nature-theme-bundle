@@ -1,0 +1,7 @@
+{% extends "@Contao/content_element/hyperlink.html.twig" %}
+
+{% block text_link %}
+  {{- text_before -}}
+  <a{{ attrs(link_attributes|default) }}>{{ link_text|insert_tag_raw }}</a>
+  {{- text_after -}}
+{% endblock %}

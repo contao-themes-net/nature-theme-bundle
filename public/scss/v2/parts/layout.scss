@@ -1,6 +1,10 @@
 ::-moz-selection { background: var(--bulma-primary); color: var(--bulma-primary-invert); }
 ::selection { background: var(--bulma-primary); color: var(--bulma-primary-invert); }
 
+* {
+  word-break: break-word;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -30,6 +34,13 @@ body + div {
 .column-wrapper {
   position: relative;
   background: var(--bulma-background);
+}
+
+.has-background-dark, .has-background-black, .has-background-black-bis, .has-background-black-ter, .has-background-grey-darker, .has-background-grey-dark, .has-background-grey {
+  .content {
+    --bulma-text: var(--bulma-light);
+    color: var(--bulma-text);
+  }
 }
 
 #left, #right {
@@ -63,10 +74,30 @@ body + div {
 }
 
 .has-background-primary {
+  --bulma-link: --bulma-primary-invert;
+  --bulma-link-text: var(--bulma-link);
+  --bulma-link-hover: --bulma-link;
   background-color: var(--bulma-primary) !important;
-  color: var(--bulma-primary-invert) !important;
 
-  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-    color: var(--bulma-primary-invert) !important;
+  a {
+    font-weight: 700;
+
+    &:hover, &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  .content {
+    --bulma-text: var(--bulma-primary-invert);
+    color: var(--bulma-text);
+  }
+
+  .ce_ct_priceBox.popular-box .inside, .ce_ct_contentBox.is-primary .inside {
+    background: color-mix(in srgb, var(--bulma-primary), black 10%);
+  }
+
+  .tabs {
+    --bulma-tabs-link-active-border-bottom-color: var(--bulma-primary-invert);
+    --bulma-tabs-link-hover-border-bottom-color: var(--bulma-primary-invert);
   }
 }
