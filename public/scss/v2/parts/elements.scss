@@ -165,8 +165,63 @@ a {
 }
 
 .ce_ct_contentBox {
+  position: relative;
+  overflow: hidden;
+
   &.column.block:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  .corner-ribbon {
+    width: 200px;
+    background: var(--bulma-corner-ribbon-background);
+    color: var(--bulma-corner-ribbon-color);
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 50px;
+    position: absolute;
+    top: 30px;
+    right: -55px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    font-size: 14px;
+
+    .corner-ribbon-inside {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.bottom-right {
+      top: inherit;
+      bottom: 30px;
+      transform: rotate(-45deg);
+    }
+
+    &.bottom-left {
+      top: inherit;
+      bottom: 30px;
+      right: inherit;
+      left: -55px;
+    }
+
+    &.top-left {
+      transform: rotate(-45deg);
+      right: inherit;
+      left: -55px;
+    }
+
+    &.top-right + .inside h3:first-child, + .inside p:first-child {
+      &:before {
+        content: "";
+        transform: rotate(45deg);
+        width: 200px;
+        height: 30px;
+        float: right;
+        margin-right: -85px;
+      }
+    }
   }
 
   .pageLink {
@@ -210,6 +265,8 @@ a {
   }
 
   &.is-warning {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-warning) 30%, white 70%);
+
     .inside {
       @extend .has-background-warning;
 
@@ -224,6 +281,8 @@ a {
   }
 
   &.is-success {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-success) 30%, white 70%);
+
     .inside {
       @extend .has-background-success;
 
@@ -238,6 +297,8 @@ a {
   }
 
   &.is-danger {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-danger) 30%, white 70%);
+
     .inside {
       @extend .has-background-danger;
 
@@ -252,6 +313,8 @@ a {
   }
 
   &.is-info {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-info) 30%, white 70%);
+
     .inside {
       @extend .has-background-info;
 

@@ -24,3 +24,7 @@ $GLOBALS['TL_LANG']['tl_content']['tabs_element'] = ['Tabs element', 'Enter here
 $GLOBALS['TL_LANG']['tl_content']['modal_legend'] = 'Modal settings';
 $GLOBALS['TL_LANG']['tl_content']['textModal_customTpl'] = ['Custom template', 'Here you can choose a custom template.'];
 $GLOBALS['TL_LANG']['tl_content']['textModal_content'] = ['Modal content', 'Please enter the content for the modal dialog.'];
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_text'] = ['Corner ribbon text', 'Here you can enter the text for the corner ribbon (e.g. FREE, SALE, NEW).'];
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position'] = ['Corner ribbon position', 'Here you can define in which corner the ribbon should appear (top right, top left, etc.).'];
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position']['options']['top-right'] = 'Top right';
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position']['options']['bottom-right'] = 'Bottom right';

@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.0) – 2025-09-05
+
+- [Added] Add corner ribbon to content box
+
 ## [2.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.0) – 2025-08-08
 
 - [Added] Fixed-position shortlinks for contact and social icons

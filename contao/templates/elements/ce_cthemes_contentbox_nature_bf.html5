@@ -1,0 +1,31 @@
+<div class="<?= $this->class ?> block"<?= $this->cssID ?><?php if ($this->style): ?> style="<?= $this->style ?>"<?php endif; ?>>
+  <?php if ($this->corner_ribbon_text): ?>
+    <div class="corner-ribbon<?= $this->corner_ribbon_position ? ' ' . $this->corner_ribbon_position : '' ?>">
+      <div class="corner-ribbon-inside"><?= $this->corner_ribbon_text ?></div>
+    </div>
+  <?php endif; ?>
+
+  <div class="inside">
+    <?php $this->block('content'); ?>
+
+    <?php if ($this->addImage): ?>
+      <?php $this->insert('picture_default', $this->picture); ?>
+    <?php endif; ?>
+
+    <?php if ($this->headline): ?>
+      <<?= $this->hl ?>>
+        <?= $this->headline ?>
+      </<?= $this->hl ?>>
+    <?php endif; ?>
+
+    <?= $this->text ?>
+
+    <?php if($this->page != ""): ?>
+      <div class="pageLink">
+        <a href="<?= $this->page ?>"<?= $this->target ?><?= $this->rel ?><?= $this->pageTitle ?>><?= $this->pageText ?></a>
+      </div>
+    <?php endif; ?>
+
+    <?php $this->endblock(); ?>
+  </div>
+</div>
