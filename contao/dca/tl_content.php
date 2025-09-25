@@ -94,6 +94,7 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['corner_ribbon_position'] = [
 	'exclude' => true,
 	'inputType' => 'select',
 	'options' => ['top-right', 'bottom-right'],
+	'reference' => &$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position']['options'],
 	'eval' => ['includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
 	'sql' => "varchar(64) NOT NULL default 'top-right'",
 ];

@@ -1713,6 +1713,10 @@ strong {
   font-size: 1.3em;
   font-style: italic;
 
+  &[class*="has-slope-"] {
+    --section-color: var(--bulma-quote-background);
+  }
+
   .rte {
     position: relative;
 
