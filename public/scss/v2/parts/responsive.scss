@@ -58,6 +58,10 @@
     color: var(--bulma-navbar-item-color);
     font-size: 1rem;
   }
+
+  .wcag.content-text {
+    padding: 0 15px;
+  }
 }
 
 @media (max-width: 1023px) {

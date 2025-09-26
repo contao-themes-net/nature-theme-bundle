@@ -14,6 +14,10 @@ a {
   }
 }
 
+.block {
+  overflow: visible;
+}
+
 .content .button {
   text-decoration: none;
 }
@@ -176,6 +180,7 @@ a {
 
   .inside {
     background: var(--bulma-boxes-background);
+    box-shadow: var(--bulma-box-shadow);
     padding: 30px 30px 80px;
     height: 100%;
 
@@ -384,6 +389,7 @@ a {
     align-items: center;
     background: var(--bulma-boxes-background);
     color: var(--bulma-boxes-color);
+    box-shadow: var(--bulma-box-shadow);
     padding: 20px;
     height: 100%;
     border-radius: 5px;
@@ -401,6 +407,9 @@ a {
 }
 
 .ce_ct_priceBox {
+  display: flex;
+  align-items: center;
+
   &.block:not(:last-child) {
     margin-bottom: 0;
   }
@@ -429,9 +438,11 @@ a {
     background: var(--bulma-boxes-background);
     color: var(--bulma-boxes-color);
     border: 1px solid rgba(var(--bulma-boxes-color), .05);
+    box-shadow: var(--bulma-box-shadow);
     padding: 50px;
     text-align: center;
-    height: 100%;
+    height: auto;
+    width: 100%;
     border-radius: 5px;
 
     h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -444,12 +455,6 @@ a {
         margin-top: 0;
       }
     }
-  }
-
-  &:not(.popular-box) .inside {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: calc(100% - 100px);
   }
 
   &.popular-box {
@@ -479,10 +484,10 @@ a {
 
     .price {
       background: var(--bulma-boxes-background);
-      color: var(--bulma-text);
+      color: var(--bulma-boxes-color);
 
       .label {
-        color: var(--bulma-text);
+        color: var(--bulma-boxes-color);
       }
     }
   }
@@ -673,6 +678,10 @@ a {
   strong {
     color: var(--bulma-boxes-color);
   }
+}
+
+.content .content-gallery ul {
+  margin-inline-start: 0;
 }
 
 .content-gallery {
@@ -879,6 +888,7 @@ a {
     border: none;
     cursor: pointer;
     z-index: 1;
+    box-shadow: var(--bulma-box-shadow);
 
     &:focus-visible {
       outline-color: hsl(var(--bulma-focus-h), var(--bulma-focus-s), var(--bulma-focus-l));
@@ -961,6 +971,10 @@ a {
     }
   }
 
+  ul {
+    margin-inline-start: 1em;
+  }
+
   table {
     color: var(--bulma-table-color);
 
@@ -994,6 +1008,10 @@ a {
 
 .empty {
   padding: 0 0.75rem;
+}
+
+img.fullwidth-img {
+  width: 100%;
 }
 
 .full-width-height-slider {
@@ -1244,6 +1262,14 @@ a {
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--bulma-family-heading);
+}
+
+.has-image-ellipse img {
+  -webkit-clip-path: ellipse(100% 50% at 50% 50%);
+  clip-path: ellipse(100% 50% at 50% 50%);
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .has-background-info {
@@ -1657,23 +1683,95 @@ strong {
 
 .shortlinks {
   position: fixed;
-  left: 0;
-  top: 50%;
-  margin-top: -117.5px;
+  top: 0;
   border-top: none;
-  z-index: 1;
+  z-index: 1000;
+  --bulma-container-padding: 0px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  pointer-events: none;
+
+  &[class*="left"] {
+    left: 0;
+
+    a {
+      border-top-right-radius: var(--bulma-control-radius);
+      border-bottom-right-radius: var(--bulma-control-radius);
+    }
+  }
+
+  &[class*="right"] {
+    right: 0;
+
+    a {
+      border-top-left-radius: var(--bulma-control-radius);
+      border-bottom-left-radius: var(--bulma-control-radius);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    &[class*="bottom"] {
+      align-items: flex-end;
+      padding-bottom: 3%;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    &[class*="top"] {
+      align-items: flex-start;
+      padding-top: 180px;
+    }
+  }
 
   a {
-    background: var(--bulma-primary);
+    background: var(--bulma-button-background-color);
     padding: 15px;
     margin: 10px 0;
     display: flex;
-    width: 65px;
-    height: 65px;
-    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    pointer-events: auto;
+    text-decoration: none;
+
+    &:hover, &:focus {
+      background: var(--bulma-primary-button-hover-background-color);
+    }
 
     i {
-      color: var(--bulma-primary-invert);
+      color: var(--bulma-button-color);
+      font-size: 2rem;
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 1099px) {
+    top: inherit;
+    bottom: 0;
+    height: inherit;
+    width: 100%;
+
+    &[class*="left"], &[class*="right"] {
+      a {
+        border-top-right-radius: var(--bulma-control-radius);
+        border-top-left-radius: var(--bulma-control-radius);
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+    }
+
+    a {
+      margin: 0 5px;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -1686,10 +1784,12 @@ strong {
     border-width: 4px;
     border-color: transparent;
     text-decoration: none;
+    font-weight: 300;
 
     &:hover, &:focus {
       border-width: 4px;
       color: var(--bulma-tabs-link-hover-color);
+      text-decoration: none;
     }
   }
 
@@ -1736,5 +1836,60 @@ strong {
 .white-text {
   h1, h2, h3, h4, h5, h6, p, .h1, .h2, .h3, .h4, .h5, .h6 {
     color: #f5f5f5;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .ce_ct_teaserBox.image-right {
+    position:relative
+  }
+
+  .ce_ct_teaserBox.image-right .content {
+    margin-left: 0;
+  }
+
+  .ce_ct_teaserBox:not(.image-right) {
+    position: relative
+  }
+
+  .ce_ct_teaserBox:nth-child(3) {
+    z-index: 1
+  }
+
+  .ce_ct_teaserBox:nth-child(4) {
+    z-index: 2
+  }
+
+  .ce_ct_teaserBox:nth-child(5) {
+    z-index: 3
+  }
+
+  .ce_ct_teaserBox:nth-child(6) {
+    z-index: 4
+  }
+
+  .ce_ct_teaserBox:nth-child(7) {
+    z-index: 5
+  }
+
+  .ce_ct_teaserBox:nth-child(8) {
+    z-index: 6
+  }
+
+  .ce_ct_teaserBox:nth-child(9) {
+    z-index: 7
+  }
+
+  .ce_ct_teaserBox:nth-child(10) {
+    z-index: 8
+  }
+
+  .sticky-container .sticky-column .sticky-column-background.image-right {
+    margin-left: 100%;
+  }
+
+  .ce_ct_teaserBox:not(.full-height).image-right .image_container:after {
+    left: 0;
+    right: inherit
   }
 }

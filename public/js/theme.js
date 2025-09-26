@@ -49,7 +49,13 @@ jQuery(document).ready(function($) {
     }
     $(".sticky-teaserbox").each( function() {
         var style = $(this).find(".inside > .image_container").attr("style").replace(/\"/g, "'"); // replace for ie11
-        $(this).closest(".sticky-container").find(".sticky-column").append('<div class="sticky-column-background" style="'+style+'"></div>');
+        var cssClasses = '';
+
+        if ($(this).hasClass('image-right')) {
+            cssClasses = ' image-right';
+        }
+
+        $(this).closest(".sticky-container").find(".sticky-column").append('<div class="sticky-column-background'+cssClasses+'" style="'+style+'"></div>');
     });
 
     /* =================== *
