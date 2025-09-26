@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.5.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.2) – 2025-09-26
+
+- [Fixed] Demo data import for Contao 5.6
+
 ## [2.5.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.1) – 2025-07-24
 
 - [Fixed] Demo data import for Contao 5.5
