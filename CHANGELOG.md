@@ -10,9 +10,19 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.5.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.2) – 2025-09-26
+## [2.6.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.1) – 2025-09-26
 
 - [Fixed] Demo data import for Contao 5.6
+
+## [2.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.0) – 2025-08-08
+
+- [Added] Fixed-position shortlinks for contact and social icons
+- [Added] CSS classes for angled edges on articles (use `.has-slope-top-left`, `.has-slope-top-right`, `.has-slope-bottom-left` or `.has-slope-bottom-right` with background e.g. `.has-background-primary`)
+- [Added] CSS class for full-width elliptical image (`.has-image-ellipse`)
+- [Added] Icon in the header to toggle between normal mode and high contrast mode
+- [Added] Implemented accessibility statement and linked it via an icon in the header
+- [Added] Teaserbox supports right-aligned images via `image-right` class
+- [Changed] Update sql files
 
 ## [2.5.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.5.1) – 2025-07-24
 
