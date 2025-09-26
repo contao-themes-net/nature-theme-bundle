@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.6.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.1) – 2025-09-26
+
+- [Fixed] Demo data import for Contao 5.6
+
 ## [2.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.0) – 2025-08-08
 
 - [Added] Fixed-position shortlinks for contact and social icons

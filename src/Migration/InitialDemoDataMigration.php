@@ -101,7 +101,7 @@ class InitialDemoDataMigration extends AbstractMigration
                 continue;
             }
 
-            $this->connection->prepare($sql)->execute();
+            $this->connection->executeStatement($sql);
         }
 
         return $this->createResult(true, 'Initial structure and content added.');
