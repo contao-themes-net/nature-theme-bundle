@@ -95,6 +95,67 @@ a {
   }
 }
 
+.brush-button {
+  a, > div {
+    display: inline-block;
+    padding: 30px 60px 50px 30px;
+    font-family: var(--bulma-family-primary);
+    font-size: 1.3rem;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    background-image: url(/files/naturetheme/img/pinselstrich.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+  }
+
+  a {
+    &:hover, &:focus {
+      filter: brightness(1) contrast(1.1);
+    }
+  }
+}
+
+.circle-image-outline {
+  a:hover, a:focus {
+    .brush-button {
+      filter: brightness(1) contrast(1.1);
+    }
+  }
+
+  figure {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 20px solid var(--bulma-background);
+    box-shadow: 0 0 0 2px #d0d0d0;
+    transition: transform 0.3s ease;
+
+    &:not(:last-child) {
+      margin: 0 !important;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  img {
+    vertical-align: bottom;
+    width: 100%;
+  }
+
+  .brush-button {
+    text-align: center;
+    margin-top: -50px;
+    transition: all 0.3s;
+  }
+}
+
 .ce_accordion {
   &.block:not(:last-child) {
     margin-bottom: 10px;

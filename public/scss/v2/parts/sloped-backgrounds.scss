@@ -116,6 +116,68 @@
   z-index: 0;
 }
 
+.angled-edges {
+  overflow: hidden;
+
+  .swiper .swiper-pagination {
+    --swiper-pagination-bottom: 80px;
+  }
+}
+
+.angled-up {
+  clip-path: polygon(
+    0 3vw,
+    100% 0,
+    100% calc(100% - 3vw),
+    0 100%
+  );
+}
+
+.angled-down {
+  clip-path: polygon(
+    0 0,
+    100% 3vw,
+    100% 100%,
+    0 calc(100% - 3vw)
+  );
+}
+
+.angled-bottom-left {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 3vw),
+    0 100%
+  );
+}
+
+.angled-bottom-right {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 3vw)
+  );
+}
+
+.angled-top-right {
+  clip-path: polygon(
+    0 3vw,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+.angled-top-left {
+  clip-path: polygon(
+    0 0,
+    100% 3vw,
+    100% 100%,
+    0 100%
+  );
+}
+
 @media (max-width: 1023px) {
   .has-slope-top-right::before {
     top: -30px;

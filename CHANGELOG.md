@@ -10,9 +10,15 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.0) – 2025-09-05
+## [2.7.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.0) – 2025-10-10
 
 - [Added] Add corner ribbon to content box
+- [Added] Support angled edges for all articles (not only those with background colors) — can now be used for 
+full-width images or text/image content elements (use classes `angled-edges` with `angled-up`, `angled-down`, 
+`angled-bottom-left`, `angled-bottom-right`, `angled-top-left`, or `angled-top-right`)
+- [Added] New “Round Image with Double Circle” element (`circle-image-outline` class)
+- [Added] New “Brush Stroke Button” — a hyperlink element with a brush-stroke background (`brush-button` class)
+- [Added] New combined element “Round Image with Brush Stroke Button” (`circle_image_with_brush` template)
 
 ## [2.6.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.6.0) – 2025-08-08
 
