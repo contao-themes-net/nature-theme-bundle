@@ -88,4 +88,13 @@
   .content a {
     text-decoration: underline;
   }
+
+  .has-background-white-ter, .has-background-white-bis, .has-background-grey-lighter, .has-background-grey-light, .has-background-light {
+    --bulma-background: var(--bulma-grey-darker);
+    --bulma-boxes-background: var(--bulma-grey-dark);
+  }
+
+  .has-background-light {
+    background-color: var(--bulma-black-ter) !important;
+  }
 }

@@ -95,6 +95,67 @@ a {
   }
 }
 
+.brush-button {
+  a, > div {
+    display: inline-block;
+    padding: 30px 60px 50px 30px;
+    font-family: var(--bulma-family-primary);
+    font-size: 1.3rem;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    background-image: url(/files/naturetheme/img/pinselstrich.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    font-weight: 500;
+  }
+
+  a {
+    &:hover, &:focus {
+      filter: brightness(1) contrast(1.1);
+    }
+  }
+}
+
+.circle-image-outline {
+  a:hover, a:focus {
+    .brush-button {
+      filter: brightness(1) contrast(1.1);
+    }
+  }
+
+  figure {
+    position: relative;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 20px solid var(--bulma-background);
+    box-shadow: 0 0 0 2px #d0d0d0;
+    transition: transform 0.3s ease;
+
+    &:not(:last-child) {
+      margin: 0 !important;
+    }
+
+    &:hover {
+      transform: scale(1.02);
+    }
+  }
+
+  img {
+    vertical-align: bottom;
+    width: 100%;
+  }
+
+  .brush-button {
+    text-align: center;
+    margin-top: -50px;
+    transition: all 0.3s;
+  }
+}
+
 .ce_accordion {
   &.block:not(:last-child) {
     margin-bottom: 10px;
@@ -165,8 +226,63 @@ a {
 }
 
 .ce_ct_contentBox {
+  position: relative;
+  overflow: hidden;
+
   &.column.block:not(:last-child) {
     margin-bottom: 0;
+  }
+
+  .corner-ribbon {
+    width: 200px;
+    background: var(--bulma-corner-ribbon-background);
+    color: var(--bulma-corner-ribbon-color);
+    text-align: center;
+    font-weight: 500;
+    padding: 5px 50px;
+    position: absolute;
+    top: 30px;
+    right: -55px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    font-size: 14px;
+
+    .corner-ribbon-inside {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &.bottom-right {
+      top: inherit;
+      bottom: 30px;
+      transform: rotate(-45deg);
+    }
+
+    &.bottom-left {
+      top: inherit;
+      bottom: 30px;
+      right: inherit;
+      left: -55px;
+    }
+
+    &.top-left {
+      transform: rotate(-45deg);
+      right: inherit;
+      left: -55px;
+    }
+
+    &.top-right + .inside h3:first-child, + .inside p:first-child {
+      &:before {
+        content: "";
+        transform: rotate(45deg);
+        width: 200px;
+        height: 30px;
+        float: right;
+        margin-right: -85px;
+      }
+    }
   }
 
   .pageLink {
@@ -210,6 +326,8 @@ a {
   }
 
   &.is-warning {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-warning) 30%, white 70%);
+
     .inside {
       @extend .has-background-warning;
 
@@ -224,6 +342,8 @@ a {
   }
 
   &.is-success {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-success) 30%, white 70%);
+
     .inside {
       @extend .has-background-success;
 
@@ -238,6 +358,8 @@ a {
   }
 
   &.is-danger {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-danger) 30%, white 70%);
+
     .inside {
       @extend .has-background-danger;
 
@@ -252,6 +374,8 @@ a {
   }
 
   &.is-info {
+    --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-info) 30%, white 70%);
+
     .inside {
       @extend .has-background-info;
 
@@ -269,6 +393,87 @@ a {
     @extend .button;
     @extend .is-primary;
   }
+
+  &.has-background-white {
+    background: none !important;
+    .inside { @extend .has-background-white }
+  }
+  &.has-background-black {
+    background: none !important;
+    .inside { @extend .has-background-black }
+  }
+  &.has-background-light {
+    background: none !important;
+    .inside { @extend .has-background-light }
+  }
+  &.has-background-dark {
+    background: none !important;
+    .inside { @extend .has-background-dark }
+  }
+  &.has-background-primary {
+    background: none !important;
+    .inside { @extend .has-background-primary }
+  }
+  &.has-background-link {
+    background: none !important;
+    .inside { @extend .has-background-link }
+  }
+  &.has-background-info {
+    background: none !important;
+    .inside { @extend .has-background-info }
+  }
+  &.has-background-success {
+    background: none !important;
+    .inside { @extend .has-background-success }
+  }
+  &.has-background-warning {
+    background: none !important;
+    .inside { @extend .has-background-warning }
+  }
+  &.has-background-danger {
+    background: none !important;
+    .inside { @extend .has-background-danger }
+  }
+  &.has-background-black-bis {
+    background: none !important;
+    .inside { @extend .has-background-black-bis }
+  }
+  &.has-background-black-ter {
+    background: none !important;
+    .inside { @extend .has-background-black-ter }
+  }
+  &.has-background-grey-darker {
+    background: none !important;
+    .inside { @extend .has-background-grey-darker }
+  }
+  &.has-background-grey-dark {
+    background: none !important;
+    .inside { @extend .has-background-grey-dark }
+  }
+  &.has-background-grey {
+    background: none !important;
+    .inside { @extend .has-background-grey }
+  }
+  &.has-background-grey-light {
+    background: none !important;
+    .inside { @extend .has-background-grey-light }
+  }
+  &.has-background-grey-lighter {
+    background: none  !important;
+    .inside { @extend .has-background-grey-lighter }
+  }
+  &.has-background-white-ter {
+    background: none !important;
+    .inside { @extend .has-background-white-ter }
+  }
+  &.has-background-white-bis {
+    background: none !important;
+    .inside { @extend .has-background-white-bis }
+  }
+}
+
+.has-background-white-ter, .has-background-white-bis, .has-background-grey-lighter, .has-background-grey-light, .has-background-light {
+  --bulma-boxes-background: #fff;
 }
 
 .ce_ct_featureElement {
@@ -1649,6 +1854,10 @@ strong {
   text-align: center;
   font-size: 1.3em;
   font-style: italic;
+
+  &[class*="has-slope-"] {
+    --section-color: var(--bulma-quote-background);
+  }
 
   .rte {
     position: relative;

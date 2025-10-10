@@ -17,7 +17,14 @@ declare(strict_types=1);
  */
 
 use Contao\Backend;
+use Contao\CoreBundle\DataContainer\PaletteManipulator;
 use Contao\DataContainer;
+
+PaletteManipulator::create()
+	->addField('corner_ribbon_text', 'ct_contentBox_settings', PaletteManipulator::POSITION_APPEND)
+	->addField('corner_ribbon_position', 'ct_contentBox_settings', PaletteManipulator::POSITION_APPEND)
+	->applyToPalette('ct_contentBox', 'tl_content')
+;
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['ct_sliderElement'] = str_replace(
     'ct_sliderElement_linkText;',
@@ -74,6 +81,22 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['textModal_customTpl'] = [
     'options_callback' => ['tl_content_nature', 'getTextModalTemplates'],
     'eval' => ['includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
     'sql' => "varchar(64) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['corner_ribbon_text'] = [
+	'exclude' => true,
+	'inputType' => 'text',
+	'eval' => ['tl_class' => 'w50'],
+	'sql' => "varchar(255) NOT NULL default ''",
+];
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['corner_ribbon_position'] = [
+	'exclude' => true,
+	'inputType' => 'select',
+	'options' => ['top-right', 'bottom-right'],
+	'reference' => &$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position']['options'],
+	'eval' => ['includeBlankOption' => true, 'chosen' => true, 'tl_class' => 'w50'],
+	'sql' => "varchar(64) NOT NULL default 'top-right'",
 ];
 
 class tl_content_nature extends Backend

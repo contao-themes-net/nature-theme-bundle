@@ -1,0 +1,34 @@
+{% extends "@Contao/content_element/hyperlink.html.twig" %}
+
+{% block wrapper %}
+  {% set attributes = attrs(attributes|default).addClass(['circle-image-outline']) %}
+  {{ parent() }}
+{% endblock %}
+
+{% block content %}
+  {% block image_link %}
+    <a{{ link_attributes }}>
+        {% with {figure: image} %}
+          {{ block('figure_component') }}
+        {% endwith %}
+        {% block text_link %}
+          {% if data.linkTitle %}
+            <div class="brush-button">
+              {{- text_before -}}
+              <div>{{ link_text|insert_tag }}</div>
+              {{- text_after -}}
+            </div>
+          {% endif %}
+        {% endblock %}
+    </a>
+  {% endblock %}
+{% endblock %}
+
+{% block media_link %}
+  {% set link_attributes = attrs(figure.linkAttributes(true)|default)
+    .setIfExists('title', figure.hasLightbox and figure.hasMetadata ? figure.metadata.title : null)
+    .mergeWith(figure.options.link_attr|default)
+    .mergeWith(link_attributes|default)
+  %}
+  {{ block('media') }}
+{% endblock %}

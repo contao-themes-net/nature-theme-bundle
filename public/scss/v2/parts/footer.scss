@@ -4,6 +4,11 @@
   position: relative;
   font-size: 1rem;
 
+  &[class*="has-slope-"] {
+    --section-color: var(--bulma-footer-background-color);
+    overflow: visible;
+  }
+
   a {
     font-weight: 700;
     color: var(--bulma-footer-color);

@@ -24,3 +24,7 @@ $GLOBALS['TL_LANG']['tl_content']['tabs_element'] = ['Tabs-Element', 'Geben Sie 
 $GLOBALS['TL_LANG']['tl_content']['modal_legend'] = 'Modal Einstellungen';
 $GLOBALS['TL_LANG']['tl_content']['textModal_customTpl'] = ['Individuelles Template', 'Hier können Sie ein individuelles Template auswählen.'];
 $GLOBALS['TL_LANG']['tl_content']['textModal_content'] = ['Inhalt für Modal', 'Fügen Sie hier den Inhalt ein, der dargestellt werden soll, wenn sich der Modale Dialog öffnet.'];
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_text'] = ['Eckenbanner-Text', 'Hier können Sie den Text für den Eckenbanner eingeben (z. B. FREE, SALE, NEU).'];
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position'] = ['Eckenbanner-Position', 'Hier können Sie festlegen, in welcher Ecke das Eckenband angezeigt wird (oben rechts, oben links, usw.).'];
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position']['options']['top-right'] = 'Oben rechts';
+$GLOBALS['TL_LANG']['tl_content']['corner_ribbon_position']['options']['bottom-right'] = 'Unten rechts';

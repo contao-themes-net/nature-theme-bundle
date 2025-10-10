@@ -30,6 +30,8 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-boxes-background: var(--bulma-white-ter);
   --bulma-boxes-color: var(--bulma-text);
   --bulma-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08);
+  --bulma-corner-ribbon-background: color-mix(in srgb, var(--bulma-primary) 30%, white 70%);
+  --bulma-corner-ribbon-color: #000;
 
   //--bulma-info: #3e8ed0;
   //--bulma-success: #48c78e;
