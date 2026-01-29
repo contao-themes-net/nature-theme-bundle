@@ -5,7 +5,7 @@ declare(strict_types=1);
 /*
  * nature theme bundle for Contao Open Source CMS
  *
- * Copyright (C) 2025 pdir / digital agentur  // pdir GmbH
+ * Copyright (C) 2026 pdir / digital agentur  // pdir GmbH
  *
  * @package    contao-themes-net/nature-theme-bundle
  * @link       https://github.com/contao-themes-net/nature-theme-bundle
@@ -53,15 +53,15 @@ class Version200 extends AbstractMigration
         }
 
         $test = $this->connection->fetchOne("
-            SELECT id FROM tl_content 
-            WHERE customTpl = 'ce_image_headerimage' 
-               OR customTpl = 'ce_hyperlink_button' 
-               OR customTpl = 'ce_text_cthemes_simplebox_nature' 
+            SELECT id FROM tl_content
+            WHERE customTpl = 'ce_image_headerimage'
+               OR customTpl = 'ce_hyperlink_button'
+               OR customTpl = 'ce_text_cthemes_simplebox_nature'
                OR customTpl = 'ce_youtube_nature'
-               OR customTpl = 'ce_list_alphabetic_lowercase' 
-               OR customTpl = 'ce_list_alphabetic_uppercase' 
-               OR customTpl = 'ce_list_roman_lowercase' 
-               OR customTpl = 'ce_list_roman_uppercase' 
+               OR customTpl = 'ce_list_alphabetic_lowercase'
+               OR customTpl = 'ce_list_alphabetic_uppercase'
+               OR customTpl = 'ce_list_roman_lowercase'
+               OR customTpl = 'ce_list_roman_uppercase'
                OR 'text' LIKE ' %2x}}%'
                OR 'text' LIKE ' %3x}}%'
                OR 'text' LIKE ' %4x}}%'
