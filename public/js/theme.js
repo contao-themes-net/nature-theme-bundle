@@ -81,10 +81,44 @@ jQuery(document).ready(function($) {
     /* =================== *
      * Mobile Menu   	   *
      * =================== */
-    $(".toggle-more, .toggle-less").click( function(e) {
-        $(this).closest("a").next().toggleClass("active");
-        $(this).closest("a").find(".toggle-more, .toggle-less").toggleClass("active");
+    function setToggleState($link, open) {
+        $link.find(".toggle-more").toggleClass("active", !open); // Plus an, wenn zu
+        $link.find(".toggle-less").toggleClass("active", open);  // Minus an, wenn auf
+    }
+
+    $(document).on("click", ".toggle-more, .toggle-less", function(e) {
         e.preventDefault();
+        e.stopPropagation();
+
+        const $link = $(this).closest("a.navbar-link");
+        const $item = $link.closest(".navbar-item.has-dropdown");
+        const $dropdown = $item.children(".navbar-dropdown");
+
+        const willOpen = !$dropdown.hasClass("active");
+
+        // Ebene (Scope) bestimmen
+        const $scope = $item.parent().closest(".navbar-dropdown").length
+            ? $item.parent().closest(".navbar-dropdown")
+            : $item.parent();
+
+        // Geschwister schließen (Radio pro Ebene)
+        $scope.children(".navbar-item.has-dropdown").not($item).each(function() {
+            const $sib = $(this);
+            $sib.children(".navbar-dropdown").removeClass("active");
+            setToggleState($sib.children("a.navbar-link"), false); // geschlossen => Plus sichtbar
+        });
+
+        // Geklicktes togglen
+        $dropdown.toggleClass("active", willOpen);
+        setToggleState($link, willOpen);
+
+        // Optional: beim Schließen auch Unterebenen schließen
+        if (!willOpen) {
+            $dropdown.find(".navbar-dropdown").removeClass("active");
+            $dropdown.find("a.navbar-link").each(function() {
+                setToggleState($(this), false);
+            });
+        }
     });
 
     /* =================== *
