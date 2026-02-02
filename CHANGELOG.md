@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.7.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.1) – 2026-01-29
+## [2.7.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.1) – 2026-02-02
 
 - [Fixed] Fix navbar submenu toggle behavior (radio-style per level with correct plus/minus state)
 
