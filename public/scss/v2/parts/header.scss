@@ -407,7 +407,7 @@
   .navbar-start {
     justify-content: flex-end;
     width: 100%;
-    padding: 30px 70px 30px 40px;
+    padding: 10px 70px 10px 40px;
     align-items: center;
 
     > .navbar-item > a, > a {
@@ -486,6 +486,10 @@ a.navbar-item:active,
     &.level_4 {
       background: var(--bulma-navbar-dropdown-lvl4-background-color);
     }
+  }
+
+  .navbar-menu {
+    width: min-content;
   }
 
   .header-block-layout {
