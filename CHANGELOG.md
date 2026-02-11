@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.2) – 2026-02-11
+
+- [Fixed] Fix navbar layout overflow by enabling wrapping when menu items exceed available width
+
 ## [2.7.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.1) – 2026-02-02
 
 - [Fixed] Fix navbar submenu toggle behavior (radio-style per level with correct plus/minus state)
