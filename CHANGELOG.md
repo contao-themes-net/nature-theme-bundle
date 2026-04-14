@@ -10,6 +10,11 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.0) – 2026-04-14
+
+- [Added] Add styling for new content element "Icon Title" (based on the hyperlink element with image and customized template)
+- [Changed] Update sql files with all new content elements
+
 ## [2.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.2) – 2026-02-11
 
 - [Fixed] Fix navbar layout overflow by enabling wrapping when menu items exceed available width
