@@ -2053,6 +2053,52 @@ strong {
   }
 }
 
+@keyframes kenburns {
+  from { transform: scale(1) translateZ(0); }
+  to   { transform: scale(1.12) translateZ(0); }
+}
+
+.image-zoom {
+  figure {
+    overflow: hidden;
+  }
+
+  figure img {
+    transition: transform 400ms ease;
+    will-change: transform;
+  }
+
+  figure:hover img {
+    transform: scale(1.08);
+  }
+}
+
+.full-width-height-slider .text .image_container {
+  width: auto;
+}
+
+.feature-section__brand figure:hover img {
+  transform: none;
+}
+
+.slider--ken-burns {
+  .swiper-slide .ce_ct_sliderElement > figure {
+    transform: scale(1);
+    will-change: transform;
+  }
+
+  .swiper-slide-active .ce_ct_sliderElement > figure {
+    animation: kenburns 7s ease-out both;
+  }
+}
+
+.content--ken-burns {
+  figure {
+    will-change: transform;
+    animation: kenburns 7s ease-out both;
+  }
+}
+
 @media only screen and (min-width: 769px) {
   .ce_ct_teaserBox.image-right {
     position:relative

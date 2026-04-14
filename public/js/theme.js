@@ -74,6 +74,12 @@ jQuery(document).ready(function($) {
         $(modalId).toggleClass("is-active");
     });
 
+    var hash = window.location.hash;
+
+    if (hash.length > 0 && $(hash).length) {
+        $(hash).addClass("is-active");
+    }
+
     $(".modal .delete, .modal-background").click( function() {
         $(this).closest(".modal").toggleClass("is-active");
     });
