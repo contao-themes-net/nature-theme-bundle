@@ -77,7 +77,8 @@ jQuery(document).ready(function($) {
     var hash = window.location.hash;
 
     if (hash.length > 0 && $(hash).length) {
-        $(hash).addClass("is-active");
+        var modalId = $(hash).find('.modal-button').attr('data-target');
+        $(modalId).addClass("is-active");
     }
 
     $(".modal .delete, .modal-background").click( function() {

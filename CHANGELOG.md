@@ -10,11 +10,12 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.0) – 2026-04-14
+## [2.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.0) – 2026-04-20
 
 - [Added] Add styling for new content element "Icon Title" (based on the hyperlink element with image and customized template)
 - [Added] Image zoom hover effect for images (use css class `image-zoom`)
 - [Added] Optional Ken Burns animation for slider and content images (use css classes `content--ken-burns` or `slider--ken-burns`)
+- [Added] Allow opening modal module and text modal elements via URL hash (`#id`) on page load
 - [Changed] Update sql files with all new content elements
 
 ## [2.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.2) – 2026-02-11
