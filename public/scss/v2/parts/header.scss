@@ -507,6 +507,11 @@ a.navbar-item:active,
       }
     }
 
+    #navbarMain {
+      width: auto;
+      justify-content: center;
+    }
+
     .mod_navigation.navbar {
       display: block;
       height: 160px;
@@ -522,11 +527,18 @@ a.navbar-item:active,
       .navbar-start {
         justify-content: center;
         padding: 0;
+        flex-wrap: inherit;
+        width: inherit;
+        margin: 0;
       }
     }
 
     .megamenu .navbar-item .navbar-dropdown.level_2 {
       margin-top: -25px;
+    }
+
+    .wcag.content-text {
+      padding-right: 0;
     }
   }
 }

@@ -17,6 +17,7 @@ Types of changes
 - [Added] Optional Ken Burns animation for slider and content images (use css classes `content--ken-burns` or `slider--ken-burns`)
 - [Added] Allow opening modal module and text modal elements via URL hash (`#id`) on page load
 - [Changed] Update sql files with all new content elements
+- [Fixed] Fix display issue in navigation with logo and links arranged vertically
 
 ## [2.7.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.7.2) – 2026-02-11
 
