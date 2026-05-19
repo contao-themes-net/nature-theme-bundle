@@ -1,4 +1,4 @@
-<div class="event layout_teaser<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
+<div class="event reveal layout_teaser<?= $this->classList ?>" itemscope itemtype="http://schema.org/Event">
 
   <div class="columns">
     <div class="column is-12-mobile is-6-tablet">

@@ -10,7 +10,7 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
-## [2.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.0) – 2026-04-20
+## [2.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.0) – 2026-05-19
 
 - [Added] Add styling for new content element "Icon Title" (based on the hyperlink element with image and customized template)
 - [Added] Image zoom hover effect for images (use css class `image-zoom`)

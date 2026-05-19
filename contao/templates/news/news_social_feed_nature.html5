@@ -1,4 +1,4 @@
-<div class="social_feed_element arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+<div class="social_feed_element reveal arc_<?= $this->archive->id ?> block<?= $this->class ?>">
   <div class="inner">
 
     <a href="<?= $this->url ?>" target="_blank">
