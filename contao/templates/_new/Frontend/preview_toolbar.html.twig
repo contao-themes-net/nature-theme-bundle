@@ -1,3 +1,7 @@
+{% set currentRoute = app.request.attributes.get('_route') %}
+{% set currentParams = app.request.attributes.get('_route_params') %}
+{% set currentUrl = currentRoute ? path(currentRoute, currentParams) : '#' %}
+
 <div id="naturePreviewToolbar">
   <ul id="slide-out" class="sidenav">
     <li class="close-icon" title="Toolbar schließen">✕</li>
@@ -6,7 +10,7 @@
 
     <li{% if 'green_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors_contrast"
+        href="{{ currentUrl }}?theme-color=green_colors_contrast"
         class="color-scheme green-colors-contrast"
         data-id="green_colors_contrast"
       >
@@ -21,7 +25,7 @@
 
     <li{% if 'blue_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors_contrast"
+        href="{{ currentUrl }}?theme-color=blue_colors_contrast"
         class="color-scheme blue-colors-contrast"
         data-id="blue_colors_contrast"
       >
@@ -36,7 +40,7 @@
 
     <li{% if 'red_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors_contrast"
+        href="{{ currentUrl }}?theme-color=red_colors_contrast"
         class="color-scheme red-colors-contrast"
         data-id="red_colors_contrast"
       >
@@ -51,7 +55,7 @@
 
     <li{% if 'dark_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_colors_contrast"
+        href="{{ currentUrl }}?theme-color=dark_colors_contrast"
         class="color-scheme dark-colors-contrast"
         data-id="dark_colors_contrast"
       >
@@ -67,7 +71,7 @@
 
     <li{% if 'dark_green_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_green_colors_contrast"
+        href="{{ currentUrl }}?theme-color=dark_green_colors_contrast"
         class="color-scheme dark-green-colors-contrast"
         data-id="dark_green_colors_contrast"
       >
@@ -82,7 +86,7 @@
 
     <li{% if 'dark_blue_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_blue_colors_contrast"
+        href="{{ currentUrl }}?theme-color=dark_blue_colors_contrast"
         class="color-scheme dark-blue-colors-contrast"
         data-id="dark_blue_colors_contrast"
       >
@@ -97,7 +101,7 @@
 
     <li{% if 'dark_red_colors_contrast' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=dark_red_colors_contrast"
+        href="{{ currentUrl }}?theme-color=dark_red_colors_contrast"
         class="color-scheme dark-red-colors-contrast"
         data-id="dark_red_colors_contrast"
       >
@@ -112,7 +116,7 @@
 
     <li{% if 'green_colors' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=green_colors"
+        href="{{ currentUrl }}?theme-color=green_colors"
         class="color-scheme green-colors"
         data-id="green_colors"
       >
@@ -127,7 +131,7 @@
 
     <li{% if 'blue_colors' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=blue_colors"
+        href="{{ currentUrl }}?theme-color=blue_colors"
         class="color-scheme blue-colors"
         data-id="blue_colors"
       >
@@ -142,7 +146,7 @@
 
     <li{% if 'red_colors' == natureColor %} class="active"{% endif %}>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=red_colors"
+        href="{{ currentUrl }}?theme-color=red_colors"
         class="color-scheme red-colors"
         data-id="red_colors"
       >
@@ -157,7 +161,7 @@
 
     <li>
       <a
-        href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}?theme-color=reset"
+        href="{{ currentUrl }}?theme-color=reset"
       >
         <span class="title">Farbschema-Auswahl zurücksetzen</span>
       </a>
@@ -178,7 +182,7 @@
         Fehler melden</a>
     </li>
   </ul>
-  <a href="{{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}#"
+  <a href="{{ currentUrl }}#"
      data-target="slide-out" class="open-settings sidenav-trigger" title="Show settings menu"><i class="fas fa-cog"></i></a>
 </div>
 <script>
