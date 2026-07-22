@@ -2,7 +2,7 @@
   /*        Exposé          */
   /* ====================== */
   .estate-detail {
-    font-family: $family-primary;
+    font-family: var(--bulma-family-primary);
     font-size: inherit;
 
     .container {
@@ -18,7 +18,7 @@
     }
 
     .legende_eclass {
-      background: $boxes-background;
+      background: var(--bulma-boxes-background);
     }
 
     .big-img {
@@ -37,8 +37,12 @@
       width: 100vw;
       left: 0;
       padding: 30px 0;
-      background: $boxes-background;
+      background: var(--bulma-boxes-background);
       margin-top: 30px;
+
+      img {
+        width: 100%;
+      }
 
       .slick-arrow {
         position: absolute;
@@ -74,8 +78,8 @@
     }
 
     .field.verwaltung_techn-objektnr_extern {
-      color: $primary;
-      font-family: $family-heading;
+      color: var(--bulma-primary);
+      font-family: var(--bulma-family-heading);
       text-align: center;
 
       .label, div:last-child {
@@ -98,11 +102,11 @@
 
         .obj-details {
           h2 {
-            background: $primary;
+            background: var(--bulma-primary);
             color: #fff;
             text-transform: uppercase;
             font-weight: 300;
-            font-family: $family-primary;
+            font-family: var(--bulma-family-primary);
             margin: -30px 0 20px;
             display: inline-block;
             width: inherit;
@@ -115,7 +119,7 @@
           }
 
           .inside {
-            background: $boxes-background;
+            background: var(--bulma-boxes-background);
             padding: 0 30px 30px;
             height: 100%;
           }
@@ -133,19 +137,19 @@
       .label {
         font-weight: 700;
         font-size: 1rem;
-        color: $text;
+        color: var(--bulma-text);
       }
 
       div:last-child {
         font-weight: 300;
         font-size: 1rem;
-        color: $text;
+        color: var(--bulma-text);
       }
     }
 
     h3 {
       width: auto;
-      background: $primary;
+      background: var(--bulma-primary);
       color: #f2f2f2;
       border: none;
       text-transform: none;
@@ -161,7 +165,7 @@
     }
 
     h4 {
-      color: $text;
+      color: var(--bulma-text);
       margin-top: 0;
     }
 
@@ -190,7 +194,7 @@
         }
 
         .custom-control-input:checked~.custom-control-label::before {
-          background: $primary;
+          background: var(--bulma-primary);
         }
       }
 
@@ -208,18 +212,18 @@
       }
 
       .inside {
-        background: $boxes-background;
+        background: var(--bulma-boxes-background);
         margin-bottom: 30px;
         padding: 30px;
-        color: $boxes-color;
+        color: var(--bulma-boxes-color);
         box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
         -webkit-box-shadow: -2px 2px 2px 0 rgba(0, 0, 0, 0.25);
 
         h3 {
           margin-top: 0;
-          font-family: $family-heading;
+          font-family: var(--bulma-family-heading);
           background: none;
-          color: $primary;
+          color: var(--bulma-primary-bg-text);
           font-size: 1.5rem;
           padding: 0 0 20px;
           margin-bottom: 20px;
@@ -230,7 +234,7 @@
             bottom: 0;
             left: 0;
             width: 50px;
-            border-bottom: 3px solid $primary;
+            border-bottom: 3px solid var(--bulma-primary);
           }
         }
       }
@@ -241,7 +245,7 @@
     }
 
     .description, .contact, .maps, .obj-header {
-      color: $text;
+      color: var(--bulma-text);
     }
 
     .description .inside {
@@ -276,7 +280,7 @@
   .top-obj-details {
     position: absolute;
     width: 100vw;
-    background: rgba($boxes-background, 0.9);
+    background: rgba(#F3F4F6, 0.9);
     color: #f2f2f2;
     display: flex;
     align-items: center;
@@ -311,17 +315,18 @@
         font-size: 1.8rem;
         font-weight: 400;
         text-align: left;
-        color: $primary;
-        font-family: $family-heading;
+        color: var(--bulma-primary);
+        font-family: var(--bulma-family-heading);
         line-height: 1.2;
       }
 
       .label {
         width: inherit;
-        color: $boxes-color;
+        color: var(--bulma-black);
         text-align: left;
         font-weight: 400;
         margin: 0;
+        width: 100%;
       }
     }
 
@@ -331,7 +336,7 @@
 
       i {
         font-size: 3.5rem;
-        color: $primary;
+        color: var(--bulma-primary);
       }
     }
 
@@ -347,32 +352,37 @@
   #estate_filter_list {
     button {
       background: none;
-      color: $primary;
-      border: 1px solid $primary;
+      color: var(--bulma-primary);
+      border: 1px solid var(--bulma-primary);
       box-shadow: none;
       font-weight: 400;
       padding: 10px;
       margin: 5px 5px 5px 0;
 
       &:hover {
-        background: $primary;
-        color: $boxes-background;
+        background: var(--bulma-primary);
+        color: var(--bulma-boxes-background);
       }
     }
 
+    .button {
+      font-size: .9rem;
+      margin: 0 0 20px 5px;
+    }
+
     .button.active {
-      background: $button-background-color !important;
-      color: $button-color;
+      background: var(--bulma-button-background-color) !important;
+      color: var(--bulma-button-color);
     }
 
     &.button-filter > div {
-      background: $boxes-background;
-      border-color: $background;
+      background: var(--bulma-boxes-background);
+      border-color: var(--bulma-background);
     }
 
     .header {
-      color: $primary;
-      font-family: $family-heading;
+      color: var(--bulma-primary-bg-text);
+      font-family: var(--bulma-family-heading);
       font-size: 16px;
       text-align: center;
       margin-bottom: 10px;
@@ -382,10 +392,10 @@
 
     &.select-filter, &.button-filter {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       flex-wrap: wrap;
       min-height: 130px;
-      background: $boxes-background;
+      background: var(--bulma-boxes-background);
       padding: 20px;
       margin-top: -165px;
       justify-content: center;
@@ -393,7 +403,7 @@
 
       > div {
         padding: 0 5px;
-        background: $boxes-background;
+        background: var(--bulma-boxes-background);
         border: none;
         height: auto;
         margin-bottom: 20px;
@@ -408,7 +418,7 @@
 
       .header {
         text-align: left;
-        color: $text;
+        color: var(--bulma-text);
       }
     }
 
@@ -426,9 +436,9 @@
         border-radius: 5px;
         font-size: 14px;
         background-image:
-          linear-gradient(45deg, transparent 50%, $white 50%),
-          linear-gradient(135deg, $white 50%, transparent 50%),
-          linear-gradient(to right, $grey-dark, $grey-dark);
+          linear-gradient(45deg, transparent 50%, var(--bulma-white) 50%),
+          linear-gradient(135deg, var(--bulma-white) 50%, transparent 50%),
+          linear-gradient(to right, var(--bulma-grey-dark), var(--bulma-grey-dark));
         background-position:
           calc(100% - 7px) calc(1em + 2px),
           calc(100% - 2px) calc(1em + 2px),
@@ -440,8 +450,8 @@
         background-repeat: no-repeat;
         -webkit-appearance: none;
         -moz-appearance: none;
-        background-color: $background;
-        color: $text;
+        background-color: var(--bulma-background);
+        color: var(--bulma-text);
       }
     }
 
@@ -486,13 +496,13 @@
 
   .estate-header-image {
     height: calc(100vh - 100px);
-    font-family: $family-primary;
+    font-family: var(--bulma-family-primary);
 
     h1, h2, h3, h4, h5, h6 {
       background: none;
       text-align: center;
       margin: 0 auto 200px;
-      color: $white;
+      color: var(--bulma-white);
       font-weight: 700;
       text-transform: none;
       padding: 0;
@@ -511,15 +521,15 @@
   }
 
   .mod_immoListView {
-    font-family: $family-primary;
+    font-family: var(--bulma-family-primary);
 
     &.block {
       overflow: visible;
     }
 
     .btn.btn-reset-filter {
-      background: $primary;
-      color: $white;
+      background: var(--bulma-primary);
+      color: var(--bulma-white);
       margin: 15px 0 0 5px;
       font-size: 16px;
       font-weight: 200;
@@ -530,7 +540,7 @@
       border: none;
 
       &:hover {
-        background: $link-hover;
+        background: var(--bulma-link-hover);
       }
     }
 
@@ -538,12 +548,13 @@
       width: 50%;
 
       &:hover {
-        color: $primary;
+        color: var(--bulma-primary);
       }
 
       .content {
         padding: 40px 40px 10px;
         position: relative;
+        margin: 0;
       }
 
       .fields {
@@ -553,7 +564,7 @@
         margin-left: 0;
 
         .label {
-          color: $text;
+          color: var(--bulma-text);
           font-weight: 300;
         }
 
@@ -564,26 +575,27 @@
       }
 
       h2 {
-        color: $primary;
+        color: var(--bulma-primary-bg-text);
         border: none;
         height: inherit;
-        font-family: $family-heading;
+        font-family: var(--bulma-family-heading);
         font-weight: 400;
         font-size: 26px;
         line-height: 30px;
       }
 
       .inner{
-        background: $boxes-background;
+        background: var(--bulma-boxes-background);
         position: relative;
         height: 720px;
         box-shadow: 0px 0px 15px -5px rgba(0, 0, 0, 0.25);
         margin: 0 20px 40px;
         overflow: hidden;
         display: block;
+        text-decoration: none;
 
         &:hover {
-          color: $primary;
+          color: var(--bulma-primary-bg-text);
         }
       }
 
@@ -606,18 +618,18 @@
         font-size: 14px;
         letter-spacing: 1px;
         font-weight: 200;
-        background: $primary;
+        background: var(--bulma-primary);
         padding: 10px 15px;
       }
 
       ul li {
         .label {
-          color: rgba($text, .4);
+          color: rgba(var(--bulma-text), .4);
           font-weight: 400;
         }
 
         .value {
-          color: $text;
+          color: var(--bulma-text);
         }
       }
 
@@ -626,7 +638,7 @@
         bottom: 0;
         padding: 10px 15px;
         width: 100%;
-        background: $primary;
+        background: var(--bulma-primary);
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
 
@@ -666,7 +678,7 @@
       }
 
       .pagination-link {
-        color: $pagination-color;
+        color: var(--bulma-pagination-color);
         background: none;
         font-size: 1em;
         justify-content: center;
@@ -676,22 +688,29 @@
         padding-bottom: calc(0.375em - 1px);
         padding-top: calc(0.375em - 1px);
         text-align: center;
+        display: flex;
 
         &:hover {
-          color: $pagination-hover-color;
+          color: var(--bulma-pagination-hover-color);
           background: none;
         }
       }
 
       ul li.active a {
-        color: $pagination-current-color;
-        background: $pagination-current-background-color;
+        color: var(--bulma-pagination-current-color);
+        background: var(--bulma-pagination-current-background-color);
       }
     }
 
     .read-more {
       text-align: center;
       padding-bottom: 20px;
+      display: flex;
+      justify-content: center;
+
+      .button {
+        margin: 0;
+      }
 
       .btn {
         margin: 0;
@@ -699,11 +718,14 @@
         font-weight: 200;
         border-radius: 5px;
         padding: 7px 10px;
-        background: $primary;
+        background: var(--bulma-button-background-color);
+        color: var(--bulma-button-color);
         border: none;
+        display: inline-block;
 
-        &:hover {
-          background: $link-hover;
+        &:hover, &:focus {
+          background: var(--bulma-link-hover);
+          color: var(--bulma-button-hover-color);
         }
       }
     }
@@ -889,14 +911,6 @@
     .top-obj-details .field>div:last-child {
       float: none;
     }
-  }
-
-}
-
-@media (max-width:450px) {
-
-  .top-obj-details {
-
   }
 
 }

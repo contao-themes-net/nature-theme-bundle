@@ -88,7 +88,7 @@ else:
 
   <div class="small-pics small-pics-slider row">
     <?php foreach ($this->estate->attachments()->startAt(0) as $attachment) : ?>
-      <div><?php $attachment->group("BILD,GRUNDRISS,AUSSENANSICHTEN,INNENANSICHTEN,PANORAMA,KARTEN_LAGEPLAN")->size(612,350)->render() ?></div>
+      <div><?php $attachment->group("BILD,GRUNDRISS,KARTEN_LAGEPLAN,AUSSENANSICHTEN,INNENANSICHTEN,PANORAMA")->size(120,75,$this->attachmentSize)->render() ?></div>
     <?php endforeach; ?>
   </div>
 
@@ -103,7 +103,7 @@ else:
 
         <div class="prices">
           <div class="inside">
-            <h2>Preise</h2>
+            <h2><?= $GLOBALS['TL_LANG']['MSC']['prices'] ?></h2>
             <?php $this->estate->renderer('objektkategorie.objektart.wohnung.wohnungtyp')->asText()->render(); ?>
             <?php $this->estate->renderer('preise.kaufpreis')->asNumber(2)->append(' EUR')->render(); ?>
             <?php $this->estate->renderer('preise.kaltmiete')->asNumber(2)->append(' EUR')->render(); ?>
@@ -124,7 +124,7 @@ else:
         </div>
         <div class="area">
           <div class="inside">
-            <h2>Flächen</h2>
+            <h2><?= $GLOBALS['TL_LANG']['MSC']['area'] ?></h2>
             <?php $this->estate->renderer('geo.etage')->asNumber(0)->render(); ?>
             <?php $this->estate->renderer('flaechen.wohnflaeche')->asNumber(0)->append(' m²')->render(); ?>
             <?php $this->estate->renderer('flaechen.gesamtflaeche')->asNumber(2)->append(' m²')->render(); ?>
@@ -157,7 +157,7 @@ else:
         </div>
         <div class="equipment">
           <div class="inside">
-            <h2>Austattung</h2>
+            <h2><?= $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['freitexte.ausstatt_beschr'] ?></h2>
             <?php $this->estate->renderer('ausstattung.kueche.@EBK')->asFlag('Ja', 'Nein')->render(); ?>
             <?php $this->estate->renderer('ausstattung.bad.@WANNE')->asFlag('Ja', 'Nein')->render(); ?>
             <?php $this->estate->renderer('ausstattung.bad.@DUSCHE')->asFlag('Ja', 'Nein')->render(); ?>
@@ -200,14 +200,14 @@ else:
 
       <?php if($this->estate->renderer('freitexte.objektbeschreibung')->asText()->value(true) != ""): ?>
         <div class="inside">
-          <div><h3>Objektbeschreibung</h3></div>
+          <div><h3><?= $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['freitexte.objektbeschreibung'] ?></h3></div>
           <?php $this->estate->renderer('freitexte.objektbeschreibung')->asText()->value(); ?>
         </div>
       <?php endif; ?>
 
       <?php if($this->estate->renderer('freitexte.ausstatt_beschr')->asText()->value(true) != ""): ?>
         <div class="inside">
-          <div><h3>Ausstattung</h3></div>
+          <div><h3><?= $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['freitexte.ausstatt_beschr'] ?></h3></div>
           <?php $this->estate->renderer('freitexte.ausstatt_beschr')->asText()->value(); ?>
 
         </div>
@@ -215,7 +215,7 @@ else:
 
       <?php if($this->estate->renderer('freitexte.lage')->asText()->value(true) != ""): ?>
         <div class="inside">
-          <div><h3>Lage</h3></div>
+          <div><h3><?= $GLOBALS['TL_LANG']['makler_modul_mplus']['field_keys']['freitexte.lage'] ?></h3></div>
           <?php $this->estate->renderer('freitexte.lage')->asText()->value(); ?>
         </div>
       <?php endif; ?>
@@ -226,7 +226,7 @@ else:
       $this->estate->renderer('fahrzeit_flughafen')->asText()->value(true) != ""): ?>
         <div class="inside">
           <div class="distances">
-            <div><h3>Entfernungen</h3></div>
+            <div><h3><?= $GLOBALS['TL_LANG']['MSC']['distances'] ?></h3></div>
             <?php $this->estate->renderer('fussweg_oeffentlverkehr')->asNumber(2)->append(' km')->render(); ?>
             <?php $this->estate->renderer('fahrzeit_hauptbahnhof')->asNumber(2)->append(' km')->render(); ?>
             <?php $this->estate->renderer('fahrzeit_bab')->asNumber(2)->append(' km')->render(); ?>
@@ -240,33 +240,48 @@ else:
       </div>
 
       <div class="contact inside">
-        <div><h3>Ansprechpartner</h3></div>
-        <?php if($this->estate->renderer('kontaktperson.anrede')->asText()->withoutLabel()->value(true)): ?>
-        <?php $this->estate->renderer('kontaktperson.anrede')->asText()->value(); ?><br>
-        <?php endif; ?>
-
+        <h3><?= $GLOBALS['TL_LANG']['MSC']['contact'] ?></h3>
         <?php if($this->estate->renderer('kontaktperson.vorname')->asText()->withoutLabel()->value(true)): ?>
-        <?php $this->estate->renderer('kontaktperson.vorname')->asText()->value(); ?>, <?php $this->estate->renderer('kontaktperson.name')->asText()->value(); ?><br/>
+          <div>
+            <?php if($this->estate->renderer('kontaktperson.anrede')->asText()->withoutLabel()->value(true)): ?>
+              <?php $this->estate->renderer('kontaktperson.anrede')->asText()->value(); ?>
+            <?php endif; ?>
+            <?php $this->estate->renderer('kontaktperson.vorname')->asText()->value(); ?> <?php $this->estate->renderer('kontaktperson.name')->asText()->value(); ?>
+          </div>
         <?php endif; ?>
 
         <?php if($this->estate->renderer('kontaktperson.tel_zentrale')->asText()->withoutLabel()->value(true)): ?>
-        Tel.: <?php $this->estate->renderer('kontaktperson.tel_zentrale')->asText()->value(); ?>
+          <div>Tel.: <?php $this->estate->renderer('kontaktperson.tel_zentrale')->asText()->value(); ?></div>
+        <?php elseif($this->estate->renderer('kontaktperson.tel_durchw')->asText()->withoutLabel()->value(true)): ?>
+          <div>Tel.: <?php $this->estate->renderer('kontaktperson.tel_durchw')->asText()->value(); ?></div>
+        <?php endif; ?>
+
+        <?php if($this->estate->renderer('kontaktperson.tel_fax')->asText()->withoutLabel()->value(true)): ?>
+          <div>Fax: <?php $this->estate->renderer('kontaktperson.tel_fax')->asText()->value(); ?></div>
+        <?php endif; ?>
+
+        <?php if($this->estate->renderer('kontaktperson.tel_handy')->asText()->withoutLabel()->value(true)): ?>
+          <div>Mobil: <?php $this->estate->renderer('kontaktperson.tel_handy')->asText()->value(); ?></div>
         <?php endif; ?>
 
         <?php if($this->estate->renderer('kontaktperson.email_zentrale')->asText()->withoutLabel()->value(true)): ?>
-        <br>{{email::<?php $this->estate->renderer('kontaktperson.email_zentrale')->asText()->value(); ?>}}
+          <div>E-Mail: {{email::<?php $this->estate->renderer('kontaktperson.email_zentrale')->asText()->value(); ?>}}</div>
+        <?php endif; ?>
+
+        <?php if ($this->estate->rawValue('kontaktperson.foto.daten.pfad')): ?>
+          {{image::/<?= Pdir\MaklermodulBundle\Util\Helper::getImageLinkPath() . $this->estate->rawValue('kontaktperson.foto.daten.pfad'); ?>?width=200}}
         <?php endif; ?>
       </div>
 
       <?php if($this->estate->renderer('freitexte.sonstige_angaben')->asText()->value(true) != ""): ?>
         <div class="inside">
-          <div><h3>Sonstiges</h3></div>
+          <div><h3><?= $GLOBALS['TL_LANG']['MSC']['other'] ?></h3></div>
           <?php $this->estate->renderer('freitexte.sonstige_angaben')->asText()->value(); ?>
         </div>
       <?php endif; ?>
 
       <div class="documents inside">
-        <div><h3>Dokumente</h3></div>
+        <div><h3><?= $GLOBALS['TL_LANG']['MSC']['documents'] ?></h3></div>
         <?php $i = 1; foreach ($this->estate->attachments()->startAt(0) as $attachment): ?>
         <?php $attachment->group("DOKUMENTE,FILMLINK")->render() ?>
         <?php $i++; endforeach; ?>
@@ -274,75 +289,14 @@ else:
 
       <?php if($this->estate->renderer('verwaltung_objekt.objektadresse_freigeben')->asText()->value(true) == true && $this->showMap == 1): ?>
         <div class="inside">
-          <div><h3>Adresse</h3></div>
+          <div><h3><?= $GLOBALS['TL_LANG']['MSC']['objectAddress'] ?></h3></div>
           <div class="address">
-            <h4>Objektanschrift</h4>
             <?php $this->estate->renderer('geo.strasse')->asText()->value() ?> <?php $this->estate->renderer('geo.hausnummer')->asText()->value() ?><br />
             <?php $this->estate->renderer('geo.plz')->asText()->value() ?> <?php $this->estate->renderer('geo.ort')->asText()->value() ?>
           </div>
         </div>
       <?php endif; ?>
     </div>
-
-    <?php if($this->estate->renderer('verwaltung_objekt.objektadresse_freigeben')->asText()->value(true) == true && $this->showMap == 1): ?>
-    <?php
-    $GLOBALS['TL_BODY'][] = '
-    <script>
-    jQuery(document).ready( function($) {
-      if(typeof google === "undefined")
-        return;
-
-        $("#confirm-googlemaps").click( function() {
-          setMap();
-        });
-
-        $("#confirm-googlemaps .btn").click( function() {
-          $("#confirm-googlemaps").trigger("click");
-          return false;
-        });
-
-        var mapsCookie = "'.\Input::cookie("dlh_googlemaps").'";
-        if(mapsCookie != "" || $(".dlh_googlemap > div").attr("id") != "confirm-googlemaps") {
-          setMap();
-        }
-
-        function setMap() {
-          setTimeout( function() {
-            var geocoder = new google.maps.Geocoder();
-            var lat; var lng;
-            geocodeAddress(geocoder);
-          },500);
-        }
-
-        function geocodeAddress(geocoder, resultsMap) {
-          var address = "'.$this->estate->renderer("geo.strasse")->asText()->value(true).'";
-          address = address + " '.$this->estate->renderer("geo.hausnummer")->asText()->value(true).'";
-          address = address + ", '.$this->estate->renderer("geo.ort")->asText()->value(true).'";
-          geocoder.geocode({"address": address}, function(results, status) {
-            if (status === google.maps.GeocoderStatus.OK) {
-              lat = results[0].geometry.location.lat();
-              lng = results[0].geometry.location.lng();
-              setCenter(lat, lng);
-              setMarker(lat, lng);
-            }
-          });
-        }
-
-        function setCenter(lat, lng) {
-          gmap1.setCenter(new google.maps.LatLng(lat, lng));
-        }
-
-        function setMarker(lat, lng) {
-          var gmap1_marker = new google.maps.Marker({
-            position: new google.maps.LatLng(lat, lng),
-            map: gmap1,
-            zIndex: 1
-          });
-      }
-    });
-    </script>
-    '; ?>
-    <?php endif; ?>
 
     <div class="back">
       <?php $this->estate->backButton()->render() ?>

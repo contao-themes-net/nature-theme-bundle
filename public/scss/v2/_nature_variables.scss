@@ -118,6 +118,14 @@ $bulma-navbar-breakpoint: $desktop;
   --bulma-grid-gap: 1.5rem;
 }
 
+.icon-tile {
+  --icon-tile-background: var(--bulma-button-background-color);
+  --icon-tile-color: var(--bulma-button-color);
+  --icon-tile-background-hover: var(--bulma-primary-button-hover-background-color);
+  --icon-tile-color-hover: var(--bulma-button-color);
+  --icon-tile-border-radius: 0;
+}
+
 .menu {
   /* Menu */
   --bulma-menu-item-background-color: transparent;

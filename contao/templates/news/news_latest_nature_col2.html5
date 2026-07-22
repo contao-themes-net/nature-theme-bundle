@@ -1,4 +1,4 @@
-<div class="layout_latest column is-12-mobile is-6-tablet arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+<div class="layout_latest column is-12-mobile is-6-tablet reveal arc_<?= $this->archive->id ?> block<?= $this->class ?>">
 
   <div class="inside">
     <?php if ($this->addImage): ?>

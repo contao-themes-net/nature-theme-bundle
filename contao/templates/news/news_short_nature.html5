@@ -1,5 +1,5 @@
 
-<a href="<?= $this->link ?>" title="<?= $this->headline ?>" class="layout_short column is-12-mobile is-6-tablet is-4-desktop arc_<?= $this->archive->id ?> block<?= $this->class ?>">
+<a href="<?= $this->link ?>" title="<?= $this->headline ?>" class="layout_short column is-12-mobile is-6-tablet is-4-desktop reveal arc_<?= $this->archive->id ?> block<?= $this->class ?>">
 
   <div class="inside">
     <?php if($this->subheadline): ?>
