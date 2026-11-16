@@ -1,3 +1,4 @@
+@import 'parts/bulma-navbar';
 @import 'parts/layout';
 
 @import "parts/elements";
@@ -33,7 +34,7 @@
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $bulma-navbar-breakpoint) {
     .navbar-item {
       &.is-hoverable:hover {
         .navbar-dropdown {
