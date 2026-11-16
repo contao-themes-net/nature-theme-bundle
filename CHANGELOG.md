@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.8.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.1) – 2026-11-16
+
+- [Fixed] Navbar breakpoint can be changed again via `$bulma-navbar-breakpoint` in `_custom_variables.scss` (Bulma navbar media queries moved from precompiled `bulma.css` to `v2/parts/_bulma-navbar.scss`)
+
 ## [2.8.0](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.0) – 2026-07-22
 
 - [Added] Add styling for new content element "Icon Title" (based on the hyperlink element with image and customized template)

@@ -14,7 +14,7 @@ $widescreen-enabled: true !default;
 $fullhd: 1344px + 2 * $gap !default;
 $fullhd-enabled: true !default;
 
-$bulma-navbar-breakpoint: $desktop;
+$bulma-navbar-breakpoint: $desktop !default;
 
 :root {
   --bulma-primary: #5ca152;
