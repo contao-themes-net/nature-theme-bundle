@@ -18,7 +18,10 @@ declare(strict_types=1);
 
 namespace ContaoThemesNet\NatureThemeBundle\Migration;
 
+use Contao\Automator;
 use Contao\CoreBundle\Framework\ContaoFramework;
+use Contao\Folder;
+use Contao\System;
 use Doctrine\DBAL\Connection;
 
 trait MigrationHelperTrait
@@ -41,4 +44,27 @@ trait MigrationHelperTrait
     private array $fullTables = [ // @phpstan-ignore-line
         'tl_calendar', 'tl_calendar_events', 'tl_faq', 'tl_faq_category', 'tl_news', 'tl_newsletter_channel', 'tl_news_archive',
     ];
+
+    /**
+     * Copies the theme files to the upload folder and regenerates the symlinks.
+     * Returns false if the folder already exists.
+     */
+    private function copyThemeFiles(): bool
+    {
+        $this->contaoFramework->initialize();
+
+        $this->uploadPath = System::getContainer()->getParameter('contao.upload_path');
+        $this->projectDir = System::getContainer()->getParameter('kernel.project_dir');
+
+        if (file_exists($this->projectDir.'/'.$this->uploadPath.'/'.$this->themeFolder)) {
+            return false;
+        }
+
+        $folder = new Folder($this->contaoFolder.'/files/'.$this->themeFolder);
+        $folder->copyTo($this->uploadPath.'/'.$this->themeFolder);
+
+        (new Automator())->generateSymlinks();
+
+        return true;
+    }
 }
