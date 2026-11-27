@@ -104,6 +104,12 @@ class InitialDemoDataMigration extends AbstractMigration
             $this->connection->executeStatement($sql);
         }
 
+        // Copy the theme files in the same step. Otherwise inserting the demo content
+        // would make InitialFilesFolderMigration pending in the middle of the current
+        // migration run, which Contao rejects with an UnexpectedPendingMigrationException
+        // ("Expected ... got ...") as soon as another migration is pending as well.
+        $this->copyThemeFiles();
+
         return $this->createResult(true, 'Initial structure and content added. ');
     }
 }

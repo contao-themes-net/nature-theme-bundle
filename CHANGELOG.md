@@ -10,6 +10,10 @@ Types of changes
     Security in case of vulnerabilities.
 )
 
+## [2.8.2](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.2) – 2026-11-27
+
+- [Fixed] Fix "Expected … got Initial files folder migration - NATURE Theme" error during the initial migration in Contao 5.7 (theme files are now copied together with the demo data)
+
 ## [2.8.1](https://github.com/contao-themes-net/nature-theme-bundle/tree/2.8.1) – 2026-11-16
 
 - [Fixed] Navbar breakpoint can be changed again via `$bulma-navbar-breakpoint` in `_custom_variables.scss` (Bulma navbar media queries moved from precompiled `bulma.css` to `v2/parts/_bulma-navbar.scss`)
